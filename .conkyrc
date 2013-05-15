@@ -38,8 +38,15 @@ Kernel: $alignr$kernel
 Processes: ${alignr}$processes ($running_processes running)
 Load: ${alignr}$loadavg
 
-CPU ${alignc} ${freq}MHz ${alignr}(${cpu cpu1}%)
-${cpubar 4 cpu1}
+Core 0 ${alignc} ${freq}MHz ${alignr}(${cpu cpu0}%)
+${cpubar cpu0}
+Core 1 ${alignr}(${cpu cpu1}%)
+${cpubar cpu1}
+Core 2 ${alignr}(${cpu cpu2}%)
+${cpubar cpu2}
+Core 3 ${alignr}(${cpu cpu3}%) 
+${cpubar cpu3}
+
 ${cpugraph cccccc ffffff}
 
 RAM ${alignr}$mem / $memmax ($memperc%)
@@ -73,8 +80,8 @@ ${font Aerial:style=Bold:pixelsize=12}FILESYSTEM ${font Snap.se:size=8}${hr 1}
 Root: ${alignr}${fs_free /} / ${fs_size /}
 ${fs_bar 4 /}
 
-Data: ${alignr}${fs_free /media/data} / ${fs_size /media/data}
-${fs_bar 4 /media/data}
+Data: ${alignr}${fs_free /media/Data} / ${fs_size /media/Data}
+${fs_bar 4 /media/Data}
 
 ${font Aerial:style=Bold:pixelsize=12}NETWORK ${font Snap.se:size=8}${hr 1}
 
