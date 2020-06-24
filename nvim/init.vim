@@ -2,7 +2,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " general
 Plug 'preservim/nerdtree'
-Plug 'airblade/vim-gitgutter'                                           " Show git diff in the gutter
 Plug 'morhetz/gruvbox'                                                  " Retro groove color scheme for Vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                         " Auto-completion
 Plug 'raimondi/delimitmate'                                             " Auto-completion for quotes, parens, brackets, etc.
@@ -13,6 +12,13 @@ Plug 'w0rp/ale'                                                         " Asynch
 Plug 'machakann/vim-sandwich'                                           " Add/delete/replace surroundings of a sandwiched text object
 Plug 'mbbill/undotree'                                                  " Undo history visualizer
 Plug 'simeji/winresizer'                                                " Easy window resizing
+Plug 'justinmk/vim-sneak'                                               " Jump to any location specified by two characters
+
+" git
+Plug 'airblade/vim-gitgutter'                                           " Show git diff in the gutter
+Plug 'rhysd/git-messenger.vim'                                          " Reveal commit messages under the cursor
+Plug 'tpope/vim-fugitive'                                               " Git wrapper
+Plug 'tpope/vim-rhubarb'                                                " GitHub extension for fugitive.vim
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }                     " A command-line fuzzy finder
