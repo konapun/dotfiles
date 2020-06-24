@@ -1,0 +1,11 @@
+[user]
+	email = bremen.braun@gmail.com
+	name = konapun
+[core]
+	editor = nvim
+[alias]
+	ls = !git branch | fzf | xargs git checkout
+	undo = reset --soft HEAD~1
+	dmb = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
+	up = !git checkout master && git branch --set-upstream-to=upstream/master && git pull && git push origin master && git dmb
+
