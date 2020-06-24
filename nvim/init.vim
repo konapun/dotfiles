@@ -1,11 +1,15 @@
 call plug#begin('~/.config/nvim/plugged')
 
-" general
-Plug 'preservim/nerdtree'
+" themes
 Plug 'morhetz/gruvbox'                                                  " Retro groove color scheme for Vim
+Plug 'tomasr/molokai'                                                   " Molokai color scheme
+
+" general
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                         " Auto-completion
 Plug 'raimondi/delimitmate'                                             " Auto-completion for quotes, parens, brackets, etc.
 Plug 'sheerun/vim-polyglot'                                             " Language pack
+Plug 'rafaqz/ranger.vim'                                                " Ranger file manager
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}                     " Multiple cursors plugin for vim/neovim
 Plug 'tpope/vim-commentary'                                             " Comment stuff out
 Plug 'vim-airline/vim-airline'                                          " Statusline
 Plug 'w0rp/ale'                                                         " Asynchronous linting
@@ -13,10 +17,21 @@ Plug 'machakann/vim-sandwich'                                           " Add/de
 Plug 'mbbill/undotree'                                                  " Undo history visualizer
 Plug 'simeji/winresizer'                                                " Easy window resizing
 Plug 'justinmk/vim-sneak'                                               " Jump to any location specified by two characters
+Plug 'editorconfig/editorconfig-vim'                                    " Support for .editorconfig
+Plug 'liuchengxu/vista.vim'                                             " View and search LSP symbols, tags in Vim/NeoVim
+Plug 'wellle/context.vim'                                               " Shows the context of the currently visible buffer contents
+Plug 't9md/vim-choosewin'                                               " Land on window you chose like tmux's 'display-pane'
+Plug 'farmergreg/vim-lastplace'                                         " Intelligently reopen files at your last edit position
+
+" testing
+Plug 'vim-test/vim-test'                                                " Test runner
+Plug 'radenling/vim-dispatch-neovim'                                    " Support for neovim's terminal emulator and job control to dispatch.vim
+Plug 'tpope/vim-dispatch'                                               " Asynchronous build and test dispatcher
 
 " git
 Plug 'airblade/vim-gitgutter'                                           " Show git diff in the gutter
 Plug 'rhysd/git-messenger.vim'                                          " Reveal commit messages under the cursor
+Plug 'APZelos/blamer.nvim'                                              " Display line blame on the current line a la GitLens
 Plug 'tpope/vim-fugitive'                                               " Git wrapper
 Plug 'tpope/vim-rhubarb'                                                " GitHub extension for fugitive.vim
 
@@ -30,7 +45,7 @@ call plug#end()
 set background=dark                                                     " Set colorscheme background color
 set termguicolors                                                       " Enable 24-bit color
 syntax enable                                                           " Enable syntax highlighting
-colorscheme gruvbox
+colorscheme molokai
 
 " general
 set autoread                                                            " Reload files changed outside Vim
@@ -72,11 +87,11 @@ set undofile                                                            " Write 
 set undolevels=1000                                                     " Max changes that can be undone
 set undoreload=10000                                                    " Max lines to save for undo on buffer reload
 
-for f in split(glob('config/general/*.vim'), '\n')
+for f in split(glob('~/.config/nvim/config/general/*.vim'), '\n')
   exe 'source' f
 endfor
 
-for f in split(glob('config/plugin/*.vim'), '\n')
+for f in split(glob('~/.config/nvim/config/plugin/*.vim'), '\n')
   exe 'source' f
 endfor
 
