@@ -13,6 +13,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}                     " Multip
 Plug 'tpope/vim-commentary'                                             " Comment stuff out
 Plug 'vim-airline/vim-airline'                                          " Statusline
 Plug 'w0rp/ale'                                                         " Asynchronous linting
+Plug 'ludovicchabant/vim-gutentags'                                     " Tag file management
 Plug 'machakann/vim-sandwich'                                           " Add/delete/replace surroundings of a sandwiched text object
 Plug 'mbbill/undotree'                                                  " Undo history visualizer
 Plug 'simeji/winresizer'                                                " Easy window resizing
