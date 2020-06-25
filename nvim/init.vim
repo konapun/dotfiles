@@ -23,6 +23,8 @@ Plug 'liuchengxu/vista.vim'                                             " View a
 Plug 'wellle/context.vim'                                               " Shows the context of the currently visible buffer contents
 Plug 't9md/vim-choosewin'                                               " Land on window you chose like tmux's 'display-pane'
 Plug 'farmergreg/vim-lastplace'                                         " Intelligently reopen files at your last edit position
+Plug 'camspiers/animate.vim'                                            " Window animation
+Plug 'camspiers/lens.vim'                                               " Automatic window resizing
 Plug 'andreyorst/SimpleWorkspaces.vim'                                  " VS Code-like workspace support
 
 " testing
