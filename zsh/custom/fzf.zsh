@@ -4,7 +4,7 @@ rg --files              \
    --follow             \
    --hidden             \
    --line-number        \
-   --no-ignore-vcs      \
+   --ignore-vcs         \
    --smart-case
 '
 
