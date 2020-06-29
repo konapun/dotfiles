@@ -26,6 +26,7 @@ Plug 'farmergreg/vim-lastplace'                                         " Intell
 Plug 'camspiers/animate.vim'                                            " Window animation
 Plug 'camspiers/lens.vim'                                               " Automatic window resizing
 Plug 'andreyorst/SimpleWorkspaces.vim'                                  " VS Code-like workspace support
+Plug 'kshenoy/vim-signature'                                            " Toggle, display and navigate marks
 
 " testing
 Plug 'vim-test/vim-test'                                                " Test runner
@@ -49,7 +50,7 @@ call plug#end()
 set background=dark                                                     " Set colorscheme background color
 set termguicolors                                                       " Enable 24-bit color
 syntax enable                                                           " Enable syntax highlighting
-colorscheme molokai
+colorscheme gruvbox
 
 " general
 set autoread                                                            " Reload files changed outside Vim
