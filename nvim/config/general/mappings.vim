@@ -13,6 +13,9 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <leader>rn <Plug>(coc-rename)
 
+" ALE
+nmap <leader>f  :ALEFix<CR>
+
 " fugitive
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gg :Gbrowse<CR>
@@ -22,7 +25,7 @@ nmap <leader>gc :Gcommit<CR>
 " FZF
 nmap <leader>a :Rg<Space>
 nmap <leader>b :Buffers<CR>
-nmap <leader>f :GFiles<CR>
+nmap <leader>g :GFiles<CR>
 nmap <leader>F :Files<CR>
 nmap <leader>h :History<CR>
 nmap <leader>l :BLines<CR>
