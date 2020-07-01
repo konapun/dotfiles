@@ -70,6 +70,7 @@ plugins=(git fzf npm nvm ubuntu vscode yarn)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+greet
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -99,3 +100,4 @@ fi
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
