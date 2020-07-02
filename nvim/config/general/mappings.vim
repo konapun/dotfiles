@@ -12,10 +12,11 @@ set splitright
 " CoC
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
 
 " ALE
-nmap <leader>f  :ALEFix<CR>
+nmap <leader>F  :ALEFix<CR>
 
 " fugitive
 nmap <leader>gb :Gblame<CR>
@@ -27,7 +28,7 @@ nmap <leader>gc :Gcommit<CR>
 nmap <leader>a :Rg<Space>
 nmap <leader>b :Buffers<CR>
 nmap <leader>g :GFiles<CR>
-nmap <leader>F :Files<CR>
+nmap <leader>f :Files<CR>
 nmap <leader>h :History<CR>
 nmap <leader>l :BLines<CR>
 nmap <leader>L :Lines<CR>
@@ -59,5 +60,4 @@ nmap [c <Plug>(GitGutterPrevHunk)
 
 " choosewin
 nmap - <Plug>(choosewin)
-
 
