@@ -35,7 +35,7 @@ function configure_neovim {
 }
 
 function configure_tmux {
-  cp ./tmux/tmux.conf ~/.tmux.conf
+  bash ./tmux/install.sh
 }
 
 function configure_zsh {
