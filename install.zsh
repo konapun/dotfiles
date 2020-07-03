@@ -22,7 +22,9 @@ function install_oh_my_zsh {
 }
 
 function install_nvm {
-  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  if [[ ! -d ~/.nvm ]]; then
+    wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  fi
 }
 
 function configure_git {

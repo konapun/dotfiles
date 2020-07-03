@@ -2,6 +2,7 @@
 
 " split navigation
 nnoremap <C-w>n :vnew<CR>
+nnoremap <C-w>t :tabnew<CR>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
