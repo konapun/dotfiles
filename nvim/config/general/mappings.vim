@@ -62,3 +62,6 @@ nmap [c <Plug>(GitGutterPrevHunk)
 " choosewin
 nmap - <Plug>(choosewin)
 
+" undotree
+nnoremap <F5> :UndotreeToggle<cr>
+

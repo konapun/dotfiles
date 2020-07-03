@@ -4,7 +4,7 @@
 # - add option to symlink rather than copy
 
 # INSTALLATION
-apt_packages=(fzf htop neofetch neovim nodejs ranger ripgrep tmux yarn)
+apt_packages=(ctags fzf htop neofetch neovim nodejs ranger ripgrep tmux yarn)
 brew_packages=() # TODO
 brew_cask_packages=() # TODO
 

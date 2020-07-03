@@ -29,6 +29,10 @@ Plug 'andreyorst/SimpleWorkspaces.vim'                                  " VS Cod
 Plug 'kshenoy/vim-signature'                                            " Toggle, display and navigate marks
 Plug 'vim-scripts/ReplaceWithRegister'                                  " Replace text object with contents of register
 
+" markup
+Plug 'alvan/vim-closetag'                                               " Automatically close HTML tags
+Plug 'mattn/emmet-vim'                                                  " HTML/CSS text expansion
+
 " testing
 Plug 'vim-test/vim-test'                                                " Test runner
 Plug 'radenling/vim-dispatch-neovim'                                    " Support for neovim's terminal emulator and job control to dispatch.vim
