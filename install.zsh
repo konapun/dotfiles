@@ -5,14 +5,14 @@
 
 # INSTALLATION
 apt_packages=(ctags fzf htop neofetch neovim nodejs ranger ripgrep tmux yarn)
-brew_packages=() # TODO
-brew_cask_packages=() # TODO
+brew_packages=(ctags fzf htop neofetch neovim node ranger ripgrep tmux yarn)
+brew_cask_packages=(font-cascadia-pl font-ibm-plex dash gimp iterm2 rectangle slack spotify ultimaker-cura vanilla)
 
 if [[ $OSTYPE == linux-gnu ]]; then
   apt install $apt_packages
 elif [[ $OSTYPE == darwin ]]; then
   brew install $brew_packages
-  brew cask install $brew_cask_packages
+  # brew cask install $brew_cask_packages
 fi
 
 function install_oh_my_zsh {
