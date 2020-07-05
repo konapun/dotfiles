@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 " themes
 Plug 'morhetz/gruvbox'                                                  " Retro groove color scheme for Vim
 Plug 'tomasr/molokai'                                                   " Molokai color scheme
+Plug 'franbach/miramare'                                                " Comfortable & Pleasant Color Scheme for Vim
 
 " general
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                         " Auto-completion
