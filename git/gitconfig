@@ -2,7 +2,10 @@
 	email = bremen.braun@gmail.com
 	name = konapun
 [core]
+        excludesfile = ~/.gitignore_global
 	editor = nvim
+[push]
+        default = simple
 [alias]
 	ls = !git branch | fzf | xargs git checkout
 	undo = reset --soft HEAD~1
