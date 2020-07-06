@@ -26,7 +26,6 @@ Plug 't9md/vim-choosewin'                                               " Land o
 Plug 'farmergreg/vim-lastplace'                                         " Intelligently reopen files at your last edit position
 Plug 'camspiers/animate.vim'                                            " Window animation
 Plug 'camspiers/lens.vim'                                               " Automatic window resizing
-Plug 'andreyorst/SimpleWorkspaces.vim'                                  " VS Code-like workspace support
 Plug 'kshenoy/vim-signature'                                            " Toggle, display and navigate marks
 Plug 'vim-scripts/ReplaceWithRegister'                                  " Replace text object with contents of register
 
