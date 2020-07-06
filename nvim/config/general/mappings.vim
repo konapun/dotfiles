@@ -10,6 +10,10 @@ nnoremap <C-h> <C-w><C-h>
 set splitbelow
 set splitright
 
+" buffer navigation
+nnoremap gb :bn<CR>
+nnoremap gB :bp<CR>
+
 " CoC
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <silent> gd <Plug>(coc-definition)
