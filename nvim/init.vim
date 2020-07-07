@@ -16,6 +16,7 @@ Plug 'vim-airline/vim-airline'                                          " Status
 Plug 'w0rp/ale'                                                         " Asynchronous linting
 Plug 'ludovicchabant/vim-gutentags'                                     " Tag file management
 Plug 'machakann/vim-sandwich'                                           " Add/delete/replace surroundings of a sandwiched text object
+Plug 'tpope/vim-unimpaired'                                             " Pairs of handy bracket mappings
 Plug 'mbbill/undotree'                                                  " Undo history visualizer
 Plug 'simeji/winresizer'                                                " Easy window resizing
 Plug 'justinmk/vim-sneak'                                               " Jump to any location specified by two characters
