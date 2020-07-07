@@ -8,6 +8,8 @@ apt_packages=(ctags fzf htop neofetch neovim nodejs ranger ripgrep tmux yarn)
 brew_packages=(ctags fzf htop neofetch neovim node ranger ripgrep tmux yarn)
 brew_cask_packages=(amethyst font-cascadia-pl font-ibm-plex dash gimp iterm2 rectangle slack spotify ultimaker-cura vanilla)
 
+targets=$@
+
 if [[ $OSTYPE == linux-gnu ]]; then
   apt install $apt_packages
 elif [[ $OSTYPE == darwin ]]; then
