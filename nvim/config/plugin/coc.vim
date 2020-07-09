@@ -1,3 +1,15 @@
+let g:coc_global_extensions = [
+  \'coc-highlight',
+  \'coc-css',
+  \'coc-yaml',
+  \'coc-html',
+  \'coc-jest',
+  \'coc-eslint',
+  \'coc-json',
+  \'coc-tsserver',
+  \'coc-snippets'
+\]
+
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
