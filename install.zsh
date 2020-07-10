@@ -36,6 +36,9 @@ function configure_git {
 function configure_neovim {
   mkdir -p ~/.config
   cp -r ./nvim ~/.config
+
+  # other dependencies
+  pip3 install neovim
 }
 
 function configure_tmux {
