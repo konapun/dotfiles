@@ -49,6 +49,7 @@ function configure_zsh {
   cp ./zsh/ignore ~/.ignore
   cp ./zsh/zshenv ~/.zshenv
   cp ./zsh/zshrc ~/.zshrc
+  cp ./zsh/p10k.zsh ~/.p10k.zsh
   cp -r ./zsh/custom ~/.oh-my-zsh
 }
 
