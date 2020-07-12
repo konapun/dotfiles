@@ -51,6 +51,12 @@ function configure_zsh {
   cp ./zsh/zshrc ~/.zshrc
   cp ./zsh/p10k.zsh ~/.p10k.zsh
   cp -r ./zsh/custom ~/.oh-my-zsh
+
+  if [[ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ]]; then
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+  else # update
+    git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
+  fi
 }
 
 # CUSTOM INSTALLATION
@@ -62,5 +68,4 @@ configure_zsh
 configure_git
 configure_tmux
 configure_neovim
-
 
