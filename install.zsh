@@ -3,6 +3,9 @@
 # - add update functionality
 # - add option to symlink rather than copy
 
+# TODO: get these from opts
+winuser="Bremen"
+
 # INSTALLATION
 apt_packages=(ctags fzf htop neofetch neovim nodejs ranger ripgrep tmux yarn)
 brew_packages=(ctags fzf htop neofetch neovim node ranger ripgrep tmux yarn)
@@ -34,4 +37,5 @@ source ./git/configure
 source ./tmux/configure
 source ./nvim/configure
 source ./ranger/configure
+source ./winterm/configure
 

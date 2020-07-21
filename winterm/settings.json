@@ -6,7 +6,7 @@
     "profiles": {
         "defaults": {
             // Put settings here that you want to apply to all profiles
-            "colorScheme": "Gruvbox",
+            "colorScheme": "Eva01",
             "fontFace": "Cascadia Code PL"
         },
         "list": [
@@ -61,6 +61,27 @@
             "red": "#CC241D",
             "white": "#A89984",
             "yellow": "#D79921"
+        },
+        {
+          "name": "Eva01",
+          "background": "#282828",
+          "black": "#000000",
+          "blue": "#00ddff",
+          "brightBlack": "#686868",
+          "brightBlue": "#afafff",
+          "brightCyan": "#875faf",
+          "brightGreen": "#87ff5f",
+          "brightPurple": "#af5fff",
+          "brightRed": "#d787af",
+          "brightWhite": "#ffffff",
+          "brightYellow": "#dfff00",
+          "cyan": "#689D6A",
+          "foreground": "#ffffff",
+          "green": "#afff87",
+          "purple": "#5f005f",
+          "red": "#d75f87",
+          "white": "#ffffff",
+          "yellow": "#dfff00"
         }
     ],
     // Add any keybinding overrides to this array.
