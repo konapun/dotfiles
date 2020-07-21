@@ -17,11 +17,7 @@ elif [[ $OSTYPE == darwin ]]; then
   # brew cask install $brew_cask_packages
 fi
 
-function install_oh_my_zsh {
-  if [[ ! -d ~/.oh-my-zsh ]]; then
-    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  fi
-}
+mkdir -p ~/.config
 
 function install_nvm {
   if [[ ! -d ~/.nvm ]]; then
@@ -29,43 +25,18 @@ function install_nvm {
   fi
 }
 
-function configure_git {
-  cp git/gitconfig ~/.gitconfig
-}
-
-function configure_neovim {
-  mkdir -p ~/.config
-  cp -r ./nvim ~/.config
-
-  # other dependencies
-  pip3 install neovim
-}
-
-function configure_tmux {
-  bash ./tmux/install.sh
-}
-
-function configure_zsh {
-  cp ./zsh/ignore ~/.ignore
-  cp ./zsh/zshenv ~/.zshenv
-  cp ./zsh/zshrc ~/.zshrc
-  cp ./zsh/p10k.zsh ~/.p10k.zsh
-  cp -r ./zsh/custom ~/.oh-my-zsh
-
-  if [[ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ]]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-  else # update
-    git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
-  fi
+function copy_scripts {
+  cp ./scripts/* /usr/local/bin
 }
 
 # CUSTOM INSTALLATION
-install_oh_my_zsh
 install_nvm
+copy_scripts
 
 # CONFIGURATION
-configure_zsh
-configure_git
-configure_tmux
-configure_neovim
+zsh ./zsh/configure
+zsh ./git/configure
+zsh ./tmux/configure
+zsh ./nvim/configure
+zsh ./ranger/configure
 

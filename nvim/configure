@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+cp -r ./nvim ~/.config
+rm ~/.config/nvim/configure
+
+pip3 install neovim

@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Concatenates default settings with platform settings and copies them to ~/.conf/ranger/rc.conf
+
+if [[ $OSTYPE == linux-gnu ]]; then
+  platform=linux
+elif [[ $OSTYPE == darwin ]]; then
+  platform=mac
+fi
+
+mkdir -p ~/.config/ranger
+if [[ -e ~/.config/ranger/rc.conf ]]; then
+  mv ~/.config/ranger/rc.conf ~/.config/ranger/rc.conf.bak
+fi
+
+cat ./ranger/rc.conf ./ranger/$platform.rc.conf >> ~/.config/ranger/rc.conf
