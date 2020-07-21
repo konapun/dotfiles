@@ -25,18 +25,13 @@ function install_nvm {
   fi
 }
 
-function copy_scripts {
-  cp ./scripts/* /usr/local/bin
-}
-
 # CUSTOM INSTALLATION
 install_nvm
-copy_scripts
 
 # CONFIGURATION
-zsh ./zsh/configure
-zsh ./git/configure
-zsh ./tmux/configure
-zsh ./nvim/configure
-zsh ./ranger/configure
+source ./zsh/configure
+source ./git/configure
+source ./tmux/configure
+source ./nvim/configure
+source ./ranger/configure
 
