@@ -1,8 +1,3 @@
-#!/usr/bin/env zsh
-
 if [[ -d /mnt/c ]]; then
-  echo "copying"
-  cp ./winterm/settings.json /mnt/c/Users/$winuser/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
-else
-  echo "not windows"
+  cp ./winterm/settings.json /mnt/c/Users/$WINUSER/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
 fi

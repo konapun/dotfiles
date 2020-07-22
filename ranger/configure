@@ -1,4 +1,3 @@
-#!/usr/bin/env zsh
 # Concatenates default settings with platform settings and copies them to ~/.conf/ranger/rc.conf
 
 if [[ $OSTYPE == linux-gnu ]]; then

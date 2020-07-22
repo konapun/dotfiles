@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 if [[ -e ~/.gitconfig ]]; then
   mv ~/.gitconfig ~/.gitconfig.bak
 fi
