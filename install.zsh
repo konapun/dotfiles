@@ -11,6 +11,9 @@ brew_cask_packages=(amethyst edex-ui font-cascadia-pl font-ibm-plex dash gimp it
 # set up variables for use in sourced scripts
 IS_WSL=$(cat /proc/version | grep microsoft)
 TERM=$(ps -h -o comm -p $(ps -h -o ppid -p $$ 2>/dev/null) 2>/dev/null)
+RED='\033[0;31m'
+NC='\033[0m'
+alias warn='echo -e "${RED}"'
 
 function install_nvm {
   if [[ ! -d ~/.nvm ]]; then
@@ -50,10 +53,11 @@ mkdir -p ~/.config
 install_nvm
 
 # CONFIGURATION
-source ./zsh/configure
-source ./git/configure
-source ./tmux/configure
-source ./nvim/configure
-source ./ranger/configure
-source ./winterm/configure
-source ./theme/configure
+zsh ./tmux/configure.zsh
+source ./zsh/configure.zsh
+source ./git/configure.zsh
+source ./nvim/configure.zsh
+source ./ranger/configure.zsh
+source ./winterm/configure.zsh
+source ./fonts/configure.zsh
+source ./theme/configure.zsh

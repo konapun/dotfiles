@@ -6,7 +6,7 @@
     "profiles": {
         "defaults": {
             // Put settings here that you want to apply to all profiles
-            "colorScheme": "Eva01",
+            "colorScheme": "Gruvbox",
             "fontFace": "Cascadia Code PL"
         },
         "list": [

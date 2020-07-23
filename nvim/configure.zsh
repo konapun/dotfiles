@@ -1,4 +1,4 @@
 cp -r ./nvim ~/.config
-rm ~/.config/nvim/configure
+rm ~/.config/nvim/configure.zsh
 
 pip3 install neovim
