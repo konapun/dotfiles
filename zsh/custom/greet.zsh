@@ -1,7 +1,7 @@
 function greet_small {
   local RED='\033[0;31m'
   local WHITE='\033[1;37m'
- 
+
   echo "${WHITE}              人  工  知  能  や  ロ  ボ  ッ  ト  エ  学              "
   echo "${RED}####    ####       ###     ####      #### ####    #####      ###"
   echo "${RED}####    ####      #####    #####     #### ####   #####      #####"
@@ -15,10 +15,10 @@ function greet_small {
   echo "\n"
 }
 
-function greet {
+function greet_large {
   local RED='\033[0;31m'
   local WHITE='\033[1;37m'
- 
+
   echo "${WHITE}              人   工   知   能   や   ロ   ボ   ッ   ト   エ   学               "
   echo "${RED}#####    #####       #####     #####       ##### #####    ######      #####"
   echo "${RED}#####    #####      #######    ######      ##### #####   ######      #######"
@@ -31,3 +31,13 @@ function greet {
   echo "${WHITE}            R       O       B       O       T       I       C       S             "
   echo "\n"
 }
+
+function greet {
+  local columns=$(tput cols) # $(stty -a <"/dev/pts/0" | grep -Po '(?<=columns )\d+')
+  if [[ $columns -ge 81 ]]; then
+    greet_large
+  else
+    greet_small
+  fi
+}
+
