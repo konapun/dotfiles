@@ -2,8 +2,8 @@
 
 NERD_BASE=https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts
 
-# (name url format)
-FONT=("CaskaydiaCove Nerd Font Mono" "$NERD_BASE/CascadiaCode/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete%20Mono" "ttf")
+# (name url format cask)
+FONT=("CaskaydiaCove Nerd Font Mono" "$NERD_BASE/CascadiaCode/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete%20Mono" "ttf" "font-cascaydiacove-nerd-font")
 
 function set_gnome_terminal {
   local set_font=$1
@@ -33,6 +33,9 @@ else
       set_gnome_terminal $FONT[1]
     fi
   else # macos
-    # TODO: macos
+    if [[ $(which brew) ]]; then # the witches' brew!
+      brew cask install $FONT[4]
+    fi
+    # TODO: set font in iterm
   fi
 fi

@@ -33,6 +33,7 @@ Plug 'camspiers/lens.vim'                                               " Automa
 Plug 'kshenoy/vim-signature'                                            " Toggle, display and navigate marks
 Plug 'vim-scripts/ReplaceWithRegister'                                  " Replace text object with contents of register
 Plug 'sirver/ultisnips'                                                 " The ultimate snippet solution for Vim
+Plug 'tpope/vim-repeat'                                                 " Enable repeating supported plugin maps
 
 " markup
 Plug 'alvan/vim-closetag'                                               " Automatically close HTML tags

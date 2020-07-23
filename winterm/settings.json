@@ -7,7 +7,7 @@
         "defaults": {
             // Put settings here that you want to apply to all profiles
             "colorScheme": "Gruvbox",
-            "fontFace": "Cascadia Code PL"
+            "fontFace": "CaskaydiaCove NF"
         },
         "list": [
             {
