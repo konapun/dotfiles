@@ -68,3 +68,4 @@ source ./ranger/configure.zsh
 source ./winterm/configure.zsh
 source ./fonts/configure.zsh
 source ./theme/configure.zsh
+source ./gnome-terminal/configure.zsh
