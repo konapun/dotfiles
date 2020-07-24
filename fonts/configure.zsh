@@ -4,6 +4,7 @@ NERD_BASE=https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts
 
 # (name url format cask)
 FONT=("CaskaydiaCove Nerd Font Mono" "$NERD_BASE/CascadiaCode/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete%20Mono" "ttf" "font-cascaydiacove-nerd-font")
+FONT_SIZE=13
 
 function set_gnome_terminal {
   local set_font=$1
@@ -12,25 +13,28 @@ function set_gnome_terminal {
   local profiles=($(echo $profile_list | sed "s/'//g" | sed 's/\[//g' | sed 's/\]//g' | tr "," "\n"))
 
   for profile in $profiles; do
-    gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile/ font "$set_font 14"
+    gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile/ font "$set_font $FONT_SIZE"
   done
 }
 
-FONT_LOCAL=./fonts/$FONT[1].$FONT[3]
+FONT_FILE=$FONT[1].$FONT[3]
+FONT_LOCAL=./fonts/$FONT_FILE
 if [[ $IS_WSL ]]; then
   warn "Fonts must be installed manually under WSL. Please install the font from this directory."
   curl -fLo $FONT_LOCAL $FONT[2]%20Windows%20Compatible.$FONT[3]
 else
   if [[ $OSTYPE == linux-gnu ]]; then
-    # download and install the font
-    curl -fLo $FONT_LOCAL $FONT[2].$FONT[3]
-    mkdir -p ~/.local/share/fonts
-    mv $FONT_LOCAL ~/.local/share/fonts
-    fc-cache -fv
+    if [[ ! -f ~/.local/share/fonts/$FONT_FILE || $UPDATE ]]; then
+      # download and install the font
+      curl -fLo $FONT_LOCAL $FONT_FILE
+      mkdir -p ~/.local/share/fonts
+      mv $FONT_LOCAL ~/.local/share/fonts
+      fc-cache -fv
 
-    # set the font
-    if [[ $(which gsettings) ]]; then
-      set_gnome_terminal $FONT[1]
+      # set the font
+      if [[ $(which gsettings) ]]; then
+        set_gnome_terminal $FONT[1]
+      fi
     fi
   else # macos
     if [[ $(which brew) ]]; then # the witches' brew!

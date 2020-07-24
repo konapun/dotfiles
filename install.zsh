@@ -29,9 +29,10 @@ function parse_options {
   o_theme=(-t "")
   o_winuser=(-w Bremen)
 
-  zparseopts -K -- g=o_graphical t:=o_theme w:=o_winuser
+  zparseopts -K -- g=o_graphical u=o_update t:=o_theme w:=o_winuser
 
   GRAPHICAL=$o_graphical
+  UPDATE=$o_update
   THEME=$o_theme[2]
   WINUSER=$o_winuser[2]
 }
@@ -39,22 +40,24 @@ function parse_options {
 parse_options $*
 
 # INSTALLATION
-if [[ $OSTYPE == linux-gnu ]]; then
-  apt install $apt_packages
-elif [[ $OSTYPE == darwin ]]; then
-  brew install $brew_packages
-  if [[ $GRAPHICAL ]]; then
-    brew cask install $brew_cask_packages
+if [[ ! $UPDATE ]]; then
+  if [[ $OSTYPE == linux-gnu ]]; then
+    apt install $apt_packages
+  elif [[ $OSTYPE == darwin ]]; then
+    brew install $brew_packages
+    if [[ $GRAPHICAL ]]; then
+      brew cask install $brew_cask_packages
+    fi
+  else
+    echo "Unsupported OS"
+    exit
   fi
-else
-  echo "Unsupported OS"
-  exit
+
+  # CUSTOM INSTALLATION
+  install_nvm
 fi
 
 mkdir -p ~/.config
-
-# CUSTOM INSTALLATION
-install_nvm
 
 # CONFIGURATION
 zsh ./tmux/configure.zsh

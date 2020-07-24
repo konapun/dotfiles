@@ -18,7 +18,7 @@ ranger_devicons=$ranger_plugin_dir/ranger_devicons
 mkdir -p $ranger_plugin_dir
 if [[ ! -d $ranger_devicons ]]; then # install
   git clone https://github.com/alexanderjeurissen/ranger_devicons $ranger_devicons
-else # update
+elif [[ $UPDATE ]]; then # update
   cd $ranger_devicons
   git pull
   cd -
