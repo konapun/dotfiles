@@ -2,6 +2,7 @@
 # TODO:
 # - add update functionality
 # - add option to symlink rather than copy
+# - add powershell script for finishing windows non-WSL config
 
 # package config
 apt_packages=(ctags fzf htop neofetch neovim nodejs ranger ripgrep tmux yarn)
@@ -38,6 +39,7 @@ function parse_options {
 }
 
 parse_options $*
+targets=$@
 
 # INSTALLATION
 if [[ ! $UPDATE ]]; then
@@ -60,12 +62,29 @@ fi
 mkdir -p ~/.config
 
 # CONFIGURATION
-zsh ./tmux/configure.zsh
-source ./zsh/configure.zsh
-source ./git/configure.zsh
-source ./nvim/configure.zsh
-source ./ranger/configure.zsh
-source ./winterm/configure.zsh
-source ./fonts/configure.zsh
+source ./theme/default.zsh
+if [[ $targets &&  ${targets[(ie)tmux]} -le ${#targets} ]]; then
+  zsh ./tmux/configure.zsh
+fi
+if [[ $targets &&  ${targets[(ie)zsh]} -le ${#targets} ]]; then
+  source ./zsh/configure.zsh
+fi
+if [[ $targets &&  ${targets[(ie)git]} -le ${#targets} ]]; then
+  source ./git/configure.zsh
+fi
+if [[ $targets &&  ${targets[(ie)nvim]} -le ${#targets} ]]; then
+  source ./nvim/configure.zsh
+fi
+if [[ $targets &&  ${targets[(ie)ranger]} -le ${#targets} ]]; then
+  source ./ranger/configure.zsh
+fi
+if [[ $targets &&  ${targets[(ie)winterm]} -le ${#targets} ]]; then
+  source ./winterm/configure.zsh
+fi
+if [[ $targets &&  ${targets[(ie)fonts]} -le ${#targets} ]]; then
+  source ./fonts/configure.zsh
+fi
+if [[ $targets &&  ${targets[(ie)gnome-terminal]} -le ${#targets} ]]; then
+  source ./gnome-terminal/configure.zsh
+fi
 source ./theme/configure.zsh
-source ./gnome-terminal/configure.zsh
