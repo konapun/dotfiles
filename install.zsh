@@ -40,6 +40,9 @@ function parse_options {
 
 parse_options $*
 targets=$@
+if [[ ! $targets ]]; then # target all by default
+  targets=(tmux zsh git nvim ranger winterm fonts gnome-terminal)
+fi
 
 # INSTALLATION
 if [[ ! $UPDATE ]]; then
@@ -63,28 +66,29 @@ mkdir -p ~/.config
 
 # CONFIGURATION
 source ./theme/default.zsh
-if [[ $targets &&  ${targets[(ie)tmux]} -le ${#targets} ]]; then
+if [[ ${targets[(i)tmux]} -le ${#targets} ]]; then
   zsh ./tmux/configure.zsh
 fi
-if [[ $targets &&  ${targets[(ie)zsh]} -le ${#targets} ]]; then
+if [[ ${targets[(i)zsh]} -le ${#targets} ]]; then
   source ./zsh/configure.zsh
 fi
-if [[ $targets &&  ${targets[(ie)git]} -le ${#targets} ]]; then
+if [[ ${targets[(i)git]} -le ${#targets} ]]; then
   source ./git/configure.zsh
 fi
-if [[ $targets &&  ${targets[(ie)nvim]} -le ${#targets} ]]; then
+if [[ ${targets[(i)nvim]} -le ${#targets} ]]; then
   source ./nvim/configure.zsh
 fi
-if [[ $targets &&  ${targets[(ie)ranger]} -le ${#targets} ]]; then
+if [[ ${targets[(i)ranger]} -le ${#targets} ]]; then
   source ./ranger/configure.zsh
 fi
-if [[ $targets &&  ${targets[(ie)winterm]} -le ${#targets} ]]; then
+if [[ ${targets[(i)winterm]} -le ${#targets} ]]; then
   source ./winterm/configure.zsh
 fi
-if [[ $targets &&  ${targets[(ie)fonts]} -le ${#targets} ]]; then
+if [[ ${targets[(i)fonts]} -le ${#targets} ]]; then
   source ./fonts/configure.zsh
 fi
-if [[ $targets &&  ${targets[(ie)gnome-terminal]} -le ${#targets} ]]; then
+if [[ ${targets[(i)gnome-terminal]} -le ${#targets} ]]; then
   source ./gnome-terminal/configure.zsh
 fi
+
 source ./theme/configure.zsh
