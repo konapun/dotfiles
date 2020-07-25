@@ -23,4 +23,5 @@ WALLPAPER=./wallpaper/hanka.png
 TMUX_PLUGINS=('egel/tmux-gruvbox')
 
 # vim plugins specific to this theme
-# TODO
+VIM_PLUGINS=('morhetz/gruvbox')
+VIM_COLORSCHEME=gruvbox
