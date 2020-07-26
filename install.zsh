@@ -6,6 +6,7 @@
 
 # package config
 apt_packages=(ctags fzf htop neofetch neovim nodejs ranger ripgrep tmux yarn)
+apt_graphical_packages=(audacity blender gimp lmms slack spotify-client steam)
 brew_packages=(ctags fzf htop neofetch neovim node ranger ripgrep tmux yarn)
 brew_cask_packages=(amethyst edex-ui font-cascadia-pl font-ibm-plex dash gimp iterm2 rectangle slack spotify ultimaker-cura vanilla)
 
@@ -48,6 +49,9 @@ fi
 if [[ ! $UPDATE ]]; then
   if [[ $OSTYPE == linux-gnu ]]; then
     apt install $apt_packages
+    if [[ $GRAPHICAL ]]; then
+      apt install $apt_graphical_packages
+    fi
   elif [[ $OSTYPE == darwin ]]; then
     brew install $brew_packages
     if [[ $GRAPHICAL ]]; then
