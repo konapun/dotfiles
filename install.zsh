@@ -5,7 +5,7 @@
 # - add powershell script for finishing windows non-WSL config
 
 # package config
-apt_packages=(ctags fzf htop neofetch neovim nodejs ranger ripgrep tmux yarn)
+apt_packages=(ctags fzf htop neofetch neovim nodejs ranger ripgrep tmux yarn) # ncmpcpp
 apt_graphical_packages=(audacity blender gimp lmms slack spotify-client steam)
 brew_packages=(ctags fzf htop neofetch neovim node ranger ripgrep tmux yarn)
 brew_cask_packages=(amethyst edex-ui font-cascadia-pl font-ibm-plex dash gimp iterm2 rectangle slack spotify ultimaker-cura vanilla)
