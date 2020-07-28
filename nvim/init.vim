@@ -55,6 +55,9 @@ Plug 'tpope/vim-rhubarb'                                                " GitHub
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }                     " A command-line fuzzy finder
 Plug 'junegunn/fzf.vim'                                                 " FZF wrapper for Vim
 
+" Decoration
+Plug 'ryanoasis/vim-devicons'                                           " Adds file type icons to Vim plugins
+
 call plug#end()
 
 " set theme
