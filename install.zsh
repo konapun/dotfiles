@@ -8,7 +8,7 @@
 apt_packages=(ctags fzf htop neofetch neovim nodejs ranger ripgrep tmux yarn zsh) # stow ncmpcpp
 apt_graphical_packages=(audacity blender gimp lmms slack spotify-client steam)
 brew_packages=(ctags fzf htop neofetch neovim node ranger ripgrep tmux yarn) # stow
-brew_cask_packages=(amethyst edex-ui font-cascadia-pl font-ibm-plex dash gimp iterm2 rectangle slack spotify ultimaker-cura vanilla)
+brew_cask_packages=(alacritty amethyst edex-ui font-cascadia-pl font-ibm-plex dash gimp iterm2 rectangle slack spotify ultimaker-cura vanilla)
 
 # set up variables for use in sourced scripts
 IS_WSL=$(cat /proc/version | grep microsoft)
