@@ -7,7 +7,7 @@
 # package config
 apt_packages=(bat ctags fzf highlight htop neofetch neovim nodejs ranger ripgrep thefuck tmux yarn zsh) # stow ncmpcpp
 apt_graphical_packages=(audacity blender gimp lmms slack spotify-client steam)
-brew_packages=(bat ctags fzf hightlight htop lsd neofetch neovim node ranger ripgrep thefuck tmux yarn) # stow
+brew_packages=(bat ctags fzf highlight htop lsd neofetch neovim node ranger ripgrep thefuck tmux yarn) # stow
 brew_cask_packages=(alacritty amethyst edex-ui font-cascadia-pl font-ibm-plex dash gimp iterm2 rectangle slack spotify ultimaker-cura vanilla)
 
 # set up variables for use in sourced scripts
