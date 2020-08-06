@@ -5,9 +5,9 @@
 # - add powershell script for finishing windows non-WSL config
 
 # package config
-apt_packages=(bat ctags fzf htop neofetch neovim nodejs ranger ripgrep thefuck tmux yarn zsh) # stow ncmpcpp
+apt_packages=(bat ctags fzf highlight htop neofetch neovim nodejs ranger ripgrep thefuck tmux yarn zsh) # stow ncmpcpp
 apt_graphical_packages=(audacity blender gimp lmms slack spotify-client steam)
-brew_packages=(bat ctags fzf htop lsd neofetch neovim node ranger ripgrep thefuck tmux yarn) # stow
+brew_packages=(bat ctags fzf hightlight htop lsd neofetch neovim node ranger ripgrep thefuck tmux yarn) # stow
 brew_cask_packages=(alacritty amethyst edex-ui font-cascadia-pl font-ibm-plex dash gimp iterm2 rectangle slack spotify ultimaker-cura vanilla)
 
 # set up variables for use in sourced scripts
@@ -42,7 +42,7 @@ function parse_options {
 parse_options $*
 targets=$@
 if [[ ! $targets ]]; then # target all by default
-  targets=(tmux zsh git nvim ranger winterm fonts alacritty gnome-terminal)
+  targets=(tmux zsh git nvim highlight ranger winterm fonts alacritty gnome-terminal)
 fi
 
 # INSTALLATION
@@ -81,6 +81,9 @@ if [[ ${targets[(i)git]} -le ${#targets} ]]; then
 fi
 if [[ ${targets[(i)nvim]} -le ${#targets} ]]; then
   source ./nvim/configure.zsh
+fi
+if [[ ${targets[(i)highlight]} -le ${#targets} ]]; then
+  source ./highlight/configure.zsh
 fi
 if [[ ${targets[(i)ranger]} -le ${#targets} ]]; then
   source ./ranger/configure.zsh
