@@ -1,14 +1,7 @@
 #!/usr/bin/env zsh
 # TODO:
-# - add update functionality
 # - add option to symlink rather than copy
 # - add powershell script for finishing windows non-WSL config
-
-# package config
-apt_packages=(bat ctags fzf highlight htop neofetch neovim nodejs ranger ripgrep thefuck tmux yarn zsh) # stow ncmpcpp
-apt_graphical_packages=(audacity blender gimp lmms slack spotify-client steam)
-brew_packages=(bat ctags fzf highlight htop lsd neofetch neovim node ranger ripgrep thefuck tmux yarn) # stow
-brew_cask_packages=(alacritty amethyst edex-ui font-cascadia-pl font-ibm-plex dash gimp iterm2 rectangle slack spotify ultimaker-cura vanilla)
 
 # set up variables for use in sourced scripts
 IS_WSL=$(cat /proc/version | grep microsoft)
@@ -47,20 +40,7 @@ fi
 
 # INSTALLATION
 if [[ ! $UPDATE ]]; then
-  if [[ $OSTYPE == linux-gnu ]]; then
-    apt install $apt_packages
-    if [[ $GRAPHICAL ]]; then
-      apt install $apt_graphical_packages
-    fi
-  elif [[ $OSTYPE =~ darwin ]]; then
-    brew install $brew_packages
-    if [[ $GRAPHICAL ]]; then
-      brew cask install $brew_cask_packages
-    fi
-  else
-    echo "Unsupported OS"
-    exit
-  fi
+  source ./packages/configure.zsh
 
   # CUSTOM INSTALLATION
   install_nvm
