@@ -93,6 +93,10 @@ set ignorecase                                                          " Ignore
 set showmatch                                                           " When a bracket is inserted, briefly jump to the matching one
 set smartcase                                                           " Perform a case sensitive search if the pattern contains upper case characters
 
+" show invisibles
+set list                                                                " Show invisible characters
+set listchars=eol:¬,tab:￫\ ,trail:·,extends:»,precedes:«,nbsp:␣         " Set custom invisibles
+
 " tab settings
 set autoindent                                                          " Copy indent from current line when starting a new line
 set expandtab                                                           " Use the appropriate number of spaces to insert a <Tab>
