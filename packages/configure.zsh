@@ -1,4 +1,4 @@
-if [[ $OSTYPE == linux-gnu ]]; then
+if [[ $OSTYPE =~ linux ]]; then
   source ./packages/linux.zsh
 elif [[ $OSTYPE =~ darwin ]]; then
   source ./packages/mac.zsh
