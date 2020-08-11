@@ -44,6 +44,12 @@ Plug 'vim-test/vim-test'                                                " Test r
 Plug 'radenling/vim-dispatch-neovim'                                    " Support for neovim's terminal emulator and job control to dispatch.vim
 Plug 'tpope/vim-dispatch'                                               " Asynchronous build and test dispatcher
 
+" text objects
+Plug 'kana/vim-textobj-entire'                                          " Text objects for entire buffers
+Plug 'kana/vim-textobj-indent'                                          " Text objects for indented blocks of lines
+Plug 'kana/vim-textobj-line'                                            " Text objects for the current line
+Plug 'kana/vim-textobj-user'                                            " Create your own text objects
+
 " git
 Plug 'airblade/vim-gitgutter'                                           " Show git diff in the gutter
 Plug 'rhysd/git-messenger.vim'                                          " Reveal commit messages under the cursor
