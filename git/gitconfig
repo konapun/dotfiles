@@ -1,35 +1,37 @@
 [user]
-	email = bremen.braun@gmail.com
-	name = konapun
+  email = bremen.braun@gmail.com
+  name = konapun
 [core]
-        excludesfile = ~/.gitignore_global
-	editor = nvim
+  excludesfile = ~/.gitignore_global
+  editor = nvim
 [push]
-        default = simple
+  default = simple
+[pull]
+  rebase = false
 [alias]
-	ls = !git branch | fzf | xargs git checkout
-        ca = !git add -A && git commit
-        ci = commit
-        cl = clone
-        co = checkout
-        cb = checkout -b
-        cm = checkout master
-        st = status
-        fa = fetch --all
-        aa = add --all
-        po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
-        pum = push upstream master
-        ri = rebase --interactive --autosquash upstream/master
-        stup = !git stash && git up && git stash apply
-        save = !git add -A && git commit -m 'quick save'
-        fix = !git add -A && git commit --fixup HEAD
-        undo = reset --soft HEAD~1
-        ac = !git add -A && git commit --amend -C HEAD
-        pf = push -f
-        acpf = !git ac && git pf
-        l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-        dmb = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
-        up = !git checkout master && git branch --set-upstream-to=upstream/master && git pull && git push origin master && git dmb
-        setup = "!f() { git remote add upstream $1 && git fetch --all && git up;}; f"
-        rekt = reset --hard upstream/master
-        git = hub
+  ls = !git branch | fzf | xargs git checkout
+  ca = !git add -A && git commit
+  ci = commit
+  cl = clone
+  co = checkout
+  cb = checkout -b
+  cm = checkout master
+  st = status
+  fa = fetch --all
+  aa = add --all
+  po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+  pum = push upstream master
+  ri = rebase --interactive --autosquash upstream/master
+  stup = !git stash && git up && git stash apply
+  save = !git add -A && git commit -m 'quick save'
+  fix = !git add -A && git commit --fixup HEAD
+  undo = reset --soft HEAD~1
+  ac = !git add -A && git commit --amend -C HEAD
+  pf = push -f
+  acpf = !git ac && git pf
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  dmb = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
+  up = !git checkout master && git branch --set-upstream-to=upstream/master && git pull && git push origin master && git dmb
+  setup = "!f() { git remote add upstream $1 && git fetch --all && git up;}; f"
+  rekt = reset --hard upstream/master
+  git = hub
