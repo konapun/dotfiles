@@ -69,3 +69,6 @@ nmap - <Plug>(choosewin)
 " undotree
 nnoremap <F5> :UndotreeToggle<cr>
 
+" goyo
+nmap <C-w>z :Goyo<cr>
+

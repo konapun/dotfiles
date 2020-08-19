@@ -34,6 +34,7 @@ Plug 'kshenoy/vim-signature'                                            " Toggle
 Plug 'vim-scripts/ReplaceWithRegister'                                  " Replace text object with contents of register
 Plug 'sirver/ultisnips'                                                 " The ultimate snippet solution for Vim
 Plug 'tpope/vim-repeat'                                                 " Enable repeating supported plugin maps
+Plug 'tpope/vim-sleuth'                                                 " Heuristically set buffer options
 
 " markup
 Plug 'alvan/vim-closetag'                                               " Automatically close HTML tags
@@ -61,7 +62,9 @@ Plug 'tpope/vim-rhubarb'                                                " GitHub
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }                     " A command-line fuzzy finder
 Plug 'junegunn/fzf.vim'                                                 " FZF wrapper for Vim
 
-" Decoration
+" decoration/layout
+Plug 'junegunn/goyo.vim'                                                " Distraction-free writing in Vim
+Plug 'junegunn/limelight.vim'                                           " Highlight current block
 Plug 'ryanoasis/vim-devicons'                                           " Adds file type icons to Vim plugins
 
 call plug#end()
