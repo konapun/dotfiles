@@ -21,19 +21,22 @@ Plug 'ludovicchabant/vim-gutentags'                                     " Tag fi
 Plug 'machakann/vim-sandwich'                                           " Add/delete/replace surroundings of a sandwiched text object
 Plug 'tpope/vim-unimpaired'                                             " Pairs of handy bracket mappings
 Plug 'mbbill/undotree'                                                  " Undo history visualizer
-Plug 'simeji/winresizer'                                                " Easy window resizing
 Plug 'justinmk/vim-sneak'                                               " Jump to any location specified by two characters
 Plug 'editorconfig/editorconfig-vim'                                    " Support for .editorconfig
 Plug 'liuchengxu/vista.vim'                                             " View and search LSP symbols, tags in Vim/NeoVim
 Plug 'wellle/context.vim'                                               " Shows the context of the currently visible buffer contents
-Plug 't9md/vim-choosewin'                                               " Land on window you chose like tmux's 'display-pane'
-Plug 'farmergreg/vim-lastplace'                                         " Intelligently reopen files at your last edit position
-Plug 'camspiers/animate.vim'                                            " Window animation
-Plug 'camspiers/lens.vim'                                               " Automatic window resizing
 Plug 'kshenoy/vim-signature'                                            " Toggle, display and navigate marks
 Plug 'vim-scripts/ReplaceWithRegister'                                  " Replace text object with contents of register
 Plug 'sirver/ultisnips'                                                 " The ultimate snippet solution for Vim
 Plug 'tpope/vim-repeat'                                                 " Enable repeating supported plugin maps
+
+" buffer/window
+Plug 'camspiers/animate.vim'                                            " Window animation
+Plug 'camspiers/lens.vim'                                               " Automatic window resizing
+Plug 'qpkorr/vim-bufkill'                                               " Interact with buffers without affecting window layout
+Plug 'simeji/winresizer'                                                " Easy window resizing
+Plug 't9md/vim-choosewin'                                               " Land on window you chose like tmux's 'display-pane'
+Plug 'farmergreg/vim-lastplace'                                         " Intelligently reopen files at your last edit position
 Plug 'tpope/vim-sleuth'                                                 " Heuristically set buffer options
 
 " markup
