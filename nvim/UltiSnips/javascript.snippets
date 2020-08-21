@@ -201,16 +201,28 @@ const ${1:name} = ($2) => ({
 })
 endsnippet
 
-snippet im "import"
+snippet imp "import"
 import ${1:foo} from '${2:bar}'
 endsnippet
 
-snippet ex "export"
+snippet exp "export"
 export ${1:default} ${2:bar}
 endsnippet
 
-snippet ex.c "export const" w
+snippet exp.c "export const" w
 export const ${1:name} = $0
+endsnippet
+
+snippet bc "block comment"
+/*
+ * $0
+ */
+endsnippet
+
+snippet bc.d "block comment doc" w
+/**
+ * $0
+ */
 endsnippet
 
 snippet prom "promise"
