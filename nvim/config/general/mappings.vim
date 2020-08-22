@@ -1,5 +1,9 @@
 " keybindings
 
+"general
+let mapleader=" "
+nnoremap <silent> <C-n> :nohl<CR>
+
 " split navigation
 nnoremap <C-w>n :vnew<CR>
 nnoremap <C-w>t :tabnew<CR>
