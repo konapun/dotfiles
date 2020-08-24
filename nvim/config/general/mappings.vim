@@ -3,6 +3,7 @@
 "general
 let mapleader=" "
 nnoremap <silent> <C-n> :nohl<CR>
+map <C-c> <Esc>
 
 " split navigation
 nnoremap <C-w>n :vnew<CR>
