@@ -39,6 +39,9 @@
             }
         ]
     },
+    "actions": [
+        { "command": "commandPalette", "keys": "ctrl+shift+p" }
+    ],
     // Add custom color schemes to this array
     "schemes": [
         {
