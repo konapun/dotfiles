@@ -19,14 +19,21 @@ set splitright
 nnoremap gb :bn<CR>
 nnoremap gB :bp<CR>
 
+" replace-with-register
+nmap r <Plug>ReplaceWithRegisterOperator
+nmap rr <Plug>ReplaceWithRegisterLine
+xmap r <Plug>ReplaceWithRegisterVisual
+
 " CoC
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gy <Plug>(coc-type-definition)
 nmap <leader>rn <Plug>(coc-rename)
 
 " ALE
-nmap <leader>F  :ALEFix<CR>
+nmap <leader>F :ALEFix<CR>
 
 " fugitive
 nmap <leader>gb :Gblame<CR>
