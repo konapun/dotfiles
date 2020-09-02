@@ -35,11 +35,11 @@ function parse_options {
 parse_options $*
 targets=$@
 if [[ ! $targets ]]; then # target all by default
-  targets=(tmux zsh git nvim highlight ranger winterm fonts alacritty gnome-terminal)
+  targets=(packages tmux zsh git nvim highlight ranger winterm fonts alacritty gnome-terminal)
 fi
 
 # INSTALLATION
-if [[ ! $UPDATE ]]; then
+if [[ ${targets[(i)packages]} -le ${#targets} ]]; then
   source ./packages/configure.zsh
 
   # CUSTOM INSTALLATION
