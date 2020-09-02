@@ -20,9 +20,9 @@ nnoremap gb :bn<CR>
 nnoremap gB :bp<CR>
 
 " replace-with-register
-nmap r <Plug>ReplaceWithRegisterOperator
-nmap rr <Plug>ReplaceWithRegisterLine
-xmap r <Plug>ReplaceWithRegisterVisual
+nmap <localleader>r <Plug>ReplaceWithRegisterOperator
+nmap <localleader>rr <Plug>ReplaceWithRegisterLine
+xmap <localleader>r <Plug>ReplaceWithRegisterVisual
 
 " CoC
 nnoremap <silent> K :call <SID>show_documentation()<CR>
