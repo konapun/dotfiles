@@ -7,6 +7,7 @@ let g:coc_global_extensions = [
   \'coc-eslint',
   \'coc-json',
   \'coc-tsserver',
+  \'coc-conjure',
   \'coc-emmet',
   \'coc-snippets'
 \]
