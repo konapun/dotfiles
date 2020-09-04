@@ -1,3 +1,5 @@
+source ./packages/npm.zsh
+
 if [[ $OSTYPE =~ linux ]]; then
   source ./packages/linux.zsh
 elif [[ $OSTYPE =~ darwin ]]; then
@@ -11,3 +13,5 @@ eval "$PACKAGE_MANAGER install $CORE_PACKAGES"
 if [[ $GRAPHICAL ]]; then
   eval $GRAPHICAL_PACKAGE_MANAGER install $GRAPHICAL_PACKAGES
 fi
+
+npm install -g $NPM_PACKAGES
