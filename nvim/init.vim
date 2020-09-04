@@ -20,7 +20,6 @@ Plug 'w0rp/ale'                                                         " Asynch
 Plug 'ludovicchabant/vim-gutentags'                                     " Tag file management
 Plug 'machakann/vim-sandwich'                                           " Add/delete/replace surroundings of a sandwiched text object
 Plug 'tpope/vim-unimpaired'                                             " Pairs of handy bracket mappings
-Plug 'jiangmiao/auto-pairs'                                             " Insert or delete brackets, parens, and quotes in pairs
 Plug 'mbbill/undotree'                                                  " Undo history visualizer
 Plug 'justinmk/vim-sneak'                                               " Jump to any location specified by two characters
 Plug 'editorconfig/editorconfig-vim'                                    " Support for .editorconfig
