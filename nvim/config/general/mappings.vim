@@ -49,6 +49,7 @@ nmap <leader>f :Files<CR>
 nmap <leader>h :History<CR>
 nmap <leader>l :BLines<CR>
 nmap <leader>L :Lines<CR>
+nmap <leader>m :Marks<CR>
 nmap <leader>o :Buffers<CR>
 nmap <leader>t :BTags<CR>
 nmap <leader>T :Tags<CR>
