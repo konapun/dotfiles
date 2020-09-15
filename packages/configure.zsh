@@ -1,3 +1,4 @@
+source ./packages/nvm.zsh
 source ./packages/npm.zsh
 
 if [[ $OSTYPE =~ linux ]]; then

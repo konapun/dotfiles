@@ -14,12 +14,6 @@ function warn {
   echo -e "${red}$@${nc}"
 }
 
-function install_nvm {
-  if [[ ! -d ~/.nvm ]]; then
-    wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-  fi
-}
-
 function parse_options {
   o_theme=(-t "")
   o_winuser=(-w Bremen)
@@ -41,9 +35,6 @@ fi
 # INSTALLATION
 if [[ ${targets[(i)packages]} -le ${#targets} ]]; then
   source ./packages/configure.zsh
-
-  # CUSTOM INSTALLATION
-  install_nvm
 fi
 
 mkdir -p ~/.config
