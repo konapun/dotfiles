@@ -32,12 +32,12 @@ else
       fc-cache -fv
 
       # set the font
-      if [[ $(which gsettings) ]]; then
+      if command -v gsettings &> /dev/null; then
         set_gnome_terminal $FONT[1]
       fi
     fi
   else # macos
-    if [[ $(which brew) ]]; then # the witches' brew!
+    if command -v brew &> /dev/null; then # the witches' brew!
       brew cask install $FONT[4]
     fi
     # TODO: set font in iterm
