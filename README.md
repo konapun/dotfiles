@@ -2,25 +2,38 @@
 
 <img src="screenshot.png" alt="Screenshot">
 <hr>
-I regularly jump across Windows, MacOS, and various Linux DEs so this is an attempt to script my environment to be usable wherever I go. In particular,
-it provides installation and configuration for:
+I regularly jump across Windows, MacOS, and various Linux DEs so this is an attempt to script my environment to be usable wherever I go. This
+setup is used and confirmed working on Mac OS, Ubuntu 18.04, Ubuntu 20.04 (WSL), and Raspberry Pi OS (Raspian) on armv7.
+
+In particular, this provides installation and configuration for:
 
   * git
   * neovim
   * tmux
   * ranger
-  * zsh
+  * zsh (and sets up replacements for cat and ls)
   * fonts
   * Windows Terminal (where available)
   * Gnome Terminal (where available)
   * Alacritty (where available)
   * (more coming soon as I get it working for my bspwm setup)
 
-### Theming
-My approach to theming is in the form of patching a known setup. Rather than using templates for my initial config, my initial config is based off gruvbox
-and then a specific theme is patched over the top on the target machine by replacing known values.
+### Prerequisites
+zsh
 
-Currently available themes are:
+### Installing
+The installation/configuration script is modular. To install everything, simply run `zsh ./install.zsh` (sudo is required on Linux).
 
-  * Gruvbox
-  * (more on the way)
+Alternatively, you can install the following targets separately by running `zsh ./install.zsh [target1 target2 ...]` where a target is one of:
+
+  * **packages** install all apt/brew/etc programs
+  * **tmux** install configuration and associated plugins for tmux
+  * **zsh** install oh-my-zsh and associated configuration
+  * **git** install git aliases and config
+  * **nvim** install neovim configuration
+  * **highlight** install highlight configuration (for syntax highlighting within various unix utilities)
+  * **ranger** install ranger configuration
+  * **winterm** install configuration for Windows Terminal (where applicable)
+  * **fonts** install fonts associated with this configuration. Will set default font where available
+  * **alacritty** install configuration for alacritty (where available)
+  * **gnome-terminal** install configuration for gnome terminal (where available)
