@@ -23,7 +23,7 @@ if [[ $IS_WSL ]]; then
   warn "Fonts must be installed manually under WSL. Please install the font from this directory."
   curl -fLo $FONT_LOCAL $FONT[2]%20Windows%20Compatible.$FONT[3]
 else
-  if [[ $OSTYPE == linux-gnu ]]; then
+  if [[ $OSTYPE =~ linux ]]; then
     if [[ ! -f ~/.local/share/fonts/$FONT_FILE || $UPDATE ]]; then
       # download and install the font
       curl -fLo $FONT_LOCAL $FONT_FILE

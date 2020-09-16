@@ -1,8 +1,8 @@
 # Concatenates default settings with platform settings and copies them to ~/.conf/ranger/rc.conf
 
-if [[ $OSTYPE == linux-gnu ]]; then
+if [[ $OSTYPE =~ linux ]]; then
   platform=linux
-elif [[ $OSTYPE == darwin ]]; then
+elif [[ $OSTYPE =~ darwin ]]; then
   platform=mac
 fi
 
