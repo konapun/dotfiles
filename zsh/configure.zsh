@@ -8,6 +8,12 @@ elif [[ $UPDATE ]]; then
   git -C ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting pull
 fi
 
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-completions ]]; then
+  git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+elif [[ $UPDATE ]]; then
+  git -C ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions pull
+fi
+
 local zsh_files=(ignore zshenv zshrc p10k.zsh)
 for zsh_file in $zsh_files; do
   local syspath=~/.$zsh_file
