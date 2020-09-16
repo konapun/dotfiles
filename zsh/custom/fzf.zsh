@@ -13,9 +13,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='
 --bind ctrl-f:page-down,ctrl-b:page-up
 --ansi
---color fg:-1,bg:-1,hl:#81A1C1
---color fg+:-1,bg+:-1,hl+:#8FBCBB
---color info:-1,prompt:#A3BE8C,pointer:#8FBCBB,marker:#EBCB8B,spinner:#EBCB8B,header:-1
+--color fg:15,bg:0,hl:11,fg+:15,bg+:0,hl+:11
+--color info:2,prompt:8,spinner:11,pointer:12,marker:3,header:8
 '
 
 bindkey '^P' fzf-file-widget
