@@ -6,7 +6,8 @@ nnoremap <silent> <C-n> :nohl<CR>
 map <C-c> <Esc>
 
 " split navigation
-nnoremap <C-w>n :vnew<CR>
+nnoremap <C-w>n :enew<CR>
+nnoremap <C-w>N :vnew<CR>
 nnoremap <C-w>t :tabnew<CR>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
