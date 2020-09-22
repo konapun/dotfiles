@@ -89,3 +89,6 @@ nmap <C-w>z :Goyo<cr>
 
 " vista
 nmap <leader>v :Vista coc
+
+" lens
+nnoremap <silent> <C-w>[ :call lens#toggle()<CR>
