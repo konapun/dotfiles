@@ -40,7 +40,6 @@ fi
 mkdir -p ~/.config
 
 # CONFIGURATION
-source ./theme/default.zsh
 if [[ ${targets[(i)tmux]} -le ${#targets} ]]; then
   zsh ./tmux/configure.zsh
 fi

@@ -1,4 +1,4 @@
 TMUX_PLUGINS=()
 VIM_PLUGINS=()
 
-source ./theme/gruvbox.zsh
+source ./theme/themes/gruvbox.zsh
