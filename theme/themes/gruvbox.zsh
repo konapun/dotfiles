@@ -17,10 +17,10 @@ BRIGHT_CYAN=#8ec07c
 BRIGHT_WHITE=#ebdbb2
 
 # wallpaper (optional)
-WALLPAPER=./wallpaper/hanka.png
+WALLPAPER=./wallpaper/hanka_gruvbox.png
 
 # tmux plugins specific to this theme
-TMUX_PLUGINS=('egel/tmux-gruvbox')
+TMUX_PLUGINS=()
 
 # vim plugins specific to this theme
 VIM_PLUGINS=('morhetz/gruvbox')
