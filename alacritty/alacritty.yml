@@ -42,3 +42,13 @@ colors:
     magenta: '{{bright_purple}}'
     cyan:    '{{bright_cyan}}'
     white:   '{{bright_white}}'
+
+  dim:
+    black:   '{{!dim_black}}'
+    red:     '{{!dim_red}}'
+    green:   '{{!dim_green}}'
+    yellow:  '{{!dim_yellow}}'
+    blue:    '{{!dim_blue}}'
+    magenta: '{{!dim_purple}}'
+    cyan:    '{{!dim_cyan}}'
+    white:   '{{!dim_white}}'
