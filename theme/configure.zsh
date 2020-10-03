@@ -1,44 +1,49 @@
-# TODO
-# create easily definable theme files
-# apply either by
-#   1) patching local version
-#   2) generating a full theme
-#
-# Where possible, a theme should be hardcoded and then its value
-# should be patched into the configuration (such as just patching
-# `colorscheme` in nvim) rather than replacing color values
-#
-# Other ideas: create tool to generate theming sections for files
-# in this repo (like theme templates)
+# Apply theme by substituting template variables with theme values
 
-function apply_tmux_plugin {
-  # TODO
-}
-
-function apply_nvim_plugin {
-  # TODO
-}
-
+source ./theme/themer.zsh
 source ./theme/default.zsh
+
 if [[ -n $THEME ]]; then
   if [[ -f ./theme/themes/$THEME ]]; then
     source ./theme/themes/$THEME # set theme variables for patching
   fi
 
-  # Patch configs for theme
-
   # Theme nvim
-  for nvim_plugin in $NVIM_PLUGINS; do
-    apply_nvim_plugin $nvim_plugin
-  done
+  themer_substitute syntax_theme_plug $SYNTAX_THEME_PLUG $NVIM_CONFIG_FILE
+  themer_substitute syntax_theme $SYNTAX_THEME $NVIM_CONFIG_FILE
+  themer_cleanup $NVIM_CONFIG_FILE
 
   # Theme tmux
-  for tmux_plugin in $TMUX_PLUGINS; do
-    apply_tmux_plugin $tmux_plugin
-  done
-
-  # Theme terminal (gnome, windows, alacritty, iterm2, etc.)
   # TODO
+
+  # Theme bat
+  themer_substitute syntax_theme $SYNTAX_THEME $BAT_CONFIG_FILE
+  themer_cleanup $BAT_CONFIG_FILE
+
+  # Theme highlight
+  # TODO
+
+  # Theme terminal
+  # winterm
+  themer_substitute syntax_theme $SYNTAX_THEME $WINTERM_CONFIG_FILE
+  themer_cleanup $WINTERM_CONFIG_FILE
+  # alacritty
+  themer_substitute black $BLACK $ALACRITTY_CONFIG_FILE
+  themer_substitute red $RED $ALACRITTY_CONFIG_FILE
+  themer_substitute green $GREEN $ALACRITTY_CONFIG_FILE
+  themer_substitute yellow $YELLOW $ALACRITTY_CONFIG_FILE
+  themer_substitute blue $BLUE $ALACRITTY_CONFIG_FILE
+  themer_substitute purple $PURPLE $ALACRITTY_CONFIG_FILE
+  themer_substitute cyan $CYAN $ALACRITTY_CONFIG_FILE
+  themer_substitute white $WHITE $ALACRITTY_CONFIG_FILE
+  themer_substitute bright_black $BRIGHT_BLACK $ALACRITTY_CONFIG_FILE
+  themer_substitute bright_red $BRIGHT_RED $ALACRITTY_CONFIG_FILE
+  themer_substitute bright_green $BRIGHT_GREEN $ALACRITTY_CONFIG_FILE
+  themer_substitute bright_yellow $BRIGHT_YELLOW $ALACRITTY_CONFIG_FILE
+  themer_substitute bright_blue $BRIGHT_BLUE $ALACRITTY_CONFIG_FILE
+  themer_substitute bright_purple $BRIGHT_PURPLE $ALACRITTY_CONFIG_FILE
+  themer_substitute bright_cyan $BRIGHT_CYAN $ALACRITTY_CONFIG_FILE
+  themer_substitute bright_white $BRIGHT_WHITE $ALACRITTY_CONFIG_FILE
 
   # Set wallpaper
   # TODO

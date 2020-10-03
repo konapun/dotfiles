@@ -37,3 +37,20 @@ Alternatively, you can install the following targets separately by running `zsh 
   * **fonts** install fonts associated with this configuration. Will set default font where available
   * **alacritty** install configuration for alacritty (where available)
   * **gnome-terminal** install configuration for gnome terminal (where available)
+
+### Theming
+Theme support is provided via a simple `sed`-based template system. Any configuration file can specify a template variable by enclosing a key
+within double curly braces (e.g. `{{my_template_variable}}`). The theme script then replaces these variables with values from the loaded theme.
+Some theming is done by specifying hex colors while other theming is done by taking advantage of provided themes.
+
+
+To use a theme, run the install script with the `--theme` option followed by the theme name: `./install.zsh --theme dracula`
+
+#### Available Themes
+  * gruvbox (default)
+  * cyberpunk
+  * dracula
+  * eva01
+  * monokai
+  * nord
+

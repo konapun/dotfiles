@@ -6,7 +6,7 @@
     "profiles": {
         "defaults": {
             // Put settings here that you want to apply to all profiles
-            "colorScheme": "Gruvbox",
+            "colorScheme": "{{syntax_theme}}",
             "fontFace": "CaskaydiaCove NF"
         },
         "list": [
@@ -45,7 +45,7 @@
     // Add custom color schemes to this array
     "schemes": [
         {
-            "name": "Gruvbox",
+            "name": "gruvbox",
             "background": "#282828",
             "black": "#282828",
             "blue": "#458588",
@@ -66,7 +66,7 @@
             "yellow": "#D79921"
         },
         {
-          "name": "Eva01",
+          "name": "eva01",
           "background": "#282828",
           "black": "#000000",
           "blue": "#00ddff",

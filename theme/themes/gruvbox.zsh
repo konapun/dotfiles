@@ -1,3 +1,7 @@
+# vim/bat config
+SYNTAX_THEME_PLUG='morhetz/gruvbox'
+SYNTAX_THEME=gruvbox
+
 # colors
 BLACK=#282828
 RED=#cc241d
@@ -15,6 +19,9 @@ BRIGHT_BLUE=#83a598
 BRIGHT_PURPLE=#d3869b
 BRIGHT_CYAN=#8ec07c
 BRIGHT_WHITE=#ebdbb2
+
+BACKGROUND=$BLACK
+FOREGROUND=$BRIGHT_WHITE
 
 # wallpaper (optional)
 WALLPAPER=./wallpaper/hanka_gruvbox.png
