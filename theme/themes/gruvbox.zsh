@@ -1,6 +1,7 @@
+# GRUVBOX
+
 # vim/bat config
-SYNTAX_THEME_PLUG_AUTHOR='morhetz'
-SYNTAX_THEME_PLUG_THEME='gruvbox'
+SYNTAX_THEME_PLUG="'morhetz\/gruvbox'"
 SYNTAX_THEME=gruvbox
 
 # colors
@@ -27,9 +28,3 @@ FOREGROUND=$BRIGHT_WHITE
 # wallpaper (optional)
 WALLPAPER=./wallpaper/hanka_gruvbox.png
 
-# tmux plugins specific to this theme
-TMUX_PLUGINS=()
-
-# vim plugins specific to this theme
-VIM_PLUGINS=('morhetz/gruvbox')
-VIM_COLORSCHEME=gruvbox

@@ -32,6 +32,8 @@ if [[ ! $targets ]]; then # target all by default
   targets=(packages tmux zsh bat git nvim highlight ranger winterm fonts alacritty gnome-terminal)
 fi
 
+source ./theme/configure.zsh # set up utilities and variables for theming
+
 # INSTALLATION
 if [[ ${targets[(i)packages]} -le ${#targets} ]]; then
   source ./packages/configure.zsh
@@ -74,4 +76,3 @@ if [[ ${targets[(i)gnome-terminal]} -le ${#targets} ]]; then
   source ./gnome-terminal/configure.zsh
 fi
 
-source ./theme/configure.zsh # theme must be applied no matter what so template variables don't linger

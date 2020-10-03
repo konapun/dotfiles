@@ -44,7 +44,7 @@ within double curly braces (e.g. `{{my_template_variable}}`). The theme script t
 Some theming is done by specifying hex colors while other theming is done by taking advantage of provided themes.
 
 
-To use a theme, run the install script with the `--theme` option followed by the theme name: `./install.zsh --theme dracula`
+To use a theme, run the install script with the `-t` option followed by the theme name: `./install.zsh -t dracula`
 
 #### Available Themes
   * gruvbox (default)

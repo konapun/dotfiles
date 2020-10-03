@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " themes
-Plug '{{!syntax_theme_plug_author}}/{{!syntax_theme_plug_theme}}'
+Plug {{!syntax_theme_plug}}
 " Plug 'morhetz/gruvbox'                                                  " Retro groove color scheme for Vim
 " Plug 'franbach/miramare'                                                " Comfortable & Pleasant Color Scheme for Vim
 " Plug 'sainnhe/forest-night'                                             " Comfortable & Pleasant Color Scheme for Vim
