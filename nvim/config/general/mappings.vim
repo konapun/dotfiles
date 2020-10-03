@@ -2,7 +2,7 @@
 
 "general
 let mapleader=" "
-let maplocalleader="\"
+let maplocalleader="\\"
 nnoremap <silent> <C-n> :nohl<CR>
 map <C-c> <Esc>
 
