@@ -18,31 +18,37 @@ window:
 cursor:
   style: Block
 
-# Gruvbox Dark
 colors:
-  # Default colors
   primary:
-    # hard contrast: background = '#1d2021'
-    background: '#282828'
-    # soft contrast: background = '#32302f'
-    foreground: '#ebdbb2'
+    background: '{{background}}'
+    foreground: '{{foreground}}'
 
   normal:
-    black:   '#282828'
-    red:     '#cc241d'
-    green:   '#98971a'
-    yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#a89984'
+    black:   '{{black}}'
+    red:     '{{red}}'
+    green:   '{{green}}'
+    yellow:  '{{yellow}}'
+    blue:    '{{blue}}'
+    magenta: '{{purple}}'
+    cyan:    '{{cyan}}'
+    white:   '{{white}}'
 
   bright:
-    black:   '#928374'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#ebdbb2'
+    black:   '{{bright_black}}'
+    red:     '{{bright_red}}'
+    green:   '{{bright_green}}'
+    yellow:  '{{bright_yellow}}'
+    blue:    '{{bright_blue}}'
+    magenta: '{{bright_purple}}'
+    cyan:    '{{bright_cyan}}'
+    white:   '{{bright_white}}'
+
+  dim:
+    black:   '{{!dim_black}}'
+    red:     '{{!dim_red}}'
+    green:   '{{!dim_green}}'
+    yellow:  '{{!dim_yellow}}'
+    blue:    '{{!dim_blue}}'
+    magenta: '{{!dim_purple}}'
+    cyan:    '{{!dim_cyan}}'
+    white:   '{{!dim_white}}'

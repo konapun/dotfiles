@@ -32,6 +32,8 @@ if [[ ! $targets ]]; then # target all by default
   targets=(packages tmux zsh bat git nvim highlight ranger winterm fonts alacritty gnome-terminal)
 fi
 
+source ./theme/configure.zsh # set up utilities and variables for theming
+
 # INSTALLATION
 if [[ ${targets[(i)packages]} -le ${#targets} ]]; then
   source ./packages/configure.zsh
@@ -40,7 +42,6 @@ fi
 mkdir -p ~/.config
 
 # CONFIGURATION
-source ./theme/default.zsh
 if [[ ${targets[(i)tmux]} -le ${#targets} ]]; then
   zsh ./tmux/configure.zsh
 fi
@@ -75,4 +76,3 @@ if [[ ${targets[(i)gnome-terminal]} -le ${#targets} ]]; then
   source ./gnome-terminal/configure.zsh
 fi
 
-source ./theme/configure.zsh

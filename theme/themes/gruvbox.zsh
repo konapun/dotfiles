@@ -1,3 +1,9 @@
+# GRUVBOX
+
+# vim/bat config
+SYNTAX_THEME_PLUG="'morhetz\/gruvbox'"
+SYNTAX_THEME=gruvbox
+
 # colors
 BLACK=#282828
 RED=#cc241d
@@ -16,12 +22,9 @@ BRIGHT_PURPLE=#d3869b
 BRIGHT_CYAN=#8ec07c
 BRIGHT_WHITE=#ebdbb2
 
+BACKGROUND=$BLACK
+FOREGROUND=$BRIGHT_WHITE
+
 # wallpaper (optional)
-WALLPAPER=./wallpaper/hanka.png
+WALLPAPER=./wallpaper/hanka_gruvbox.png
 
-# tmux plugins specific to this theme
-TMUX_PLUGINS=('egel/tmux-gruvbox')
-
-# vim plugins specific to this theme
-VIM_PLUGINS=('morhetz/gruvbox')
-VIM_COLORSCHEME=gruvbox

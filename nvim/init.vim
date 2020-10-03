@@ -1,12 +1,14 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " themes
-Plug 'morhetz/gruvbox'                                                  " Retro groove color scheme for Vim
+Plug {{!syntax_theme_plug}}
+" Plug 'morhetz/gruvbox'                                                  " Retro groove color scheme for Vim
 " Plug 'franbach/miramare'                                                " Comfortable & Pleasant Color Scheme for Vim
 " Plug 'sainnhe/forest-night'                                             " Comfortable & Pleasant Color Scheme for Vim
 " Plug 'sainnhe/gruvbox-material'                                         " Gruvbox with Material Palette
 " Plug 'fcpg/vim-farout'                                                  " Dark retro base16 theme for gvim and 24-bit color terminals
 " Plug 'fcpg/vim-fahrenheit'                                              " Dark, warm base16 Vim theme for 256-color terminals
+
 
 " general
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                         " Auto-completion
@@ -82,7 +84,7 @@ call plug#end()
 set background=dark                                                     " Set colorscheme background color
 set termguicolors                                                       " Enable 24-bit color
 syntax enable                                                           " Enable syntax highlighting
-colorscheme gruvbox
+colorscheme {{syntax_theme}}
 
 " general
 set autoread                                                            " Reload files changed outside Vim
