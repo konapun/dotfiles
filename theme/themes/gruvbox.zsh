@@ -1,5 +1,6 @@
 # vim/bat config
-SYNTAX_THEME_PLUG='morhetz/gruvbox'
+SYNTAX_THEME_PLUG_AUTHOR='morhetz'
+SYNTAX_THEME_PLUG_THEME='gruvbox'
 SYNTAX_THEME=gruvbox
 
 # colors
