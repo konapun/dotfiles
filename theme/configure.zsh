@@ -44,6 +44,7 @@ if [[ -n $THEME ]]; then
   themer_substitute bright_purple $BRIGHT_PURPLE $ALACRITTY_CONFIG_FILE
   themer_substitute bright_cyan $BRIGHT_CYAN $ALACRITTY_CONFIG_FILE
   themer_substitute bright_white $BRIGHT_WHITE $ALACRITTY_CONFIG_FILE
+  themer_cleanup $ALACRITTY_CONFIG_FILE
 
   # Set wallpaper
   # TODO

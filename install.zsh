@@ -74,4 +74,4 @@ if [[ ${targets[(i)gnome-terminal]} -le ${#targets} ]]; then
   source ./gnome-terminal/configure.zsh
 fi
 
-source ./theme/configure.zsh
+source ./theme/configure.zsh # theme must be applied no matter what so template variables don't linger
