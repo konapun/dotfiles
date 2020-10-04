@@ -26,5 +26,5 @@ BACKGROUND=$BLACK
 FOREGROUND=$BRIGHT_WHITE
 
 # wallpaper (optional)
-WALLPAPER=./wallpaper/hanka_gruvbox.png
+WALLPAPER=./wallpaper/dracula.png
 
