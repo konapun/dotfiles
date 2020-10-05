@@ -17,6 +17,12 @@ window:
 
 cursor:
   style: Block
+  text: '{{!cursor_text}}'
+  cursor: '{{!cursor}}'
+
+selection:
+  text: '{{!selection_text}}'
+  backgroun: '{{!selection_background}}'
 
 colors:
   primary:

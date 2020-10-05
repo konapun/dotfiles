@@ -7,6 +7,10 @@ fi
 
 
 # Theming
+themer_substitute cursor_text $CURSOR_TEXT $ALACRITTY_CONFIG_FILE
+themer_substitute cursor $CURSOR $ALACRITTY_CONFIG_FILE
+themer_substitute selection_text $SELECTION_TEXT $ALACRITTY_CONFIG_FILE
+themer_substitute selection_background $SELECTION_BACKGROUND $ALACRITTY_CONFIG_FILE
 themer_substitute background $BACKGROUND $ALACRITTY_CONFIG_FILE
 themer_substitute foreground $FOREGROUND $ALACRITTY_CONFIG_FILE
 themer_substitute black $BLACK $ALACRITTY_CONFIG_FILE
