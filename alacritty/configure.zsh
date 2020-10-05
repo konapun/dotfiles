@@ -1,4 +1,4 @@
-ALACRITTY_CONFIG_FILE=~/.config/alacritty
+ALACRITTY_CONFIG_FILE=~/.config/alacritty/alacritty.yml
 
 if command -v alacritty &> /dev/null; then
   cp -r ./alacritty ~/.config
@@ -7,6 +7,12 @@ fi
 
 
 # Theming
+themer_substitute cursor_text $CURSOR_TEXT $ALACRITTY_CONFIG_FILE
+themer_substitute cursor $CURSOR $ALACRITTY_CONFIG_FILE
+themer_substitute selection_text $SELECTION_TEXT $ALACRITTY_CONFIG_FILE
+themer_substitute selection_background $SELECTION_BACKGROUND $ALACRITTY_CONFIG_FILE
+themer_substitute background $BACKGROUND $ALACRITTY_CONFIG_FILE
+themer_substitute foreground $FOREGROUND $ALACRITTY_CONFIG_FILE
 themer_substitute black $BLACK $ALACRITTY_CONFIG_FILE
 themer_substitute red $RED $ALACRITTY_CONFIG_FILE
 themer_substitute green $GREEN $ALACRITTY_CONFIG_FILE
