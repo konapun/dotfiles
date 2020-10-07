@@ -45,6 +45,27 @@
     // Add custom color schemes to this array
     "schemes": [
         {
+            "name": "all-hallows-eve",
+            "background": "#0c0c0c",
+            "black": "#404040",
+            "blue": "#c900ff",
+            "brightBlack": "#404040",
+            "brightBlue": "#c900ff",
+            "brightCyan": "#c900ff",
+            "brightGreen": "#09ff00",
+            "brightPurple": "#c900ff",
+            "brightRed": "#c900ff",
+            "brightWhite": "#ffffff",
+            "brightYellow": "#d9ff00",
+            "cyan": "#c900ff",
+            "foreground": "#ffffff",
+            "green": "#09ff00",
+            "purple": "#c900ff",
+            "red": "#c900ff",
+            "white": "#ffffff",
+            "yellow": "#d9ff00"
+        },
+        {
             "name": "gruvbox",
             "background": "#282828",
             "black": "#282828",
@@ -108,7 +129,8 @@
             "brightRed": "#FF6E6E",
             "brightWhite": "#FFFFFF",
             "brightYellow": "#FFFFA5"
-        },{
+        },
+        {
             "name": "nord",
             "background" : "#2E3440",
             "foreground" : "#E5E9F0",
