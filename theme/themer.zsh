@@ -6,8 +6,8 @@ function themer_substitute {
   local pattern="{{$key}}"
   local kibosh_pattern="{{!$key}}"
 
-  sed -i -- "s/$pattern/$value/g" $file
-  sed -i -- "s/$kibosh_pattern/$value/g" $file
+  sed -i -- "s/$pattern/$value/g" $file &> /dev/null
+  sed -i -- "s/$kibosh_pattern/$value/g" $file &> /dev/null
 }
 
 # Ensures there are no unsubstituted template variables within a file (to be called after all substituions have taken place)
@@ -24,6 +24,6 @@ function themer_validate {
 function themer_cleanup {
   local file=$1
 
-  sed --in-place '/{{!.*}}/d' $file # delete whole line with unsubstituted {{!variable}}
-  sed -i -- 's/{{.*}}//g' $file # delete unsubstituted variable {{variable}}
+  sed --in-place '/{{!.*}}/d' $file &> /dev/null # delete whole line with unsubstituted {{!variable}}
+  sed -i -- 's/{{.*}}//g' $file &> /dev/null # delete unsubstituted variable {{variable}}
 }
