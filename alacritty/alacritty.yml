@@ -22,7 +22,7 @@ cursor:
 
 selection:
   text: '{{!selection_text}}'
-  backgroun: '{{!selection_background}}'
+  background: '{{!selection_background}}'
 
 colors:
   primary:
