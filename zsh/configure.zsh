@@ -31,3 +31,16 @@ if [[ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ]]; then
 elif [[ $UPDATE ]]; then # update
   git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
 fi
+
+# theming
+local tmux_config_file=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/tmux.zsh
+echo Theming $tmux_config_file
+themer_substitute background $BACKGROUND $tmux_config_file
+themer_substitute left_segment_start $LEFT_SEGMENT_START $tmux_config_file
+themer_substitute left_segment_end $LEFT_SEGMENT_END $tmux_config_file
+themer_substitute left_separator $LEFT_SEPARATOR $tmux_config_file
+themer_substitute right_segment_start $RIGHT_SEGMENT_START $tmux_config_file
+themer_substitute right_segment_end $RIGHT_SEGMENT_END $tmux_config_file
+themer_substitute right_separator $RIGHT_SEPARATOR $tmux_config_file
+themer_cleanup $tmux_config_file
+

@@ -1,0 +1,133 @@
+#!/usr/bin/env bash
+
+usage() { echo "Usage: $0 [-l] [-v visualization]" 1>&2; exit 1; }
+
+visualizations=(bars dna ghosts guns invaders waves)
+visualization=${visualizations[0]}
+
+while getopts "lhv:" o; do
+  case "${o}" in
+    l)
+      echo "$(printf "%s\n" "${visualizations[@]}")"
+      ;;
+    v)
+      visualization=${OPTARG}
+      ;;
+    h)
+      usage
+      ;;
+    *)
+      usage
+      ;;
+  esac
+done
+shift $((OPTIND-1))
+
+f=3 b=4
+for j in f b; do
+  for i in {0..7}; do
+    printf -v $j$i %b "\e[${!j}${i}m"
+  done
+done
+bld=$'\e[1m'
+rst=$'\e[0m'
+inv=$'\e[7m'
+
+function dna {
+  cat << EOF
+
+ $f1█-----$bld█  $rst$f2█-----$bld█$rst  $f3█-----$bld█$rst  $f4█-----$bld█$rst  $f5█-----$bld█$rst  $f6█-----$bld█$rst
+  $f1█---$bld█$rst    $f2█---$bld█$rst    $f3█---$bld█$rst    $f4█---$bld█$rst    $f5█---$bld█$rst    $f6█---$bld█$rst
+  $f1 █-$bld█$rst     $f2 █-$bld█$rst     $f3 █-$bld█$rst     $f4 █-$bld█$rst     $f5 █-$bld█$rst     $f6 █-$bld█$rst
+    $f1█$rst        $f2█$rst        $f3█$rst        $f4█$rst        $f5█$rst        $f6█$rst
+   $f1$bld█-$rst$f1█$rst      $f2$bld█_$rst$f2█$rst      $f3$bld█-$rst$f3█$rst      $f4$bld█-$rst$f4█$rst      $f5$bld█-$rst$f5█$rst      $f6$bld█-$rst$f6█$rst
+  $f1$bld█---$rst$f1█$rst    $f2$bld█---$rst$f2█$rst    $f3$bld█---$rst$f3█$rst    $f4$bld█---$rst$f4█$rst    $f5$bld█---$rst$f5█$rst    $f6$bld█---$rst$f6█$rst
+ $f1$bld█-----$rst$f1█$rst  $f2$bld█-----$rst$f2█$rst  $f3$bld█-----$rst$f3█$rst  $f4$bld█-----$rst$f4█$rst  $f5$bld█-----$rst$f5█$rst  $f6$bld█-----$rst$f6█$rst
+  $f1$bld█---$rst$f1█$rst    $f2$bld█---$rst$f2█$rst    $f3$bld█---$rst$f3█$rst    $f4$bld█---$rst$f4█$rst    $f5$bld█---$rst$f5█$rst    $f6$bld█---$rst$f6█$rst
+   $f1$bld█-$rst$f1█$rst      $f2$bld█-$rst$f2█$rst      $f3$bld█-$rst$f3█$rst      $f4$bld█-$rst$f4█$rst      $f5$bld█-$rst$f5█$rst      $f6$bld█-$rst$f6█$rst
+    $f1$bld█$rst        $f2$bld█$rst        $f3$bld█$rst        $f4$bld█$rst        $f5$bld█$rst        $f6$bld█$rst
+   $f1█-$bld█$rst      $f2█-$bld█$rst      $f3█-$bld█$rst      $f4█-$bld█$rst      $f5█-$bld█$rst      $f6█-$bld█$rst
+  $f1█---$bld█$rst    $f2█---$bld█$rst    $f3█---$bld█$rst    $f4█---$bld█$rst    $f5█---$bld█$rst    $f6█---$bld█$rst
+ $f1█-----$bld█  $rst$f2█-----$bld█$rst  $f3█-----$bld█$rst  $f4█-----$bld█$rst  $f5█-----$bld█$rst  $f6█-----$bld█$rst
+  $f1█---$bld█$rst    $f2█---$bld█$rst    $f3█---$bld█$rst    $f4█---$bld█$rst    $f5█---$bld█$rst    $f6█---$bld█$rst
+  $f1 █-$bld█$rst     $f2 █-$bld█$rst     $f3 █-$bld█$rst     $f4 █-$bld█$rst     $f5 █-$bld█$rst     $f6 █-$bld█$rst
+    $f1█$rst        $f2█$rst        $f3█$rst        $f4█$rst        $f5█$rst        $f6█$rst
+   $f1$bld█-$rst$f1█$rst      $f2$bld█_$rst$f2█$rst      $f3$bld█-$rst$f3█$rst      $f4$bld█-$rst$f4█$rst      $f5$bld█-$rst$f5█$rst      $f6$bld█-$rst$f6█$rst
+  $f1$bld█---$rst$f1█$rst    $f2$bld█---$rst$f2█$rst    $f3$bld█---$rst$f3█$rst    $f4$bld█---$rst$f4█$rst    $f5$bld█---$rst$f5█$rst    $f6$bld█---$rst$f6█$rst
+ $f1$bld█-----$rst$f1█$rst  $f2$bld█-----$rst$f2█$rst  $f3$bld█-----$rst$f3█$rst  $f4$bld█-----$rst$f4█$rst  $f5$bld█-----$rst$f5█$rst  $f6$bld█-----$rst$f6█$rst
+  $f1$bld█---$rst$f1█$rst    $f2$bld█---$rst$f2█$rst    $f3$bld█---$rst$f3█$rst    $f4$bld█---$rst$f4█$rst    $f5$bld█---$rst$f5█$rst    $f6$bld█---$rst$f6█$rst
+   $f1$bld█-$rst$f1█$rst      $f2$bld█-$rst$f2█$rst      $f3$bld█-$rst$f3█$rst      $f4$bld█-$rst$f4█$rst      $f5$bld█-$rst$f5█$rst      $f6$bld█-$rst$f6█$rst
+    $f1$bld█$rst        $f2$bld█$rst        $f3$bld█$rst        $f4$bld█$rst        $f5$bld█$rst        $f6$bld█$rst
+   $f1█-$bld█$rst      $f2█-$bld█$rst      $f3█-$bld█$rst      $f4█-$bld█$rst      $f5█-$bld█$rst      $f6█-$bld█$rst
+  $f1█---$bld█$rst    $f2█---$bld█$rst    $f3█---$bld█$rst    $f4█---$bld█$rst    $f5█---$bld█$rst    $f6█---$bld█$rst
+ $f1█-----$bld█  $rst$f2█-----$bld█$rst  $f3█-----$bld█$rst  $f4█-----$bld█$rst  $f5█-----$bld█$rst  $f6█-----$bld█$rst
+
+EOF
+}
+
+function bars {
+  cat << EOF
+$f1▬▬▬▬▬ $f2▬▬▬▬▬ $f3▬▬▬▬▬ $f4▬▬▬▬▬ $f5▬▬▬▬▬ $f6▬▬▬▬▬
+$bld$f1▬▬▬▬▬ $f2▬▬▬▬▬ $f3▬▬▬▬▬ $f4▬▬▬▬▬ $f5▬▬▬▬▬ $f6▬▬▬▬▬
+$rst
+EOF
+}
+
+function ghosts {
+  cat << EOF
+$f1    ▄▄▄      $f2    ▄▄▄      $f3    ▄▄▄      $f4    ▄▄▄      $f5    ▄▄▄      $f6    ▄▄▄
+$f1   ▀█▀██  ▄  $f2   ▀█▀██  ▄  $f3   ▀█▀██  ▄  $f4   ▀█▀██  ▄  $f5   ▀█▀██  ▄  $f6   ▀█▀██  ▄
+$f1 ▀▄██████▀   $f2 ▀▄██████▀   $f3 ▀▄██████▀   $f4 ▀▄██████▀   $f5 ▀▄██████▀   $f6 ▀▄██████▀
+$f1    ▀█████   $f2    ▀█████   $f3    ▀█████   $f4    ▀█████   $f5    ▀█████   $f6    ▀█████
+$f1       ▀▀▀▀▄ $f2       ▀▀▀▀▄ $f3       ▀▀▀▀▄ $f4       ▀▀▀▀▄ $f5       ▀▀▀▀▄ $f6       ▀▀▀▀▄
+$bld
+$f1    ▄▄▄      $f2    ▄▄▄      $f3    ▄▄▄      $f4    ▄▄▄      $f5    ▄▄▄      $f6    ▄▄▄
+$f1   ▀█▀██  ▄  $f2   ▀█▀██  ▄  $f3   ▀█▀██  ▄  $f4   ▀█▀██  ▄  $f5   ▀█▀██  ▄  $f6   ▀█▀██  ▄
+$f1 ▀▄██████▀   $f2 ▀▄██████▀   $f3 ▀▄██████▀   $f4 ▀▄██████▀   $f5 ▀▄██████▀   $f6 ▀▄██████▀
+$f1    ▀█████   $f2    ▀█████   $f3    ▀█████   $f4    ▀█████   $f5    ▀█████   $f6    ▀█████
+$f1       ▀▀▀▀▄ $f2       ▀▀▀▀▄ $f3       ▀▀▀▀▄ $f4       ▀▀▀▀▄ $f5       ▀▀▀▀▄ $f6       ▀▀▀▀▄
+$rst
+EOF
+}
+
+function guns {
+  cat << EOF
+
+$f1   ▀▄▄███████████  $f2 ▀▄▄███████████  $f3 ▀▄▄███████████  $f4 ▀▄▄███████████  $f5 ▀▄▄███████████  $f6 ▀▄▄███████████
+$f1  ▄███▀█▀▀▀        $f2 ▄███▀█▀▀▀       $f3 ▄███▀█▀▀▀       $f4 ▄███▀█▀▀▀       $f5 ▄███▀█▀▀▀       $f6 ▄███▀█▀▀▀
+$f1 ▐███▄▀            $f2▐███▄▀           $f3▐███▄▀           $f4▐███▄▀           $f5▐███▄▀           $f6▐███▄▀
+$f1 ▐███              $f2▐███             $f3▐███             $f4▐███             $f5▐███             $f6▐███
+$f1  ▀▀▀              $f2 ▀▀▀             $f3 ▀▀▀             $f4 ▀▀▀             $f5 ▀▀▀             $f6 ▀▀▀
+$bld
+$f1   ▀▄▄███████████  $f2 ▀▄▄███████████  $f3 ▀▄▄███████████  $f4 ▀▄▄███████████  $f5 ▀▄▄███████████  $f6 ▀▄▄███████████
+$f1  ▄███▀█▀▀▀        $f2 ▄███▀█▀▀▀       $f3 ▄███▀█▀▀▀       $f4 ▄███▀█▀▀▀       $f5 ▄███▀█▀▀▀       $f6 ▄███▀█▀▀▀
+$f1 ▐███▄▀            $f2▐███▄▀           $f3▐███▄▀           $f4▐███▄▀           $f5▐███▄▀           $f6▐███▄▀
+$f1 ▐███              $f2▐███             $f3▐███             $f4▐███             $f5▐███             $f6▐███
+$f1  ▀▀▀              $f2 ▀▀▀             $f3 ▀▀▀             $f4 ▀▀▀             $f5 ▀▀▀             $f6 ▀▀▀
+$rst
+EOF
+}
+
+function invaders {
+  cat << EOF
+
+$f1  ▀▄   ▄▀     $f2 ▄▄▄████▄▄▄    $f3  ▄██▄     $f4  ▀▄   ▄▀     $f5 ▄▄▄████▄▄▄    $f6  ▄██▄  $rst
+$f1 ▄█▀███▀█▄    $f2███▀▀██▀▀███   $f3▄█▀██▀█▄   $f4 ▄█▀███▀█▄    $f5███▀▀██▀▀███   $f6▄█▀██▀█▄$rst
+$f1█▀███████▀█   $f2▀▀███▀▀███▀▀   $f3▀█▀██▀█▀   $f4█▀███████▀█   $f5▀▀███▀▀███▀▀   $f6▀█▀██▀█▀$rst
+$f1▀ ▀▄▄ ▄▄▀ ▀   $f2 ▀█▄ ▀▀ ▄█▀    $f3▀▄    ▄▀   $f4▀ ▀▄▄ ▄▄▀ ▀   $f5 ▀█▄ ▀▀ ▄█▀    $f6▀▄    ▄▀$rst
+
+$bld$f1▄ ▀▄   ▄▀ ▄   $f2 ▄▄▄████▄▄▄    $f3  ▄██▄     $f4▄ ▀▄   ▄▀ ▄   $f5 ▄▄▄████▄▄▄    $f6  ▄██▄  $rst
+$bld$f1█▄█▀███▀█▄█   $f2███▀▀██▀▀███   $f3▄█▀██▀█▄   $f4█▄█▀███▀█▄█   $f5███▀▀██▀▀███   $f6▄█▀██▀█▄$rst
+$bld$f1▀█████████▀   $f2▀▀▀██▀▀██▀▀▀   $f3▀▀█▀▀█▀▀   $f4▀█████████▀   $f5▀▀▀██▀▀██▀▀▀   $f6▀▀█▀▀█▀▀$rst
+$bld$f1 ▄▀     ▀▄    $f2▄▄▀▀ ▀▀ ▀▀▄▄   $f3▄▀▄▀▀▄▀▄   $f4 ▄▀     ▀▄    $f5▄▄▀▀ ▀▀ ▀▀▄▄   $f6▄▀▄▀▀▄▀▄$rst
+EOF
+}
+
+function waves {
+  cat << EOF
+$f1▀■▄ $f2▀■▄ $f3▀■▄ $f4▀■▄ $f5▀■▄ $f6▀■▄
+ $bld$f1▀■▄ $f2▀■▄ $f3▀■▄ $f4▀■▄ $f5▀■▄ $f6▀■▄$rst
+EOF
+}
+
+eval $visualization

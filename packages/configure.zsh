@@ -16,3 +16,5 @@ if [[ $GRAPHICAL ]]; then
 fi
 
 npm install -g $NPM_PACKAGES
+
+sudo cp ./packages/local/* /usr/local/bin
