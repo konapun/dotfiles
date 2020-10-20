@@ -1,8 +1,11 @@
 # NORD
 
 # vim/bat config
-SYNTAX_THEME_PLUG="'arcticicestudio\/nord-vim'"
+SYNTAX_THEME_PLUG="'arcticicestudio/nord-vim'"
 SYNTAX_THEME=nord
+
+# tmux config
+TMUX_THEME="'arcticicestudio/nord-tmux'"
 
 # colors
 BLACK=#3b4252

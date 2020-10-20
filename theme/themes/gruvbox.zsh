@@ -1,8 +1,11 @@
 # GRUVBOX
 
 # vim/bat config
-SYNTAX_THEME_PLUG="'morhetz\/gruvbox'"
+SYNTAX_THEME_PLUG="'morhetz/gruvbox'"
 SYNTAX_THEME=gruvbox
+
+# tmux config
+TMUX_THEME="'konapun/tmux-terminal-theme'"
 
 # segments
 LEFT_SEGMENT_START=

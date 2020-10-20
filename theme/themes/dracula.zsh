@@ -1,5 +1,5 @@
 # DRACULA
-SYNTAX_THEME_PLUG="'dracula\/vim', {'as': 'dracula'}"
+SYNTAX_THEME_PLUG="'dracula/vim', {'as': 'dracula'}"
 
 # vim/bat config
 SYNTAX_THEME=dracula

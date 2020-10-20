@@ -43,7 +43,7 @@ mkdir -p ~/.config
 
 # CONFIGURATION
 if [[ ${targets[(i)tmux]} -le ${#targets} ]]; then
-  zsh ./tmux/configure.zsh
+  source ./tmux/configure.zsh
 fi
 if [[ ${targets[(i)zsh]} -le ${#targets} ]]; then
   source ./zsh/configure.zsh
