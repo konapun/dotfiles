@@ -14,6 +14,13 @@ function warn {
   echo -e "${red}$@${nc}"
 }
 
+function info {
+  local green='\033[0;32m'
+  local nc='\033[0m'
+
+  echo -e "${green}$@${nc}"
+}
+
 function parse_options {
   o_theme=(-t "")
   o_winuser=(-w Bremen)
@@ -29,7 +36,7 @@ function parse_options {
 parse_options $*
 targets=$@
 if [[ ! $targets ]]; then # target all by default
-  targets=(packages tmux zsh bat git nvim highlight ranger winterm fonts alacritty gnome-terminal)
+  targets=(packages tmux zsh bat git nvim highlight ranger winterm fonts alacritty gnome-terminal slack)
 fi
 
 source ./theme/configure.zsh # set up utilities and variables for theming
@@ -75,4 +82,6 @@ fi
 if [[ ${targets[(i)gnome-terminal]} -le ${#targets} ]]; then
   source ./gnome-terminal/configure.zsh
 fi
-
+if [[ ${targets[(i)slack]} -le ${#targets} ]]; then
+  source ./slack/configure.zsh
+fi
