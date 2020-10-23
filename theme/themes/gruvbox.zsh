@@ -35,6 +35,7 @@ BRIGHT_WHITE=#ebdbb2
 
 BACKGROUND=$BLACK
 FOREGROUND=$BRIGHT_WHITE
+ACCENT=$BRIGHT_GREEN
 
 # wallpaper (optional)
 WALLPAPER=./wallpaper/hanka_gruvbox.png

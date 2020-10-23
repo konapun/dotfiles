@@ -35,8 +35,9 @@ DIM_PURPLE=#8c738c
 DIM_CYAN=#6d96a5
 DIM_WHITE=#aeb3bb
 
-BACKGROUND=#434c5e
+BACKGROUND=#2E3440
 FOREGROUND=#d8dee9
+ACCENT=$CYAN
 
 # wallpaper (optional)
 WALLPAPER=./wallpaper/hanka_gruvbox.png
