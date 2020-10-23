@@ -1,8 +1,11 @@
 # NORD
 
 # vim/bat config
-SYNTAX_THEME_PLUG="'arcticicestudio\/nord-vim'"
+SYNTAX_THEME_PLUG="'arcticicestudio/nord-vim'"
 SYNTAX_THEME=nord
+
+# tmux config
+TMUX_THEME="'arcticicestudio/nord-tmux'"
 
 # colors
 BLACK=#3b4252
@@ -32,8 +35,9 @@ DIM_PURPLE=#8c738c
 DIM_CYAN=#6d96a5
 DIM_WHITE=#aeb3bb
 
-BACKGROUND=#434c5e
+BACKGROUND=#2E3440
 FOREGROUND=#d8dee9
+ACCENT=$CYAN
 
 # wallpaper (optional)
 WALLPAPER=./wallpaper/hanka_gruvbox.png

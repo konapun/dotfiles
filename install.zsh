@@ -14,22 +14,32 @@ function warn {
   echo -e "${red}$@${nc}"
 }
 
+function info {
+  local green='\033[0;32m'
+  local nc='\033[0m'
+
+  echo -e "${green}$@${nc}"
+}
+
+arguments=()
 function parse_options {
   o_theme=(-t "")
   o_winuser=(-w Bremen)
 
-  zparseopts -K -- g=o_graphical u=o_update t:=o_theme w:=o_winuser
+  zparseopts -D -E -- g=o_graphical u=o_update t:=o_theme w:=o_winuser
 
   GRAPHICAL=$o_graphical
   UPDATE=$o_update
   THEME=$o_theme[2]
   WINUSER=$o_winuser[2]
+  arguments=$@
 }
 
 parse_options $*
-targets=$@
+targets=$arguments
+
 if [[ ! $targets ]]; then # target all by default
-  targets=(packages tmux zsh bat git nvim highlight ranger winterm fonts alacritty gnome-terminal)
+  targets=(packages tmux zsh bat git nvim highlight ranger winterm fonts alacritty gnome-terminal slack)
 fi
 
 source ./theme/configure.zsh # set up utilities and variables for theming
@@ -43,7 +53,7 @@ mkdir -p ~/.config
 
 # CONFIGURATION
 if [[ ${targets[(i)tmux]} -le ${#targets} ]]; then
-  zsh ./tmux/configure.zsh
+  source ./tmux/configure.zsh
 fi
 if [[ ${targets[(i)zsh]} -le ${#targets} ]]; then
   source ./zsh/configure.zsh
@@ -75,4 +85,6 @@ fi
 if [[ ${targets[(i)gnome-terminal]} -le ${#targets} ]]; then
   source ./gnome-terminal/configure.zsh
 fi
-
+if [[ ${targets[(i)slack]} -le ${#targets} ]]; then
+  source ./slack/configure.zsh
+fi

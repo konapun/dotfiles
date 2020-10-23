@@ -1,8 +1,11 @@
 # GRUVBOX
 
 # vim/bat config
-SYNTAX_THEME_PLUG="'morhetz\/gruvbox'"
+SYNTAX_THEME_PLUG="'morhetz/gruvbox'"
 SYNTAX_THEME=gruvbox
+
+# tmux config
+TMUX_THEME="'konapun/tmux-terminal-theme'"
 
 # segments
 LEFT_SEGMENT_START=
@@ -32,6 +35,7 @@ BRIGHT_WHITE=#ebdbb2
 
 BACKGROUND=$BLACK
 FOREGROUND=$BRIGHT_WHITE
+ACCENT=$BRIGHT_GREEN
 
 # wallpaper (optional)
 WALLPAPER=./wallpaper/hanka_gruvbox.png

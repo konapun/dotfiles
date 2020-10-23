@@ -34,7 +34,6 @@ fi
 
 # theming
 local tmux_config_file=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/tmux.zsh
-echo Theming $tmux_config_file
 themer_substitute background $BACKGROUND $tmux_config_file
 themer_substitute left_segment_start $LEFT_SEGMENT_START $tmux_config_file
 themer_substitute left_segment_end $LEFT_SEGMENT_END $tmux_config_file

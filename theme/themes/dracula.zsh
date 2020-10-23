@@ -1,8 +1,11 @@
 # DRACULA
-SYNTAX_THEME_PLUG="'dracula\/vim', {'as': 'dracula'}"
+SYNTAX_THEME_PLUG="'dracula/vim', {'as': 'dracula'}"
 
 # vim/bat config
 SYNTAX_THEME=dracula
+
+# tmux config
+TMUX_THEME="'dracula/tmux'"
 
 # colors
 BLACK=#000000
