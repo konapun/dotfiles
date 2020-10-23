@@ -7,6 +7,9 @@ SYNTAX_THEME=gruvbox
 # tmux config
 TMUX_THEME="'konapun/tmux-terminal-theme'"
 
+# chrome config
+CHROME_THEME=https://chrome.google.com/webstore/detail/gruvbox-theme/ihennfdbghdiflogeancnalflhgmanop
+
 # segments
 LEFT_SEGMENT_START=
 LEFT_SEGMENT_END=
