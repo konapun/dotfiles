@@ -1,8 +1,10 @@
-# GRUVBOX
+# ALL HALLOW'S EVE
 
 # vim/bat config
-SYNTAX_THEME_PLUG="'morhetz/gruvbox'"
-SYNTAX_THEME=gruvbox
+SYNTAX_THEME=all-hallows-eve-plus
+
+# tmux config
+TMUX_THEME="'konapun/tmux-terminal-theme'"
 
 # colors
 BLACK=#404040
@@ -24,7 +26,4 @@ BRIGHT_WHITE=#ffffff
 
 BACKGROUND=#0c0c0c
 FOREGROUND=$BRIGHT_WHITE
-
-# wallpaper (optional)
-# WALLPAPER=./wallpaper/hanka_gruvbox.png
 

@@ -21,20 +21,23 @@ function info {
   echo -e "${green}$@${nc}"
 }
 
+arguments=()
 function parse_options {
   o_theme=(-t "")
   o_winuser=(-w Bremen)
 
-  zparseopts -K -- g=o_graphical u=o_update t:=o_theme w:=o_winuser
+  zparseopts -D -E -- g=o_graphical u=o_update t:=o_theme w:=o_winuser
 
   GRAPHICAL=$o_graphical
   UPDATE=$o_update
   THEME=$o_theme[2]
   WINUSER=$o_winuser[2]
+  arguments=$@
 }
 
 parse_options $*
-targets=$@
+targets=$arguments
+
 if [[ ! $targets ]]; then # target all by default
   targets=(packages tmux zsh bat git nvim highlight ranger winterm fonts alacritty gnome-terminal slack)
 fi
