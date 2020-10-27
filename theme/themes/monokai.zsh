@@ -3,6 +3,9 @@
 # vim/bat config
 SYNTAX_THEME=molokai
 
+# bpytop config
+BPYTOP_THEME=monokai
+
 # colors
 BLACK=#333333
 RED=#C4265E

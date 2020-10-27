@@ -10,6 +10,9 @@ TMUX_THEME="'konapun/tmux-terminal-theme'"
 # chrome config
 CHROME_THEME=https://chrome.google.com/webstore/detail/gruvbox-theme/ihennfdbghdiflogeancnalflhgmanop
 
+# bpytop config
+BPYTOP_THEME=gruvbox_dark
+
 # segments
 LEFT_SEGMENT_START=
 LEFT_SEGMENT_END=
