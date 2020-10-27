@@ -1,0 +1,1 @@
+PIP3_PACKAGES=(bpytop)

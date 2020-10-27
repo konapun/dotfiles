@@ -1,5 +1,6 @@
 source ./packages/nvm.zsh
 source ./packages/npm.zsh
+source ./packages/pip3.zsh
 
 if [[ $OSTYPE =~ linux ]]; then
   source ./packages/linux.zsh
@@ -16,5 +17,6 @@ if [[ $GRAPHICAL ]]; then
 fi
 
 npm install -g $NPM_PACKAGES
+pip3 install --upgrade $PIP3_PACKAGES
 
 sudo cp ./packages/local/* /usr/local/bin
