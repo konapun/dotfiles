@@ -7,6 +7,9 @@
 IS_WSL=$(cat /proc/version | grep microsoft)
 TERM=$(ps -h -o comm -p $(ps -h -o ppid -p $$ 2>/dev/null) 2>/dev/null)
 
+# make aliases available within scripts
+source ~/.oh-my-zsh/custom/alias.zsh &>/dev/null
+
 function warn {
   local red='\033[0;31m'
   local nc='\033[0m'
@@ -39,7 +42,7 @@ parse_options $*
 targets=$arguments
 
 if [[ ! $targets ]]; then # target all by default
-  targets=(packages tmux zsh bat git nvim highlight ranger winterm fonts alacritty gnome-terminal slack)
+  targets=(packages tmux zsh bat git nvim highlight ranger bpytop winterm fonts alacritty gnome-terminal slack chrome)
 fi
 
 source ./theme/configure.zsh # set up utilities and variables for theming
@@ -73,6 +76,9 @@ fi
 if [[ ${targets[(i)ranger]} -le ${#targets} ]]; then
   source ./ranger/configure.zsh
 fi
+if [[ ${targets[(i)bpytop]} -le ${#targets} ]]; then
+  source ./bpytop/configure.zsh
+fi
 if [[ ${targets[(i)winterm]} -le ${#targets} ]]; then
   source ./winterm/configure.zsh
 fi
@@ -87,4 +93,7 @@ if [[ ${targets[(i)gnome-terminal]} -le ${#targets} ]]; then
 fi
 if [[ ${targets[(i)slack]} -le ${#targets} ]]; then
   source ./slack/configure.zsh
+fi
+if [[ ${targets[(i)chrome]} -le ${#targets} ]]; then
+  source ./chrome/configure.zsh
 fi

@@ -7,6 +7,12 @@ SYNTAX_THEME=nord
 # tmux config
 TMUX_THEME="'arcticicestudio/nord-tmux'"
 
+# bpytop config
+BPYTOP_THEME=nord
+
+# chrome config
+CHROME_THEME=https://chrome.google.com/webstore/detail/nord/abehfkkfjlplnjadfcjiflnejblfmmpj
+
 # colors
 BLACK=#3b4252
 RED=#bf616a

@@ -43,3 +43,4 @@ themer_substitute right_segment_end $RIGHT_SEGMENT_END $tmux_config_file
 themer_substitute right_separator $RIGHT_SEPARATOR $tmux_config_file
 themer_cleanup $tmux_config_file
 
+source ~/.oh-my-zsh/custom/alias.zsh &>/dev/null

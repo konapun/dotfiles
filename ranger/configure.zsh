@@ -24,5 +24,7 @@ elif [[ $UPDATE ]]; then # update
   cd -
 fi
 
+cp ./ranger/commands.py ~/.config/ranger
+
 # platform-specific config
 cat ./ranger/rc.conf ./ranger/$platform.rc.conf >> ~/.config/ranger/rc.conf

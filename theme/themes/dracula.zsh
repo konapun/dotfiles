@@ -7,6 +7,9 @@ SYNTAX_THEME=dracula
 # tmux config
 TMUX_THEME="'dracula/tmux'"
 
+# bpytop config
+BPYTOP_THEME=dracula
+
 # colors
 BLACK=#000000
 RED=#ff5555
