@@ -4,22 +4,11 @@
 SYNTAX_THEME_PLUG="'morhetz/gruvbox'"
 SYNTAX_THEME=gruvbox
 
-# tmux config
-TMUX_THEME="'konapun/tmux-terminal-theme'"
-
 # chrome config
 CHROME_THEME=https://chrome.google.com/webstore/detail/gruvbox-theme/ihennfdbghdiflogeancnalflhgmanop
 
 # bpytop config
 BPYTOP_THEME=gruvbox_dark
-
-# segments
-LEFT_SEGMENT_START=
-LEFT_SEGMENT_END=
-LEFT_SEPARATOR=
-RIGHT_SEGMENT_START=
-RIGHT_SEGMENT_END=
-RIGHT_SEPARATOR=
 
 # colors
 BLACK=#282828
@@ -46,3 +35,4 @@ ACCENT=$BRIGHT_GREEN
 # wallpaper (optional)
 WALLPAPER=./wallpaper/hanka_gruvbox.png
 
+WINDOWS_THEME="./windows/Hanka Gruvbox.theme"

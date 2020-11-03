@@ -1,6 +1,9 @@
 # vim/bat config
 SYNTAX_THEME=eva01
 
+# chrome config
+CHROME_THEME=https://www.themebeta.com/chrome/theme/1358797
+
 # colors
 BLACK=#000000
 RED=#d75f87
@@ -21,3 +24,6 @@ BRIGHT_WHITE=#ffffff
 
 BACKGROUND=#282828
 FOREGROUND=$BRIGHT_WHITE
+
+WALLPAPER=./wallpaper/eva01.png
+WINDOWS_THEME="./windows/Eva 01.theme"

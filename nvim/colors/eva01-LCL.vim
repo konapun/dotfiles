@@ -36,7 +36,7 @@ hi CursorLineNr ctermfg=102 ctermbg=16 cterm=bold guifg=#9E9E9E guibg=#000000 gu
 hi MatchParen ctermfg=15 ctermbg=240 cterm=bold guifg=#FFFFFF guibg=#585858 gui=bold
 hi ModeMsg ctermfg=119 ctermbg=NONE cterm=bold guifg=#76FF03 guibg=NONE gui=bold
 hi MoreMsg ctermfg=119 ctermbg=NONE cterm=bold guifg=#76FF03 guibg=NONE gui=bold
-hi NonText ctermfg=119 ctermbg=NONE cterm=NONE guifg=#76FF03 guibg=NONE gui=NONE
+hi NonText ctermfg=97 ctermbg=NONE cterm=NONE guifg=#875FAF guibg=NONE gui=NONE
 hi Normal ctermfg=252 ctermbg=NONE cterm=NONE guifg=#D7D1DC guibg=#1C1C1C gui=NONE
 hi Pmenu ctermfg=119 ctermbg=16 cterm=NONE guifg=#76FF03 guibg=#000000 gui=NONE
 hi PmenuSel ctermfg=16 ctermbg=119 cterm=NONE guifg=#000000 guibg=#76FF03 gui=NONE
@@ -60,7 +60,7 @@ hi WarningMsg ctermfg=168 ctermbg=NONE cterm=bold guifg=#EF5350 guibg=NONE gui=b
 hi WildMenu ctermfg=119 ctermbg=NONE cterm=NONE guifg=#76FF03 guibg=NONE gui=NONE
 "}}}
 " Syntax highlighting"{{{
-hi Comment ctermfg=102 ctermbg=NONE cterm=NONE guifg=#9E9E9E guibg=NONE gui=italic
+hi Comment ctermfg=102 ctermbg=NONE cterm=NONE guifg=#9E9E9E guibg=NONE gui=NONE
 hi Constant ctermfg=156 ctermbg=NONE cterm=NONE guifg=#AEEA00 guibg=NONE gui=NONE
 hi String ctermfg=151 ctermbg=NONE cterm=NONE guifg=#C0CA33 guibg=NONE gui=NONE
 hi Number ctermfg=179 ctermbg=NONE cterm=NONE guifg=#FFB300 guibg=NONE gui=NONE

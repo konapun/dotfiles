@@ -3,6 +3,9 @@
 # vim/bat config
 SYNTAX_THEME=molokai
 
+# chrome config
+CHROME_THEME=https://chrome.google.com/webstore/detail/passion-for-pink/cogfkcjpgcgbhkllpaednchppnjepmmm?hl=en
+
 # bpytop config
 BPYTOP_THEME=monokai
 
@@ -27,6 +30,7 @@ BRIGHT_WHITE=#F8F8F2
 
 BACKGROUND=#1B1D1E
 FOREGROUND=#F8F8F2
+ACCENT=$BRIGHT_RED
 
 # wallpaper (optional)
 WALLPAPER=./wallpaper/hanka_gruvbox.png
