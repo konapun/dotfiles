@@ -6,3 +6,6 @@ GRAPHICAL_PACKAGES=(audacity blender gimp lmms slack spotify-client steam)
 
 # lsd isn't currently available in apt so install it from releases
 source ./packages/lsd.zsh
+
+# external repos where commands may be located
+source ./packages/apt-sources.zsh
