@@ -79,6 +79,9 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'                       " Better
 Plug 'Olical/conjure'                                                   " Interactive evaluation for Neovim (Clojure, Fennel, Janet)
 Plug 'clojure-vim/vim-jack-in'                                          " cider-jack-in for vim
 
+" other languages
+Plug 'alunny/pegjs-vim'                                                 " Syntax highlighting for PEG.js grammars
+
 call plug#end()
 
 " set theme
