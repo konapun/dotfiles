@@ -16,6 +16,7 @@ public/webpack
 .rubocop-*
 tags
 !tags/
+*.swp
 *.tmp*
 *.old
 *.plist
