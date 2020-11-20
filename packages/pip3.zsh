@@ -1,1 +1,1 @@
-PIP3_PACKAGES=(bpytop mdv)
+PIP3_PACKAGES=(bpytop deemix mdv)
