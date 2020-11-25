@@ -18,6 +18,9 @@ CHROME_THEME=https://chrome.google.com/webstore/detail/gruvbox-theme/ihennfdbghd
 # bpytop config
 BPYTOP_THEME=gruvbox_dark
 
+# highlight config
+#HIGHLIGHT_THEME=gruvbox
+
 # segments
 LEFT_SEGMENT_START=
 LEFT_SEGMENT_END=

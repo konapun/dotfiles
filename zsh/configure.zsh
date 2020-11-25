@@ -34,6 +34,7 @@ fi
 
 # theming
 local tmux_config_file=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/tmux.zsh
+local highlight_config_file=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/highlight.zsh
 themer_substitute background $BACKGROUND $tmux_config_file
 themer_substitute left_segment_start $LEFT_SEGMENT_START $tmux_config_file
 themer_substitute left_segment_end $LEFT_SEGMENT_END $tmux_config_file
@@ -42,5 +43,7 @@ themer_substitute right_segment_start $RIGHT_SEGMENT_START $tmux_config_file
 themer_substitute right_segment_end $RIGHT_SEGMENT_END $tmux_config_file
 themer_substitute right_separator $RIGHT_SEPARATOR $tmux_config_file
 themer_cleanup $tmux_config_file
+themer_substitute highlight_theme $HIGHLIGHT_THEME $highlight_config_file
+themer_cleanup $highlight_config_file
 
 source ~/.oh-my-zsh/custom/alias.zsh &>/dev/null
