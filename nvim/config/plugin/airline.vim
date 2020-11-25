@@ -8,3 +8,5 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_detect_spell = 0
 let g:airline_detect_spelllang = 0
 let g:airline_section_y = ''
+
+let g:airline_theme = '{{!airline_theme}}'
