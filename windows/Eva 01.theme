@@ -3,7 +3,7 @@
 [Theme]
 ; Windows - IDS_THEME_DISPLAYNAME_AERO
 DisplayName=Eva 01
-ThemeId={50DDEAE0-0140-4701-A5FC-13CACEC42B83}
+ThemeId={94E33110-A5FE-45D3-95D4-184C269FC5A1}
 
 ; Computer - SHIDI_SERVER
 [CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
@@ -41,18 +41,18 @@ Wait=%SystemRoot%\cursors\aero_busy.ani
 DefaultValue=Windows Default
 
 [Control Panel\Desktop]
-Wallpaper=%USERPROFILE%\Downloads\eva01.png
+Wallpaper=E:\breme\Documents\Projects\dotfiles\wallpaper\eva01_darker.png
 Pattern=
 MultimonBackgrounds=0
 PicturePosition=4
-WallpaperWriteTime=132488539473815164
+WallpaperWriteTime=132507365376930388
 
 [VisualStyles]
 Path=%SystemRoot%\resources\themes\Aero\Aero.msstyles
 ColorStyle=NormalColor
 Size=NormalSize
 AutoColorization=0
-ColorizationColor=0XC4875FAF
+ColorizationColor=0XC45F005F
 SystemMode=Dark
 AppMode=Dark
 VisualStyleVersion=10
