@@ -66,4 +66,5 @@ To use a theme, run the install script with the `-t` option followed by the them
   * eva01
   * monokai
   * nord
+  * farout
 
