@@ -196,6 +196,27 @@
             "brightRed": "#D47D49",
             "brightWhite": "#E0CCAE",
             "brightYellow": "#A67458"
+        },
+        {
+            "name": "cyberpunk",
+            "background": "#101116",
+            "foreground": "#eeffff",
+            "black": "#101116",
+            "blue": "#00b0ff",
+            "cyan": "#c592ff",
+            "green": "#00ff84",
+            "purple": "#311b92",
+            "red": "#ff0055",
+            "white": "#eeffff",
+            "yellow": "#fffc58",
+            "brightBlack": "#2b3e5a",
+            "brightBlue": "#6766b3",
+            "brightCyan": "#d57bff",
+            "brightGreen": "#00ffc8",
+            "brightPurple": "#283593",
+            "brightRed": "#ff1745",
+            "brightWhite": "#ffffff",
+            "brightYellow": "#b3ff00"
         }
     ],
     // Add any keybinding overrides to this array.
