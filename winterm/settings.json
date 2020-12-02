@@ -175,6 +175,27 @@
             "brightRed": "#BF616A",
             "brightWhite": "#E5E9F0",
             "brightYellow": "#EBCB8B"
+        },
+        {
+            "name": "farout",
+            "background": "#1F1311",
+            "foreground": "#F2DDBC",
+            "black": "#1F1311",
+            "blue": "#5f87af",
+            "cyan": "#6B4035",
+            "green": "#af896f",
+            "purple": "#66292F",
+            "red": "#BF472C",
+            "white": "#F2DDBC",
+            "yellow": "#F2A766",
+            "brightBlack": "#0F0908",
+            "brightBlue": "#a8a8a8",
+            "brightCyan": "#A67458",
+            "brightGreen": "#A4895C",
+            "brightPurple": "#8A4B53",
+            "brightRed": "#D47D49",
+            "brightWhite": "#E0CCAE",
+            "brightYellow": "#A67458"
         }
     ],
     // Add any keybinding overrides to this array.
