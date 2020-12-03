@@ -5,5 +5,7 @@ if [[ -d /mnt/c ]]; then
 fi
 
 # Theming
+themer_substitute font_face $FONT_FACE $WINTERM_CONFIG_FILE
+themer_substitute font_size $FONT_SIZE $WINTERM_CONFIG_FILE
 themer_substitute syntax_theme $SYNTAX_THEME $WINTERM_CONFIG_FILE
 themer_cleanup $WINTERM_CONFIG_FILE

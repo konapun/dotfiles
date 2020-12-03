@@ -1,8 +1,8 @@
 font:
   normal:
-    family: CaskaydiaCove Nerd Font
-    style: Book
-  size: 17
+    family: {{font_family}}
+    style: {{font_style}}
+  size: {{font_size}}
   offset:
     x: 0
     y: 4
