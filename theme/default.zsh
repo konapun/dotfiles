@@ -18,6 +18,11 @@ CHROME_THEME=https://chrome.google.com/webstore/detail/gruvbox-theme/ihennfdbghd
 # bpytop config
 BPYTOP_THEME=gruvbox_dark
 
+FONT_FACE="CaskaydiaCove NF"
+FONT_FAMILY="CaskaydiaCove Nerd Font"
+FONT_STYLE="Book"
+FONT_SIZE=14
+
 # highlight config
 #HIGHLIGHT_THEME=gruvbox
 

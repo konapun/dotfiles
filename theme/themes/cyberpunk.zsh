@@ -6,6 +6,11 @@ AIRLINE_THEME=system
 
 CHROME_THEME=https://chrome.google.com/webstore/detail/cyberpunk/ekkfihjmcoeplagmladakeignpdaecmc
 
+FONT_FACE="Scientifica NF"
+FONT_FAMILY="Scientifica Nerd Font"
+FONT_STYLE="Normal"
+FONT_SIZE=17
+
 # colors
 BLACK=#101116
 RED=#ff0055

@@ -7,6 +7,9 @@ fi
 
 
 # Theming
+themer_substitute font_family $FONT_FAMILY $ALACRITTY_CONFIG_FILE
+themer_substitute font_size $FONT_SIZE $ALACRITTY_CONFIG_FILE
+themer_substitute font_style $FONT_STYLE $ALACRITTY_CONFIG_FILE
 themer_substitute cursor_text $CURSOR_TEXT $ALACRITTY_CONFIG_FILE
 themer_substitute cursor $CURSOR $ALACRITTY_CONFIG_FILE
 themer_substitute selection_text $SELECTION_TEXT $ALACRITTY_CONFIG_FILE
