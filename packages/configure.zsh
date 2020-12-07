@@ -1,6 +1,7 @@
 source ./packages/nvm.zsh
 source ./packages/npm.zsh
 source ./packages/pip3.zsh
+source ./packages/cargo.zsh
 
 if [[ $OSTYPE =~ linux ]]; then
   source ./packages/linux.zsh
@@ -18,5 +19,6 @@ fi
 
 npm install -g $NPM_PACKAGES
 pip3 install --upgrade $PIP3_PACKAGES
+cargo install --force $CARGO_PACKAGES
 
 sudo cp ./packages/local/* /usr/local/bin
