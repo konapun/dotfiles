@@ -34,7 +34,7 @@ The installation/configuration script is modular. To install everything, simply 
 
 Alternatively, you can install the following targets separately by running `zsh ./install.zsh [target1 target2 ...]` where a target is one of:
 
-  * **packages** install all apt/brew/npm/pip/etc programs
+  * **packages** install all apt/brew/cargo/npm/pip/etc programs
   * **tmux** install configuration and associated plugins for tmux
   * **zsh** install oh-my-zsh and associated configuration, including aliases and custom functions (fzf, color scripts, etc)
   * **bat** install configuration for bat
