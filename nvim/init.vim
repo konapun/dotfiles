@@ -28,6 +28,7 @@ Plug 'justinmk/vim-sneak'                                               " Jump t
 Plug 'editorconfig/editorconfig-vim'                                    " Support for .editorconfig
 Plug 'liuchengxu/vista.vim'                                             " View and search LSP symbols, tags in Vim/NeoVim
 Plug 'wellle/context.vim'                                               " Shows the context of the currently visible buffer contents
+Plug 'vim-scripts/TaskList.vim'                                         " Eclipse like task list
 Plug 'kshenoy/vim-signature'                                            " Toggle, display and navigate marks
 Plug 'vim-scripts/ReplaceWithRegister'                                  " Replace text object with contents of register
 Plug 'sirver/ultisnips'                                                 " The ultimate snippet solution for Vim

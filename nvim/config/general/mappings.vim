@@ -93,3 +93,6 @@ nmap <leader>v :Vista coc
 
 " lens
 nnoremap <silent> <C-w>[ :call lens#toggle()<CR>
+
+" TaskList
+nmap <localleader>t <Plug>TaskList
