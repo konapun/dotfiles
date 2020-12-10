@@ -18,7 +18,13 @@ if [[ $GRAPHICAL ]]; then
 fi
 
 npm install -g $NPM_PACKAGES
-pip3 install --upgrade $PIP3_PACKAGES
-cargo install --force $CARGO_PACKAGES
+pip3 install $PIP3_PACKAGES
+cargo install$CARGO_PACKAGES
+
+if [[ $UPDATE ]]; then
+  npm update
+  pip3 install --upgrade $PIP3_PACKAGES
+  cargo install --force $CARGO_PACKAGES
+fi
 
 sudo cp ./packages/local/* /usr/local/bin
