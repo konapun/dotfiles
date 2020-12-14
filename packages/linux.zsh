@@ -11,8 +11,8 @@ source ./packages/babashka.zsh
 # external repos where commands may be located
 source ./packages/apt-sources.zsh
 
-if command -v apt &> /dev/null; then
-  source ./packages/linux/apt.zsh
-elif command -v pkg &> /dev/null; then
+if command -v pkg &> /dev/null; then
   source ./packages/linux/pkg.zsh
+elif command -v apt &> /dev/null; then
+  source ./packages/linux/apt.zsh
 fi
