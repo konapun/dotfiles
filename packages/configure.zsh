@@ -19,7 +19,9 @@ fi
 
 npm install -g $NPM_PACKAGES
 pip3 install $PIP3_PACKAGES
-cargo install$CARGO_PACKAGES
+if command -v cargo &> /dev/null; then
+  cargo install $CARGO_PACKAGES
+fi
 
 if [[ $UPDATE ]]; then
   npm update
