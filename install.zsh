@@ -4,11 +4,11 @@
 # - add powershell script for finishing windows non-WSL config
 
 # set up variables for use in sourced scripts
-IS_WSL=$(cat /proc/version | grep microsoft)
+IS_WSL=$(cat /proc/version &> /dev/null | grep microsoft)
 TERM=$(ps -h -o comm -p $(ps -h -o ppid -p $$ 2>/dev/null) 2>/dev/null)
 
 # make aliases available within scripts
-source ~/.oh-my-zsh/custom/alias.zsh &>/dev/null
+source ~/.oh-my-zsh/custom/alias.zsh &> /dev/null
 
 function warn {
   local red='\033[0;31m'
