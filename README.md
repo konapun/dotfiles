@@ -3,7 +3,7 @@
 <img src="screenshot.png" alt="Screenshot">
 <hr>
 I regularly jump across Windows, MacOS, and various Linux DEs so this is an attempt to script my environment to be usable wherever I go. This
-setup is used and confirmed working on Mac OS, Ubuntu 18.04, Ubuntu 20.04 (WSL), and Raspberry Pi OS (Raspian) on armv7.
+setup is used and confirmed working on Mac OS, Ubuntu 18.04, Ubuntu 20.04 (WSL), Android (via Termux), and Raspberry Pi OS (Raspian) on armv7.
 
 In particular, this provides installation and configuration for:
 
