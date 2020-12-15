@@ -16,3 +16,8 @@ if command -v pkg &> /dev/null; then
 elif command -v apt &> /dev/null; then
   source ./packages/linux/apt.zsh
 fi
+
+# snap-based packages
+if command -v snap &> /dev/null; then
+  source ./packages/linux.snap.zsh
+fi
