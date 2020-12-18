@@ -9,6 +9,7 @@ let g:coc_global_extensions = [
   \'coc-tsserver',
   \'coc-conjure',
   \'coc-emmet',
+  \'coc-pyright',
   \'coc-snippets'
 \]
 
