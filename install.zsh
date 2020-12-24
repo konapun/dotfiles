@@ -42,7 +42,7 @@ parse_options $*
 targets=$arguments
 
 if [[ ! $targets ]]; then # target all by default
-  targets=(packages tmux zsh bat git nvim highlight ranger bpytop winterm fonts alacritty gnome-terminal slack chrome)
+  targets=(packages tmux zsh bat git nvim highlight ranger bpytop winterm fonts alacritty kitty gnome-terminal slack chrome)
 fi
 
 source ./theme/configure.zsh # set up utilities and variables for theming
@@ -87,6 +87,9 @@ if [[ ${targets[(i)fonts]} -le ${#targets} ]]; then
 fi
 if [[ ${targets[(i)alacritty]} -le ${#targets} ]]; then
   source ./alacritty/configure.zsh
+fi
+if [[ ${targets[(i)kitty]} -le ${#targets} ]]; then
+  source ./kitty/configure.zsh
 fi
 if [[ ${targets[(i)gnome-terminal]} -le ${#targets} ]]; then
   source ./gnome-terminal/configure.zsh
