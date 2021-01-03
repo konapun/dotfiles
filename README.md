@@ -23,6 +23,7 @@ In particular, this provides installation and configuration for:
   * Windows Theme (where available)
   * Gnome Terminal (where available)
   * Alacritty (where available)
+  * Kitty (where available)
   * A selection of wallpapers which match the included themes
   * (more coming soon as I get it working for my bspwm setup)
 
