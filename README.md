@@ -68,4 +68,5 @@ To use a theme, run the install script with the `-t` option followed by the them
   * nord
   * farout
   * lighthaus (partial theme only - no vim yet)
+  * salvation
 
