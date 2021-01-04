@@ -4,11 +4,11 @@
 # - add powershell script for finishing windows non-WSL config
 
 # set up variables for use in sourced scripts
-IS_WSL=$(cat /proc/version | grep microsoft)
+IS_WSL=$(cat /proc/version &> /dev/null | grep microsoft)
 TERM=$(ps -h -o comm -p $(ps -h -o ppid -p $$ 2>/dev/null) 2>/dev/null)
 
 # make aliases available within scripts
-source ~/.oh-my-zsh/custom/alias.zsh &>/dev/null
+source ~/.oh-my-zsh/custom/alias.zsh &> /dev/null
 
 function warn {
   local red='\033[0;31m'
@@ -42,7 +42,7 @@ parse_options $*
 targets=$arguments
 
 if [[ ! $targets ]]; then # target all by default
-  targets=(packages tmux zsh bat git nvim highlight ranger bpytop winterm fonts alacritty gnome-terminal slack chrome)
+  targets=(packages tmux zsh bat git nvim highlight ranger bpytop winterm fonts alacritty kitty gnome-terminal slack chrome)
 fi
 
 source ./theme/configure.zsh # set up utilities and variables for theming
@@ -87,6 +87,9 @@ if [[ ${targets[(i)fonts]} -le ${#targets} ]]; then
 fi
 if [[ ${targets[(i)alacritty]} -le ${#targets} ]]; then
   source ./alacritty/configure.zsh
+fi
+if [[ ${targets[(i)kitty]} -le ${#targets} ]]; then
+  source ./kitty/configure.zsh
 fi
 if [[ ${targets[(i)gnome-terminal]} -le ${#targets} ]]; then
   source ./gnome-terminal/configure.zsh

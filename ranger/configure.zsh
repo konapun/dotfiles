@@ -1,3 +1,5 @@
+RANGER_CONFIG_FILE=$HOME/.config/ranger/rc.conf
+
 # Concatenates default settings with platform settings and copies them to ~/.conf/ranger/rc.conf
 
 if [[ $OSTYPE =~ linux ]]; then
@@ -7,6 +9,7 @@ elif [[ $OSTYPE =~ darwin ]]; then
 fi
 
 mkdir -p ~/.config/ranger
+cp -r ./ranger/colorschemes ~/.config/ranger
 if [[ -e ~/.config/ranger/rc.conf ]]; then
   mv ~/.config/ranger/rc.conf ~/.config/ranger/rc.conf.bak
 fi
@@ -28,3 +31,7 @@ cp ./ranger/commands.py ~/.config/ranger
 
 # platform-specific config
 cat ./ranger/rc.conf ./ranger/$platform.rc.conf >> ~/.config/ranger/rc.conf
+
+# theming
+themer_substitute colorscheme $RANGER_THEME $RANGER_CONFIG_FILE
+themer_cleanup $RANGER_CONFIG_FILE

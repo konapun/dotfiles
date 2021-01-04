@@ -3,7 +3,7 @@
 <img src="screenshot.png" alt="Screenshot">
 <hr>
 I regularly jump across Windows, MacOS, and various Linux DEs so this is an attempt to script my environment to be usable wherever I go. This
-setup is used and confirmed working on Mac OS, Ubuntu 18.04, Ubuntu 20.04 (WSL), and Raspberry Pi OS (Raspian) on armv7.
+setup is used and confirmed working on Mac OS, Ubuntu 18.04, Ubuntu 20.04 (WSL), Android (via Termux), and Raspberry Pi OS (Raspian) on armv7.
 
 In particular, this provides installation and configuration for:
 
@@ -23,6 +23,7 @@ In particular, this provides installation and configuration for:
   * Windows Theme (where available)
   * Gnome Terminal (where available)
   * Alacritty (where available)
+  * Kitty (where available)
   * A selection of wallpapers which match the included themes
   * (more coming soon as I get it working for my bspwm setup)
 
@@ -68,4 +69,5 @@ To use a theme, run the install script with the `-t` option followed by the them
   * nord
   * farout
   * lighthaus (partial theme only - no vim yet)
+  * salvation
 

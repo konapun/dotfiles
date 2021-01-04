@@ -1,1 +1,1 @@
-NPM_PACKAGES=(clj-kondo)
+NPM_PACKAGES=(clj-kondo yarn)

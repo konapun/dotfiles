@@ -9,7 +9,7 @@ Plug {{!syntax_theme_plug}}
 " Plug 'sainnhe/gruvbox-material'                                         " Gruvbox with Material Palette
 " Plug 'fcpg/vim-farout'                                                  " Dark retro base16 theme for gvim and 24-bit color terminals
 " Plug 'fcpg/vim-fahrenheit'                                              " Dark, warm base16 Vim theme for 256-color terminals
-
+" Plug 'branwright1/salvation-vim'                                        " Dark colorscheme for Vim/Neovim.
 
 " general
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                         " Auto-completion
