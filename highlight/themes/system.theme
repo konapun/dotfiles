@@ -1,0 +1,30 @@
+Canvas         = { Colour = "{{canvas}}", Italic = false, Bold = false }
+
+Default        = { Colour = "{{default}}", Italic = false, Bold = false }
+
+Number         = { Colour = "{{number}}", Italic = false, Bold = false }
+
+Operator       = { Colour = "{{operator}}", Italic = false, Bold = false }
+
+String         = { Colour = "{{string}}", Italic = false, Bold = false }
+
+Escape         = { Colour = "{{escape}}", Italic = false, Bold = false }
+StringPreProc  = Escape
+
+Interpolation  = { Colour = "{{interpolation}}", Italic = false, Bold = false }
+
+LineComment    = { Colour = "{{comment}}", Italic = true,  Bold = false }
+BlockComment   = LineComment
+
+LineNum        = { Colour = "{{line_number}}", Italic = false, Bold = false }
+
+PreProcessor   = { Colour = "{{preprocessor}}", Italic = false, Bold = false }
+
+Keywords = {
+  { Colour = "{{keyword1}}", Italic = false, Bold = true  },
+  { Colour = "{{keyword2}}", Italic = false, Bold = true  },
+  { Colour = "{{keyword3}}", Italic = false, Bold = true  },
+  { Colour = "{{keyword4}}", Italic = false, Bold = true  },
+  { Colour = "{{keyword5}}", Italic = false, Bold = true  },
+  { Colour = "{{keyword6}}", Italic = false, Bold = true  },
+}

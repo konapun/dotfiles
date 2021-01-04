@@ -1,6 +1,8 @@
 SYNTAX_THEME_PLUG="'branwright1/salvation-vim'"
 SYNTAX_THEME=salvation
 
+HIGHLIGHT_THEME=system
+
 TMUX_THEME='system-theme'
 TMUX_STATUS_BG=colour0
 TMUX_STATUS_FG=colour8

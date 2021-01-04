@@ -1,1 +1,1 @@
-export HIGHLIGHT_STYLE=gruvbox
+export HIGHLIGHT_STYLE={{!HIGHLIGHT_THEME}}
