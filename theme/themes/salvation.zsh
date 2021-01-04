@@ -23,8 +23,8 @@ TMUX_STATUS_CURRENT_BG=colour11
 TMUX_STATUS_CURRENT_FG=colour8
 
 FONT_FACE="TerminessTTF NF"
-FONT_FAMILY="Terminess Nerd Font"
-FONT_STYLE="Book"
+FONT_FAMILY="TerminessTTF Nerd Font"
+FONT_STYLE="Normal"
 FONT_SIZE=16
 
 # highlight config
