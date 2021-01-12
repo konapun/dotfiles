@@ -3,6 +3,7 @@ alias ...="cd ../.."
 
 alias vim=nvim
 
+command -v hub &> /dev/null && alias git=hub
 command -v gsed &> /dev/null && alias sed=gsed
 command -v batcat &> /dev/null && alias bat=batcat
 command -v bat &> /dev/null && alias cat=bat

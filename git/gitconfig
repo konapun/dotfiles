@@ -10,6 +10,8 @@
   rebase = false
 [alias]
   ls = !git branch | fzf | xargs git checkout
+  branch-name = !git branch --show-current
+  publish = !git push -u origin $(git branch-name)
   ca = !git add -A && git commit
   ci = commit
   cl = clone
@@ -34,4 +36,4 @@
   up = !git checkout master && git branch --set-upstream-to=upstream/master && git pull && git push origin master && git dmb
   setup = "!f() { git remote add upstream $1 && git fetch --all && git up;}; f"
   rekt = reset --hard upstream/master
-  git = hub
+  ; git = hub
