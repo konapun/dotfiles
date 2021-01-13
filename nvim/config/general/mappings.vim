@@ -36,6 +36,7 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " ALE
 nmap <leader>F :ALEFix<CR>
+nmap <leader>n :ALENextWrap<CR>
 
 " fugitive
 nmap <leader>gb :Gblame<CR>
