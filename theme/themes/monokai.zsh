@@ -2,12 +2,18 @@
 
 # vim/bat config
 SYNTAX_THEME=molokai
+AIRLINE_THEME=system
 
 # chrome config
 CHROME_THEME=https://chrome.google.com/webstore/detail/passion-for-pink/cogfkcjpgcgbhkllpaednchppnjepmmm?hl=en
 
 # bpytop config
 BPYTOP_THEME=monokai
+
+# tmux config
+TMUX_THEME='system-theme'
+TMUX_STATUS_BG=colour236
+TMUX_STATUS_RIGHT_FG=colour2
 
 # colors
 BLACK=#333333

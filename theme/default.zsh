@@ -11,6 +11,8 @@ SYNTAX_THEME=wal
 
 # tmux config
 TMUX_THEME="'konapun/tmux-terminal-theme'"
+
+# system theme defaults
 TMUX_STATUS_BG=colour0
 TMUX_STATUS_FG=colour8
 TMUX_WINDOW_STATUS_BG=colour3

@@ -89,7 +89,7 @@ nnoremap <F5> :UndotreeToggle<cr>
 nmap <C-w>z :Goyo<cr>
 
 " vista
-nmap <leader>v :Vista coc
+nmap <leader>v :Vista coc<cr>
 
 " lens
 nnoremap <silent> <C-w>[ :call lens#toggle()<CR>
