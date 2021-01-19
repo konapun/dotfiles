@@ -1,1 +1,1 @@
-export HIGHLIGHT_STYLE={{!HIGHLIGHT_THEME}}
+export HIGHLIGHT_STYLE={{!highlight_theme}}

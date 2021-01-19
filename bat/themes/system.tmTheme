@@ -7,7 +7,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>nord</string>
+	<string>system</string>
 	<key>settings</key>
 	<array>
 		<dict>
@@ -35,7 +35,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#616E88</string>
+        <string>{{comment}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -46,7 +46,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#A3BE8C</string>
+        <string>{{string}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -57,7 +57,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#B48EAD</string>
+        <string>{{number}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -68,7 +68,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#81A1C1</string>
+        <string>{{constant}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -89,7 +89,7 @@
 			<string>keyword</string> <key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#81A1C1</string>
+        <string>{{keyword}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -102,7 +102,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#81A1C1</string>
+        <string>{{storage}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -113,7 +113,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#81A1C1</string>
+        <string>{{storage-type}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -124,7 +124,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#8FBCBB</string>
+        <string>{{class-name}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -137,7 +137,7 @@
 				<key>fontStyle</key>
 				<string>  bold</string>
 				<key>foreground</key>
-				<string>#8FBCBB</string>
+        <string>{{inherited-class}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -150,7 +150,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#88C0D0</string>
+        <string>{{function-name}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -163,7 +163,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#81A1C1</string>
+        <string>{{tag-name}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -176,7 +176,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#8FBCBB</string>
+        <string>{{tag-attribute}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -189,7 +189,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#88C0D0</string>
+        <string>{{library-function}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -211,11 +211,11 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#F92672</string>
+        <string>{{invalid-background}}</string>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#F8F8F0</string>
+        <string>{{invalid}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -226,9 +226,9 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#AE81FF</string>
+        <string>{{invalid-deprecated-background}}</string>
 				<key>foreground</key>
-				<string>#F8F8F0</string>
+        <string>{{invalid-deprecated}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -239,7 +239,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#B48EAD</string>
+        <string>{{rgb-value}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -250,7 +250,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#EBCB8B</string>
+        <string>{{escape-code}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -261,7 +261,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#8FBCBB</string>
+        <string>{{other-constant}}</string>
 			</dict>
 		</dict>
 	</array>
@@ -270,6 +270,6 @@
 	<key>colorSpaceName</key>
 	<string>sRGB</string>
 	<key>semanticClass</key>
-	<string>theme.dark.nord</string>
+	<string>theme.system</string>
 </dict>
 </plist>
