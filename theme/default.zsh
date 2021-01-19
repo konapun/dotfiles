@@ -51,7 +51,7 @@ FONT_STYLE="Book"
 FONT_SIZE=14
 
 # highlight config
-#HIGHLIGHT_THEME=gruvbox
+HIGHLIGHT_THEME=system
 
 # segments
 LEFT_SEGMENT_START=

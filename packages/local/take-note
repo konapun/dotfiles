@@ -1,0 +1,15 @@
+#!/bin/sh
+
+datestring="$(date +%Y-%m-%d).md"
+notesDir="$HOME/Documents/notes"
+notePath="$notesDir/note-$datestring.md"
+
+if [ ! -f  $notePath ]; then
+  echo "# Notes for $datestring" > $notePath
+fi
+
+nvim -v "norm Go" \
+  -c "norm Go## $(date +%H:%M)" \
+  -c "norm G2o" \
+  -c "norm zz" \
+  -c "startinsert" $notePath
