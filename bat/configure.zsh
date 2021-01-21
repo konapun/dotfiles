@@ -7,7 +7,7 @@ rm ~/.config/bat/configure.zsh
 bat cache --build
 
 # Theming
-themer_substitute syntax_theme $SYNTAX_THEME $BAT_CONFIG_FILE
+themer_substitute theme $BAT_THEME $BAT_CONFIG_FILE
 themer_cleanup $BAT_CONFIG_FILE
 themer_substitute background $BACKGROUND $bat_system_theme
 themer_substitute foreground $FOREGROUND $bat_system_theme

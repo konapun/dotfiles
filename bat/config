@@ -1,4 +1,4 @@
---theme="{{syntax_theme}}"
+--theme="{{theme}}"
 
 # Show line numbers, Git modifications and file header (but no grid)
 --style="numbers,changes,header"
