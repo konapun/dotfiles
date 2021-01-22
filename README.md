@@ -71,4 +71,5 @@ To use a theme, run the install script with the `-t` option followed by the them
   * lighthaus (partial theme only - no vim yet)
   * salvation
   * one-dark
+  * kawaii
 
