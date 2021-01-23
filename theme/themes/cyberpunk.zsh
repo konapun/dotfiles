@@ -3,6 +3,7 @@
 # vim/bat config
 SYNTAX_THEME=cyberpunk
 AIRLINE_THEME=system
+WINTERM_THEME=cyberpunk
 
 # tmux config
 TMUX_THEME='system-theme'

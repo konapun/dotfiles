@@ -3,6 +3,7 @@
 # vim/bat config
 SYNTAX_THEME_PLUG="'fcpg/vim-farout'"
 SYNTAX_THEME=farout
+WINTERM_THEME=farout
 
 # chrome config
 CHROME_THEME=https://chrome.google.com/webstore/detail/dark-l20-brown/lhlhfdabjlokjmdnbclidjjdhghdgblm

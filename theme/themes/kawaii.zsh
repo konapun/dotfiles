@@ -3,6 +3,7 @@
 # vim/bat config
 SYNTAX_THEME=noelle
 AIRLINE_THEME=system
+WINTERM_THEME=system
 
 # tmux config
 TMUX_THEME='system-theme'
@@ -27,9 +28,9 @@ TMUX_STATUS_CURRENT_FG=colour8
 # CHROME_THEME TODO
 
 # fonts
-FONT_FACE="azukifontBI"
+FONT_FACE="azukifontBI NF"
 FONT_FAMILY="azukifontBI"
-FONT_STYLE="Regular"
+FONT_STYLE="Book"
 FONT_SIZE=17
 
 # colors
@@ -53,3 +54,7 @@ BRIGHT_WHITE=#F2CC60
 BACKGROUND=#FFFCFD
 FOREGROUND=#250E07
 ACCENT=$BRIGHT_PURPLE
+
+WALLPAPER=./wallpaper/kawaii_float.jpg
+
+WINDOWS_THEME="./windows/Kawaii.theme"

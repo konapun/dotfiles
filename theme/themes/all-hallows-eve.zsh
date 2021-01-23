@@ -2,6 +2,7 @@
 
 # vim/bat config
 SYNTAX_THEME=all-hallows-eve-plus
+WINTERM_THEME=all-hallows-eve
 
 # tmux config
 TMUX_THEME="'konapun/tmux-terminal-theme'"

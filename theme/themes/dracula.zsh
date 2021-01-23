@@ -4,6 +4,9 @@ SYNTAX_THEME_PLUG="'dracula/vim', {'as': 'dracula'}"
 # vim/bat config
 SYNTAX_THEME=dracula
 
+# winterm theme
+WINTERM_THEME=dracula
+
 # tmux config
 TMUX_THEME="'dracula/tmux'"
 

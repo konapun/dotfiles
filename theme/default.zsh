@@ -9,6 +9,9 @@
 SYNTAX_THEME_PLUG="'dylanaraps/wal.vim'"
 SYNTAX_THEME=wal
 
+# windows terminal
+WINTERM_THEME=system
+
 # tmux config
 TMUX_THEME="'konapun/tmux-terminal-theme'"
 

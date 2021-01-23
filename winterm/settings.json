@@ -242,6 +242,26 @@
             "brightRed" : "#FF5050",
             "brightWhite" : "#FFFADE",
             "brightYellow" : "#ED722E"
+        }, {
+            "name" : "system",
+            "background" : "{{background}}",
+            "foreground" : "{{foreground}}",
+            "black" : "{{black}}",
+            "blue" : "{{blue}}",
+            "cyan" : "{{cyan}}",
+            "green" : "{{green}}",
+            "purple" : "{{purple}}",
+            "red" : "{{red}}",
+            "white" : "{{white}}",
+            "yellow" : "{{yellow}}",
+            "brightBlack" : "{{bright_black}}",
+            "brightBlue" : "{{bright_blue}}",
+            "brightCyan" : "{{bright_cyan}}",
+            "brightGreen" : "{{bright_green}}",
+            "brightPurple" : "{{bright_purple}}",
+            "brightRed" : "{{bright_red}}",
+            "brightWhite" : "{{bright_white}}",
+            "brightYellow" : "{{bright_yellow}}"
         }
     ],
     // Add any keybinding overrides to this array.

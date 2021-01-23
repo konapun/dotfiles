@@ -2,6 +2,7 @@
 
 # vim/bat config
 SYNTAX_THEME=base16-eva
+WINTERM_THEME=base16-eva
 
 # chrome config
 CHROME_THEME=https://chrome.google.com/webstore/detail/nord/abehfkkfjlplnjadfcjiflnejblfmmpj

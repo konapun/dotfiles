@@ -3,6 +3,7 @@
 # vim/bat config
 SYNTAX_THEME_PLUG="'lighthaus-theme/vim'"
 SYNTAX_THEME=lighthaus
+WINTERM_THEME=lighthaus
 
 # colors
 BLACK=#18191E
