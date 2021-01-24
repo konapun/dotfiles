@@ -33,9 +33,19 @@ elif [[ $UPDATE ]]; then # update
 fi
 
 # theming
+local p10k_config_file=$HOME/.p10k.zsh
 local tmux_config_file=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/tmux.zsh
 local highlight_config_file=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/highlight.zsh
 local ranger_config_file=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/ranger.zsh
+themer_substitute left_subsegment_separator $LEFT_SEPARATOR $p10k_config_file
+themer_substitute right_subsegment_separator $RIGHT_SEPARATOR $p10k_config_file
+themer_substitute left_segment_separator $LEFT_SEGMENT_START $p10k_config_file
+themer_substitute right_segment_separator $RIGHT_SEGMENT_START $p10k_config_file
+themer_substitute left_last_segment_end_symbol $PROMPT_LEFT_END $p10k_config_file
+themer_substitute right_first_segment_start_symbol $PROMPT_RIGHT_START $p10k_config_file
+themer_substitute left_first_segment_start_symbol $PROMPT_LEFT_START $p10k_config_file
+themer_substitute right_last_segment_end_symbol $PROMPT_RIGHT_END $p10k_config_file
+themer_cleanup $p10k_config_file
 themer_substitute background $BACKGROUND $tmux_config_file
 themer_substitute left_segment_start $LEFT_SEGMENT_START $tmux_config_file
 themer_substitute left_segment_end $LEFT_SEGMENT_END $tmux_config_file

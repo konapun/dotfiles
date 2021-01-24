@@ -58,12 +58,16 @@ HIGHLIGHT_THEME=system
 BAT_THEME=system
 
 # segments
-LEFT_SEGMENT_START=
+PROMPT_LEFT_START='' # the leftmost side
+PROMPT_LEFT_END='\\uE0C6' # the portion preceding user input
+PROMPT_RIGHT_START='\\uE0C7' # the portion proceding user input
+PROMPT_RIGHT_END='' # the rightmost side
+LEFT_SEGMENT_START= # '\\uE0B0'
 LEFT_SEGMENT_END=
-LEFT_SEPARATOR=
-RIGHT_SEGMENT_START=
+LEFT_SEPARATOR= # '\\uE0B1'
+RIGHT_SEGMENT_START= # '\\uE0B2'
 RIGHT_SEGMENT_END=
-RIGHT_SEPARATOR=
+RIGHT_SEPARATOR= # '\\uE0B3'
 
 # colors
 BLACK=#282828
