@@ -8,6 +8,8 @@ fi
 themer_substitute font_face $FONT_FACE $WINTERM_CONFIG_FILE
 themer_substitute font_size $FONT_SIZE $WINTERM_CONFIG_FILE
 themer_substitute syntax_theme $WINTERM_THEME $WINTERM_CONFIG_FILE
+themer_substitute cursor_color $CURSOR $WINTERM_CONFIG_FILE
+themer_substitute selection_background $SELECTION_BACKGROUND $WINTERM_CONFIG_FILE
 themer_substitute background $BACKGROUND $WINTERM_CONFIG_FILE
 themer_substitute foreground $FOREGROUND $WINTERM_CONFIG_FILE
 themer_substitute black $BLACK $WINTERM_CONFIG_FILE

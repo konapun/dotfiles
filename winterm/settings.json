@@ -244,6 +244,8 @@
             "brightYellow" : "#ED722E"
         }, {
             "name" : "system",
+            "cursorColor": "{{!cursor_color}}",
+            "selectionBackground": "{{!selection_background}}",
             "background" : "{{background}}",
             "foreground" : "{{foreground}}",
             "black" : "{{black}}",
