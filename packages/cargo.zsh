@@ -1,1 +1,1 @@
-CARGO_PACKAGES=(onefetch)
+CARGO_PACKAGES=() #(onefetch)

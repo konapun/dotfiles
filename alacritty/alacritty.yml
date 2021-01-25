@@ -39,7 +39,7 @@ colors:
     cyan:    '{{cyan}}'
     white:   '{{white}}'
 
-  bright:
+  bright: # {{!bright_black}}
     black:   '{{bright_black}}'
     red:     '{{bright_red}}'
     green:   '{{bright_green}}'
@@ -49,7 +49,7 @@ colors:
     cyan:    '{{bright_cyan}}'
     white:   '{{bright_white}}'
 
-  dim:
+  dim: # {{!dim_black}}
     black:   '{{!dim_black}}'
     red:     '{{!dim_red}}'
     green:   '{{!dim_green}}'
