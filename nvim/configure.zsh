@@ -32,4 +32,6 @@ themer_substitute foreground $FOREGROUND $AIRLINE_THEME_FILE
 themer_substitute accent $ACCENT $AIRLINE_THEME_FILE
 themer_cleanup $AIRLINE_THEME_FILE
 themer_substitute airline_theme $AIRLINE_THEME $AIRLINE_CONFIG_FILE
+themer_substitute airline_left_sep $LEFT_SEGMENT_START $AIRLINE_CONFIG_FILE
+themer_substitute airline_right_sep $RIGHT_SEGMENT_START $AIRLINE_CONFIG_FILE
 themer_cleanup $AIRLINE_CONFIG_FILE
