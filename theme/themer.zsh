@@ -3,6 +3,13 @@ function themer_substitute {
   local key=$1
   local value=$2
   local file=$3
+
+  # if value is empty, its value will be file's and file will be empty so shuffle things around...
+  if [[ $file == '' ]]; then
+    file=$value
+    value=''
+  fi
+
   local pattern="{{$key}}"
   local kibosh_pattern="{{!$key}}"
 

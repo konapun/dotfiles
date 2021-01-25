@@ -5,7 +5,18 @@ SYNTAX_THEME=all-hallows-eve-plus
 WINTERM_THEME=all-hallows-eve
 
 # tmux config
-TMUX_THEME="'konapun/tmux-terminal-theme'"
+TMUX_THEME='system-theme'
+
+# segments
+PROMPT_LEFT_END=' \\ufb8a'
+PROMPT_RIGHT_START='' # the portion proceding user input
+PROMPT_RIGHT_END='' # the rightmost side
+LEFT_SEGMENT_START='' # '\\uE0B0'
+LEFT_SEGMENT_END=''
+LEFT_SEPARATOR='\\uE621' # '\\uE0B1'
+RIGHT_SEGMENT_START='' # '\\uE0B2'
+RIGHT_SEGMENT_END=''
+RIGHT_SEPARATOR='\\uE621' # '\\uE0B3'
 
 # colors
 BLACK=#404040
