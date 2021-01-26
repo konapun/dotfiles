@@ -8,6 +8,15 @@ WINTERM_THEME=eva01
 # chrome config
 CHROME_THEME=https://www.themebeta.com/chrome/theme/1358797
 
+# segments
+PROMPT_LEFT_END='\\uE0B8' # 01
+LEFT_SEGMENT_START='\\uE0B8'
+LEFT_SEGMENT_END='\\uE0B8'
+LEFT_SEPARATOR='\\uE0B9' #
+RIGHT_SEGMENT_START='\\uE0BA' # '\\uE0B2'
+RIGHT_SEGMENT_END='\\uE0BA'
+RIGHT_SEPARATOR='\\uE0BB' #
+
 # tmux config
 TMUX_THEME='system-theme'
 TMUX_STATUS_BG=colour235

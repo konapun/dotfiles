@@ -8,7 +8,7 @@ WINTERM_THEME=all-hallows-eve
 TMUX_THEME='system-theme'
 
 # segments
-PROMPT_LEFT_END=' \\ufb8a'
+PROMPT_LEFT_END=' \\ufb8a' # skull
 PROMPT_RIGHT_START='' # the portion proceding user input
 PROMPT_RIGHT_END='' # the rightmost side
 LEFT_SEGMENT_START='' # '\\uE0B0'

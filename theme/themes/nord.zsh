@@ -8,6 +8,9 @@ WINTERM_THEME=nord
 # tmux config
 TMUX_THEME="'arcticicestudio/nord-tmux'"
 
+# segments
+PROMPT_LEFT_END=' \uufc15' # snowflake
+
 # bpytop config
 BPYTOP_THEME=nord
 

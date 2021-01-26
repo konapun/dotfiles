@@ -4,8 +4,6 @@ local bat_system_theme=$HOME/.config/bat/themes/system.tmTheme
 cp -r ./bat ~/.config
 rm ~/.config/bat/configure.zsh
 
-bat cache --build
-
 # Theming
 themer_substitute theme $BAT_THEME $BAT_CONFIG_FILE
 themer_cleanup $BAT_CONFIG_FILE
@@ -36,3 +34,5 @@ themer_substitute rgb-value $BRIGHT_WHITE
 themer_substitute escape-code $BRIGHT_BLACK $bat_system_theme
 themer_substitute other-constant $RED $bat_system_theme
 themer_cleanup $bat_system_theme
+
+bat cache --build
