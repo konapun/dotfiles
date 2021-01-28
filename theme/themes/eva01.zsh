@@ -3,7 +3,7 @@ SYNTAX_THEME=eva01
 
 AIRLINE_THEME=system
 
-WINTERM_THEME=eva01
+WINTERM_THEME=system
 
 # chrome config
 CHROME_THEME=https://www.themebeta.com/chrome/theme/1358797

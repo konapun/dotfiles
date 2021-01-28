@@ -1,6 +1,8 @@
 ## My portable environment
 
-<img src="screenshot.png" alt="Screenshot">
+<img src="./_res/eva01-theme.png" alt="Screenshot">
+^ranger, zsh, and neovim with eva01 theme^
+
 <hr>
 I regularly jump across Windows, MacOS, and various Linux DEs so this is an attempt to script my environment to be usable wherever I go. This
 setup is used and confirmed working on Mac OS, Ubuntu 18.04, Ubuntu 20.04 (WSL), Android (via Termux), and Raspberry Pi OS (Raspian) on armv7.
