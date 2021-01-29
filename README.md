@@ -1,7 +1,7 @@
 # My portable environment
 
 <img src="./_res/eva01-theme.png" alt="Screenshot">
-^ranger, zsh, and neovim with eva01 theme^
+<sub>tmux, ranger, zsh, and neovim with eva01 theme</sub>
 
 <hr>
 I regularly jump across Windows, MacOS, and various Linux DEs so this is an attempt to script my environment to be usable wherever I go. This
