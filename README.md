@@ -1,4 +1,4 @@
-## My portable environment
+# My portable environment
 
 <img src="./_res/eva01-theme.png" alt="Screenshot">
 ^ranger, zsh, and neovim with eva01 theme^
@@ -29,10 +29,10 @@ In particular, this provides installation and configuration for:
   * A selection of wallpapers which match the included themes
   * (more coming soon as I get it working for my bspwm setup)
 
-### Prerequisites
+## Prerequisites
 zsh
 
-### Installing
+## Installing
 The installation/configuration script is modular. To install everything, simply run `zsh ./install.zsh` (sudo is required on Linux).
 
 Alternatively, you can install the following targets separately by running `zsh ./install.zsh [target1 target2 ...]` where a target is one of:
@@ -53,7 +53,7 @@ Alternatively, you can install the following targets separately by running `zsh 
   * **slack** generate sidebar theme for slack
   * **chrome** link to suggested chrome theme in web store
 
-### Theming
+## Theming
 Theme support is provided via a simple `sed`-based template system. Any configuration file can specify a template variable by enclosing a key
 within double curly braces (e.g. `{{my_template_variable}}`). The theme script then replaces these variables with values from the loaded theme.
 Some theming is done by specifying hex colors while other theming is done by taking advantage of provided themes.
@@ -61,23 +61,42 @@ Some theming is done by specifying hex colors while other theming is done by tak
 
 To use a theme, run the install script with the `-t` option followed by the theme name: `./install.zsh -t dracula`
 
-#### Available Themes
-  * default (attempts to use configurations which make terminal utilities respect shell colors)
-  * all-hallows-eve
-    <img src="./_res/all-hallows-eve-theme.png" alt="all-hallows-eve">
-  * cyberpunk
-    <img src="./_res/cyberpunk-theme.png" alt="cyberpunk">
-  * dracula
-  * eva01
-    <img src="./_res/eva01-theme.png" alt="eva01">
-  * farout
-  * gruvbox
-    <img src="./_res/gruvbox-theme.png" alt="gruvbox">
-  * kawaii
-  * lighthaus (partial theme only - no vim yet)
-  * monokai
-  * nord
-    <img src="./_res/nord-theme.png" alt="nord">
-  * one-dark
-  * salvation
 
+### default
+(attempts to use configurations which make terminal utilities respect shell colors)
+
+### all-hallows-eve
+<img src="./_res/all-hallows-eve-theme.png" alt="all-hallows-eve">
+
+### cyberpunk
+<img src="./_res/cyberpunk-theme.png" alt="cyberpunk">
+
+### dracula
+screenshot coming soon
+
+### eva01
+<img src="./_res/eva01-theme.png" alt="eva01">
+
+### farout
+screenshot coming soon
+
+### gruvbox
+<img src="./_res/gruvbox-theme.png" alt="gruvbox">
+
+### kawaii
+<img src="./_res/kawaii-theme.png" alt="kawaii">
+
+### lighthaus
+(partial theme only - no vim yet)
+
+### monokai
+screenshot coming soon
+
+### nord
+<img src="./_res/nord-theme.png" alt="nord">
+
+### one-dark
+screenshot coming soon
+
+### salvation
+screenshot coming soon
