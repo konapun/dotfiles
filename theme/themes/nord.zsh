@@ -9,7 +9,7 @@ WINTERM_THEME=nord
 TMUX_THEME="'arcticicestudio/nord-tmux'"
 
 # segments
-PROMPT_LEFT_END=' \uufc15' # snowflake
+PROMPT_LEFT_END='\\uE0B0\\uFC15' # snowflake
 
 # bpytop config
 BPYTOP_THEME=nord

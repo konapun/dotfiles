@@ -64,15 +64,20 @@ To use a theme, run the install script with the `-t` option followed by the them
 #### Available Themes
   * default (attempts to use configurations which make terminal utilities respect shell colors)
   * all-hallows-eve
+    <img src="./_res/all-hallows-eve-theme.png" alt="all-hallows-eve">
   * cyberpunk
+    <img src="./_res/cyberpunk-theme.png" alt="cyberpunk">
   * dracula
   * eva01
+    <img src="./_res/eva01-theme.png" alt="eva01">
   * farout
   * gruvbox
+    <img src="./_res/gruvbox-theme.png" alt="gruvbox">
   * kawaii
   * lighthaus (partial theme only - no vim yet)
   * monokai
   * nord
+    <img src="./_res/nord-theme.png" alt="nord">
   * one-dark
   * salvation
 
