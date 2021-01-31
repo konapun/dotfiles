@@ -72,13 +72,13 @@ To use a theme, run the install script with the `-t` option followed by the them
 <img src="./_res/cyberpunk-theme.png" alt="cyberpunk">
 
 ### dracula
-screenshot coming soon
+<img src="./_res/dracula-theme.png" alt="dracula">
 
 ### eva01
 <img src="./_res/eva01-theme.png" alt="eva01">
 
 ### farout
-screenshot coming soon
+<img src="./_res/farout-theme.png" alt="farout">
 
 ### gruvbox
 <img src="./_res/gruvbox-theme.png" alt="gruvbox">
@@ -90,13 +90,13 @@ screenshot coming soon
 (partial theme only - no vim yet)
 
 ### monokai
-screenshot coming soon
+<img src="./_res/monokai-theme.png" alt="monokai">
 
 ### nord
 <img src="./_res/nord-theme.png" alt="nord">
 
 ### one-dark
-screenshot coming soon
+<img src="./_res/one-dark-theme.png" alt="one-dark">
 
 ### salvation
 screenshot coming soon
