@@ -1,5 +1,5 @@
-SYNTAX_THEME_PLUG="'branwright1/salvation-vim'"
 SYNTAX_THEME=salvation
+AIRLINE_THEME=salvation
 
 HIGHLIGHT_THEME=system
 

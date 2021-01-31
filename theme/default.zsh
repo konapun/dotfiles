@@ -43,7 +43,7 @@ TMUX_STATUS_CURRENT_BG=colour3
 TMUX_STATUS_CURRENT_FG=colour239
 
 # chrome config
-CHROME_THEME=https://chrome.google.com/webstore/detail/gruvbox-theme/ihennfdbghdiflogeancnalflhgmanop
+# CHROME_THEME=https://chrome.google.com/webstore/detail/gruvbox-theme/ihennfdbghdiflogeancnalflhgmanop
 
 # bpytop config
 BPYTOP_THEME=gruvbox_dark
