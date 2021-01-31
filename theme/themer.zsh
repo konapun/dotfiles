@@ -1,3 +1,5 @@
+THEMER_EMPTY_STRING='[____]'
+
 # Replaces all occurrences of a template variable within a file
 function themer_substitute {
   local key=$1
@@ -10,10 +12,15 @@ function themer_substitute {
     value=''
   fi
 
+
   local pattern="{{$key}}"
   local kibosh_pattern="{{!$key}}"
 
   if [[ ! -z $value ]]; then # don't do replacements with empty values or the variables won't be available for cleanup
+    if [[ $value == $THEMER_EMPTY_STRING ]]; then # Since shell scripting sucks, if value is '' it'll still be considered null which will break intended functionality. As a lame workaround, use a special value to represent an intended empty string :(
+      value=''
+    fi
+
     sed -i -- "s&$pattern&$value&g" $file &> /dev/null
     sed -i -- "s&$kibosh_pattern&$value&g" $file &> /dev/null
   fi

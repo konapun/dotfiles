@@ -2,20 +2,21 @@
 
 # vim/bat config
 SYNTAX_THEME=all-hallows-eve-plus
-WINTERM_THEME=all-hallows-eve
+WINTERM_THEME=system
 
 # tmux config
 TMUX_THEME='system-theme'
+TMUX_STATUS_BG=colour16
 
 # segments
 PROMPT_LEFT_END=' \\ufb8a' # skull
-PROMPT_RIGHT_START='' # the portion proceding user input
-PROMPT_RIGHT_END='' # the rightmost side
-LEFT_SEGMENT_START='' # '\\uE0B0'
-LEFT_SEGMENT_END=''
+PROMPT_RIGHT_START=$THEMER_EMPTY_STRING # the portion proceding user input
+PROMPT_RIGHT_END=$THEMER_EMPTY_STRING # the rightmost side
+LEFT_SEGMENT_START=$THEMER_EMPTY_STRING # '\\uE0B0'
+LEFT_SEGMENT_END=$THEMER_EMPTY_STRING
 LEFT_SEPARATOR='\\uE621' # '\\uE0B1'
-RIGHT_SEGMENT_START='' # '\\uE0B2'
-RIGHT_SEGMENT_END=''
+RIGHT_SEGMENT_START=$THEMER_EMPTY_STRING # '\\uE0B2'
+RIGHT_SEGMENT_END=$THEMER_EMPTY_STRING
 RIGHT_SEPARATOR='\\uE621' # '\\uE0B3'
 
 # colors
