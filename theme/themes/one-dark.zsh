@@ -4,7 +4,7 @@ SYNTAX_THEME_PLUG="'joshdick/onedark.vim'"
 SYNTAX_THEME=onedark
 
 #chrome config
-# TODO
+CHROME_THEME=https://chrome.google.com/webstore/detail/one-dark/hpkjepofpoigjlihphohlecofocheiaf?hl=en
 
 # bpytop config
 # TODO

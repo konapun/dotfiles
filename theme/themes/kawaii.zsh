@@ -5,6 +5,13 @@ SYNTAX_THEME=noelle
 AIRLINE_THEME=system
 WINTERM_THEME=system
 
+# All of these Chrome themes fit pretty well
+CHROME_THEME=https://chrome.google.com/webstore/detail/fancy-pastel/imliopkgpgnbpcipjlmffljjajdalabl
+# CHROME_THEME=https://chrome.google.com/webstore/detail/pompompurin-theme-1/npembhkklpidmaehgaailagokgflcgek
+# CHROME_THEME=https://chrome.google.com/webstore/detail/pastel-teddies/mmkdmpbafhfhhllhmnnilclfbplbfedo
+# CHROME_THEME=https://chrome.google.com/webstore/detail/cute-pink-strawberries/mpcicanollmjempiaefjpnlakdmenhci
+# CHROME_THEME=https://chrome.google.com/webstore/detail/pink-moon-bunny/mfkbnaajbkfbbllfpadglkmmdodcdifd
+
 # segments
 PROMPT_LEFT_START='\\uE0B6'
 PROMPT_LEFT_END='\\uE0B4 \\uF7D0 '

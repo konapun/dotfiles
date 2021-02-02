@@ -8,6 +8,10 @@ WINTERM_THEME=system
 TMUX_THEME='system-theme'
 TMUX_STATUS_BG=colour16
 
+CHROME_THEME=https://chrome.google.com/webstore/detail/halloween-cute-spooky-pol/lkkdjmlekkcglkekoafagnbgfmckfgok?hl=en
+# CHROME_THEME=https://chrome.google.com/webstore/detail/halloween-pixel-ghosts/hkbinnddeloniioefldeidfcecpbikie?hl=en
+# CHROME_THEME=https://chrome.google.com/webstore/detail/cute-halloween/chjbphgnjeijoimmeghonhpcpbeibjpm?hl=en
+
 # segments
 PROMPT_LEFT_END=' \\ufb8a' # skull
 PROMPT_RIGHT_START=$THEMER_EMPTY_STRING # the portion proceding user input

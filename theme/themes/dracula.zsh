@@ -13,6 +13,8 @@ TMUX_THEME="'dracula/tmux'"
 # bpytop config
 BPYTOP_THEME=dracula
 
+CHROME_THEME=https://chrome.google.com/webstore/detail/dracula-chrome-theme-dark/gfapcejdoghpoidkfodoiiffaaibpaem
+
 # colors
 BLACK=#000000
 RED=#ff5555
