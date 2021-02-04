@@ -99,4 +99,4 @@ To use a theme, run the install script with the `-t` option followed by the them
 <img src="./_res/one-dark-theme.png" alt="one-dark">
 
 ### salvation
-screenshot coming soon
+<img src="./_res/salvation-theme.png" alt="salvation">
