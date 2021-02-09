@@ -3,3 +3,4 @@ tags.*
 nvim/plugged
 nvim/undo
 nvim/.netrwhist
+npm-debug.log
