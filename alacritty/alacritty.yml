@@ -12,8 +12,8 @@ font:
 
 window:
   padding:
-    x: 10
-    y: 10
+    x: {{padding_x}}
+    y: {{padding_y}}
 
 cursor:
   style: Block

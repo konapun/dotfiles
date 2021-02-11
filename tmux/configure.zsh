@@ -8,6 +8,23 @@ cp -r ./tmux/plugins/* $HOME/.tmux/plugins
 themer_substitute tmux_theme $TMUX_THEME $tmux_config_file
 themer_cleanup $tmux_config_file
 
+# Default values
+if [[ ! -v TMUX_STATUS_LEFT_SEGMENT ]]; then
+  TMUX_STATUS_LEFT_SEGMENT=$LEFT_SEGMENT_START
+fi
+if [[ ! -v TMUX_STATUS_INACTIVE_BG ]]; then
+  TMUX_STATUS_INACTIVE_BG=$TMUX_STATUS_CURRENT_FG
+fi
+if [[ ! -v TMUX_STATUS_INACTIVE_FG ]]; then
+  TMUX_STATUS_INACTIVE_FG=$TMUX_STATUS_CURRENT_BG
+fi
+if [[ ! -v TMUX_STATUS_RIGHT_SECONDARY_BG ]]; then
+  TMUX_STATUS_RIGHT_SECONDARY_BG=$TMUX_STATUS_RIGHT_FG
+fi
+if [[ ! -v TMUX_STATUS_RIGHT_SECONDARY_FG ]]; then
+  TMUX_STATUS_RIGHT_SECONDARY_FG=$TMUX_STATUS_RIGHT_BG
+fi
+
 themer_substitute status_bg $TMUX_STATUS_BG $tmux_system_theme
 themer_substitute status_fg $TMUX_STATUS_FG $tmux_system_theme
 themer_substitute window_status_bg $TMUX_WINDOW_STATUS_BG $tmux_system_theme
@@ -23,8 +40,13 @@ themer_substitute status_left_bg $TMUX_STATUS_LEFT_BG $tmux_system_theme
 themer_substitute status_left_fg $TMUX_STATUS_LEFT_FG $tmux_system_theme
 themer_substitute status_right_bg $TMUX_STATUS_RIGHT_BG $tmux_system_theme
 themer_substitute status_right_fg $TMUX_STATUS_RIGHT_FG $tmux_system_theme
+themer_substitute status_right_secondary_bg $TMUX_STATUS_RIGHT_SECONDARY_BG $tmux_system_theme
+themer_substitute status_right_secondary_fg $TMUX_STATUS_RIGHT_SECONDARY_FG $tmux_system_theme
+themer_substitute status_inactive_bg $TMUX_STATUS_INACTIVE_BG $tmux_system_theme
+themer_substitute status_inactive_fg $TMUX_STATUS_INACTIVE_FG $tmux_system_theme
 themer_substitute status_current_bg $TMUX_STATUS_CURRENT_BG $tmux_system_theme
 themer_substitute status_current_fg $TMUX_STATUS_CURRENT_FG $tmux_system_theme
+themer_substitute status_left_segment $TMUX_STATUS_LEFT_SEGMENT $tmux_system_theme
 themer_substitute left_segment_separator $LEFT_SEGMENT_START $tmux_system_theme
 themer_substitute right_segment_separator $RIGHT_SEGMENT_START $tmux_system_theme
 themer_substitute left_subsegment_separator $LEFT_SEPARATOR $tmux_system_theme

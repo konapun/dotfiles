@@ -8,6 +8,8 @@ if command -v alacritty &> /dev/null; then
   themer_substitute font_family $FONT_FAMILY $ALACRITTY_CONFIG_FILE
   themer_substitute font_size $FONT_SIZE $ALACRITTY_CONFIG_FILE
   themer_substitute font_style $FONT_STYLE $ALACRITTY_CONFIG_FILE
+  themer_substitute padding_x $WINDOW_PADDING $ALACRITTY_CONFIG_FILE
+  themer_substitute padding_y $WINDOW_PADDING $ALACRITTY_CONFIG_FILE
   themer_substitute cursor_text $CURSOR_TEXT $ALACRITTY_CONFIG_FILE
   themer_substitute cursor $CURSOR $ALACRITTY_CONFIG_FILE
   themer_substitute selection_text $SELECTION_TEXT $ALACRITTY_CONFIG_FILE

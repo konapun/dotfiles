@@ -1,22 +1,22 @@
 " vim-airline template by chartoin (http://github.com/chartoin)
 " Base 16 Ashes Scheme by Jannik Siebert (https://github.com/janniks)
 let g:airline#themes#system#palette = {}
-let s:gui00 = "{{bright_black}}"
-let s:gui01 = "{{background}}" " center bar color
-let s:gui02 = "{{bright_green}}"
-let s:gui03 = "{{red}}"
-let s:gui04 = "{{foreground}}"
-let s:gui05 = "{{bright_green}}"
-let s:gui06 = "{{background}}" " second segment text color
-let s:gui07 = "{{bright_white}}"
-let s:gui08 = "{{bright_green}}"
-let s:gui09 = "{{bright_green}}" " center text
-let s:gui0A = "{{green}}" " bottom second segment
-let s:gui0B = "{{purple}}" " bottom first segment
-let s:gui0C = "{{blue}}"
-let s:gui0D = "{{yellow}}" " top first segment edited
-let s:gui0E = "{{cyan}}"
-let s:gui0F = "{{bright_cyan}}"
+let s:gui00 = "{{gui00}}"
+let s:gui01 = "{{gui01}}" " center bar color
+let s:gui02 = "{{gui02}}"
+let s:gui03 = "{{gui03}}"
+let s:gui04 = "{{gui04}}"
+let s:gui05 = "{{gui05}}"
+let s:gui06 = "{{gui06}}" " second segment text color
+let s:gui07 = "{{gui07}}"
+let s:gui08 = "{{gui08}}"
+let s:gui09 = "{{gui09}}" " center text
+let s:gui0A = "{{gui0A}}" " bottom second segment
+let s:gui0B = "{{gui0B}}" " bottom first segment
+let s:gui0C = "{{gui0C}}"
+let s:gui0D = "{{gui0D}}" " top first segment edited
+let s:gui0E = "{{gui0E}}"
+let s:gui0F = "{{gui0F}}"
 
 let s:cterm00 = 0
 let s:cterm01 = 59

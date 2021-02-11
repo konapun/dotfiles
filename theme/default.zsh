@@ -48,6 +48,10 @@ TMUX_STATUS_CURRENT_FG=colour239
 # bpytop config
 BPYTOP_THEME=gruvbox_dark
 
+# terminal config
+WINDOW_PADDING=10
+
+# font config
 FONT_FACE="CaskaydiaCove NF"
 FONT_FAMILY="CaskaydiaCove Nerd Font"
 FONT_STYLE="Book"

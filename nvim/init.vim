@@ -86,7 +86,7 @@ Plug 'alunny/pegjs-vim'                                                 " Syntax
 call plug#end()
 
 " set theme
-set background=dark                                                     " Set colorscheme background color
+set background={{background}}                                                     " Set colorscheme background color
 set termguicolors                                                       " Enable 24-bit color
 syntax enable                                                           " Enable syntax highlighting
 colorscheme {{syntax_theme}}
