@@ -7,6 +7,7 @@ fi
 # Theming
 themer_substitute font_face $FONT_FACE $WINTERM_CONFIG_FILE
 themer_substitute font_size $FONT_SIZE $WINTERM_CONFIG_FILE
+themer_substitute padding $WINDOW_PADDING $WINTERM_CONFIG_FILE
 themer_substitute syntax_theme $WINTERM_THEME $WINTERM_CONFIG_FILE
 themer_substitute cursor_color $CURSOR $WINTERM_CONFIG_FILE
 themer_substitute selection_background $SELECTION_BACKGROUND $WINTERM_CONFIG_FILE

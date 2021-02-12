@@ -8,7 +8,8 @@
             // Put settings here that you want to apply to all profiles
             "colorScheme": "{{syntax_theme}}",
             "fontFace": "{{font_face}}",
-            "fontSize": {{font_size}}
+            "fontSize": {{font_size}},
+            "padding": "{{padding}}"
         },
         "list": [
             {

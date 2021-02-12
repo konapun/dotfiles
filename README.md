@@ -100,3 +100,6 @@ To use a theme, run the install script with the `-t` option followed by the them
 
 ### salvation
 <img src="./_res/salvation-theme.png" alt="salvation">
+
+### xp
+<img src="./_res/xp-theme.png" alt="xp">
