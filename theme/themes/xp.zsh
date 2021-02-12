@@ -5,6 +5,8 @@ SYNTAX_THEME=eclipse-console
 BACKGROUND_TYPE=light
 WINTERM_THEME=system
 
+CHROME_THEME=https://chrome.google.com/webstore/detail/windows-xp-luna-blue-them/ngegmjpafpbhealkgbgfjdgibjebmkgp
+
 WINDOW_PADDING=0
 
 # colors
