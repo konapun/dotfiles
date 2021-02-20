@@ -1,49 +1,5 @@
 # CYBERPUNK
 
-# vim/bat config
-SYNTAX_THEME=cyberpunk
-AIRLINE_THEME=system
-WINTERM_THEME=cyberpunk
-
-# segments
-PROMPT_LEFT_START='' # the leftmost side
-PROMPT_LEFT_END='\\uE0C6' # the portion preceding user input
-PROMPT_RIGHT_START='\\uE0C7' # the portion proceding user input
-PROMPT_RIGHT_END='' # the rightmost side
-LEFT_SEGMENT_START='\\uE0C6' # '\\uE0B0'
-LEFT_SEGMENT_END='\\uE0C6'
-LEFT_SEPARATOR= # '\\uE0B1'
-RIGHT_SEGMENT_START='\\uE0C7' # '\\uE0B2'
-RIGHT_SEGMENT_END='\\uE0C7'
-RIGHT_SEPARATOR= # '\\uE0B3'
-
-# tmux config
-TMUX_THEME='system-theme'
-TMUX_STATUS_BG=colour0
-TMUX_STATUS_FG=colour8
-TMUX_WINDOW_STATUS_BG=colour3
-TMUX_WINDOW_STATUS_FG=colour8
-TMUX_WINDOW_STATUS_CURRENT_BG=colour1
-TMUX_WINDOW_STATUS_CURRENT_FG=colour0
-TMUX_PANE_ACTIVE_BORDER=colour250
-TMUX_DISPLAY_PANES_ACTIVE=colour250
-TMUX_CLOCK_MODE=colour4
-TMUX_WINDOW_STATUS_BELL_BG=colour9
-TMUX_WINDOW_STATUS_BELL_FG=colour235
-TMUX_STATUS_LEFT_BG=colour1
-TMUX_STATUS_LEFT_FG=colour15
-TMUX_STATUS_RIGHT_BG=colour5
-TMUX_STATUS_RIGHT_FG=colour8
-TMUX_STATUS_CURRENT_BG=colour11
-TMUX_STATUS_CURRENT_FG=colour8
-
-CHROME_THEME=https://chrome.google.com/webstore/detail/cyberpunk/ekkfihjmcoeplagmladakeignpdaecmc
-
-FONT_FACE="Scientifica NF"
-FONT_FAMILY="Scientifica Nerd Font"
-FONT_STYLE="Normal"
-FONT_SIZE=17
-
 # colors
 BLACK=#101116
 RED=#ff0055
@@ -65,3 +21,58 @@ BRIGHT_WHITE=#ffffff
 BACKGROUND=$BLACK
 FOREGROUND=$WHITE
 ACCENT=$GREEN
+
+CHROME_THEME=https://chrome.google.com/webstore/detail/cyberpunk/ekkfihjmcoeplagmladakeignpdaecmc
+
+FONT_FACE="Scientifica NF"
+FONT_FAMILY="Scientifica Nerd Font"
+FONT_STYLE="Normal"
+FONT_SIZE=17
+
+# vim/bat config
+SYNTAX_THEME=cyberpunk
+AIRLINE_THEME=system
+WINTERM_THEME=cyberpunk
+
+# segments
+PROMPT_LEFT_START='' # the leftmost side
+PROMPT_LEFT_END='\\uE0C6' # the portion preceding user input
+PROMPT_RIGHT_START='\\uE0C7' # the portion proceding user input
+PROMPT_RIGHT_END='' # the rightmost side
+LEFT_SEGMENT_START='\\uE0C6' # '\\uE0B0'
+LEFT_SEGMENT_END='\\uE0C6'
+LEFT_SEPARATOR= # '\\uE0B1'
+RIGHT_SEGMENT_START='\\uE0C7' # '\\uE0B2'
+RIGHT_SEGMENT_END='\\uE0C7'
+RIGHT_SEPARATOR= # '\\uE0B3'
+
+# tmux config
+TMUX_THEME='system-theme'
+TMUX_STATUS_BG=colour0
+TMUX_STATUS_FG=colour8
+TMUX_WINDOW_STATUS_BG=colour10
+TMUX_WINDOW_STATUS_FG=colour8
+TMUX_WINDOW_STATUS_CURRENT_BG=colour1
+TMUX_WINDOW_STATUS_CURRENT_FG=colour0
+TMUX_PANE_ACTIVE_BORDER=colour250
+TMUX_DISPLAY_PANES_ACTIVE=colour250
+TMUX_CLOCK_MODE=colour4
+TMUX_WINDOW_STATUS_BELL_BG=colour9
+TMUX_WINDOW_STATUS_BELL_FG=colour235
+TMUX_STATUS_LEFT_BG=colour5
+TMUX_STATUS_LEFT_FG=colour0
+TMUX_STATUS_RIGHT_BG=colour5
+TMUX_STATUS_RIGHT_FG=colour8
+TMUX_STATUS_CURRENT_BG=colour10
+TMUX_STATUS_CURRENT_FG=colour8
+
+# airline
+AIRLINE_THEME=system
+AIRLINE_GUI02=$BRIGHT_PURPLE
+AIRLINE_GUI05=$GREEN
+AIRLINE_GUI08=$BRIGHT_YELLOW
+AIRLINE_GUI09=$GREEN
+AIRLINE_GUI0B=$BRIGHT_GREEN
+AIRLINE_GUI0D=$BRIGHT_YELLOW
+
+
