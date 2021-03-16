@@ -1,5 +1,4 @@
-# https://docs.docker.com/engine/install/linux-postinstall/
-if [[ $OSTYPE =~ linux ]]; then
+function configure_docker {
   # add user to docker group
   local current_groups=$(groups $USER)
   local belongs_to_docker=$(echo $current_groups | grep docker)
@@ -7,4 +6,7 @@ if [[ $OSTYPE =~ linux ]]; then
     sudo usermod -aG docker $USER
     newgrp docker
   fi
-fi
+}
+
+configure_docker
+

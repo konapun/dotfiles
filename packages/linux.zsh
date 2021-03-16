@@ -9,5 +9,7 @@ fi
 
 # snap-based packages
 if command -v snap &> /dev/null; then
-  source ./packages/linux.snap.zsh
+  source ./packages/linux/snap.zsh
 fi
+
+source ./packages/linux/postinstall.zsh

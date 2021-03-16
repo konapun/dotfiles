@@ -43,6 +43,9 @@ Plug 't9md/vim-choosewin'                                               " Land o
 Plug 'farmergreg/vim-lastplace'                                         " Intelligently reopen files at your last edit position
 Plug 'tpope/vim-sleuth'                                                 " Heuristically set buffer options
 
+" database
+Plug 'tpope/vim-dadbod'                                                 " Modern database interface for vim
+
 " markup
 Plug 'alvan/vim-closetag'                                               " Automatically close HTML tags
 Plug 'mattn/emmet-vim'                                                  " HTML/CSS text expansion
