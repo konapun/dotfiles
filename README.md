@@ -31,6 +31,7 @@ In particular, this provides installation and configuration for:
 
 ## Prerequisites
 zsh
+brew (if on macOS)
 
 ## Installing
 The installation/configuration script is modular. To install everything, simply run `zsh ./install.zsh` (sudo is required on Linux).

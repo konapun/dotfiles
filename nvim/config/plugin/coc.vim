@@ -10,7 +10,8 @@ let g:coc_global_extensions = [
   \'coc-conjure',
   \'coc-emmet',
   \'coc-pyright',
-  \'coc-snippets'
+  \'coc-snippets',
+  \'coc-docker'
 \]
 
 inoremap <silent><expr> <TAB>
