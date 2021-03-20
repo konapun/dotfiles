@@ -10,4 +10,4 @@ source ./packages/definitions/lsd.zsh
 source ./packages/definitions/babashka.zsh
 
 # external repos where commands may be located
-source ./packages/package_manager/apt/apt-sources.zsh
+source ./packages/linux/package_manager/apt/apt-sources.zsh
