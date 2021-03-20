@@ -7,14 +7,16 @@ if [[ $OSTYPE =~ linux ]]; then
   source ./packages/linux.zsh
 elif [[ $OSTYPE =~ darwin ]]; then
   source ./packages/mac.zsh
+elif [[ $(uname -a | grep iSH) ]]; then
+  source ./packges/linux.zsh # iSH is alpine running on iOS
 else
   echo "Unsupported OS"
   exit
 fi
 
-eval "$PACKAGE_MANAGER install $CORE_PACKAGES"
+eval "$PACKAGE_MANAGER $INSTALL_COMMAND $CORE_PACKAGES"
 if [[ $GRAPHICAL ]]; then
-  eval $GRAPHICAL_PACKAGE_MANAGER install $GRAPHICAL_PACKAGES
+  eval $GRAPHICAL_PACKAGE_MANAGER $INSTALL_COMMAND $GRAPHICAL_PACKAGES
 fi
 
 npm install -g $NPM_PACKAGES
