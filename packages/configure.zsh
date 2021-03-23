@@ -10,7 +10,7 @@ elif [[ $OSTYPE =~ darwin ]]; then
 elif [[ $(uname -a | grep iSH) ]]; then
   source ./packges/linux.zsh # iSH is alpine running on iOS
 else
-  echo "Unsupported OS"
+  warn "Unsupported OS"
   exit
 fi
 
