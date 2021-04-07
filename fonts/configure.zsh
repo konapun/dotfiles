@@ -40,7 +40,7 @@ else
     fi
   else # macos
     if command -v brew &> /dev/null; then # the witches' brew!
-      brew cask install $FONT[4]
+      brew install --cask $FONT[4]
     fi
     # TODO: set font in iterm
   fi

@@ -1,5 +1,5 @@
 PACKAGE_MANAGER=brew
-GRAPHICAL_PACKAGE_MANAGER="brew cask"
+GRAPHICAL_PACKAGE_MANAGER="brew --cask"
 INSTALL_COMMAND="install"
 
 CORE_PACKAGES=(babashka bat calcurse ctags docker fortune fzf gron gsed highlight htop hub lsd navi neofetch neovim node ranger ripgrep rust thefuck tmux) # stow
