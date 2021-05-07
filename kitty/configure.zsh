@@ -4,7 +4,7 @@ if command -v kitty &> /dev/null; then
   cp ./kitty/kitty.conf ~/.config/kitty
 
   # Theming
-  themer_substitute font_family $FONT_FACE $KITTY_CONFIG_FILE
+  themer_substitute font_family $FONT_FAMILY $KITTY_CONFIG_FILE
   themer_substitute font_size $FONT_SIZE $KITTY_CONFIG_FILE
   themer_substitute window_margin_width $WINDOW_PADDING $KITTY_CONFIG_FILE
   themer_substitute cursor $CURSOR $KITTY_CONFIG_FILE
