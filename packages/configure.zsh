@@ -2,6 +2,7 @@ source ./packages/nvm.zsh
 source ./packages/npm.zsh
 source ./packages/pip3.zsh
 source ./packages/cargo.zsh
+source ./packages/go.zsh
 
 if [[ $OSTYPE =~ linux ]]; then
   source ./packages/linux.zsh
@@ -24,11 +25,15 @@ pip3 install $PIP3_PACKAGES
 if command -v cargo &> /dev/null; then
   cargo install $CARGO_PACKAGES
 fi
+if command -v go &> /dev/null; then
+  go get $GO_PACKAGES
+fi
 
 if [[ $UPDATE ]]; then
   npm update
   pip3 install --upgrade $PIP3_PACKAGES
   cargo install --force $CARGO_PACKAGES
+  go get -u all
 fi
 
 sudo cp ./packages/local/* /usr/local/bin
