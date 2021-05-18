@@ -1,9 +1,13 @@
-source ./packages/nvm.zsh
+# shared definitions
+source ./packages/definitions/nvm.zsh
+
+# package sources
 source ./packages/npm.zsh
 source ./packages/pip3.zsh
 source ./packages/cargo.zsh
 source ./packages/go.zsh
 
+# OS-dependent installations
 if [[ $OSTYPE =~ linux ]]; then
   source ./packages/linux.zsh
 elif [[ $OSTYPE =~ darwin ]]; then
@@ -20,6 +24,7 @@ if [[ $GRAPHICAL ]]; then
   eval $GRAPHICAL_PACKAGE_MANAGER $INSTALL_COMMAND $GRAPHICAL_PACKAGES
 fi
 
+# install from package sources
 npm install -g $NPM_PACKAGES
 pip3 install $PIP3_PACKAGES
 if command -v cargo &> /dev/null; then
@@ -36,4 +41,5 @@ if [[ $UPDATE ]]; then
   go get -u all
 fi
 
+# local definitions
 sudo cp ./packages/local/* /usr/local/bin
