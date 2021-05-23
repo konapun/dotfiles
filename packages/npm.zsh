@@ -1,1 +1,1 @@
-NPM_PACKAGES=(clj-kondo fixjson yarn)
+NPM_PACKAGES=(@perryrh0dan/taskline clj-kondo fixjson yarn)
