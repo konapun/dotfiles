@@ -8,9 +8,9 @@ source ./packages/cargo.zsh
 source ./packages/go.zsh
 
 # OS-dependent installations
-if [[ $OSTYPE =~ linux ]]; then
+if [[ $IS_LINUX ]]; then
   source ./packages/linux.zsh
-elif [[ $OSTYPE =~ darwin ]]; then
+elif [[ $IS_MACOS ]]; then
   source ./packages/mac.zsh
 elif [[ $(uname -a | grep iSH) ]]; then
   source ./packges/linux.zsh # iSH is alpine running on iOS

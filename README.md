@@ -30,8 +30,8 @@ In particular, this provides installation and configuration for:
   * (more coming soon as I get it working for my bspwm setup)
 
 ## Prerequisites
-zsh
-brew (if on macOS)
+  * zsh
+  * brew (if on macOS)
 
 ## Installing
 The installation/configuration script is modular. To install everything, simply run `zsh ./install.zsh` (sudo is required on Linux).

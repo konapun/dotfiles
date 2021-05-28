@@ -3,26 +3,11 @@
 # - add option to symlink rather than copy
 # - add powershell script for finishing windows non-WSL config
 
-# set up variables for use in sourced scripts
-IS_WSL=$(cat /proc/version &> /dev/null | grep microsoft)
-TERM=$(ps -h -o comm -p $(ps -h -o ppid -p $$ 2>/dev/null) 2>/dev/null)
+source ./vars.zsh
+source ./funcs.zsh
 
 # make aliases available within scripts
 source ~/.oh-my-zsh/custom/alias.zsh &> /dev/null
-
-function warn {
-  local red='\033[0;31m'
-  local nc='\033[0m'
-
-  echo -e "${red}$@${nc}"
-}
-
-function info {
-  local green='\033[0;32m'
-  local nc='\033[0m'
-
-  echo -e "${green}$@${nc}"
-}
 
 arguments=()
 function parse_options {
