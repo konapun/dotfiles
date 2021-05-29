@@ -33,6 +33,7 @@ Plug 'kshenoy/vim-signature'                                            " Toggle
 Plug 'vim-scripts/ReplaceWithRegister'                                  " Replace text object with contents of register
 Plug 'sirver/ultisnips'                                                 " The ultimate snippet solution for Vim
 Plug 'tpope/vim-repeat'                                                 " Enable repeating supported plugin maps
+Plug 'voldikss/vim-floaterm'                                            " Floating terminals
 
 " buffer/window
 Plug 'camspiers/animate.vim'                                            " Window animation

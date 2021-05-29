@@ -96,4 +96,12 @@ nmap <leader>v :Vista coc<cr>
 nnoremap <silent> <C-w>[ :call lens#toggle()<CR>
 
 " TaskList
-nmap <localleader>t <Plug>TaskList
+nmap <localleader>tl <Plug>TaskList
+
+" Terminal
+nmap <localleader>tt :term<cr>
+nmap <localleader>tf :FloatermNew<cr>
+nmap <localleader>to :FloatermToggle<cr>
+nmap <localleader>tn :FloatermNext<cr>
+nmap <localleader>tp :FloatermPrev<cr>
+
