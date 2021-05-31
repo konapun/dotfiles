@@ -23,6 +23,7 @@ hi LineNr       guifg=#60ff60                 ctermfg=lightgreen
 hi Directory    guifg=#40d040                 ctermfg=lightgreen
 hi Folded       guifg=#001000  guibg=#006000  ctermfg=black      ctermbg=darkgreen  gui=bold
 hi ColorColumn  guibg=#003000                                    ctermbg=darkgreen
+hi SignColumn   guibg=#002520                                    ctermbg=black
 hi Error        guibg=#ff8000                                    ctermbg=brown
 hi CursorLine   guifg=#001000  guibg=#008000  ctermfg=black      ctermbg=green
 hi TabLine      guifg=#40ff40  guibg=#008000               	 ctermfg=darkgreen  ctermbg=bg
