@@ -99,6 +99,9 @@ To use a theme, run the install script with the `-t` option followed by the them
 ### one-dark
 <img src="./_res/one-dark-theme.png" alt="one-dark">
 
+### phosphor
+<img src="./_res/phosphor-theme.png" alt="phosphor">
+
 ### rose-pine
 <img src="./_res/rose-pine-theme.png" alt="rose-pine">
 
