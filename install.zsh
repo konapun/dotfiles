@@ -3,8 +3,8 @@
 # - add option to symlink rather than copy
 # - add powershell script for finishing windows non-WSL config
 
-source ./vars.zsh
-source ./funcs.zsh
+source ./lib/vars.zsh
+source ./lib/funcs.zsh
 
 # make aliases available within scripts
 source ~/.oh-my-zsh/custom/alias.zsh &> /dev/null

@@ -29,3 +29,5 @@ TMUX_STATUS_LEFT_BG=$PURPLE
 TMUX_STATUS_LEFT_FG=$WHITE
 TMUX_STATUS_CURRENT_BG=$WHITE
 TMUX_STATUS_CURRENT_FG=$PURPLE
+
+CHROME_THEME=https://chrome.google.com/webstore/detail/midnight-green/cgfeajoohfhaafdnoibpfnekdmfflgbn?hl=en
