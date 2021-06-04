@@ -74,3 +74,21 @@ hi link SpecialChar    Special
 hi link Delimiter      Special
 hi link SpecialComment Special
 hi link Debug          Special
+
+" Neovim terminal
+let g:terminal_color_0  = '#00010a'
+let g:terminal_color_1  = '#002520'
+let g:terminal_color_1  = '#006747'
+let g:terminal_color_2  = '#003c29'
+let g:terminal_color_3  = '#004932'
+let g:terminal_color_4  = '#00553a'
+let g:terminal_color_5  = '#00a571'
+let g:terminal_color_6  = '#00ff92'
+let g:terminal_color_7  = '#003424'
+let g:terminal_color_8  = '#005036'
+let g:terminal_color_9  = '#00db96'
+let g:terminal_color_10 = '#00b67c'
+let g:terminal_color_11 = '#008159'
+let g:terminal_color_12 = '#007751'
+let g:terminal_color_13 = '#00f7aa'
+let g:terminal_color_14 = '#00ff92'
