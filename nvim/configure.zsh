@@ -1,4 +1,5 @@
 NVIM_CONFIG_FILE=~/.config/nvim/init.vim
+NVIM_THEME_FILE=~/.config/nvim/colors/system.vim
 AIRLINE_THEME_FILE=~/.config/nvim/autoload/airline/themes/system.vim
 AIRLINE_CONFIG_FILE=~/.config/nvim/config/plugin/airline.vim
 
@@ -87,3 +88,22 @@ themer_substitute airline_theme $AIRLINE_THEME $AIRLINE_CONFIG_FILE
 themer_substitute airline_left_sep $LEFT_SEGMENT_START $AIRLINE_CONFIG_FILE
 themer_substitute airline_right_sep $RIGHT_SEGMENT_START $AIRLINE_CONFIG_FILE
 themer_cleanup $AIRLINE_CONFIG_FILE
+
+themer_substitute background $BACKGROUND $NVIM_THEME_FILE
+themer_substitute foreground $FOREGROUND $NVIM_THEME_FILE
+themer_substitute black $BLACK $NVIM_THEME_FILE
+themer_substitute red $RED $NVIM_THEME_FILE
+themer_substitute green $GREEN $NVIM_THEME_FILE
+themer_substitute yellow $YELLOW $NVIM_THEME_FILE
+themer_substitute blue $BLUE $NVIM_THEME_FILE
+themer_substitute purple $PURPLE $NVIM_THEME_FILE
+themer_substitute cyan $CYAN $NVIM_THEME_FILE
+themer_substitute white $WHITE $NVIM_THEME_FILE
+themer_substitute bright_black $BRIGHT_BLACK $NVIM_THEME_FILE
+themer_substitute bright_red $BRIGHT_RED $NVIM_THEME_FILE
+themer_substitute bright_green $BRIGHT_GREEN $NVIM_THEME_FILE
+themer_substitute bright_yellow $BRIGHT_YELLOW $NVIM_THEME_FILE
+themer_substitute bright_blue $BRIGHT_BLUE $NVIM_THEME_FILE
+themer_substitute bright_purple $BRIGHT_PURPLE $NVIM_THEME_FILE
+themer_substitute bright_cyan $BRIGHT_CYAN $NVIM_THEME_FILE
+themer_substitute bright_white $BRIGHT_WHITE $NVIM_THEME_FILE
