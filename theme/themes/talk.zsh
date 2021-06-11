@@ -1,4 +1,4 @@
-# OKAMI
+# TALK
 
 # colors
 BLACK=#2b464e

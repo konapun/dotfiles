@@ -31,9 +31,9 @@ let s:configuration.current_word = get(g:, 'system_current_word', get(g:, 'syste
 let s:palette = {
       \ 'bg':            ['{{background}}', '235', 'Black'],
       \ 'bg0':           ['{{background}}',   '235',  'Black'],
-      \ 'bg1':           ['{{bright_black}}',   '236',  'DarkGrey'],
-      \ 'bg2':           ['{{bright_black}}',   '237',  'DarkGrey'],
-      \ 'bg3':           ['{{bright_black}}',   '238',  'DarkGrey'],
+      \ 'bg1':           ['{{black}}',   '236',  'DarkGrey'],
+      \ 'bg2':           ['{{black}}',   '237',  'DarkGrey'],
+      \ 'bg3':           ['{{black}}',   '238',  'DarkGrey'],
       \ 'bg4':           ['{{bright_black}}',   '239',  'Grey'],
       \ 'bg_red':        ['{{bright_red}}',   '52',   'DarkRed'],
       \ 'bg_green':      ['{{bright_green}}',   '22',   'DarkGreen'],
