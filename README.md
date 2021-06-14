@@ -84,6 +84,9 @@ To use a theme, run the install script with the `-t` option followed by the them
 ### gruvbox
 <img src="./_res/gruvbox-theme.png" alt="gruvbox">
 
+### hyperlight
+<img src="./_res/hyperlight-theme.png" alt="hyperlight">
+
 ### kawaii
 <img src="./_res/kawaii-theme.png" alt="kawaii">
 
@@ -99,17 +102,26 @@ To use a theme, run the install script with the `-t` option followed by the them
 ### nord
 <img src="./_res/nord-theme.png" alt="nord">
 
+### okami
+<img src="./_res/okami-theme.png" alt="okami">
+
 ### one-dark
 <img src="./_res/one-dark-theme.png" alt="one-dark">
 
 ### phosphor
 <img src="./_res/phosphor-theme.png" alt="phosphor">
 
+### retropunk
+<img src="./_res/retropunk-theme.png" alt="retropunk">
+
 ### rose-pine
 <img src="./_res/rose-pine-theme.png" alt="rose-pine">
 
 ### salvation
 <img src="./_res/salvation-theme.png" alt="salvation">
+
+### sunset
+<img src="./_res/sunset-theme.png" alt="sunset">
 
 ### talk
 <img src="./_res/talk-theme.png" alt="talk">
