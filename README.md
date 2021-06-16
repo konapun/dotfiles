@@ -114,6 +114,12 @@ To use a theme, run the install script with the `-t` option followed by the them
 ### phosphorange
 <img src="./_res/phosphorange-theme.png" alt="phosphorange">
 
+### phosphorange-glow
+<img src="./_res/phosphorange-glow-theme.png" alt="phosphorange-glow">
+
+### phosphorchid
+<img src="./_res/phosphorchid-theme.png" alt="phosphorchid">
+
 ### retropunk
 <img src="./_res/retropunk-theme.png" alt="retropunk">
 
