@@ -101,6 +101,7 @@ nmap <localleader>tl <Plug>TaskList
 " Terminal
 nmap <localleader>tt :term<cr>
 nmap <localleader>ts :split \| :term<cr>
+nmap <localleader>tv :vsplit \| :term<cr>
 nmap <localleader>tf :FloatermNew<cr>
 nmap <localleader>to :FloatermToggle<cr>
 nmap <localleader>tn :FloatermNext<cr>
