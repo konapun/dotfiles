@@ -62,7 +62,6 @@ return require('packer').startup(function()
   use 'camspiers/lens.vim'                                               -- Automatic window resizing
   use 'qpkorr/vim-bufkill'                                               -- Interact with buffers without affecting window layout (TODO: Replace with Lua https://github.com/famiu/bufdelete.nvim eventually)
   use 'simeji/winresizer'                                                -- Easy window resizing
-  use 't9md/vim-choosewin'                                               -- Land on window you chose like tmux's 'display-pane'
   use 'farmergreg/vim-lastplace'                                         -- Intelligently reopen files at your last edit position
   use 'tpope/vim-sleuth'                                                 -- Heuristically set buffer options
   -- https://github.com/matbme/JABS.nvim???????? TODO can telescope provide this functionality?
