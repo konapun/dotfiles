@@ -13,23 +13,11 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- allow packer to manage itself
 
   -- themes
-  use {'npxbr/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}               -- Lua port of the most famous vim colorscheme
-  -- use 'dylanaraps/wal.vim'                                               -- A colorscheme that adapts to your terminal colors
-  -- use 'morhetz/gruvbox'                                                  -- Retro groove color scheme for Vim
-  -- use 'franbach/miramare'                                                -- Comfortable & Pleasant Color Scheme for Vim
-  -- use 'sainnhe/forest-night'                                             -- Comfortable & Pleasant Color Scheme for Vim
-  -- use 'sainnhe/gruvbox-material'                                         -- Gruvbox with Material Palette
-  -- use 'fcpg/vim-farout'                                                  -- Dark retro base16 theme for gvim and 24-bit color terminals
-  -- use 'fcpg/vim-fahrenheit'                                              -- Dark, warm base16 Vim theme for 256-color terminals
-  -- use 'branwright1/salvation-vim'                                        -- Dark colorscheme for Vim/Neovim.
+  use {'npxbr/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}            -- Lua port of the most famous vim colorscheme
+  use {{!syntax_theme_plug}}                                             -- Install script configured theme
 
   -- general
-  use {'nvim-telescope/telescope.nvim', requires = {                     -- Find, Filter, Preview, Pick (Lua)
-    {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}
-  }}
-  use {'mg979/vim-visual-multi', branch = 'master'}                      -- Multiple cursors plugin for vim/neovim
   use 'hrsh7th/nvim-compe'                                               -- Nvim code autocompletion (Lua)
-  use 'nvim-treesitter/nvim-treesitter'                                  -- Nvim Treesitter configurations and abstraction layer (Lua)
   use 'kevinhwang91/rnvimr'                                              -- Use Ranger in a floating window via RPC (Lua)
   use 'vim-airline/vim-airline'                                          -- Statusline TODO: replace with Lua statusline
   use 'w0rp/ale'                                                         -- Asynchronous linting
@@ -38,10 +26,14 @@ return require('packer').startup(function()
   use 'editorconfig/editorconfig-vim'                                    -- Support for .editorconfig
   use 'kshenoy/vim-signature'                                            -- Toggle, display and navigate marks
   use 'vim-scripts/ReplaceWithRegister'                                  -- Replace text object with contents of register
-  use "tversteeg/registers.nvim"                                         -- Preview the contents of registers (Lua)
+  use 'tversteeg/registers.nvim'                                         -- Preview the contents of registers (Lua)
   use 'sirver/ultisnips'                                                 -- The ultimate snippet solution for Vim
   use 'numtostr/FTerm.nvim'                                              -- Nvim floating terminals (Lua)
   use 'norcalli/nvim-colorizer.lua'                                      -- Fast Nvim colorizer (Lua)
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}             -- Nvim Treesitter configurations and abstraction layer (Lua)
+  use {'nvim-telescope/telescope.nvim', requires = {                     -- Find, Filter, Preview, Pick (Lua)
+    {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}
+  }}
 
   -- LSP
   use 'neovim/nvim-lspconfig'                                            -- Quickstart configurations for the Nvim LSP client (Lua)
@@ -58,6 +50,7 @@ return require('packer').startup(function()
 
   -- editing
   use 'windwp/nvim-autopairs'                                            -- Pair autocompletion (Lua)
+  use {'mg979/vim-visual-multi', branch = 'master'}                      -- Multiple cursors plugin for vim/neovim
   use 'b3nj5m1n/kommentary'                                              -- Nvim commenting plugin (Lua)
   use 'blackCauldron7/surround.nvim'                                     -- Add/delete/replace surroundings of a sandwiched text object (Lua)
   use 'tpope/vim-unimpaired'                                             -- Pairs of handy bracket mappings use 'mbbill/undotree'                                                  -- Undo history visualizer
