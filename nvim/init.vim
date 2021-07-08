@@ -4,7 +4,7 @@
 set background={{background}}                                                     " Set colorscheme background color
 set termguicolors                                                       " Enable 24-bit color
 syntax enable                                                           " Enable syntax highlighting
-colorscheme {{syntax_theme}}
+"colorscheme {{syntax_theme}}
 
 " general
 set autoread                                                            " Reload files changed outside Vim
@@ -50,7 +50,6 @@ set undofile                                                            " Write 
 set undolevels=1000                                                     " Max changes that can be undone
 set undoreload=10000                                                    " Max lines to save for undo on buffer reload
 
-# TODO: Move to lua
 for f in split(glob('~/.config/nvim/config/general/*.vim'), '\n')
   exe 'source' f
 endfor
@@ -61,7 +60,6 @@ endfor
 
 lua << EOF
 require('plugins')
-require('keymappings')
 require('config')
 EOF
 

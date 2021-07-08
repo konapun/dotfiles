@@ -14,7 +14,7 @@ return require('packer').startup(function()
 
   -- themes
   use {'npxbr/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}            -- Lua port of the most famous vim colorscheme
-  use {{!syntax_theme_plug}}                                             -- Install script configured theme
+  -- use {{!syntax_theme_plug}}                                             -- Install script configured theme
 
   -- general
   use 'hrsh7th/nvim-compe'                                               -- Nvim code autocompletion (Lua)
@@ -53,7 +53,8 @@ return require('packer').startup(function()
   use {'mg979/vim-visual-multi', branch = 'master'}                      -- Multiple cursors plugin for vim/neovim
   use 'b3nj5m1n/kommentary'                                              -- Nvim commenting plugin (Lua)
   use 'blackCauldron7/surround.nvim'                                     -- Add/delete/replace surroundings of a sandwiched text object (Lua)
-  use 'tpope/vim-unimpaired'                                             -- Pairs of handy bracket mappings use 'mbbill/undotree'                                                  -- Undo history visualizer
+  use 'tpope/vim-unimpaired'                                             -- Pairs of handy bracket mappings
+  use 'mbbill/undotree'                                                  -- Undo history visualizer
   use 'ggandor/lightspeed.nvim'                                          -- Navigate anywhere in the current buffer in as few keystrokes as possible (Lua)
   use 'tpope/vim-repeat'                                                 -- Enable repeating supported plugin maps
   use 'mattn/emmet-vim'                                                  -- HTML/CSS text expansion
@@ -100,7 +101,7 @@ return require('packer').startup(function()
   use 'sunjon/shade.nvim'                                                -- Dim inactive windows (Lua)
   use 'junegunn/goyo.vim'                                                -- Distraction-free writing in Vim
   use 'junegunn/limelight.vim'                                           -- Highlight current block
-  use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)
+  -- use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)
   use 'karb94/neoscroll.nvim'                                            -- Smooth scrolling (Lua)
   use {                                                                  -- Icon set using nonicons for Nvim plugins and settings (Lua)
     'yamatsum/nvim-nonicons',
