@@ -1,7 +1,7 @@
 " Plug {{!syntax_theme_plug}}
 
 " set theme
-set background={{background}}                                                     " Set colorscheme background color
+set background={{background}}                                           " Set colorscheme background color
 set termguicolors                                                       " Enable 24-bit color
 syntax enable                                                           " Enable syntax highlighting
 "colorscheme {{syntax_theme}}

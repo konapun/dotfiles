@@ -6,4 +6,4 @@ endfunction
 
 autocmd BufWrite * :call DeleteTrailingWhitespace()
 autocmd BufRead,BufNewFile *.md, *.txt setlocal spell
-autocmd FileType html,js,jsx EmmetInstall
+" autocmd FileType html,js,jsx EmmetInstall

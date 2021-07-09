@@ -6,7 +6,7 @@ AIRLINE_CONFIG_FILE=~/.config/nvim/config/plugin/airline.vim
 cp -r ./nvim ~/.config
 rm ~/.config/nvim/configure.zsh
 
-pip3 install neovim
+pip3 install neovim pynvim ranger-fm
 
 # Main Theming
 if [[ ! -v BACKGROUND_TYPE ]]; then

@@ -22,3 +22,5 @@ require('./config/shade')
 require('./config/surround')
 require('./config/symbols-outline')
 require('./config/telescope')
+require('./config/treesitter')
+

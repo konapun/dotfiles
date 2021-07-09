@@ -1,1 +1,3 @@
-require('FTerm').setup()
+require('FTerm').setup({
+  border = 'single'
+})
