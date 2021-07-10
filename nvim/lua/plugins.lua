@@ -56,10 +56,12 @@ return require('packer').startup(function()
   use 'windwp/nvim-autopairs'                                            -- Pair autocompletion (Lua)
   use {'mg979/vim-visual-multi', branch = 'master'}                      -- Multiple cursors plugin for vim/neovim
   use 'b3nj5m1n/kommentary'                                              -- Nvim commenting plugin (Lua)
-  use 'blackCauldron7/surround.nvim'                                     -- Add/delete/replace surroundings of a sandwiched text object (Lua)
+  -- use 'blackCauldron7/surround.nvim'                                  -- Add/delete/replace surroundings of a sandwiched text object (Lua) (TODO: Replace sandwich when this can highlight matches)
+  use 'machakann/vim-sandwich'                                           -- Add/delete/replace surroundings of a sandwiched text object'
   use 'tpope/vim-unimpaired'                                             -- Pairs of handy bracket mappings
   use 'mbbill/undotree'                                                  -- Undo history visualizer
-  use 'ggandor/lightspeed.nvim'                                          -- Navigate anywhere in the current buffer in as few keystrokes as possible (Lua)
+  -- use 'ggandor/lightspeed.nvim'                                       -- Navigate anywhere in the current buffer in as few keystrokes as possible (Lua) (TODO: Replace sneak when this works better)
+  use 'justinmk/vim-sneak'                                               -- Jump to any location specified by two characters
   use 'tpope/vim-repeat'                                                 -- Enable repeating supported plugin maps
   use 'mattn/emmet-vim'                                                  -- HTML/CSS text expansion
 
