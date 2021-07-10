@@ -26,20 +26,24 @@ return require('packer').startup(function()
   use 'editorconfig/editorconfig-vim'                                    -- Support for .editorconfig
   use 'kshenoy/vim-signature'                                            -- Toggle, display and navigate marks
   use 'vim-scripts/ReplaceWithRegister'                                  -- Replace text object with contents of register
-  use 'tversteeg/registers.nvim'                                         -- Preview the contents of registers (Lua)
   use 'sirver/ultisnips'                                                 -- The ultimate snippet solution for Vim
   use 'numtostr/FTerm.nvim'                                              -- Nvim floating terminals (Lua)
   use 'norcalli/nvim-colorizer.lua'                                      -- Fast Nvim colorizer (Lua)
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}             -- Nvim Treesitter configurations and abstraction layer (Lua)
+
+  -- Telescope
   use {'nvim-telescope/telescope.nvim', requires = {                     -- Find, Filter, Preview, Pick (Lua)
     {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}
   }}
+  use {'fhill2/telescope-ultisnips.nvim'}                                -- Telescope integration for Ultisnips
+  use {'sudormrfbin/cheatsheet.nvim'}                                    -- A cheatsheet plugin for neovim with bundled cheatsheets for the editor, multiple vim plugins, nerd-fonts, regex, etc. with a Telescope fuzzy finder interface
 
   -- LSP
   use 'neovim/nvim-lspconfig'                                            -- Quickstart configurations for the Nvim LSP client (Lua)
   use 'kabouzeid/nvim-lspinstall'                                        -- Easily install LSP language servers
   use 'onsails/lspkind-nvim'                                             -- VSCode-like pictograms for Nvim lsp completion items (Lua)
   use 'simrat39/symbols-outline.nvim'                                    -- Tree like view for LSP symbols (Lua)
+  use 'ray-x/lsp_signature.nvim'                                         -- Show function signature as you type
   -- TODO: installers
   -- TODO: https://github.com/nvim-lua/lsp-status.nvim ??
   -- TODO: https://github.com/glepnir/lspsaga.nvim if telesope doesn't provide this functionality
@@ -102,7 +106,7 @@ return require('packer').startup(function()
   use 'junegunn/goyo.vim'                                                -- Distraction-free writing in Vim
   use 'junegunn/limelight.vim'                                           -- Highlight current block
   -- use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)
-  use 'karb94/neoscroll.nvim'                                            -- Smooth scrolling (Lua)
+  -- use 'karb94/neoscroll.nvim'                                            -- Smooth scrolling (Lua)
   use {                                                                  -- Icon set using nonicons for Nvim plugins and settings (Lua)
     'yamatsum/nvim-nonicons',
     requires = {'kyazdani42/nvim-web-devicons'}

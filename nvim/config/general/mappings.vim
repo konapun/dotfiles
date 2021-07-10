@@ -28,19 +28,10 @@ xmap <localleader>r  <Plug>ReplaceWithRegisterVisual
 
 " nvim-compe
 inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
+inoremap <silent><expr> <tab>     compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-
-" CoC
-" TODO: replace with telescope
-" nnoremap <silent> K :call <SID>show_documentation()<CR>
-" nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gr <Plug>(coc-references)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <leader>rn <Plug>(coc-rename)
 
 " ALE
 nmap <leader>F :ALEFix<CR>
@@ -52,27 +43,30 @@ nmap <leader>gg :Gbrowse<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :Gcommit<CR>
 
-" FZF
+" CoC
 " TODO: replace with telescope
-" nmap <leader>a :Rg<Space>
-" nmap <leader>b :Buffers<CR>
-" nmap <leader>g :GFiles<CR>
-" nmap <leader>f :Files<CR>
-" nmap <leader>h :History<CR>
-" nmap <leader>l :BLines<CR>
-" nmap <leader>L :Lines<CR>
-" nmap <leader>m :Marks<CR>
-" nmap <leader>o :Buffers<CR>
-" nmap <leader>t :BTags<CR>
-" nmap <leader>T :Tags<CR>
-" nmap <leader>' :Marks<CR>
-" nmap <leader>H :Helptags!<CR>
-" nmap <leader>C :Commands<CR>
-" nmap <leader>: :History:<CR>
-" nmap <leader>/ :History/<CR>
-" nnoremap <C-p> :FZF<CR>
-" " search for word under cursor
-" nnoremap <silent> <leader>A :Rg <C-r><C-w><CR>
+" nnoremap <silent> K :call <SID>show_documentation()<CR>
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <leader>rn <Plug>(coc-rename)
+
+" telescope
+nnoremap <C-p> :lua require('telescope.builtin').find_files{}<CR>
+nmap <leader>a :lua require('telescope.builtin').live_grep{}<CR>
+nmap <leader>g :lua require('telescope.builtin').git_files<CR>
+nnoremap <silent> <leader>A :lua require('telescope.builtin').grep_string{}<CR>
+nmap <leader>o :lua require('telescope.builtin').buffers{}<CR>
+nmap <leader>m :lua require('telescope.builtin').marks{}<CR>
+nmap <leader>t :lua require('telescope.builtin').current_buffer_tags{}<CR>
+nmap <leader>T :lua require('telescope.builtin').tags{}<CR>
+nmap <leader>" :lua require('telescope.builtin').registers{}<CR>
+nmap <leader>/ :lua require('telescope.builtin').current_buffer_fuzzy_find{}<CR>
+nmap <leader>q :lua require('telescope.builtin').quickfix{}<CR>
+nmap <leader>ss :lua require('telescope').extensions.ultisnips.ultisnips{}<CR>
+nmap <leader>?k :lua require('telescope.builtin').keymaps{}<CR>
+nmap <leader>?c :Cheatsheet<CR>
 
 " rnvimr
 nnoremap <leader>rr :RnvimrToggle<CR>

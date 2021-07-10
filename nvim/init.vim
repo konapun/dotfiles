@@ -1,5 +1,3 @@
-" Plug {{!syntax_theme_plug}}
-
 " set theme
 set background={{background}}                                           " Set colorscheme background color
 set termguicolors                                                       " Enable 24-bit color
@@ -21,6 +19,7 @@ set mouse=a                                                             " Enable
 set shortmess=tIF                                                       " Don't show the intro message when starting Vim
 set sidescroll=1                                                        " Scroll one character at a time when moving horizontally
 set wildmenu                                                            " Enable autocomplete menu
+set completeopt=menuone,noselect                                        " Completion menu options
 
 " line numbers
 set number                                                              " Show absolute line number of the current line

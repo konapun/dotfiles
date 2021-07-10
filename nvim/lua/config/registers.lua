@@ -1,1 +1,0 @@
--- https://github.com/tversteeg/registers.nvim#setup
