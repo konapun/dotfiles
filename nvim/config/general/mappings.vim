@@ -54,31 +54,32 @@ nmap <leader>gc :Gcommit<CR>
 
 " telescope
 nnoremap <C-p> :lua require('telescope.builtin').find_files{}<CR>
-nmap <leader>a :lua require('telescope.builtin').live_grep{}<CR>
+nmap <leader><space> :lua require('telescope.builtin').live_grep{}<CR>
 nmap <leader>g :lua require('telescope.builtin').git_files<CR>
 nnoremap <silent> <leader>A :lua require('telescope.builtin').grep_string{}<CR>
 nmap <leader>o :lua require('telescope.builtin').buffers{}<CR>
 nmap <leader>m :lua require('telescope.builtin').marks{}<CR>
+nmap <leader>d :lua require('telescope.builtin').lsp_document_diagnostics{}<CR>
+nmap <leader>D :lua require('telescope.builtin').lsp_workspace_diagnostics{}<CR>
 nmap <leader>t :lua require('telescope.builtin').current_buffer_tags{}<CR>
 nmap <leader>T :lua require('telescope.builtin').tags{}<CR>
 nmap <leader>" :lua require('telescope.builtin').registers{}<CR>
 nmap <leader>/ :lua require('telescope.builtin').current_buffer_fuzzy_find{}<CR>
 nmap <leader>q :lua require('telescope.builtin').quickfix{}<CR>
-nmap <leader>ss :lua require('telescope').extensions.ultisnips.ultisnips{}<CR>
+nmap <leader>s :lua require('telescope').extensions.ultisnips.ultisnips{}<CR>
 nmap <leader>?k :lua require('telescope.builtin').keymaps{}<CR>
 nmap <leader>?c :Cheatsheet<CR>
+nmap <silent>gr :lua require('telescope.builtin').lsp_references{}<CR>
+nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<CR>
+nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<CR>
+" nmap <silent>s :lua require('telescope.builtin').lsp_document_symbols{}<CR>
+" nmap <silent>S :lua require('telescope.builtin').lsp_workspace_symbols{}<CR>
 
 " rnvimr
 nnoremap <leader>rr :RnvimrToggle<CR>
-" tnoremap <leader>rr<C-\><C-n>:RnvimrToggle<CR> FIXME: binding errors
 
 " formatter
 nnoremap <silent> <leader>f :Format<CR>
-
-" GitGutter
-" TODO: replace with gitsigns
-" nmap ]c <Plug>(GitGutterNextHunk)
-" nmap [c <Plug>(GitGutterPrevHunk)
 
 " undotree
 nnoremap <F5> :UndotreeToggle<cr>
@@ -86,13 +87,12 @@ nnoremap <F5> :UndotreeToggle<cr>
 " goyo
 nmap <C-w>z :Goyo<cr>
 
-" vista
-" TODO: replace with symbols-outline
-" nmap <leader>v :Vista coc<cr>
-
-" TaskList
-" TODO: replace with neorg
-" nmap <localleader>tl <Plug>TaskList
+" aerial
+nmap <leader>a :AerialToggle!<cr>
+nmap { :AerialPrev<cr>
+nmap } :AerialNext<cr>
+nmap [[ :AerialPrevUp<cr>
+nmap ]] :AerialNextUp<cr>
 
 " Terminal
 nmap <localleader>tt :term<cr>

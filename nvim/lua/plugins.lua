@@ -71,7 +71,6 @@ return require('packer').startup(function()
   use 'simeji/winresizer'                                                -- Easy window resizing
   use 'farmergreg/vim-lastplace'                                         -- Intelligently reopen files at your last edit position
   use 'tpope/vim-sleuth'                                                 -- Heuristically set buffer options
-  -- https://github.com/matbme/JABS.nvim???????? TODO can telescope provide this functionality?
 
   -- database
   use 'tpope/vim-dadbod'                                                 -- Modern database interface for vim
@@ -80,9 +79,10 @@ return require('packer').startup(function()
   use 'windwp/nvim-ts-autotag'                                           -- Use treesitter to auto close and auto rename HTML tags (Lua)
 
   -- testing / debugging
-  use 'radenling/vim-dispatch-neovim'                                    -- Support for neovim's terminal emulator and job control to dispatch.vim
-  use 'tpope/vim-dispatch'                                               -- Asynchronous build and test dispatcher
   use {'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'}}     -- Nvim UI for Debug Adapter Protocol (Lua)
+  use {'radenling/vim-dispatch-neovim',                                  -- Support for neovim's terminal emulator and job control to dispatch.vim
+    requires = {'tpope/vim-dispatch'}
+  }
   use {'rcarriga/vim-ultest',                                            -- The ultimate testing plugin for Nvim (Lua)
     requires = {'vim-test/vim-test'},
     run = ":UpdateRemotePlugins"
@@ -107,16 +107,17 @@ return require('packer').startup(function()
   use 'sunjon/shade.nvim'                                                -- Dim inactive windows (Lua)
   use 'junegunn/goyo.vim'                                                -- Distraction-free writing in Vim
   use 'junegunn/limelight.vim'                                           -- Highlight current block
-  -- use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)
-  -- use 'karb94/neoscroll.nvim'                                            -- Smooth scrolling (Lua)
-  use {                                                                  -- Icon set using nonicons for Nvim plugins and settings (Lua)
-    'yamatsum/nvim-nonicons',
+  use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)
+  use 'lukas-reineke/indent-blankline.nvim'                              -- Indent guides for Nvim (Lua)
+  use 'folke/lsp-colors.nvim'                                            -- Create missing LSP diagnostics highlight groups for color schemes that don't yet support the Neovim 0.5 builtin LSP client
+  use {'yamatsum/nvim-nonicons',                                         -- Icon set using nonicons for Nvim plugins and settings (Lua)
     requires = {'kyazdani42/nvim-web-devicons'}
   }
-  -- use "lukas-reineke/indent-blankline.nvim"                              -- Indent guides for Nvim (Lua)
+  -- use 'karb94/neoscroll.nvim'                                         -- Smooth scrolling (Lua)
 
   -- utilities
   use 'vhyrro/neorg'                                                     -- Org mode for Nvim (Lua)
+  use 'stevearc/aerial.nvim'                                             -- Code navigation in outline window
   -- use {'AckslD/nvim-whichkey-setup.lua', requires = {                    -- Easy setup for which-key, a plugin to display possible keybindings of typed command (Lua)
   --   'liuchengxu/vim-which-key'
   -- }}

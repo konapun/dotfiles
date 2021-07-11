@@ -6,7 +6,6 @@ require('diffview').setup {
     width = 35,
     use_icons = true        -- Requires nvim-web-devicons
   },
-  -- TODO: move to keymappings.lua
   key_bindings = {
     disable_defaults = false,                   -- Disable the default key bindings
     -- The `view` bindings are active in the diff buffers, only when the current

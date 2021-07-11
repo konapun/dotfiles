@@ -2,7 +2,7 @@
 set background={{background}}                                           " Set colorscheme background color
 set termguicolors                                                       " Enable 24-bit color
 syntax enable                                                           " Enable syntax highlighting
-"colorscheme {{syntax_theme}}
+colorscheme {{syntax_theme}}
 
 " general
 set autoread                                                            " Reload files changed outside Vim
@@ -34,7 +34,7 @@ set smartcase                                                           " Perfor
 
 " show invisibles
 set list                                                                " Show invisible characters
-set listchars=eol:¬,tab:￫\ ,trail:·,extends:»,precedes:«,nbsp:␣         " Set custom invisibles
+" set listchars=eol:¬,tab:￫\ ,trail:·,extends:»,precedes:«,nbsp:␣         " Set custom invisibles
 
 " tab settings
 set autoindent                                                          " Copy indent from current line when starting a new line

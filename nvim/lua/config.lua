@@ -6,6 +6,7 @@ for file in fs.list('./config') do
   end
 end
 --]]
+require('./config/aerial')
 require('./config/autopairs')
 require('./config/autotag')
 require('./config/colorizer')
@@ -15,6 +16,7 @@ require('./config/formatter')
 require('./config/fterm')
 require('./config/gitsigns')
 -- require('./config/lightspeed')
+require('./config/lsp-kind')
 require('./config/lsp-signature')
 require('./config/lspinstall')
 require('./config/neorg')
