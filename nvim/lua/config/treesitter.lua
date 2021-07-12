@@ -1,12 +1,14 @@
 require('nvim-treesitter.configs').setup {
   ensure_installed = { -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     'bash',
-    'css',
+    'clojure',
     'comment',
+    'css',
     'dockerfile',
     'glimmer',
     'graphql',
     'html',
+    'javascript',
     'jsdoc',
     'json',
     'jsonc',
@@ -18,7 +20,6 @@ require('nvim-treesitter.configs').setup {
     'tsx',
     'typescript',
     'yaml'
-
   },
   highlight = {
     enable = true
