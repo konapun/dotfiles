@@ -3,8 +3,8 @@ require('shade').setup({
   opacity_step = 1,
   -- TODO: Move to mappings
   keys = {
-    brightness_up    = '<C-Up>',
+    --[[ brightness_up    = '<C-Up>',
     brightness_down  = '<C-Down>',
-    toggle           = '<Leader>s',
+    toggle           = '<Leader>s', ]]
   }
 })
