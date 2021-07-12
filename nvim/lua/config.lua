@@ -1,11 +1,4 @@
---[[local fs = require('filesystem')
-
-for file in fs.list('./config') do
-  if not fs.isDirectory(file) then
-    require(file)
-  end
-end
---]]
+-- activate plugin configurations
 require('./config/aerial')
 require('./config/autopairs')
 require('./config/autotag')
@@ -14,6 +7,7 @@ require('./config/compe')
 require('./config/diffview')
 require('./config/formatter')
 require('./config/fterm')
+-- require('./config/galaxyline')
 require('./config/gitsigns')
 -- require('./config/lightspeed')
 require('./config/lsp-kind')

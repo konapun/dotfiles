@@ -19,7 +19,6 @@ return require('packer').startup(function()
   -- general
   use 'hrsh7th/nvim-compe'                                               -- Nvim code autocompletion (Lua)
   use 'kevinhwang91/rnvimr'                                              -- Use Ranger in a floating window via RPC (Lua)
-  use 'vim-airline/vim-airline'                                          -- Statusline TODO: replace with Lua statusline
   use 'w0rp/ale'                                                         -- Asynchronous linting
   use 'mhartington/formatter.nvim'                                       -- Format runner (Lua)
   use 'ludovicchabant/vim-gutentags'                                     -- Tag file management
@@ -101,8 +100,13 @@ return require('packer').startup(function()
   -- TODO: https://github.com/TimUntersberger/neogit
 
   -- decoration/layout
+  use 'vim-airline/vim-airline'                                          -- Statusline
+  --[[ use {'glepnir/galaxyline.nvim', branch = 'main', requires = {          -- Configurable statusline (Lua)
+    'kyazdani42/nvim-web-devicons', opt = true
+  }} ]]
   use 'camspiers/animate.vim'                                            -- Window animation
   use 'sunjon/shade.nvim'                                                -- Dim inactive windows (Lua)
+  use 'wfxr/minimap.vim'                                                 -- Minimap
   use 'junegunn/goyo.vim'                                                -- Distraction-free writing in Vim
   use 'junegunn/limelight.vim'                                           -- Highlight current block
   use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)

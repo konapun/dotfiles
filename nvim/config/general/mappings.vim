@@ -71,13 +71,16 @@ nnoremap <leader>r :RnvimrToggle<CR>
 nnoremap <silent> <leader>f :Format<CR>
 
 " undotree
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <localleader>u :UndotreeToggle<cr>
 
 " goyo
-nmap <C-w>z :Goyo<cr>
+nmap <localleader>z :Goyo<cr>
+
+" minimap
+nmap <localleader>m :MinimapToggle<cr>
 
 " aerial
-nmap <leader>a :AerialToggle!<cr>
+nmap <localleader>a :AerialToggle!<cr>
 nmap { :AerialPrev<cr>
 nmap } :AerialNext<cr>
 nmap [[ :AerialPrevUp<cr>
