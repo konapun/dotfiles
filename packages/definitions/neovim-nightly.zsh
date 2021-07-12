@@ -3,9 +3,9 @@
 
 local dest=$HOME/.local/bin
 
-if [[ $IS_LINUX ]]; then
+if $IS_LINUX; then
   install_linux
-elif [[ $IS_MACOS ]]; then
+elif $IS_MACOS; then
   install_mac
 fi
 

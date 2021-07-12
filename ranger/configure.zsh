@@ -2,9 +2,9 @@ RANGER_CONFIG_FILE=$HOME/.config/ranger/rc.conf
 
 # Concatenates default settings with platform settings and copies them to ~/.conf/ranger/rc.conf
 
-if [[ $IS_LINUX ]]; then
+if $IS_LINUX; then
   platform=linux
-elif [[ $IS_MACOS ]]; then
+elif $IS_MACOS; then
   platform=mac
 fi
 

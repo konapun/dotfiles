@@ -3,7 +3,7 @@
 
 local dest=$HOME/.local/bin
 
-if [[ $IS_LINUX ]]; then
+if $IS_LINUX; then
   local src=https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 
   wget -P $dest $src
