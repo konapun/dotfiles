@@ -22,13 +22,13 @@ nnoremap gb :bn<CR>
 nnoremap gB :bp<CR>
 
 " replace-with-register
-nmap <localleader>r  <Plug>ReplaceWithRegisterOperator
-nmap <localleader>rr <Plug>ReplaceWithRegisterLine
-xmap <localleader>r  <Plug>ReplaceWithRegisterVisual
+nmap <leader>p  <Plug>ReplaceWithRegisterOperator
+nmap <leader>pp <Plug>ReplaceWithRegisterLine
+xmap <leader>p  <Plug>ReplaceWithRegisterVisual
 
 " nvim-compe
 inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <tab>     compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
+inoremap <silent><expr> <tab>     compe#confirm('<tab>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
@@ -81,10 +81,8 @@ nmap <localleader>m :MinimapToggle<cr>
 
 " aerial
 nmap <localleader>a :AerialToggle!<cr>
-nmap { :AerialPrev<cr>
-nmap } :AerialNext<cr>
-nmap [[ :AerialPrevUp<cr>
-nmap ]] :AerialNextUp<cr>
+nmap [a :AerialPrevUp<cr>
+nmap ]a :AerialNextUp<cr>
 
 " Terminal
 nmap <localleader>tt :term<cr>
