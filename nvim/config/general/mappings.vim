@@ -1,6 +1,6 @@
 " keybindings
 
-"general
+" general
 let mapleader=" "
 let maplocalleader="\\"
 nnoremap <silent> <C-n> :nohl<CR>
@@ -22,88 +22,74 @@ nnoremap gb :bn<CR>
 nnoremap gB :bp<CR>
 
 " replace-with-register
-nmap <localleader>r <Plug>ReplaceWithRegisterOperator
+nmap <localleader>r  <Plug>ReplaceWithRegisterOperator
 nmap <localleader>rr <Plug>ReplaceWithRegisterLine
-xmap <localleader>r <Plug>ReplaceWithRegisterVisual
+xmap <localleader>r  <Plug>ReplaceWithRegisterVisual
 
-" CoC
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <leader>rn <Plug>(coc-rename)
+" nvim-compe
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <tab>     compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " ALE
 nmap <leader>F :ALEFix<CR>
 nmap <leader>n :ALENextWrap<CR>
 
-" fugitive
-nmap <leader>gb :Gblame<CR>
-nmap <leader>gg :Gbrowse<CR>
-nmap <leader>gs :Gstatus<CR>
-nmap <leader>gc :Gcommit<CR>
+" telescope
+nnoremap <C-p> :lua require('telescope.builtin').find_files{}<CR>
+nmap <leader><space> :lua require('telescope.builtin').live_grep{}<CR>
+nnoremap <silent> <leader>A :lua require('telescope.builtin').grep_string{}<CR>
+nmap <leader>o :lua require('telescope.builtin').buffers{}<CR>
+nmap <leader>m :lua require('telescope.builtin').marks{}<CR>
+nmap <leader>d :lua require('telescope.builtin').lsp_document_diagnostics{}<CR>
+nmap <leader>D :lua require('telescope.builtin').lsp_workspace_diagnostics{}<CR>
+nmap <leader>t :lua require('telescope.builtin').current_buffer_tags{}<CR>
+nmap <leader>T :lua require('telescope.builtin').tags{}<CR>
+nmap <leader>" :lua require('telescope.builtin').registers{}<CR>
+nmap <leader>/ :lua require('telescope.builtin').current_buffer_fuzzy_find{}<CR>
+nmap <leader>q :lua require('telescope.builtin').quickfix{}<CR>
+nmap <leader>s :lua require('telescope.builtin').lsp_document_symbols{}<CR>
+nmap <leader>S :lua require('telescope.builtin').lsp_workspace_symbols{}<CR>
+nmap <leader>? :Cheatsheet<CR>
+nmap <leader>ik :lua require('telescope.builtin').keymaps{}<CR>
+nmap <leader>is :lua require('telescope').extensions.ultisnips.ultisnips{}<CR>
+nmap <leader>gc :lua require('telescope.builtin').git_bcommits{}<CR>
+nmap <leader>gC :lua require('telescope.builtin').git_commits{}<CR>
+nmap <leader>gb :lua require('telescope.builtin').git_branches{}<CR>
+nmap <leader>gs :lua require('telescope.builtin').git_status{}<CR>
+nmap <leader>gf :lua require('telescope.builtin').git_files{}<CR>
+nmap <silent>gr :lua require('telescope.builtin').lsp_references{}<CR>
+nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<CR>
+nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<CR>
 
-" FZF
-nmap <leader>a :Rg<Space>
-nmap <leader>b :Buffers<CR>
-nmap <leader>g :GFiles<CR>
-nmap <leader>f :Files<CR>
-nmap <leader>h :History<CR>
-nmap <leader>l :BLines<CR>
-nmap <leader>L :Lines<CR>
-nmap <leader>m :Marks<CR>
-nmap <leader>o :Buffers<CR>
-nmap <leader>t :BTags<CR>
-nmap <leader>T :Tags<CR>
-nmap <leader>' :Marks<CR>
-nmap <leader>H :Helptags!<CR>
-nmap <leader>C :Commands<CR>
-nmap <leader>: :History:<CR>
-nmap <leader>/ :History/<CR>
-nnoremap <C-p> :FZF<CR>
-" search for word under cursor
-nnoremap <silent> <leader>A :Rg <C-r><C-w><CR>
+" rnvimr
+nnoremap <leader>r :RnvimrToggle<CR>
 
-" ranger
-map <leader>rr :RangerEdit<cr>
-map <leader>rv :RangerVSplit<cr>
-map <leader>rs :RangerSplit<cr>
-map <leader>rt :RangerTab<cr>
-map <leader>ri :RangerInsert<cr>
-map <leader>ra :RangerAppend<cr>
-map <leader>rc :set operatorfunc=RangerChangeOperator<cr>g@
-map <leader>rd :RangerCD<cr>
-map <leader>rld :RangerLCD<cr>
-
-" GitGutter
-nmap ]c <Plug>(GitGutterNextHunk)
-nmap [c <Plug>(GitGutterPrevHunk)
-
-" choosewin
-nmap - <Plug>(choosewin)
+" formatter
+nnoremap <silent> <leader>f :Format<CR>
 
 " undotree
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <localleader>u :UndotreeToggle<cr>
 
 " goyo
-nmap <C-w>z :Goyo<cr>
+nmap <localleader>z :Goyo<cr>
 
-" vista
-nmap <leader>v :Vista coc<cr>
+" minimap
+nmap <localleader>m :MinimapToggle<cr>
 
-" lens
-nnoremap <silent> <C-w>[ :call lens#toggle()<CR>
-
-" TaskList
-nmap <localleader>tl <Plug>TaskList
+" aerial
+nmap <localleader>a :AerialToggle!<cr>
+nmap { :AerialPrev<cr>
+nmap } :AerialNext<cr>
+nmap [[ :AerialPrevUp<cr>
+nmap ]] :AerialNextUp<cr>
 
 " Terminal
 nmap <localleader>tt :term<cr>
 nmap <localleader>ts :split \| :term<cr>
 nmap <localleader>tv :vsplit \| :term<cr>
-nmap <localleader>tf :FloatermNew<cr>
-nmap <localleader>to :FloatermToggle<cr>
-nmap <localleader>tn :FloatermNext<cr>
-nmap <localleader>tp :FloatermPrev<cr>
+nmap <localleader>to :lua require('FTerm').toggle()<cr>
+nmap <localleader>tc :lua require('FTerm').close()<cr>
 

@@ -28,6 +28,7 @@ elif [[ $UPDATE ]]; then # update
 fi
 
 cp ./ranger/commands.py ~/.config/ranger
+cp ./ranger/rifle.conf ~/.config/ranger
 
 # platform-specific config
 cat ./ranger/rc.conf ./ranger/$platform.rc.conf >> ~/.config/ranger/rc.conf

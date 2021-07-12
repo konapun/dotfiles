@@ -3,6 +3,7 @@
 # vim/bat config
 SYNTAX_THEME_PLUG="'morhetz/gruvbox'"
 SYNTAX_THEME=gruvbox
+AIRLINE_THEME=system
 WINTERM_THEME=gruvbox
 
 # chrome config

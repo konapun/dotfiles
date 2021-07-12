@@ -1,1 +1,1 @@
-CARGO_PACKAGES=() #(bottom onefetch tickrs)
+CARGO_PACKAGES=(bottom code-minimap onefetch tickrs)

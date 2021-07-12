@@ -4,7 +4,7 @@ function! DeleteTrailingWhitespace()
   exe "normal `z"
 endfunction
 
-autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 autocmd BufWrite * :call DeleteTrailingWhitespace()
 autocmd BufRead,BufNewFile *.md, *.txt setlocal spell
-autocmd FileType html,js,jsx EmmetInstall
+autocmd BufReadPost,FileReadPost lua require "lsp_signature".on_attach()
+" autocmd FileType html,js,jsx EmmetInstall
