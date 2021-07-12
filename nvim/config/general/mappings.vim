@@ -41,6 +41,7 @@ nmap <leader>n :ALENextWrap<CR>
 nnoremap <C-p> :lua require('telescope.builtin').find_files{}<CR>
 nmap <leader><space> :lua require('telescope.builtin').live_grep{}<CR>
 nnoremap <silent> <leader>A :lua require('telescope.builtin').grep_string{}<CR>
+nmap <leader>a :lua require('telescope.builtin').lsp_code_actions{}<CR>
 nmap <leader>o :lua require('telescope.builtin').buffers{}<CR>
 nmap <leader>m :lua require('telescope.builtin').marks{}<CR>
 nmap <leader>d :lua require('telescope.builtin').lsp_document_diagnostics{}<CR>
@@ -64,6 +65,9 @@ nmap <silent>gr :lua require('telescope.builtin').lsp_references{}<CR>
 nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<CR>
 nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<CR>
 
+" gitsigns
+nmap <leader>gw :lua require('gitsigns').blame_line(true)<CR>
+
 " rnvimr
 nnoremap <leader>r :RnvimrToggle<CR>
 
@@ -72,6 +76,9 @@ nnoremap <silent> <leader>f :Format<CR>
 
 " undotree
 nnoremap <localleader>u :UndotreeToggle<cr>
+
+" indent blankline
+nmap <localleader>i :IndentBlanklineToggle<cr>
 
 " goyo
 nmap <localleader>z :Goyo<cr>
