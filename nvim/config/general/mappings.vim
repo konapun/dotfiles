@@ -34,6 +34,7 @@ inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " ALE
+" TODO replace these
 nmap <leader>F :ALEFix<CR>
 nmap <leader>n :ALENextWrap<CR>
 
