@@ -77,6 +77,14 @@ nnoremap <silent> <leader>f :Format<CR>
 " undotree
 nnoremap <localleader>u :UndotreeToggle<cr>
 
+" spectre
+noremap <localleader>S :lua require('spectre').open()<CR>
+" search current word
+nnoremap <localleader>sw viw:lua require('spectre').open_visual()<CR>
+vnoremap <localleader>s :lua require('spectre').open_visual()<CR>
+" search in current file
+nnoremap <localleader>sp viw:lua require('spectre').open_file_search()<cr>
+
 " indent blankline
 nmap <localleader>i :IndentBlanklineToggle<cr>
 
