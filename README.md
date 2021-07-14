@@ -14,6 +14,7 @@ In particular, this provides installation and configuration for:
   * bpytop
   * chrome (only as link to chrome theme)
   * highlight (used for syntax highlighting by some system utilities and ranger)
+  * irssi
   * git
   * neovim
   * tmux
@@ -45,6 +46,7 @@ Alternatively, you can install the following targets separately by running `zsh 
   * **git** install git aliases and config
   * **nvim** install neovim configuration
   * **highlight** install highlight configuration (for syntax highlighting within various unix utilities)
+  * **irssi** install irssi configuration
   * **ranger** install ranger configuration
   * **bpytop** install bpytop configuration
   * **winterm** install configuration for Windows Terminal (where applicable)
@@ -62,6 +64,8 @@ Some theming is done by specifying hex colors while other theming is done by tak
 
 To use a theme, run the install script with the `-t` option followed by the theme name: `./install.zsh -t dracula`
 
+
+<sub>neovim screenshots below are pre-treesitter and will be updated to their current appearance in the future</sub>
 
 ### default
 (attempts to use configurations which make terminal utilities respect shell colors)

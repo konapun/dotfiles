@@ -2,7 +2,7 @@ GRAPHICAL_PACKAGE_MANAGER="sudo apt"
 PACKAGE_MANAGER="sudo apt"
 INSTALL_COMMAND="install"
 
-CORE_PACKAGES=(bat calcurse cargo clojure command-not-found docker docker-compose fortune-mod fzf golang gron highlight htop hub leiningen neofetch nodejs python3 python3-pip ripgrep thefuck tmux universal-ctags tree zsh) # stow navi ncmpcpp sxhkd
+CORE_PACKAGES=(bat calcurse cargo clojure command-not-found docker docker-compose fortune-mod fzf golang gron highlight htop hub irssi leiningen neofetch nodejs python3 python3-pip ripgrep thefuck tmux universal-ctags tree zsh) # stow navi ncmpcpp sxhkd
 GRAPHICAL_PACKAGES=(audacity blender gimp lmms milkytracker slack spotify-client steam)
 
 # run migrations
