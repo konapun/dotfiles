@@ -42,6 +42,28 @@ themer_substitute left_segment_separator $LEFT_SEGMENT_START $NVIM_LUA_THEME_FIL
 themer_substitute right_segment_separator $RIGHT_SEGMENT_START $NVIM_LUA_THEME_FILE
 themer_cleanup $NVIM_LUA_THEME_FILE
 
+# system theme
+themer_substitute background $BACKGROUND $NVIM_PALETTE_FILE
+themer_substitute foreground $FOREGROUND $NVIM_PALETTE_FILE
+themer_substitute accent $ACCENT $NVIM_PALETTE_FILE
+themer_substitute black $BLACK $NVIM_PALETTE_FILE
+themer_substitute red $RED $NVIM_PALETTE_FILE
+themer_substitute green $GREEN $NVIM_PALETTE_FILE
+themer_substitute yellow $YELLOW $NVIM_PALETTE_FILE
+themer_substitute blue $BLUE $NVIM_PALETTE_FILE
+themer_substitute purple $PURPLE $NVIM_PALETTE_FILE
+themer_substitute cyan $CYAN $NVIM_PALETTE_FILE
+themer_substitute white $WHITE $NVIM_PALETTE_FILE
+themer_substitute bright_black $BRIGHT_BLACK $NVIM_PALETTE_FILE
+themer_substitute bright_red $BRIGHT_RED $NVIM_PALETTE_FILE
+themer_substitute bright_green $BRIGHT_GREEN $NVIM_PALETTE_FILE
+themer_substitute bright_yellow $BRIGHT_YELLOW $NVIM_PALETTE_FILE
+themer_substitute bright_blue $BRIGHT_BLUE $NVIM_PALETTE_FILE
+themer_substitute bright_purple $BRIGHT_PURPLE $NVIM_PALETTE_FILE
+themer_substitute bright_cyan $BRIGHT_CYAN $NVIM_PALETTE_FILE
+themer_substitute bright_white $BRIGHT_WHITE $NVIM_PALETTE_FILE
+
+# legacy system theme
 themer_substitute background $BACKGROUND $NVIM_THEME_FILE
 themer_substitute foreground $FOREGROUND $NVIM_THEME_FILE
 themer_substitute black $BLACK $NVIM_THEME_FILE
