@@ -2,6 +2,33 @@ local linters = require('./config/efm/_linters')
 local lspconfig = require('lspconfig')
 
 local format_on_write = false
+local lint_settings = {
+  ["="] = {linters.misspell},
+  vim = {linters.vint},
+  lua = {linters.luafmt},
+  go = {linters.golint, linters.gofmt},
+  python = {linters.black, linters.isort, linters.flake8, linters.mypy},
+  typescript = {linters.prettier, linters.eslint},
+  javascript = {linters.prettier, linters.eslint},
+  typescriptreact = {linters.prettier, linters.eslint},
+  javascriptreact = {linters.prettier, linters.eslint},
+  yaml = {linters.prettier},
+  json = {linters.prettier},
+  html = {linters.prettier},
+  scss = {linters.prettier},
+  css = {linters.prettier},
+  markdown = {linters.prettier},
+  sh = {linters.shellcheck},
+  tf = {linters.terraform}
+}
+
+local function get_table_keys(tab)
+  local keyset = {}
+  for k,v in pairs(tab) do
+    keyset[#keyset + 1] = k
+  end
+  return keyset
+end
 
 -- Linting
 vim.lsp.handlers["textDocument/formatting"] = function(err, _, result, _, bufnr)
@@ -48,26 +75,9 @@ local function setup_servers()
     root_dir = vim.loop.cwd,
     settings = {
       rootMarkers = {".git/"},
-      languages = {
-        ["="] = {linters.misspell},
-        vim = {linters.vint},
-        lua = {linters.luafmt},
-        go = {linters.golint, linters.gofmt},
-        python = {linters.black, linters.isort, linters.flake8, linters.mypy},
-        typescript = {linters.prettier, linters.eslint},
-        javascript = {linters.prettier, linters.eslint},
-        typescriptreact = {linters.prettier, linters.eslint},
-        javascriptreact = {linters.prettier, linters.eslint},
-        yaml = {linters.prettier},
-        json = {linters.prettier},
-        html = {linters.prettier},
-        scss = {linters.prettier},
-        css = {linters.prettier},
-        markdown = {linters.prettier},
-        sh = {linters.shellcheck},
-        tf = {linters.terraform}
-      }
-    }
+      languages = lint_settings
+    },
+    filetypes = get_table_keys(lint_settings)
   }
 end
 
