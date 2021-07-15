@@ -66,25 +66,25 @@ end
 
 -- Check if vim.g.system_custom_colors = is a table
 if type(vim.g.system_custom_colors) == "table" then
-  -- Iterate trough the table
-  for key, value in pairs(vim.g.system_custom_colors) do
-    -- If the key doesn't exist:
-    if not system[key] then
-      error("Color " .. key .. " does not exist")
-    end
-    -- If it exists and the sting starts with a "#"
-    if string.sub(value, 1, 1) == "#" then
-      -- Hex override
-      system[key] = value
-    -- IF it doesn't, dont accept it
-    else
-      -- Another group
-      if not system[value] then
-        error("Color " .. value .. " does not exist")
-      end
-      system[key] = system[value]
-    end
-  end
+	-- Iterate trough the table
+	for key, value in pairs(vim.g.system_custom_colors) do
+		-- If the key doesn't exist:
+		if not system[key] then
+			error("Color " .. key .. " does not exist")
+		end
+		-- If it exists and the sting starts with a "#"
+		if string.sub(value, 1, 1) == "#" then
+			-- Hex override
+			system[key] = value
+		-- IF it doesn't, dont accept it
+		else
+			-- Another group
+			if not system[value] then
+			  error("Color " .. value .. " does not exist")
+			end
+			system[key] = system[value]
+		end
+	end
 end
 
 return system
