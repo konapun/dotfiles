@@ -34,6 +34,7 @@ inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " ALE
+" TODO: replace these
 nmap <leader>F :ALEFix<CR>
 nmap <leader>n :ALENextWrap<CR>
 
@@ -71,8 +72,8 @@ nmap <leader>gw :lua require('gitsigns').blame_line(true)<CR>
 " rnvimr
 nnoremap <leader>r :RnvimrToggle<CR>
 
-" formatter
-nnoremap <silent> <leader>f :Format<CR>
+" formatting
+nnoremap <silent> <leader>f :lua vim.lsp.buf.formatting()<CR>
 
 " undotree
 nnoremap <localleader>u :UndotreeToggle<cr>

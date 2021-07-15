@@ -19,8 +19,6 @@ return require('packer').startup(function(use)
   -- general
   use 'hrsh7th/nvim-compe'                                               -- Nvim code autocompletion (Lua)
   use 'kevinhwang91/rnvimr'                                              -- Use Ranger in a floating window via RPC (Lua)
-  use 'w0rp/ale'                                                         -- Asynchronous linting
-  use 'mhartington/formatter.nvim'                                       -- Format runner (Lua)
   use 'ludovicchabant/vim-gutentags'                                     -- Tag file management
   use 'editorconfig/editorconfig-vim'                                    -- Support for .editorconfig
   use 'kshenoy/vim-signature'                                            -- Toggle, display and navigate marks
@@ -43,13 +41,7 @@ return require('packer').startup(function(use)
   use 'onsails/lspkind-nvim'                                             -- VSCode-like pictograms for Nvim lsp completion items (Lua)
   use 'simrat39/symbols-outline.nvim'                                    -- Tree like view for LSP symbols (Lua)
   use 'ray-x/lsp_signature.nvim'                                         -- Show function signature as you type
-  -- TODO: installers
-  -- TODO: https://github.com/nvim-lua/lsp-status.nvim ??
-  -- TODO: https://github.com/glepnir/lspsaga.nvim if telesope doesn't provide this functionality
-  -- TODO: https://github.com/RishabhRD/nvim-lsputils ""
-  -- TODO: https://github.com/ray-x/lsp_signature.nvim if normal completion doesn't show this info
-  -- TODO: https://github.com/ray-x/navigator.lua if telescope doesn't provide this functionality
-  -- TODO: https://github.com/folke/trouble.nvim ""
+  use 'folke/lsp-colors.nvim'                                            -- Create missing LSP diagnostics highlight groups for color schemes that don't yet support the Neovim 0.5 builtin LSP client
 
   -- editing
   use 'windwp/nvim-autopairs'                                            -- Pair autocompletion (Lua)
@@ -111,7 +103,6 @@ return require('packer').startup(function(use)
   use 'junegunn/limelight.vim'                                           -- Highlight current block
   use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)
   use 'lukas-reineke/indent-blankline.nvim'                              -- Indent guides for Nvim (Lua)
-  use 'folke/lsp-colors.nvim'                                            -- Create missing LSP diagnostics highlight groups for color schemes that don't yet support the Neovim 0.5 builtin LSP client
   use {'yamatsum/nvim-nonicons',                                         -- Icon set using nonicons for Nvim plugins and settings (Lua)
     requires = {'kyazdani42/nvim-web-devicons'}
   }
