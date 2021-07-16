@@ -92,10 +92,10 @@ return require('packer').startup(function(use)
   -- TODO: https://github.com/TimUntersberger/neogit
 
   -- decoration/layout
-  use 'vim-airline/vim-airline'                                          -- Statusline
-  --[[ use {'glepnir/galaxyline.nvim', branch = 'main', requires = {          -- Configurable statusline (Lua)
+  use {'glepnir/galaxyline.nvim', branch = 'main', requires = {          -- Configurable statusline (Lua)
     'kyazdani42/nvim-web-devicons', opt = true
-  }} ]]
+  }}
+  use {'akinsho/nvim-bufferline.lua'}                                    -- A snazzy bufferline for Nvim (Lua)
   use 'camspiers/animate.vim'                                            -- Window animation
   use 'sunjon/shade.nvim'                                                -- Dim inactive windows (Lua)
   use 'wfxr/minimap.vim'                                                 -- Minimap
@@ -103,9 +103,7 @@ return require('packer').startup(function(use)
   use 'junegunn/limelight.vim'                                           -- Highlight current block
   use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)
   use 'lukas-reineke/indent-blankline.nvim'                              -- Indent guides for Nvim (Lua)
-  use {'yamatsum/nvim-nonicons',                                         -- Icon set using nonicons for Nvim plugins and settings (Lua)
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
+  use 'yamatsum/nvim-nonicons'                                           -- Icon set using nonicons for Nvim plugins and settings (Lua)
   -- use 'karb94/neoscroll.nvim'                                         -- Smooth scrolling (Lua)
 
   -- utilities
