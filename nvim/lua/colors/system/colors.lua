@@ -4,11 +4,11 @@ local palette = require('colors.palette')
 local system = {
     -- Common colors
     white    = palette.bright_white,
-    gray     = palette.white,
+    gray     = palette.bright_yellow,
     black    = palette.black,
     red      = palette.red,
     green    = palette.green,
-    yellow   = palette.yellow,
+    yellow   = palette.bright_yellow,
     blue     = palette.blue,
     paleblue = palette.bright_blue,
     cyan     = palette.cyan,
@@ -21,13 +21,13 @@ local system = {
     cursor   = palette.foreground,
 
     bg           = palette.background,
-    bg_alt       = palette.foreground,
+    bg_alt       = palette.background,
     fg           = palette.foreground,
     text         = palette.foreground,
     comments     = palette.purple,
     selection    = palette.accent,
     contrast     = palette.white,
-    active       = palette.accent,
+    active       = palette.bright_black,
     border       = palette.bright_black,
     line_numbers = palette.bright_black,
     highlight    = palette.bright_black,
@@ -48,12 +48,7 @@ else
     system.float = system.bg_alt
 end
 
--- Enable custom variable colors
-if vim.g.system_variable_color == nil then
-    system.variable = system.gray
-else
-    system.variable = vim.g.system_variable_color
-end
+system.variable = system.blue
 
 -- Set black titles for lighter style
 if vim.g.system_style == 'lighter' then

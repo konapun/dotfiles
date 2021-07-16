@@ -5,36 +5,36 @@ local theme = {}
 theme.loadSyntax = function ()
     -- Syntax highlight groups
 
-	local syntax = {
-		Type =						{ fg = system.purple }, -- int, long, char, etc.
-		StorageClass =				{ fg = system.cyan }, -- static, register, volatile, etc.
-		Structure =					{ fg = system.puple }, -- struct, union, enum, etc.
-		Constant =					{ fg = system.yellow }, -- any constant
-		String =					{ fg = system.green, bg = system.none, style= 'italic' }, -- Any string
-		Character =					{ fg = system.orange }, -- any character constant: 'c', '\n'
-		Number =					{ fg = system.orange }, -- a number constant: 5
-		Boolean =					{ fg = system.orange }, -- a boolean constant: TRUE, false
-		Float =						{ fg = system.orange }, -- a floating point constant: 2.3e10
-		Statement =					{ fg = system.pink }, -- any statement
-		Label =						{ fg = system.purple }, -- case, default, etc.
-		Operator =					{ fg = system.cyan }, -- sizeof", "+", "*", etc.
-		Exception =					{ fg = system.cyan }, -- try, catch, throw
-		PreProc =					{ fg = system.purple }, -- generic Preprocessor
-		Include =					{ fg = system.blue }, -- preprocessor #include
-		Define =					{ fg = system.pink }, -- preprocessor #define
-		Macro =						{ fg = system.cyan }, -- same as Define
-		Typedef =					{ fg = system.red }, -- A typedef
-		PreCondit =					{ fg = system.cyan }, -- preprocessor #if, #else, #endif, etc.
-		Special =					{ fg = system.red }, -- any special symbol
-		SpecialChar =				{ fg = system.pink }, -- special character in a constant
-		Tag =						{ fg = system.red }, -- you can use CTRL-] on this
-		Delimiter =					{ fg = system.cyan }, -- character that needs attention like , or .
-		SpecialComment =			{ fg = system.gray }, -- special things inside a comment
-		Debug =						{ fg = system.red }, -- debugging statements
-		Underlined =				{ fg = system.link, bg = system.none, style = 'underline' }, -- text that stands out, HTML links
-		Ignore =					{ fg = system.disabled }, -- left blank, hidden
-		Error =						{ fg = system.error, bg = system.none, style = 'bold,underline' }, -- any erroneous construct
-		Todo =						{ fg = system.yellow, bg = system.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    local syntax = {
+        Type =                        { fg = system.purple }, -- int, long, char, etc.
+        StorageClass =                { fg = system.cyan }, -- static, register, volatile, etc.
+        Structure =                    { fg = system.puple }, -- struct, union, enum, etc.
+        Constant =                    { fg = system.yellow }, -- any constant
+        String =                    { fg = system.green, bg = system.none, style= 'italic' }, -- Any string
+        Character =                    { fg = system.orange }, -- any character constant: 'c', '\n'
+        Number =                    { fg = system.orange }, -- a number constant: 5
+        Boolean =                    { fg = system.orange }, -- a boolean constant: TRUE, false
+        Float =                        { fg = system.orange }, -- a floating point constant: 2.3e10
+        Statement =                    { fg = system.pink }, -- any statement
+        Label =                        { fg = system.purple }, -- case, default, etc.
+        Operator =                    { fg = system.cyan }, -- sizeof", "+", "*", etc.
+        Exception =                    { fg = system.cyan }, -- try, catch, throw
+        PreProc =                    { fg = system.purple }, -- generic Preprocessor
+        Include =                    { fg = system.blue }, -- preprocessor #include
+        Define =                    { fg = system.pink }, -- preprocessor #define
+        Macro =                        { fg = system.cyan }, -- same as Define
+        Typedef =                    { fg = system.red }, -- A typedef
+        PreCondit =                    { fg = system.cyan }, -- preprocessor #if, #else, #endif, etc.
+        Special =                    { fg = system.red }, -- any special symbol
+        SpecialChar =                { fg = system.pink }, -- special character in a constant
+        Tag =                        { fg = system.red }, -- you can use CTRL-] on this
+        Delimiter =                    { fg = system.cyan }, -- character that needs attention like , or .
+        SpecialComment =            { fg = system.gray }, -- special things inside a comment
+        Debug =                        { fg = system.red }, -- debugging statements
+        Underlined =                { fg = system.link, bg = system.none, style = 'underline' }, -- text that stands out, HTML links
+        Ignore =                    { fg = system.disabled }, -- left blank, hidden
+        Error =                        { fg = system.error, bg = system.none, style = 'bold,underline' }, -- any erroneous construct
+        Todo =                        { fg = system.yellow, bg = system.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
         htmlLink = { fg = system.link, style = "underline" },
         htmlH1 = { fg = system.cyan, style = "bold" },
@@ -48,42 +48,42 @@ theme.loadSyntax = function ()
         markdownH1Delimiter = { fg = system.cyan },
         markdownH2Delimiter = { fg = system.red },
         markdownH3Delimiter = { fg = system.green },
-	}
+    }
 
-	-- Options:
+    -- Options:
 
-	-- Italic comments
-	if vim.g.system_italic_comments == true then
-		syntax.Comment =		{fg = system.comments, bg = system.none, style = 'italic'} -- italic comments
-	else
-		syntax.Comment =		{fg = system.comments} -- normal comments
-	end
+    -- Italic comments
+    if vim.g.system_italic_comments == true then
+        syntax.Comment =        {fg = system.comments, bg = system.none, style = 'italic'} -- italic comments
+    else
+        syntax.Comment =        {fg = system.comments} -- normal comments
+    end
 
-	-- Italic Keywords
-	if vim.g.system_italic_keywords == true then
-		syntax.Conditional =		{fg = system.purple, bg = system.none, style = 'italic'} -- italic if, then, else, endif, switch, etc.
-		syntax.Keyword =			{fg = system.purple, bg = system.none, style = 'italic'} -- italic for, do, while, etc.
-		syntax.Repeat =				{fg = system.purple, bg = system.none, style = 'italic'} -- italic any other keyword
-	else
-		syntax.Conditional =		{fg = system.purple} -- normal if, then, else, endif, switch, etc.
-		syntax.Keyword =			{fg = system.purple} -- normal for, do, while, etc.
-		syntax.Repeat =				{fg = system.purple} -- normal any other keyword
-	end
+    -- Italic Keywords
+    if vim.g.system_italic_keywords == true then
+        syntax.Conditional =        {fg = system.red, bg = system.none, style = 'italic'} -- italic if, then, else, endif, switch, etc.
+        syntax.Keyword =            {fg = system.red, bg = system.none, style = 'italic'} -- italic for, do, while, etc.
+        syntax.Repeat =                {fg = system.red, bg = system.none, style = 'italic'} -- italic any other keyword
+    else
+        syntax.Conditional =        {fg = system.red} -- normal if, then, else, endif, switch, etc.
+        syntax.Keyword =            {fg = system.red} -- normal for, do, while, etc.
+        syntax.Repeat =                {fg = system.red} -- normal any other keyword
+    end
 
-	-- Italic Function names
-	if vim.g.system_italic_functions == true then
-		syntax.Function =		{fg = system.blue, bg = system.none, style = 'italic'} -- italic funtion names
-	else
-		syntax.Function =		{fg = system.blue} -- normal function names
-	end
+    -- Italic Function names
+    if vim.g.system_italic_functions == true then
+        syntax.Function =        {fg = system.green, bg = system.none, style = 'italic'} -- italic funtion names
+    else
+        syntax.Function =        {fg = system.green} -- normal function names
+    end
 
-	if vim.g.system_italic_variables == true then
-		syntax.Identifier =		{fg = system.variable, bg = system.none, style = 'italic'}; -- any variable name
-	else
-		syntax.Identifier =		{fg = system.variable}; -- any variable name
-	end
+    if vim.g.system_italic_variables == true then
+        syntax.Identifier =        {fg = system.variable, bg = system.none, style = 'italic'}; -- any variable name
+    else
+        syntax.Identifier =        {fg = system.variable}; -- any variable name
+    end
 
-	return syntax
+    return syntax
 
 end
 
@@ -91,63 +91,63 @@ end
 theme.loadEditor = function ()
     -- Editor highlight groups
 
-	local editor = {
-		NormalFloat =			{ fg = system.fg, bg = system.float }, -- normal text and background color for floating windows
-		ColorColumn =			{ fg = system.none, bg = system.active }, --  used for the columns set with 'colorcolumn'
-		Conceal =				{ fg = system.disabled }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-		Cursor =				{ fg = system.cursor, bg = system.none, style = 'reverse' }, -- the character under the cursor
-		CursorIM =				{ fg = system.cursor, bg = system.none, style = 'reverse' }, -- like Cursor, but used when in IME mode
-		Directory =				{ fg = system.blue, bg = system.none }, -- directory names (and other special names in listings)
-		DiffAdd =				{ fg = system.green, bg = system.none, style = 'reverse' }, -- diff mode: Added line
-		DiffChange =			{ fg = system.blue, bg = system.none, style = 'reverse' }, --  diff mode: Changed line
-		DiffDelete =			{ fg = system.red, bg = system.none, style = 'reverse' }, -- diff mode: Deleted line
-		DiffText =				{ fg = system.fg, bg = system.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
-		ErrorMsg =				{ fg = system.error }, -- error messages
-		Folded =				{ fg = system.disabled, bg = system.none, style = 'italic' }, -- line used for closed folds
-		FoldColumn =			{ fg = system.blue }, -- 'foldcolumn'
-		IncSearch =				{ fg = system.highlight, bg = system.title, style = 'reverse' }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-		LineNr =				{ fg = system.line_numbers }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-		CursorLineNr =			{ fg = system.accent }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-		MatchParen =			{ fg = system.yellow, bg = system.none, style = 'bold' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-		ModeMsg =				{ fg = system.accent }, -- 'showmode' message (e.g., "-- INSERT -- ")
-		MoreMsg =				{ fg = system.accent }, -- |more-prompt|
-		NonText =				{ fg = system.disabled }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-		Pmenu =					{ fg = system.text, bg = system.contrast }, -- Popup menu: normal item.
-		PmenuSel =				{ fg = system.accent, bg = system.active, style = 'italic' }, -- Popup menu: selected item.
-		PmenuSbar =				{ fg = system.text, bg = system.contrast }, -- Popup menu: scrollbar.
-		PmenuThumb =			{ fg = system.fg, bg = system.border }, -- Popup menu: Thumb of the scrollbar.
-		Question =				{ fg = system.green }, -- |hit-enter| prompt and yes/no questions
-		QuickFixLine =			{ fg = system.highlight, bg = system.title, style = 'reverse' }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-		qfLineNr =				{ fg = system.highlight, bg = system.title, style = 'reverse' }, -- Line numbers for quickfix lists
-		Search =				{ fg = system.highlight, bg = system.title, style = 'reverse' }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-		SpecialKey =			{ fg = system.purple }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-		SpellBad =				{ fg = system.red, bg = system.none, style = 'italic,undercurl' }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-		SpellCap =				{ fg = system.blue, bg = system.none, style = 'italic,undercurl' }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-		SpellLocal =			{ fg = system.cyan, bg = system.none, style = 'italic,undercurl' }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-		SpellRare =				{ fg = system.purple, bg = system.none, style = 'italic,undercurl' }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-		StatusLine =			{ fg = system.accent, bg = system.active }, -- status line of current window
-		StatusLineNC =  		{ fg = system.fg, bg = system.bg }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-		StatusLineTerm =		{ fg = system.fg, bg = system.active }, -- status line of current terminal window
-		StatusLineTermNC =		{ fg = system.text, bg = system.bg }, -- status lines of not-current terminal windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-		TabLineFill =			{ fg = system.fg }, -- tab pages line, where there are no labels
-		TablineSel =			{ fg = system.bg, bg = system.accent }, -- tab pages line, active tab page label
-		Tabline =				{ fg = system.fg },
-		Title =					{ fg = system.title, bg = system.none, style = 'bold' }, -- titles for output from ":set all", ":autocmd" etc.
-		Visual =				{ fg = system.none, bg = system.selection }, -- Visual mode selection
-		VisualNOS =				{ fg = system.none, bg = system.selection }, -- Visual mode selection when vim is "Not Owning the Selection".
-		WarningMsg =			{ fg = system.yellow }, -- warning messages
-		Whitespace =			{ fg = system.fg }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
-		WildMenu =				{ fg = system.orange, bg = system.none, style = 'bold' }, -- current match in 'wildmenu' completion
-		CursorColumn =			{ fg = system.none, bg = system.active }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		CursorLine =			{ fg = system.none, bg = system.active }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-		-- ToolbarLine =			{ fg = system.fg, bg = system.bg_alt },
-		-- ToolbarButton =			{ fg = system.fg, bg = system.none, style = 'bold' },
-		NormalMode =			{ fg = system.accent, bg = system.none, style = 'reverse' }, -- Normal mode message in the cmdline
-		InsertMode =			{ fg = system.green, bg = system.none, style = 'reverse' }, -- Insert mode message in the cmdline
-		ReplacelMode =			{ fg = system.red, bg = system.none, style = 'reverse' }, -- Replace mode message in the cmdline
-		VisualMode =			{ fg = system.purple, bg = system.none, style = 'reverse' }, -- Visual mode message in the cmdline
-		CommandMode =			{ fg = system.gray, bg = system.none, style = 'reverse' }, -- Command mode message in the cmdline
-		Warnings =				{ fg = system.yellow },
+    local editor = {
+        NormalFloat =            { fg = system.fg, bg = system.float }, -- normal text and background color for floating windows
+        ColorColumn =            { fg = system.none, bg = system.active }, --  used for the columns set with 'colorcolumn'
+        Conceal =                { fg = system.disabled }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+        Cursor =                { fg = system.cursor, bg = system.none, style = 'reverse' }, -- the character under the cursor
+        CursorIM =                { fg = system.cursor, bg = system.none, style = 'reverse' }, -- like Cursor, but used when in IME mode
+        Directory =                { fg = system.blue, bg = system.none }, -- directory names (and other special names in listings)
+        DiffAdd =                { fg = system.green, bg = system.none, style = 'reverse' }, -- diff mode: Added line
+        DiffChange =            { fg = system.blue, bg = system.none, style = 'reverse' }, --  diff mode: Changed line
+        DiffDelete =            { fg = system.red, bg = system.none, style = 'reverse' }, -- diff mode: Deleted line
+        DiffText =                { fg = system.fg, bg = system.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
+        ErrorMsg =                { fg = system.error }, -- error messages
+        Folded =                { fg = system.disabled, bg = system.none, style = 'italic' }, -- line used for closed folds
+        FoldColumn =            { fg = system.blue }, -- 'foldcolumn'
+        IncSearch =                { fg = system.highlight, bg = system.title, style = 'reverse' }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+        LineNr =                { fg = system.line_numbers }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+        CursorLineNr =            { fg = system.accent }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+        MatchParen =            { fg = system.yellow, bg = system.none, style = 'bold' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+        ModeMsg =                { fg = system.accent }, -- 'showmode' message (e.g., "-- INSERT -- ")
+        MoreMsg =                { fg = system.accent }, -- |more-prompt|
+        NonText =                { fg = system.disabled }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+        Pmenu =                    { fg = system.text, bg = system.contrast }, -- Popup menu: normal item.
+        PmenuSel =                { fg = system.accent, bg = system.active, style = 'italic' }, -- Popup menu: selected item.
+        PmenuSbar =                { fg = system.text, bg = system.contrast }, -- Popup menu: scrollbar.
+        PmenuThumb =            { fg = system.fg, bg = system.border }, -- Popup menu: Thumb of the scrollbar.
+        Question =                { fg = system.green }, -- |hit-enter| prompt and yes/no questions
+        QuickFixLine =            { fg = system.highlight, bg = system.title, style = 'reverse' }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+        qfLineNr =                { fg = system.highlight, bg = system.title, style = 'reverse' }, -- Line numbers for quickfix lists
+        Search =                { fg = system.highlight, bg = system.title, style = 'reverse' }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+        SpecialKey =            { fg = system.purple }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+        SpellBad =                { fg = system.red, bg = system.none, style = 'italic,undercurl' }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+        SpellCap =                { fg = system.blue, bg = system.none, style = 'italic,undercurl' }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+        SpellLocal =            { fg = system.cyan, bg = system.none, style = 'italic,undercurl' }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+        SpellRare =                { fg = system.purple, bg = system.none, style = 'italic,undercurl' }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+        StatusLine =            { fg = system.accent, bg = system.active }, -- status line of current window
+        StatusLineNC =          { fg = system.fg, bg = system.bg }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+        StatusLineTerm =        { fg = system.fg, bg = system.active }, -- status line of current terminal window
+        StatusLineTermNC =        { fg = system.text, bg = system.bg }, -- status lines of not-current terminal windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+        TabLineFill =            { fg = system.fg }, -- tab pages line, where there are no labels
+        TablineSel =            { fg = system.bg, bg = system.accent }, -- tab pages line, active tab page label
+        Tabline =                { fg = system.fg },
+        Title =                    { fg = system.title, bg = system.none, style = 'bold' }, -- titles for output from ":set all", ":autocmd" etc.
+        Visual =                { fg = system.none, bg = system.selection }, -- Visual mode selection
+        VisualNOS =                { fg = system.none, bg = system.selection }, -- Visual mode selection when vim is "Not Owning the Selection".
+        WarningMsg =            { fg = system.yellow }, -- warning messages
+        Whitespace =            { fg = system.fg }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+        WildMenu =                { fg = system.orange, bg = system.none, style = 'bold' }, -- current match in 'wildmenu' completion
+        CursorColumn =            { fg = system.none, bg = system.active }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+        CursorLine =            { fg = system.none, bg = system.active }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+        -- ToolbarLine =            { fg = system.fg, bg = system.bg_alt },
+        -- ToolbarButton =            { fg = system.fg, bg = system.none, style = 'bold' },
+        NormalMode =            { fg = system.accent, bg = system.none, style = 'reverse' }, -- Normal mode message in the cmdline
+        InsertMode =            { fg = system.green, bg = system.none, style = 'reverse' }, -- Insert mode message in the cmdline
+        ReplacelMode =            { fg = system.red, bg = system.none, style = 'reverse' }, -- Replace mode message in the cmdline
+        VisualMode =            { fg = system.purple, bg = system.none, style = 'reverse' }, -- Visual mode message in the cmdline
+        CommandMode =            { fg = system.gray, bg = system.none, style = 'reverse' }, -- Command mode message in the cmdline
+        Warnings =                { fg = system.yellow },
 
         healthError =           { fg = system.error },
         healthSuccess =         { fg = system.green },
@@ -159,31 +159,31 @@ theme.loadEditor = function ()
         DashboardCenter =                       { fg = system.accent },
         DashboardFooter =                       { fg = system.green, style = "italic" },
 
-	}
+    }
 
     -- Options:
 
     --Set transparent background
     if vim.g.system_disable_background == true then
-		editor.Normal =				{ fg = system.fg, bg = system.none } -- normal text and background color
-		editor.SignColumn =			{ fg = system.fg, bg = system.none }
+        editor.Normal =                { fg = system.fg, bg = system.none } -- normal text and background color
+        editor.SignColumn =            { fg = system.fg, bg = system.none }
     else
-		editor.Normal =				{ fg = system.fg, bg = system.bg } -- normal text and background color
-		editor.SignColumn =			{ fg = system.fg, bg = system.bg }
+        editor.Normal =                { fg = system.fg, bg = system.bg } -- normal text and background color
+        editor.SignColumn =            { fg = system.fg, bg = system.bg }
     end
 
     -- Remove window split borders
     if vim.g.system_borders == true then
-		editor.VertSplit =				{ fg = system.border } -- the column separating vertically split windows
+        editor.VertSplit =                { fg = system.border } -- the column separating vertically split windows
     else
-		editor.VertSplit =				{ fg = system.bg } -- the column separating vertically split windows
+        editor.VertSplit =                { fg = system.bg } -- the column separating vertically split windows
     end
 
     --Set End of Buffer lines (~)
     if vim.g.system_hide_eob == true then
-		editor.EndOfBuffer =			{ fg = system.bg } -- ~ lines at the end of a buffer
+        editor.EndOfBuffer =            { fg = system.bg } -- ~ lines at the end of a buffer
     else
-		editor.EndOfBuffer =			{ fg = system.disabled } -- ~ lines at the end of a buffer
+        editor.EndOfBuffer =            { fg = system.disabled } -- ~ lines at the end of a buffer
     end
 
     return editor
@@ -191,22 +191,22 @@ end
 
 theme.loadTerminal = function ()
 
-	vim.g.terminal_color_0 = system.black
-	vim.g.terminal_color_1 = system.red
-	vim.g.terminal_color_2 = system.green
-	vim.g.terminal_color_3 = system.yellow
-	vim.g.terminal_color_4 = system.blue
-	vim.g.terminal_color_5 = system.purple
-	vim.g.terminal_color_6 = system.cyan
-	vim.g.terminal_color_7 = system.white
-	vim.g.terminal_color_8 = system.gray
-	vim.g.terminal_color_9 = system.red
-	vim.g.terminal_color_10 = system.green
-	vim.g.terminal_color_11 = system.yellow
-	vim.g.terminal_color_12 = system.blue
-	vim.g.terminal_color_13 = system.purple
-	vim.g.terminal_color_14 = system.cyan
-	vim.g.terminal_color_15 = system.white
+    vim.g.terminal_color_0 = system.black
+    vim.g.terminal_color_1 = system.red
+    vim.g.terminal_color_2 = system.green
+    vim.g.terminal_color_3 = system.yellow
+    vim.g.terminal_color_4 = system.blue
+    vim.g.terminal_color_5 = system.purple
+    vim.g.terminal_color_6 = system.cyan
+    vim.g.terminal_color_7 = system.white
+    vim.g.terminal_color_8 = system.gray
+    vim.g.terminal_color_9 = system.red
+    vim.g.terminal_color_10 = system.green
+    vim.g.terminal_color_11 = system.yellow
+    vim.g.terminal_color_12 = system.blue
+    vim.g.terminal_color_13 = system.purple
+    vim.g.terminal_color_14 = system.cyan
+    vim.g.terminal_color_15 = system.white
 
 end
 
@@ -268,23 +268,23 @@ theme.loadTreeSitter = function ()
 
     if vim.g.system_italic_keywords == true then
         treesitter.TSConditional =             { fg = system.purple, style = 'italic' } -- For keywords related to conditionnals.
-        treesitter.TSKeyword =                 { fg = system.cyan, style = 'italic' } -- For keywords that don't fall in previous categories.
+        treesitter.TSKeyword =                 { fg = system.bright_green, style = 'italic' } -- For keywords that don't fall in previous categories.
         treesitter.TSRepeat =                  { fg = system.purple, style = 'italic' } -- For keywords related to loops.
         treesitter.TSKeywordFunction =         { fg = system.purple, style = 'italic' } -- For keywords used to define a fuction.
     else
         treesitter.TSConditional =             { fg = system.purple } -- For keywords related to conditionnals.
-        treesitter.TSKeyword =                 { fg = system.cyan } -- For keywords that don't fall in previous categories.
+        treesitter.TSKeyword =                 { fg = system.bright_green } -- For keywords that don't fall in previous categories.
         treesitter.TSRepeat =                  { fg = system.purple } -- For keywords related to loops.
         treesitter.TSKeywordFunction =         { fg = system.purple } -- For keywords used to define a fuction.
     end
 
     if vim.g.system_italic_functions == true then
-        treesitter.TSFunction =                { fg = system.blue, style = 'italic' } -- For fuction (calls and definitions).
-        treesitter.TSMethod =                  { fg = system.blue, style = 'italic' } -- For method calls and definitions.
+        treesitter.TSFunction =                { fg = system.green, style = 'italic' } -- For fuction (calls and definitions).
+        treesitter.TSMethod =                  { fg = system.green, style = 'italic' } -- For method calls and definitions.
         treesitter.TSFuncBuiltin =             { fg = system.cyan, style = 'italic' } -- For builtin functions: `table.insert` in Lua.
     else
-        treesitter.TSFunction =                { fg = system.blue } -- For fuction (calls and definitions).
-        treesitter.TSMethod =                  { fg = system.blue } -- For method calls and definitions.
+        treesitter.TSFunction =                { fg = system.green } -- For fuction (calls and definitions).
+        treesitter.TSMethod =                  { fg = system.green } -- For method calls and definitions.
         treesitter.TSFuncBuiltin =             { fg = system.cyan } -- For builtin functions: `table.insert` in Lua.
     end
 
@@ -343,8 +343,8 @@ theme.loadPlugins = function()
         LspTroubleCount =                       { fg = system.purple, bg = system.active },
         LspTroubleNormal =                      { fg = system.fg, bg = system.sidebar },
 
-		-- Nvim-Compe
-		CompeDocumentation =					{ fg = system.text, bg = system.contrast },
+        -- Nvim-Compe
+        CompeDocumentation =                    { fg = system.text, bg = system.contrast },
 
         -- Diff
         diffAdded =                             { fg = system.green },
@@ -426,14 +426,14 @@ theme.loadPlugins = function()
         DiagnosticWarning =                     { fg = system.yellow },
         DiagnosticInformation =                 { fg = system.paleblue },
         DiagnosticHint =                        { fg = system.purple },
-		LspSagaDiagnosticBorder =				{ fg = system.gray },
-		LspSagaDiagnosticHeader =				{ fg = system.blue },
-		LspSagaDiagnosticTruncateLine =			{ fg = system.border },
-		LspLinesDiagBorder =					{ fg = system.contrast },
-		ProviderTruncateLine =					{ fg = system.border },
-		LspSagaShTruncateLine =					{ fg = system.border },
-		LspSagaDocTruncateLine =				{ fg = system.border },
-		LineDiagTruncateLine =					{ fg = system.border },
+        LspSagaDiagnosticBorder =                { fg = system.gray },
+        LspSagaDiagnosticHeader =                { fg = system.blue },
+        LspSagaDiagnosticTruncateLine =            { fg = system.border },
+        LspLinesDiagBorder =                    { fg = system.contrast },
+        ProviderTruncateLine =                    { fg = system.border },
+        LspSagaShTruncateLine =                    { fg = system.border },
+        LspSagaDocTruncateLine =                { fg = system.border },
+        LineDiagTruncateLine =                    { fg = system.border },
         LspSagaBorderTitle =                    { fg = system.cyan },
         LspSagaHoverBorder =                    { fg = system.paleblue },
         LspSagaRenameBorder =                   { fg = system.green },
@@ -441,13 +441,13 @@ theme.loadPlugins = function()
         LspSagaCodeActionTitle =                { fg = system.paleblue },
         LspSagaCodeActionContent =              { fg = system.purple },
         LspSagaCodeActionBorder =               { fg = system.blue },
-		LspSagaCodeActionTruncateLine =			{ fg = system.border },
+        LspSagaCodeActionTruncateLine =            { fg = system.border },
         LspSagaSignatureHelpBorder =            { fg = system.pink },
         LspSagaFinderSelection =                { fg = system.green },
-		-- LspSagaAutoPreview =					{ fg = system.red },
+        -- LspSagaAutoPreview =                    { fg = system.red },
         ReferencesCount =                       { fg = system.purple },
         DefinitionCount =                       { fg = system.purple },
-		DefinitionPreviewTitle =				{ fg = system.green },
+        DefinitionPreviewTitle =                { fg = system.green },
         DefinitionIcon =                        { fg = system.blue },
         ReferencesIcon =                        { fg = system.blue },
         TargetWord =                            { fg = system.cyan },
@@ -468,18 +468,18 @@ theme.loadPlugins = function()
         DapBreakpoint =                         { fg = system.red },
         DapStopped =                            { fg = system.green },
 
-		-- Illuminate
-		illuminatedWord =						{ bg = system.highight },
-		illuminatedCurWord =					{ bg = system.highight },
+        -- Illuminate
+        illuminatedWord =                        { bg = system.highight },
+        illuminatedCurWord =                    { bg = system.highight },
 
-		-- Hop
-		HopNextKey =							{ fg = system.accent, style = 'bold' },
-		HopNextKey1 =							{ fg = system.purple, style = 'bold' },
-		HopNextKey2 =							{ fg = system.blue },
-		HopUnmatched =							{ fg = system.comments },
+        -- Hop
+        HopNextKey =                            { fg = system.accent, style = 'bold' },
+        HopNextKey1 =                            { fg = system.purple, style = 'bold' },
+        HopNextKey2 =                            { fg = system.blue },
+        HopUnmatched =                            { fg = system.comments },
 
-		-- Fern
-		FernBranchText =						{ fg = system.blue },
+        -- Fern
+        FernBranchText =                        { fg = system.blue },
     }
 
     -- Options:
