@@ -83,4 +83,3 @@ themer_substitute bright_purple $BRIGHT_PURPLE $NVIM_THEME_FILE
 themer_substitute bright_cyan $BRIGHT_CYAN $NVIM_THEME_FILE
 themer_substitute bright_white $BRIGHT_WHITE $NVIM_THEME_FILE
 themer_cleanup $NVIM_THEME_FILE
-
