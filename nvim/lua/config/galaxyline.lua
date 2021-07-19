@@ -1,7 +1,6 @@
 local gl = require('galaxyline')
 local palette = require('colors.palette')
 local gls = gl.section
-
 gl.short_line_list = {'LuaTree','vista','dbui'}
 
 local separator = {
@@ -10,197 +9,171 @@ local separator = {
 }
 
 local buffer_not_empty = function()
-	if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
-		return true
-	end
-	return false
+  if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
+    return true
+  end
+  return false
 end
 
 gls.left[1] = {
-	FirstElement = {
-		provider = function() return '▋' end,
-		highlight = {palette.accent, palette.accent}
-	}
+  FirstElement = {
+    provider = function() return '▋' end,
+    highlight = {palette.green, palette.bright_green}
+  },
 }
-
 gls.left[2] = {
-	ViMode = {
-		provider = function()
-			local mode_color = {
-				n      = palette.bright_red,
-				i      = palette.bright_green,
-				v      = palette.bright_cyan,
-				[''] = palette.bright_cyan,
-				V      = palette.bright_cyan,
-				c      = palette.bright_red,
-				R      = palette.bright_red,
-				Rv     = palette.bright_red,
-				t      = palette.bright_blue,
-				['!']  = palette.bright_blue,
-			}
-			local alias = {
-				n      = 'NORMAL',
-				i      = 'INSERT',
-				v      = 'VISUAL',
-				[''] = 'V·BLOCK',
-				V      = 'V·LINE',
-				c      = 'COMMAND',
-				R      = 'REPLACE',
-				Rv     = 'V·REPLACE',
-				t      =  'TERM',
-				['!']  =  'SHELL'
-			}
-			-- cmd('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
-			return alias[vim.fn.mode()]
-		end,
-		separator = separator.left,
-		separator_highlight = {palette.bright_black,function()
-			if not buffer_not_empty() then
-				return palette.background
-			end
-			return palette.background
-		end},
-		highlight = {palette.foreground,palette.bright_black,'bold'},
-	},
+  ViMode = {
+    provider = function()
+      local alias = {n = 'NORMAL',i = 'INSERT',c= 'COMMAND',v= 'VISUAL',V= 'VISUAL LINE', [''] = 'VISUAL BLOCK'}
+      return alias[vim.fn.mode()]
+    end,
+    separator = separator.left,
+    separator_highlight = {palette.purple,function()
+      if not buffer_not_empty() then
+        return palette.purple
+      end
+      return palette.blue
+    end},
+    highlight = {palette.background,palette.purple,'bold'},
+  },
 }
-
 gls.left[3] ={
-	FileIcon = {
-		provider = 'FileIcon',
-		condition = buffer_not_empty,
-		highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,palette.background},
-	},
+  FileIcon = {
+    provider = 'FileIcon',
+    condition = buffer_not_empty,
+    highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,palette.blue},
+  },
 }
-
 gls.left[4] = {
-	FileName = {
-		provider = {'FileName','FileSize'},
-		condition = buffer_not_empty,
-		separator = separator.right,
-		separator_highlight = {palette.bright_black,palette.background},
-		highlight = {palette.foreground,palette.background,'bold'}
-	}
+  FileName = {
+    provider = {'FileName','FileSize'},
+    condition = buffer_not_empty,
+    separator = separator.right,
+    separator_highlight = {palette.purple,palette.blue},
+    highlight = {palette.red,palette.blue}
+  }
 }
 
 gls.left[5] = {
-	GitIcon = {
-		provider = function() return '  ' end,
-		condition = buffer_not_empty,
-		highlight = {palette.foreground,palette.bright_black},
-	}
+  GitIcon = {
+    provider = function() return '  ' end,
+    condition = buffer_not_empty,
+    highlight = {palette.bright_yellow,palette.purple},
+  }
 }
 gls.left[6] = {
-	GitBranch = {
-		provider = 'GitBranch',
-		condition = buffer_not_empty,
-		highlight = {palette.foreground,palette.bright_black},
-	}
+  GitBranch = {
+    provider = 'GitBranch',
+    condition = buffer_not_empty,
+    highlight = {palette.background,palette.purple},
+  }
 }
 
 local checkwidth = function()
-	local squeeze_width  = vim.fn.winwidth(0) / 2
-	if squeeze_width > 40 then
-		return true
-	end
-	return false
+  local squeeze_width  = vim.fn.winwidth(0) / 2
+  if squeeze_width > 40 then
+    return true
+  end
+  return false
 end
 
 gls.left[7] = {
-	DiffAdd = {
-		provider = 'DiffAdd',
-		condition = checkwidth,
-		icon = ' ',
-		highlight = {palette.green,palette.bright_black},
-	}
+  DiffAdd = {
+    provider = 'DiffAdd',
+    condition = checkwidth,
+    icon = ' ',
+    highlight = {palette.green,palette.purple},
+  }
 }
 gls.left[8] = {
-	DiffModified = {
-		provider = 'DiffModified',
-		condition = checkwidth,
-		icon = ' ',
-		highlight = {palette.yellow,palette.bright_black},
-	}
+  DiffModified = {
+    provider = 'DiffModified',
+    condition = checkwidth,
+    icon = ' ',
+    highlight = {palette.bright_yellow,palette.purple},
+  }
 }
 gls.left[9] = {
-	DiffRemove = {
-		provider = 'DiffRemove',
-		condition = checkwidth,
-		icon = ' ',
-		highlight = {palette.bright_red,palette.bright_black},
-	}
+  DiffRemove = {
+    provider = 'DiffRemove',
+    condition = checkwidth,
+    icon = ' ',
+    highlight = {palette.red,palette.purple},
+  }
 }
 gls.left[10] = {
-	LeftEnd = {
-		provider = function() return '' end,
-		condition = buffer_not_empty,
-		highlight = {palette.bright_black,palette.background}
-	}
+  LeftEnd = {
+    provider = function() return separator.left end,
+    separator = separator.left,
+    separator_highlight = {palette.purple,palette.background},
+    highlight = {palette.purple,palette.purple}
+  }
 }
 gls.left[11] = {
-	DiagnosticError = {
-		provider = 'DiagnosticError',
-		icon = '  ',
-		highlight = {palette.bright_red,palette.background}
-	}
+  DiagnosticError = {
+    provider = 'DiagnosticError',
+    icon = '  ',
+    highlight = {palette.red,palette.background}
+  }
 }
 gls.left[12] = {
-	Space = {
-		provider = function () return ' ' end
-	}
+  Space = {
+    provider = function () return ' ' end
+  }
 }
 gls.left[13] = {
-	DiagnosticWarn = {
-		provider = 'DiagnosticWarn',
-		icon = '  ',
-		highlight = {palette.yellow,palette.background},
-	}
+  DiagnosticWarn = {
+    provider = 'DiagnosticWarn',
+    icon = '  ',
+    highlight = {palette.blue,palette.background},
+  }
 }
-
 gls.right[1]= {
-	FileFormat = {
-		provider = 'FileFormat',
-		separator = separator.left,
-		separator_highlight = {palette.background,palette.bright_black},
-		highlight = {palette.foreground,palette.bright_black},
-	}
+  FileFormat = {
+    provider = 'FileFormat',
+    separator = separator.right,
+    separator_highlight = {palette.purple,palette.background},
+    highlight = {palette.background,palette.purple},
+  }
 }
 gls.right[2] = {
-	LineInfo = {
-		provider = 'LineColumn',
-		separator = ' | ',
-		separator_highlight = {palette.foreground,palette.bright_black},
-		highlight = {palette.foreground,palette.bright_black},
-	},
+  LineInfo = {
+    provider = 'LineColumn',
+    separator = ' | ',
+    separator_highlight = {palette.blue,palette.purple},
+    highlight = {palette.background,palette.purple},
+  },
 }
 gls.right[3] = {
-	PerCent = {
-		provider = 'LinePercent',
-		separator = separator.right,
-		separator_highlight = {palette.background,palette.bright_black},
-		highlight = {palette.foreground,palette.background},
-	}
+  PerCent = {
+    provider = 'LinePercent',
+    separator = separator.left,
+    separator_highlight = {palette.purple,palette.blue},
+    highlight = {palette.background,palette.blue},
+  }
 }
 gls.right[4] = {
-	ScrollBar = {
-		provider = 'ScrollBar',
-		highlight = {palette.foreground,palette.background},
-	}
+  ScrollBar = {
+    provider = 'ScrollBar',
+    highlight = {palette.yellow,palette.purple},
+  }
 }
 
 gls.short_line_left[1] = {
-	BufferType = {
-		provider = { 'FileName' },
-		separator = separator.left,
-		separator_highlight = {palette.bright_black,palette.background},
-		highlight = {palette.foreground,palette.bright_black}
-	}
+  BufferType = {
+    provider = 'FileTypeName',
+    separator = separator.right,
+    separator_highlight = {palette.purple,palette.background},
+    highlight = {palette.background,palette.purple}
+  }
 }
 
+
 gls.short_line_right[1] = {
-	BufferIcon = {
-		provider= 'BufferIcon',
-		separator = separator.right,
-		separator_highlight = {palette.bright_black,palette.background},
-		highlight = {palette.foreground,palette.bright_black}
-	}
+  BufferIcon = {
+    provider= 'BufferIcon',
+    separator = separator.right,
+    separator_highlight = {palette.purple,palette.background},
+    highlight = {palette.background,palette.purple}
+  }
 }
