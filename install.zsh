@@ -14,9 +14,10 @@ function parse_options {
   o_theme=(-t "")
   o_winuser=(-w Bremen)
 
-  zparseopts -D -E -- g=o_graphical u=o_update t:=o_theme w:=o_winuser
+  zparseopts -D -E -- g=o_graphical u=o_update c=o_compile t:=o_theme w:=o_winuser
 
   GRAPHICAL=$o_graphical
+  COMPILE=$o_compile # cargo compilations can take a loooooong time so leave cargo utility packages out by default (unless they're required by other utilities like codemap)
   UPDATE=$o_update
   THEME=$o_theme[2]
   WINUSER=$o_winuser[2]

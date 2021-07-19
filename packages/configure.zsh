@@ -28,7 +28,10 @@ fi
 npm install -g $NPM_PACKAGES
 pip3 install $PIP3_PACKAGES
 if command -v cargo &> /dev/null; then
-  cargo install $CARGO_PACKAGES
+  cargo install $CARGO_UTILITY_PACKAGES
+  if [[ $COMPILE ]]; then
+    cargo install $CARGO_DEPENDENCY_PACKAGES
+  fi
 fi
 if command -v go &> /dev/null; then
   go get $GO_PACKAGES
@@ -37,7 +40,10 @@ fi
 if [[ $UPDATE ]]; then
   npm update
   pip3 install --upgrade $PIP3_PACKAGES
-  cargo install --force $CARGO_PACKAGES
+  cargo install --force $CARGO_DEPENDENCY_PACKAGES
+  if [[ $COMPILE ]]; then
+    cargo install --force $CARGO_UTILITY_PACKAGES
+  fi
   go get -u all
 fi
 

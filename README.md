@@ -54,6 +54,12 @@ Alternatively, you can install the following targets separately by running `zsh 
   * **slack** generate sidebar theme for slack
   * **chrome** link to suggested chrome theme in web store
 
+### Options
+  * `-t <theme_name>` Specify theme to use (see themes below)
+  * `-w <windows username>` If on windows, the username which corresponds to the home folder which will be used as an install path for windows-specific settings
+  * `-c` Compile additional Cargo packages. This is off by default since this can take a considerable amount of time. By default, only cargo packages which are dependencies for other utilities are compiled.
+  * `-u` Update installed packages
+
 ## Theming
 Theme support is provided via a simple `sed`-based template system. Any configuration file can specify a template variable by enclosing a key
 within double curly braces (e.g. `{{my_template_variable}}`). The theme script then replaces these variables with values from the loaded theme.
