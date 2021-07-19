@@ -1,5 +1,6 @@
 NVIM_CONFIG_FILE=~/.config/nvim/init.vim
 NVIM_THEME_FILE=~/.config/nvim/colors/system.vim
+NVIM_LEGACY_THEME_FILE=~/.config/nvim/colors/system-legacy.vim
 NVIM_PALETTE_FILE=~/.config/nvim/lua/colors/palette.lua
 AIRLINE_THEME_FILE=~/.config/nvim/autoload/airline/themes/system.vim
 AIRLINE_CONFIG_FILE=~/.config/nvim/config/plugin/airline.vim
@@ -112,21 +113,21 @@ themer_substitute bright_cyan $BRIGHT_CYAN $NVIM_PALETTE_FILE
 themer_substitute bright_white $BRIGHT_WHITE $NVIM_PALETTE_FILE
 
 # legacy system theme
-themer_substitute background $BACKGROUND $NVIM_THEME_FILE
-themer_substitute foreground $FOREGROUND $NVIM_THEME_FILE
-themer_substitute black $BLACK $NVIM_THEME_FILE
-themer_substitute red $RED $NVIM_THEME_FILE
-themer_substitute green $GREEN $NVIM_THEME_FILE
-themer_substitute yellow $YELLOW $NVIM_THEME_FILE
-themer_substitute blue $BLUE $NVIM_THEME_FILE
-themer_substitute purple $PURPLE $NVIM_THEME_FILE
-themer_substitute cyan $CYAN $NVIM_THEME_FILE
-themer_substitute white $WHITE $NVIM_THEME_FILE
-themer_substitute bright_black $BRIGHT_BLACK $NVIM_THEME_FILE
-themer_substitute bright_red $BRIGHT_RED $NVIM_THEME_FILE
-themer_substitute bright_green $BRIGHT_GREEN $NVIM_THEME_FILE
-themer_substitute bright_yellow $BRIGHT_YELLOW $NVIM_THEME_FILE
-themer_substitute bright_blue $BRIGHT_BLUE $NVIM_THEME_FILE
-themer_substitute bright_purple $BRIGHT_PURPLE $NVIM_THEME_FILE
-themer_substitute bright_cyan $BRIGHT_CYAN $NVIM_THEME_FILE
-themer_substitute bright_white $BRIGHT_WHITE $NVIM_THEME_FILE
+themer_substitute background $BACKGROUND $NVIM_LEGACY_THEME_FILE
+themer_substitute foreground $FOREGROUND $NVIM_LEGACY_THEME_FILE
+themer_substitute black $BLACK $NVIM_LEGACY_THEME_FILE
+themer_substitute red $RED $NVIM_LEGACY_THEME_FILE
+themer_substitute green $GREEN $NVIM_LEGACY_THEME_FILE
+themer_substitute yellow $YELLOW $NVIM_LEGACY_THEME_FILE
+themer_substitute blue $BLUE $NVIM_LEGACY_THEME_FILE
+themer_substitute purple $PURPLE $NVIM_LEGACY_THEME_FILE
+themer_substitute cyan $CYAN $NVIM_LEGACY_THEME_FILE
+themer_substitute white $WHITE $NVIM_LEGACY_THEME_FILE
+themer_substitute bright_black $BRIGHT_BLACK $NVIM_LEGACY_THEME_FILE
+themer_substitute bright_red $BRIGHT_RED $NVIM_LEGACY_THEME_FILE
+themer_substitute bright_green $BRIGHT_GREEN $NVIM_LEGACY_THEME_FILE
+themer_substitute bright_yellow $BRIGHT_YELLOW $NVIM_LEGACY_THEME_FILE
+themer_substitute bright_blue $BRIGHT_BLUE $NVIM_LEGACY_THEME_FILE
+themer_substitute bright_purple $BRIGHT_PURPLE $NVIM_LEGACY_THEME_FILE
+themer_substitute bright_cyan $BRIGHT_CYAN $NVIM_LEGACY_THEME_FILE
+themer_substitute bright_white $BRIGHT_WHITE $NVIM_LEGACY_THEME_FILE

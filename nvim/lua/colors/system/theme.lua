@@ -62,11 +62,11 @@ theme.loadSyntax = function ()
     -- Italic Keywords
     if vim.g.system_italic_keywords == true then
         syntax.Conditional =        {fg = system.red, bg = system.none, style = 'italic'} -- italic if, then, else, endif, switch, etc.
-        syntax.Keyword =            {fg = system.red, bg = system.none, style = 'italic'} -- italic for, do, while, etc.
+        syntax.Keyword =            {fg = system.yellow, bg = system.none, style = 'italic'} -- italic for, do, while, etc.
         syntax.Repeat =                {fg = system.red, bg = system.none, style = 'italic'} -- italic any other keyword
     else
         syntax.Conditional =        {fg = system.red} -- normal if, then, else, endif, switch, etc.
-        syntax.Keyword =            {fg = system.red} -- normal for, do, while, etc.
+        syntax.Keyword =            {fg = system.yellow} -- normal for, do, while, etc.
         syntax.Repeat =                {fg = system.red} -- normal any other keyword
     end
 
