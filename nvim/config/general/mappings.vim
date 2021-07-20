@@ -33,77 +33,76 @@ inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
-" ALE
-" TODO: replace these
-nmap <leader>F :ALEFix<CR>
-nmap <leader>n :ALENextWrap<CR>
-
 " telescope
-nnoremap <C-p> :lua require('telescope.builtin').find_files{}<CR>
-nmap <leader><space> :lua require('telescope.builtin').live_grep{}<CR>
+nnoremap <silent><C-p> :lua require('telescope.builtin').find_files{}<CR>
+nmap <silent><leader><space> :lua require('telescope.builtin').live_grep{}<CR>
 nnoremap <silent> <leader>A :lua require('telescope.builtin').grep_string{}<CR>
-nmap <leader>a :lua require('telescope.builtin').lsp_code_actions{}<CR>
-nmap <leader>o :lua require('telescope.builtin').buffers{}<CR>
-nmap <leader>m :lua require('telescope.builtin').marks{}<CR>
-nmap <leader>d :lua require('telescope.builtin').lsp_document_diagnostics{}<CR>
-nmap <leader>D :lua require('telescope.builtin').lsp_workspace_diagnostics{}<CR>
-nmap <leader>t :lua require('telescope.builtin').current_buffer_tags{}<CR>
-nmap <leader>T :lua require('telescope.builtin').tags{}<CR>
-nmap <leader>" :lua require('telescope.builtin').registers{}<CR>
-nmap <leader>/ :lua require('telescope.builtin').current_buffer_fuzzy_find{}<CR>
-nmap <leader>q :lua require('telescope.builtin').quickfix{}<CR>
-nmap <leader>s :lua require('telescope.builtin').lsp_document_symbols{}<CR>
-nmap <leader>S :lua require('telescope.builtin').lsp_workspace_symbols{}<CR>
-nmap <leader>? :Cheatsheet<CR>
-nmap <leader>ik :lua require('telescope.builtin').keymaps{}<CR>
-nmap <leader>is :lua require('telescope').extensions.ultisnips.ultisnips{}<CR>
-nmap <leader>gc :lua require('telescope.builtin').git_bcommits{}<CR>
-nmap <leader>gC :lua require('telescope.builtin').git_commits{}<CR>
-nmap <leader>gb :lua require('telescope.builtin').git_branches{}<CR>
-nmap <leader>gs :lua require('telescope.builtin').git_status{}<CR>
-nmap <leader>gf :lua require('telescope.builtin').git_files{}<CR>
+nmap <silent><leader>a :lua require('telescope.builtin').lsp_code_actions{}<CR>
+nmap <silent><leader>o :lua require('telescope.builtin').buffers{}<CR>
+nmap <silent><leader>m :lua require('telescope.builtin').marks{}<CR>
+nmap <silent><leader>d :lua require('telescope.builtin').lsp_document_diagnostics{}<CR>
+nmap <silent><leader>D :lua require('telescope.builtin').lsp_workspace_diagnostics{}<CR>
+nmap <silent><leader>t :lua require('telescope.builtin').current_buffer_tags{}<CR>
+nmap <silent><leader>T :lua require('telescope.builtin').tags{}<CR>
+nmap <silent><leader>" :lua require('telescope.builtin').registers{}<CR>
+nmap <silent><leader>/ :lua require('telescope.builtin').current_buffer_fuzzy_find{}<CR>
+nmap <silent><leader>q :lua require('telescope.builtin').quickfix{}<CR>
+nmap <silent><leader>s :lua require('telescope.builtin').lsp_document_symbols{}<CR>
+nmap <silent><leader>S :lua require('telescope.builtin').lsp_workspace_symbols{}<CR>
+nmap <silent><leader>? :Cheatsheet<CR>
+nmap <silent><leader>ik :lua require('telescope.builtin').keymaps{}<CR>
+nmap <silent><leader>is :lua require('telescope').extensions.ultisnips.ultisnips{}<CR>
+nmap <silent><leader>gc :lua require('telescope.builtin').git_bcommits{}<CR>
+nmap <silent><leader>gC :lua require('telescope.builtin').git_commits{}<CR>
+nmap <silent><leader>gb :lua require('telescope.builtin').git_branches{}<CR>
+nmap <silent><leader>gs :lua require('telescope.builtin').git_status{}<CR>
+nmap <silent><leader>gf :lua require('telescope.builtin').git_files{}<CR>
 nmap <silent>gr :lua require('telescope.builtin').lsp_references{}<CR>
 nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<CR>
 nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<CR>
 
 " gitsigns
-nmap <leader>gw :lua require('gitsigns').blame_line(true)<CR>
+nmap <silent><leader>gw :lua require('gitsigns').blame_line(true)<CR>
 
 " rnvimr
-nnoremap <leader>r :RnvimrToggle<CR>
+nnoremap <silent><leader>r :RnvimrToggle<CR>
 
 " formatting
-nnoremap <silent> <leader>f :lua vim.lsp.buf.formatting()<CR>
+nnoremap <silent><leader>f :lua vim.lsp.buf.formatting()<CR>
 
 " undotree
-nnoremap <localleader>u :UndotreeToggle<cr>
+nnoremap <silent><localleader>u :UndotreeToggle<cr>
 
 " spectre
-noremap <localleader>S :lua require('spectre').open()<CR>
+noremap <silent><localleader>S :lua require('spectre').open()<CR>
 " search current word
-nnoremap <localleader>sw viw:lua require('spectre').open_visual()<CR>
-vnoremap <localleader>s :lua require('spectre').open_visual()<CR>
+nnoremap <silent><localleader>sw viw:lua require('spectre').open_visual()<CR>
+vnoremap <silent><localleader>s :lua require('spectre').open_visual()<CR>
 " search in current file
-nnoremap <localleader>sp viw:lua require('spectre').open_file_search()<cr>
+nnoremap <silent><localleader>sp viw:lua require('spectre').open_file_search()<cr>
 
 " indent blankline
-nmap <localleader>i :IndentBlanklineToggle<cr>
+nmap <silent><localleader>i :IndentBlanklineToggle<cr>
+
+" diffview
+nmap <localleader>d :DiffviewOpen
+nmap <silent><localleader>D :DiffviewOpen<CR>
 
 " goyo
-nmap <localleader>z :Goyo<cr>
+nmap <silent><localleader>z :Goyo<cr>
 
 " minimap
-nmap <localleader>m :MinimapToggle<cr>
+nmap <silent><localleader>m :MinimapToggle<cr>
 
 " aerial
-nmap <localleader>a :AerialToggle!<cr>
+nmap <silent><localleader>a :AerialToggle!<cr>
 nmap [a :AerialPrevUp<cr>
 nmap ]a :AerialNextUp<cr>
 
 " Terminal
-nmap <localleader>tt :term<cr>
-nmap <localleader>ts :split \| :term<cr>
-nmap <localleader>tv :vsplit \| :term<cr>
-nmap <localleader>to :lua require('FTerm').toggle()<cr>
-nmap <localleader>tc :lua require('FTerm').close()<cr>
+nmap <silent><localleader>tt :term<cr>
+nmap <silent><localleader>ts :split \| :term<cr>
+nmap <silent><localleader>tv :vsplit \| :term<cr>
+nmap <silent><localleader>to :lua require('FTerm').toggle()<cr>
+nmap <silent><localleader>tc :lua require('FTerm').close()<cr>
 
