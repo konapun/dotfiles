@@ -109,25 +109,7 @@ gls.left[10] = {
     highlight = {palette.purple,palette.purple}
   }
 }
-gls.left[11] = {
-  DiagnosticError = {
-    provider = 'DiagnosticError',
-    icon = '  ',
-    highlight = {palette.red,palette.background}
-  }
-}
-gls.left[12] = {
-  Space = {
-    provider = function () return ' ' end
-  }
-}
-gls.left[13] = {
-  DiagnosticWarn = {
-    provider = 'DiagnosticWarn',
-    icon = '  ',
-    highlight = {palette.blue,palette.background},
-  }
-}
+
 gls.right[1]= {
   FileFormat = {
     provider = 'FileFormat',
