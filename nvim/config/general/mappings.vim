@@ -85,8 +85,9 @@ nnoremap <silent><localleader>sp viw:lua require('spectre').open_file_search()<c
 nmap <silent><localleader>i :IndentBlanklineToggle<cr>
 
 " diffview
-nmap <localleader>d :DiffviewOpen
-nmap <silent><localleader>D :DiffviewOpen<CR>
+nmap <silent><localleader>d :DiffviewOpen<CR>
+nmap <localleader>D :DiffviewOpen
+nmap <silent><localleader>dx :DiffviewClose<CR>
 
 " goyo
 nmap <silent><localleader>z :Goyo<cr>
