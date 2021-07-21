@@ -1,0 +1,6 @@
+Replaced val (should be "val"): {{key1}}
+This line should not exist: {{!key2}}
+Default val (should be "default"): {{key3|default}}
+Default with explicit value (should be "val2"): {{key4|default}}
+Default kibosh (should not exist): {{!key5|default2}}
+

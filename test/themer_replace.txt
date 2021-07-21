@@ -1,0 +1,4 @@
+Replaced val (should be "val"): val
+Default val (should be "default"): default
+Default with explicit value (should be "val2"): val2
+
