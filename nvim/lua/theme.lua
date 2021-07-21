@@ -1,7 +1,7 @@
 local M = {}
 
 -- Palette template set by dotfile installer and used by config
-M.palette = {
+local palette = {
   background = '{{background}}',
   foreground = '{{foreground}}',
   accent     = '{{accent}}',
@@ -23,9 +23,29 @@ M.palette = {
   bright_white  = '{{bright_white}}'
 }
 
+M.palette = palette
 M.modes = {
-  n = '{{mode_normal|NORMAL}}'
+  n      = {text = '{{mode_normal_text|NORMAL}}', background = {{mode_normal_background|palette.purple}} },
+  i      = {text = '{{mode_insert_text|INSERT}}', background = palette.yellow},
+  c      = {text = '{{mode_command_text|COMMAND}}', background = palette.red},
+  v      = {text = '{{mode_visual_text|VISUAL}}', background = palette.green},
+  V      = {text = '{{mode_visualline_text|VISUAL LINE}}', background = palette.blue},
+  ['^V'] = {text = '{{mode_visualblock_text|VISUAL BLOCK}}', background = palette.cyan},
+  t      = {text = '{{mode_terminal_text|TERMINAL}}', background = palette.bright_purple},
   -- TODO
+  no     = {text = 'no', background = palette.bright_yellow},
+  s      = {text = 's', background = palette.bright_red},
+  S      = {text = 'S', background = palette.bright_green},
+  [''] = {text = '^S', background = palette.bright_blue},
+  ic     = {text = 'ic', background = palette.bright_cyan},
+  R      = {text = 'R', background = palette.purple},
+  Rv     = {text = 'Rv', background = palette.purple},
+  cv     = {text = 'cv', background = palette.purple},
+  ce     = {text = 'ce', background = palette.purple},
+  r      = {text = 'r', background = palette.purple},
+  rm     = {text = 'rm', background = palette.purple},
+  ['r?'] = {text = 'r?', background = palette.purple},
+  ['!']  = {text = '!', background = palette.purple}
 }
 
 M.icon = {

@@ -3,32 +3,10 @@ local theme = require('theme')
 local gls = gl.section
 local palette = theme.palette
 local separator = theme.separator
+local mode_map = theme.modes
 local icon = theme.icon
 
 gl.short_line_list = {'LuaTree','vista','dbui'}
-
-local mode_map = {
-  n = {text = 'NORMAL', background = palette.purple, foreground = palette.background},
-  i = {text = 'INSERT', background = palette.yellow, foreground = palette.background},
-  c = {text = 'COMMAND', background = palette.red, foreground = palette.background},
-  v = {text = 'VISUAL', background = palette.green, foreground = palette.background},
-  V = {text = 'VISUAL LINE', background = palette.blue, foreground = palette.background},
-  ['^V'] = {text = 'VISUAL BLOCK', background = palette.cyan, foreground = palette.background},
-  t = {text = 'TERMINAL', background = palette.blue, foreground = palette.background},
-  --[[ no = palette.blue,
-  s = palette.orange,
-  S = palette.orange,
-  [""] = palette.orange,
-  ic = palette.yellow,
-  R = palette.red,
-  Rv = palette.red,
-  cv = palette.blue,
-  ce = palette.blue,
-  r = palette.cyan,
-  rm = palette.cyan,
-  ["r?"] = palette.cyan,
-  ["!"] = palette.blue, ]]
-}
 
 local buffer_not_empty = function()
   if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
