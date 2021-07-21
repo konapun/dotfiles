@@ -1,5 +1,7 @@
+local M = {}
+
 -- Palette template set by dotfile installer and used by config
-local palette = {
+M.palette = {
   background = '{{background}}',
   foreground = '{{foreground}}',
   accent     = '{{accent}}',
@@ -21,4 +23,27 @@ local palette = {
   bright_white  = '{{bright_white}}'
 }
 
-return palette
+M.modes = {
+  n = '{{mode_normal|NORMAL}}'
+  -- TODO
+}
+
+M.icon = {
+  primary    = '{{icon_primary|▋}}',
+  git        = '{{icon_git|}}',
+  git_add    = '{{icon_gitadd|}}', -- 
+  git_modify = '{{icon_gitmodify|}}',
+  git_remove = '{{icon_gitremove|}}' -- 
+}
+
+M.separator = {
+  left = '{{left_separator}}',
+  left_segment = '{{left_segment_separator}}',
+  right = '{{right_separator}}',
+  right_segment = '{{right_segment_separator}}'
+}
+
+-- 
+-- 
+--
+return M

@@ -1,8 +1,6 @@
 NVIM_CONFIG_FILE=~/.config/nvim/init.vim
-NVIM_PALETTE_FILE=~/.config/nvim/lua/colors/palette.lua
+NVIM_PALETTE_FILE=~/.config/nvim/lua/theme.lua
 NVIM_THEME_FILE=~/.config/nvim/colors/system.vim
-AIRLINE_THEME_FILE=~/.config/nvim/autoload/airline/themes/system.vim
-AIRLINE_CONFIG_FILE=~/.config/nvim/config/plugin/airline.vim
 
 cp -r ./nvim ~/.config
 rm ~/.config/nvim/configure.zsh
@@ -38,6 +36,10 @@ themer_substitute bright_blue $BRIGHT_BLUE $NVIM_PALETTE_FILE
 themer_substitute bright_purple $BRIGHT_PURPLE $NVIM_PALETTE_FILE
 themer_substitute bright_cyan $BRIGHT_CYAN $NVIM_PALETTE_FILE
 themer_substitute bright_white $BRIGHT_WHITE $NVIM_PALETTE_FILE
+themer_substitute left_separator $LEFT_SEPARATOR $NVIM_PALETTE_FILE
+themer_substitute right_separator $RIGHT_SEPARATOR $NVIM_PALETTE_FILE
+themer_substitute left_segment_separator $LEFT_SEGMENT_START $NVIM_PALETTE_FILE
+themer_substitute right_segment_separator $RIGHT_SEGMENT_START $NVIM_PALETTE_FILE
 themer_cleanup $NVIM_PALETTE_FILE
 
 themer_substitute background $BACKGROUND $NVIM_THEME_FILE
