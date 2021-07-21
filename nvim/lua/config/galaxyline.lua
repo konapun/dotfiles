@@ -1,14 +1,12 @@
 local gl = require('galaxyline')
-local palette = require('colors.palette')
+local theme = require('theme')
 local gls = gl.section
+local palette = theme.palette
+local separator = theme.separator
+local icon = theme.icon
+
 gl.short_line_list = {'LuaTree','vista','dbui'}
 
-local separator = {
-  left = '',
-  left_segment = '',
-  right = '',
-  right_segment = ''
-}
 local mode_map = {
   n = {text = 'NORMAL', background = palette.purple, foreground = palette.background},
   i = {text = 'INSERT', background = palette.yellow, foreground = palette.background},
@@ -41,16 +39,21 @@ end
 
 gls.left[1] = {
   FirstElement = {
-    provider = function() return '▋' end,
-    highlight = {palette.green, palette.purple}
+    provider = function()
+      local mode_config = mode_map[vim.fn.mode()]
+      -- auto change color according the vim mode
+      vim.api.nvim_command("hi GalaxyFirstElement guifg=" .. mode_config.background)
+      return icon.primary
+    end,
+    highlight = {palette.purple, palette.purple}
   },
 }
---[[ gls.left[2] = {
+gls.left[2] = {
   ViMode = {
     provider = function()
       return mode_map[vim.fn.mode()].text
     end,
-    separator = separator.left,
+    separator = separator.left_segment,
     separator_highlight = {palette.purple,function()
       if not buffer_not_empty() then
         return palette.purple
@@ -59,31 +62,19 @@ gls.left[1] = {
     end},
     highlight = {palette.background,palette.purple,'bold'},
   },
-} ]]
-gls.left[2] = {
-  ViMode = {
-    provider = function()
-      local mode_config = mode_map[vim.fn.mode()]
-      -- auto change color according the vim mode
-      vim.api.nvim_command("hi GalaxyViMode guibg=" .. mode_config.background)
-      return mode_config.text
-    end,
-    separator_highlight = { "NONE", palette.background },
-    highlight = { "NONE", palette.background },
-  }
 }
 gls.left[3] ={
   FileIcon = {
     provider = 'FileIcon',
-    condition = buffer_not_empty,
+    -- condition = buffer_not_empty,
     highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,palette.green},
   },
 }
 gls.left[4] = {
   FileName = {
     provider = {'FileName','FileSize'},
-    condition = buffer_not_empty,
-    separator = separator.left,
+    -- condition = buffer_not_empty,
+    separator = separator.left_segment,
     separator_highlight = {palette.green,palette.purple},
     highlight = {palette.background,palette.green}
   }
@@ -91,15 +82,15 @@ gls.left[4] = {
 
 gls.left[5] = {
   GitIcon = {
-    provider = function() return ' ' end,
-    condition = buffer_not_empty,
+    provider = function() return icon.git .. ' ' end,
+    -- condition = buffer_not_empty,
     highlight = {palette.bright_yellow,palette.purple},
   }
 }
 gls.left[6] = {
   GitBranch = {
     provider = 'GitBranch',
-    condition = buffer_not_empty,
+    -- condition = buffer_not_empty,
     highlight = {palette.background,palette.purple},
   }
 }
@@ -116,7 +107,7 @@ gls.left[7] = {
   DiffAdd = {
     provider = 'DiffAdd',
     condition = checkwidth,
-    icon = ' ',
+    icon = icon.diff_add .. ' ',
     highlight = {palette.green,palette.purple},
   }
 }
@@ -124,7 +115,7 @@ gls.left[8] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = checkwidth,
-    icon = ' ',
+    icon = icon.diff_modify .. ' ',
     highlight = {palette.bright_yellow,palette.purple},
   }
 }
@@ -132,14 +123,14 @@ gls.left[9] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = checkwidth,
-    icon = ' ',
+    icon = icon.diff_remove .. ' ',
     highlight = {palette.red,palette.purple},
   }
 }
 gls.left[10] = {
   LeftEnd = {
-    provider = function() return separator.left end,
-    separator = separator.left,
+    provider = function() return separator.left_segment end,
+    separator = separator.left_segment,
     separator_highlight = {palette.purple,palette.background},
     highlight = {palette.purple,palette.purple}
   }
@@ -148,7 +139,7 @@ gls.left[10] = {
 gls.right[1]= {
   FileFormat = {
     provider = 'FileFormat',
-    separator = separator.right,
+    separator = separator.right_segment,
     separator_highlight = {palette.purple,palette.background},
     highlight = {palette.background,palette.purple},
   }
@@ -156,7 +147,7 @@ gls.right[1]= {
 gls.right[2] = {
   LineInfo = {
     provider = 'LineColumn',
-    separator = separator.right_segment,
+    separator = separator.right,
     separator_highlight = {palette.blue,palette.purple},
     highlight = {palette.background,palette.purple},
   },
@@ -164,7 +155,7 @@ gls.right[2] = {
 gls.right[3] = {
   PerCent = {
     provider = 'LinePercent',
-    separator = separator.right,
+    separator = separator.right_segment,
     separator_highlight = {palette.blue,palette.purple},
     highlight = {palette.background,palette.blue},
   }
@@ -179,7 +170,7 @@ gls.right[4] = {
 gls.short_line_left[1] = {
   BufferType = {
     provider = 'FileTypeName',
-    separator = separator.right,
+    separator = separator.right_segment,
     separator_highlight = {palette.purple,palette.background},
     highlight = {palette.background,palette.purple}
   }
@@ -189,7 +180,7 @@ gls.short_line_left[1] = {
 gls.short_line_right[1] = {
   BufferIcon = {
     provider= 'BufferIcon',
-    separator = separator.right,
+    separator = separator.right_segment,
     separator_highlight = {palette.purple,palette.background},
     highlight = {palette.background,palette.purple}
   }
