@@ -44,14 +44,14 @@ gls.left[2] = {
 gls.left[3] ={
   FileIcon = {
     provider = 'FileIcon',
-    -- condition = buffer_not_empty,
+    condition = buffer_not_empty,
     highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,palette.green},
   },
 }
 gls.left[4] = {
   FileName = {
     provider = {'FileName','FileSize'},
-    -- condition = buffer_not_empty,
+    condition = buffer_not_empty,
     separator = separator.left_segment,
     separator_highlight = {palette.green,palette.purple},
     highlight = {palette.background,palette.green}
@@ -61,14 +61,14 @@ gls.left[4] = {
 gls.left[5] = {
   GitIcon = {
     provider = function() return icon.git .. ' ' end,
-    -- condition = buffer_not_empty,
+    condition = buffer_not_empty,
     highlight = {palette.bright_yellow,palette.purple},
   }
 }
 gls.left[6] = {
   GitBranch = {
     provider = 'GitBranch',
-    -- condition = buffer_not_empty,
+    condition = buffer_not_empty,
     highlight = {palette.background,palette.purple},
   }
 }
