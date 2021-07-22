@@ -25,13 +25,13 @@ local palette = {
 
 M.palette = palette
 M.modes = {
-  n      = {text = '{{mode_normal_text|NORMAL}}', background = {{mode_normal_background|palette.purple}} },
-  i      = {text = '{{mode_insert_text|INSERT}}', background = palette.yellow},
-  c      = {text = '{{mode_command_text|COMMAND}}', background = palette.red},
-  v      = {text = '{{mode_visual_text|VISUAL}}', background = palette.green},
-  V      = {text = '{{mode_visualline_text|VISUAL LINE}}', background = palette.blue},
-  ['^V'] = {text = '{{mode_visualblock_text|VISUAL BLOCK}}', background = palette.cyan},
-  t      = {text = '{{mode_terminal_text|TERMINAL}}', background = palette.bright_purple},
+  n      = {text = 'NORMAL', background = palette.purple},
+  i      = {text = 'INSERT', background = palette.yellow},
+  c      = {text = 'COMMAND', background = palette.red},
+  v      = {text = 'VISUAL', background = palette.green},
+  V      = {text = 'VISUAL LINE', background = palette.blue},
+  ['^V'] = {text = 'VISUAL BLOCK', background = palette.cyan},
+  t      = {text = 'TERMINAL', background = palette.bright_purple},
   -- TODO
   no     = {text = 'no', background = palette.bright_yellow},
   s      = {text = 's', background = palette.bright_red},
@@ -49,11 +49,11 @@ M.modes = {
 }
 
 M.icon = {
-  primary    = '{{icon_primary|▋}}',
-  git        = '{{icon_git|}}',
-  git_add    = '{{icon_gitadd|}}', -- 
-  git_modify = '{{icon_gitmodify|}}',
-  git_remove = '{{icon_gitremove|}}' -- 
+  primary    = '▋', -- {{icon_primary|▋}}',
+  git        = '', -- {{icon_git|}}',
+  diff_add    = '', -- {{icon_gitadd|}}', -- 
+  diff_modify = '', -- {{icon_gitmodify|}}',
+  diff_remove = '', -- {{icon_gitremove|}}' -- 
 }
 
 M.separator = {
