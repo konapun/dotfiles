@@ -52,3 +52,10 @@ function themer_cleanup {
   rm "$file--"
 }
 
+# TODO: Sanitize strings before replace
+function _themer_make_safe_value {
+  local value=$1
+  local safe_value=$(printf '%s\n' "$value" | sed -e 's/[\/&]/\\&/g')
+
+  echo $safe_value
+}
