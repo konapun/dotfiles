@@ -1,5 +1,7 @@
 local gl = require('galaxyline')
-local theme = require('theme')
+local theme = require('theme') -- TODO: allow this to be configured in setup{} once this becomes its own plugin
+
+local vim = vim -- confine all "undefined global"s to this line
 local gls = gl.section
 local palette = theme.palette
 local separator = theme.separator
@@ -36,7 +38,7 @@ gls.left[2] = {
       if not buffer_not_empty() then
         return palette.purple
       end
-      return palette.green -- next segment
+      return palette.bright_green -- next segment
     end},
     highlight = {palette.background,palette.purple,'bold'},
   },
@@ -45,7 +47,7 @@ gls.left[3] ={
   FileIcon = {
     provider = 'FileIcon',
     condition = buffer_not_empty,
-    highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,palette.green},
+    highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,palette.bright_green},
   },
 }
 gls.left[4] = {
@@ -53,8 +55,8 @@ gls.left[4] = {
     provider = {'FileName','FileSize'},
     condition = buffer_not_empty,
     separator = separator.left_segment,
-    separator_highlight = {palette.green,palette.purple},
-    highlight = {palette.background,palette.green}
+    separator_highlight = {palette.bright_green,palette.purple},
+    highlight = {palette.background,palette.bright_green}
   }
 }
 
@@ -86,7 +88,7 @@ gls.left[7] = {
     provider = 'DiffAdd',
     condition = checkwidth,
     icon = icon.diff_add .. ' ',
-    highlight = {palette.green,palette.purple},
+    highlight = {palette.bright_green,palette.purple},
   }
 }
 gls.left[8] = {
@@ -114,23 +116,44 @@ gls.left[10] = {
   }
 }
 
-gls.right[1]= {
-  FileFormat = {
-    provider = 'FileFormat',
-    separator = separator.right_segment,
-    separator_highlight = {palette.purple,palette.background},
-    highlight = {palette.background,palette.purple},
+gls.right[1] = {
+  LspInfo = {
+    provider = 'GetLspClient'
   }
 }
 gls.right[2] = {
+  SearchResults = {
+    provider = function()
+      local search_term = vim.fn.getreg('/')
+      local search_count = vim.fn.searchcount({recompute = 1, maxcount = -1})
+      local active = vim.v.hlsearch == 1 and search_count.total > 0
+
+      if active then
+        return '/' .. search_term .. '[' .. search_count.current .. '/' .. search_count.total .. ']'
+      end
+    end,
+    separator = separator.right_segment,
+    separator_highlight = {palette.green,palette.background},
+    highlight = {palette.background,palette.green}
+  }
+}
+gls.right[3]= {
+  FileFormat = {
+    provider = 'FileFormat',
+    separator = separator.right_segment,
+    separator_highlight = {palette.purple,palette.green},
+    highlight = {palette.background,palette.purple},
+  }
+}
+gls.right[4] = {
   LineInfo = {
     provider = 'LineColumn',
     separator = separator.right,
-    separator_highlight = {palette.blue,palette.purple},
+    separator_highlight = {palette.background,palette.purple},
     highlight = {palette.background,palette.purple},
   },
 }
-gls.right[3] = {
+gls.right[5] = {
   PerCent = {
     provider = 'LinePercent',
     separator = separator.right_segment,
@@ -138,22 +161,22 @@ gls.right[3] = {
     highlight = {palette.background,palette.blue},
   }
 }
-gls.right[4] = {
+gls.right[6] = {
   ScrollBar = {
     provider = 'ScrollBar',
-    highlight = {palette.yellow,palette.purple},
+    highlight = {palette.yellow,palette.blue},
   }
 }
 
+-- TODO
 gls.short_line_left[1] = {
   BufferType = {
     provider = 'FileTypeName',
-    separator = separator.right_segment,
+    separator = separator.left_segment,
     separator_highlight = {palette.purple,palette.background},
     highlight = {palette.background,palette.purple}
   }
 }
-
 
 gls.short_line_right[1] = {
   BufferIcon = {
