@@ -118,7 +118,8 @@ gls.left[10] = {
 
 gls.right[1] = {
   LspInfo = {
-    provider = 'GetLspClient'
+    provider = 'GetLspClient',
+    highlight = {palette.green, palette.background}
   }
 }
 gls.right[2] = {

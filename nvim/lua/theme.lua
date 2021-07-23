@@ -25,13 +25,13 @@ local palette = {
 
 M.palette = palette
 M.modes = {
-  n      = {text = 'NORMAL', background = palette.purple},
-  i      = {text = 'INSERT', background = palette.yellow},
-  c      = {text = 'COMMAND', background = palette.red},
-  v      = {text = 'VISUAL', background = palette.green},
-  V      = {text = 'VISUAL LINE', background = palette.blue},
-  ['^V'] = {text = 'VISUAL BLOCK', background = palette.cyan},
-  t      = {text = 'TERMINAL', background = palette.bright_purple},
+  n      = {text = ' ', background = palette.purple}, -- NORMAL
+  i      = {text = ' ', background = palette.green}, -- INSERT
+  c      = {text = ' ', background = palette.blue}, -- COMMAND
+  v      = {text = ' ', background = palette.yellow}, -- VISUAL
+  V      = {text = ' ', background = palette.bright_yellow}, -- VISUAL LINE
+  ['^V'] = {text = ' ', background = palette.cyan}, -- VISUAL BLOCK
+  t      = {text = ' ', background = palette.bright_purple}, -- TERMINAL
   -- TODO
   no     = {text = 'no', background = palette.bright_yellow},
   s      = {text = 's', background = palette.bright_red},
