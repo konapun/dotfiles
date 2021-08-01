@@ -105,7 +105,6 @@ return require('packer').startup(function(use)
   use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)
   use 'lukas-reineke/indent-blankline.nvim'                              -- Indent guides for Nvim (Lua)
   use 'yamatsum/nvim-nonicons'                                           -- Icon set using nonicons for Nvim plugins and settings (Lua)
-  -- use 'karb94/neoscroll.nvim'                                         -- Smooth scrolling (Lua)
 
   -- utilities
   use 'vhyrro/neorg'                                                     -- Org mode for Nvim (Lua)
@@ -114,7 +113,6 @@ return require('packer').startup(function(use)
   -- use {'AckslD/nvim-whichkey-setup.lua', requires = {                    -- Easy setup for which-key, a plugin to display possible keybindings of typed command (Lua)
   --   'liuchengxu/vim-which-key'
   -- }}
-  -- https://github.com/windwp/nvim-spectre TODO: search panel if telescope doesn't provide something similar
 
   -- lisp/clojure
   -- use 'guns/vim-sexp'                                                    -- Precision editing for S-expressions
