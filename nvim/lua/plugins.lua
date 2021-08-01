@@ -92,7 +92,8 @@ return require('packer').startup(function(use)
   -- TODO: https://github.com/TimUntersberger/neogit
 
   -- decoration/layout
-  use {'glepnir/galaxyline.nvim', branch = 'main', requires = {          -- Configurable statusline (Lua)
+  use {'konapun/vacuumline.nvim', requires = {                           -- A configuration for galaxyline based on airline
+    'glepnir/galaxyline.nvim', branch = 'main',
     'kyazdani42/nvim-web-devicons', opt = true
   }}
   use {'akinsho/nvim-bufferline.lua'}                                    -- A snazzy bufferline for Nvim (Lua)
