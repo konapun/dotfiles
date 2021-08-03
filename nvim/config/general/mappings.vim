@@ -10,6 +10,7 @@ map <C-c> <Esc>
 nnoremap <C-w>n :enew<CR>
 nnoremap <C-w>N :vnew<CR>
 nnoremap <C-w>t :tabnew<CR>
+nnoremap <C-w>S :bo sp<CR>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
