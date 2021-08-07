@@ -110,9 +110,6 @@ return require('packer').startup(function(use)
   use 'vhyrro/neorg'                                                     -- Org mode for Nvim (Lua)
   use 'stevearc/aerial.nvim'                                             -- Code navigation in outline window
   use 'windwp/nvim-spectre'                                              -- Find and replace utility
-  -- use {'AckslD/nvim-whichkey-setup.lua', requires = {                    -- Easy setup for which-key, a plugin to display possible keybindings of typed command (Lua)
-  --   'liuchengxu/vim-which-key'
-  -- }}
 
   -- lisp/clojure
   -- use 'guns/vim-sexp'                                                    -- Precision editing for S-expressions
