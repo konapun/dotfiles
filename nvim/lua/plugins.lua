@@ -92,10 +92,9 @@ return require('packer').startup(function(use)
   -- TODO: https://github.com/TimUntersberger/neogit
 
   -- decoration/layout
-  use 'vim-airline/vim-airline'                                          -- Statusline
-  --[[ use {'glepnir/galaxyline.nvim', branch = 'main', requires = {          -- Configurable statusline (Lua)
+  use {'hoob3rt/lualine.nvim', requires = {                              -- Configurable statusline for neovim (Lua)
     'kyazdani42/nvim-web-devicons', opt = true
-  }} ]]
+  }}
   use 'camspiers/animate.vim'                                            -- Window animation
   use 'sunjon/shade.nvim'                                                -- Dim inactive windows (Lua)
   use 'wfxr/minimap.vim'                                                 -- Minimap
@@ -106,16 +105,11 @@ return require('packer').startup(function(use)
   use {'yamatsum/nvim-nonicons',                                         -- Icon set using nonicons for Nvim plugins and settings (Lua)
     requires = {'kyazdani42/nvim-web-devicons'}
   }
-  -- use 'karb94/neoscroll.nvim'                                         -- Smooth scrolling (Lua)
 
   -- utilities
   use 'vhyrro/neorg'                                                     -- Org mode for Nvim (Lua)
   use 'stevearc/aerial.nvim'                                             -- Code navigation in outline window
   use 'windwp/nvim-spectre'                                              -- Find and replace utility
-  -- use {'AckslD/nvim-whichkey-setup.lua', requires = {                    -- Easy setup for which-key, a plugin to display possible keybindings of typed command (Lua)
-  --   'liuchengxu/vim-which-key'
-  -- }}
-  -- https://github.com/windwp/nvim-spectre TODO: search panel if telescope doesn't provide something similar
 
   -- lisp/clojure
   -- use 'guns/vim-sexp'                                                    -- Precision editing for S-expressions
