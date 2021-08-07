@@ -92,10 +92,11 @@ return require('packer').startup(function(use)
   -- TODO: https://github.com/TimUntersberger/neogit
 
   -- decoration/layout
-  use 'vim-airline/vim-airline'                                          -- Statusline
-  --[[ use {'glepnir/galaxyline.nvim', branch = 'main', requires = {          -- Configurable statusline (Lua)
+  use {'konapun/vacuumline.nvim', requires = {                           -- A configuration for galaxyline based on airline
+    'glepnir/galaxyline.nvim', branch = 'main',
     'kyazdani42/nvim-web-devicons', opt = true
-  }} ]]
+  }}
+  use {'akinsho/nvim-bufferline.lua'}                                    -- A snazzy bufferline for Nvim (Lua)
   use 'camspiers/animate.vim'                                            -- Window animation
   use 'sunjon/shade.nvim'                                                -- Dim inactive windows (Lua)
   use 'wfxr/minimap.vim'                                                 -- Minimap
@@ -103,19 +104,12 @@ return require('packer').startup(function(use)
   use 'junegunn/limelight.vim'                                           -- Highlight current block
   use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)
   use 'lukas-reineke/indent-blankline.nvim'                              -- Indent guides for Nvim (Lua)
-  use {'yamatsum/nvim-nonicons',                                         -- Icon set using nonicons for Nvim plugins and settings (Lua)
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
-  -- use 'karb94/neoscroll.nvim'                                         -- Smooth scrolling (Lua)
+  use 'yamatsum/nvim-nonicons'                                           -- Icon set using nonicons for Nvim plugins and settings (Lua)
 
   -- utilities
   use 'vhyrro/neorg'                                                     -- Org mode for Nvim (Lua)
   use 'stevearc/aerial.nvim'                                             -- Code navigation in outline window
   use 'windwp/nvim-spectre'                                              -- Find and replace utility
-  -- use {'AckslD/nvim-whichkey-setup.lua', requires = {                    -- Easy setup for which-key, a plugin to display possible keybindings of typed command (Lua)
-  --   'liuchengxu/vim-which-key'
-  -- }}
-  -- https://github.com/windwp/nvim-spectre TODO: search panel if telescope doesn't provide something similar
 
   -- lisp/clojure
   -- use 'guns/vim-sexp'                                                    -- Precision editing for S-expressions
