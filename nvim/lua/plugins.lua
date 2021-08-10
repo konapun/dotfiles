@@ -92,7 +92,7 @@ return require('packer').startup(function(use)
   -- TODO: https://github.com/TimUntersberger/neogit
 
   -- decoration/layout
-  use {'konapun/vacuumline.nvim', requires = {                           -- A configuration for galaxyline based on airline
+  use {'konapun/vacuumline.nvim', branch = 'next', requires = {          -- A configuration for galaxyline based on airline
     'glepnir/galaxyline.nvim', branch = 'main',
     'kyazdani42/nvim-web-devicons', opt = true
   }}
