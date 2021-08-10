@@ -110,6 +110,7 @@ return require('packer').startup(function(use)
   use 'vhyrro/neorg'                                                     -- Org mode for Nvim (Lua)
   use 'stevearc/aerial.nvim'                                             -- Code navigation in outline window
   use 'windwp/nvim-spectre'                                              -- Find and replace utility
+  use 'tweekmonster/startuptime.vim'                                     -- Breakdown Vim's --startuptime output
 
   -- lisp/clojure
   -- use 'guns/vim-sexp'                                                    -- Precision editing for S-expressions
