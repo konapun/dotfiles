@@ -96,9 +96,10 @@ return require('packer').startup(function(use)
     'glepnir/galaxyline.nvim', branch = 'main',
     'kyazdani42/nvim-web-devicons', opt = true
   }}
-  use {'akinsho/nvim-bufferline.lua'}                                    -- A snazzy bufferline for Nvim (Lua)
+  use 'akinsho/nvim-bufferline.lua'                                    -- A snazzy bufferline for Nvim (Lua)
   use 'camspiers/animate.vim'                                            -- Window animation
   use 'sunjon/shade.nvim'                                                -- Dim inactive windows (Lua)
+  use 'machakann/vim-highlightedyank'                                    -- Make the yanked region apparent
   use 'wfxr/minimap.vim'                                                 -- Minimap
   use 'junegunn/goyo.vim'                                                -- Distraction-free writing in Vim
   use 'junegunn/limelight.vim'                                           -- Highlight current block
