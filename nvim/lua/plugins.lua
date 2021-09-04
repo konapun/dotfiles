@@ -88,6 +88,7 @@ return require('packer').startup(function(use)
 
   -- git
   use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}  -- Git diff decoration, hunk navigation, and blame (Lua)
+  use 'tpope/vim-fugitive'                                               -- A Git wrapper so awesome, it should be illegal
   use 'sindrets/diffview.nvim'                                           -- Easily review all changed files for a git revision (Lua)
   -- TODO: https://github.com/TimUntersberger/neogit
 
