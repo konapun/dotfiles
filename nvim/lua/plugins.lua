@@ -57,7 +57,7 @@ return require('packer').startup(function(use)
   use 'mattn/emmet-vim'                                                  -- HTML/CSS text expansion
 
   -- buffer/window
-  use 'camspiers/lens.vim'                                               -- Automatic window resizing
+  use 'beauwilliams/focus.nvim'                                          -- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim (Lua)
   use 'qpkorr/vim-bufkill'                                               -- Interact with buffers without affecting window layout (TODO: Replace with Lua https://github.com/famiu/bufdelete.nvim eventually)
   use 'simeji/winresizer'                                                -- Easy window resizing
   use 'farmergreg/vim-lastplace'                                         -- Intelligently reopen files at your last edit position
@@ -97,8 +97,7 @@ return require('packer').startup(function(use)
     'glepnir/galaxyline.nvim', branch = 'main',
     'kyazdani42/nvim-web-devicons', opt = true
   }}
-  use 'akinsho/nvim-bufferline.lua'                                    -- A snazzy bufferline for Nvim (Lua)
-  use 'camspiers/animate.vim'                                            -- Window animation
+  use 'akinsho/nvim-bufferline.lua'                                      -- A snazzy bufferline for Nvim (Lua)
   use 'sunjon/shade.nvim'                                                -- Dim inactive windows (Lua)
   use 'machakann/vim-highlightedyank'                                    -- Make the yanked region apparent
   use 'wfxr/minimap.vim'                                                 -- Minimap
