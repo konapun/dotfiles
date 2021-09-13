@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
   end
 
   -- general
-  use 'hrsh7th/nvim-compe'                                               -- Nvim code autocompletion (Lua)
+  use 'hrsh7th/nvim-cmp'                                                 -- Nvim code autocompletion (Lua)
   use 'kevinhwang91/rnvimr'                                              -- Use Ranger in a floating window via RPC (Lua)
   use 'ludovicchabant/vim-gutentags'                                     -- Tag file management
   use 'editorconfig/editorconfig-vim'                                    -- Support for .editorconfig
