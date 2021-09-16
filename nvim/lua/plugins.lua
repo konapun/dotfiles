@@ -20,7 +20,13 @@ return require('packer').startup(function(use)
   end
 
   -- general
-  use 'hrsh7th/nvim-cmp'                                                 -- Nvim code autocompletion (Lua)
+  use {'hrsh7th/nvim-cmp', requires = {                                  -- Nvim code autocompletion (Lua)
+    'hrsh7th/cmp-nvim-lsp',
+    'quangnguyen30192/cmp-nvim-ultisnips',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-nvim-lua'
+  }}
   use 'kevinhwang91/rnvimr'                                              -- Use Ranger in a floating window via RPC (Lua)
   use 'ludovicchabant/vim-gutentags'                                     -- Tag file management
   use 'editorconfig/editorconfig-vim'                                    -- Support for .editorconfig
@@ -33,7 +39,7 @@ return require('packer').startup(function(use)
 
   -- Telescope
   use {'nvim-telescope/telescope.nvim', requires = {                     -- Find, Filter, Preview, Pick (Lua)
-    {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}
+    'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim'
   }}
   use {'fhill2/telescope-ultisnips.nvim'}                                -- Telescope integration for Ultisnips
   use {'sudormrfbin/cheatsheet.nvim'}                                    -- A cheatsheet plugin for neovim with bundled cheatsheets for the editor, multiple vim plugins, nerd-fonts, regex, etc. with a Telescope fuzzy finder interface

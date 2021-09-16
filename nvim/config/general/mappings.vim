@@ -27,13 +27,6 @@ nmap <leader>p  <Plug>ReplaceWithRegisterOperator
 nmap <leader>pp <Plug>ReplaceWithRegisterLine
 xmap <leader>p  <Plug>ReplaceWithRegisterVisual
 
-" nvim-compe
-inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <tab>     compe#confirm('<tab>')
-inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-
 " telescope
 nnoremap <silent><C-p> :lua require('telescope.builtin').find_files{}<CR>
 nmap <silent><leader><space> :lua require('telescope.builtin').live_grep{}<CR>
