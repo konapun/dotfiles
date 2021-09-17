@@ -3,7 +3,9 @@ NVIM_LUA_THEME_FILE=~/.config/nvim/lua/theme.lua
 NVIM_THEME_FILE=~/.config/nvim/colors/system.vim
 
 cp -r ./nvim ~/.config
+cp -r ./nvim/efm-langserver ~/.config
 rm ~/.config/nvim/configure.zsh
+rm -rf ~/.config/nvim/efm-langserver
 
 pip3 install neovim pynvim ranger-fm
 
