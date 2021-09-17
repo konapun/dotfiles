@@ -1,4 +1,6 @@
 local cmp = require('cmp')
+local lspkind = require('lspkind')
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -21,6 +23,12 @@ cmp.setup({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true
     })
+  },
+  formatting = {
+    format = function(entry, vim_item)
+      vim_item.kind = lspkind.presets.default[vim_item.kind]
+      return vim_item
+    end
   }
 })
 
