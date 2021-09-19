@@ -1,4 +1,5 @@
 require('focus').setup({
-  relativenumber = true,
-  winhighlight = false
+  hybridnumber = true,
+  winhighlight = false,
+  excluded_filetypes = {'minimap'}
 })
