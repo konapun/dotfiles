@@ -47,9 +47,6 @@ function themer_cleanup {
   sed -i -- '/{{!.*}}/d' $file &> /dev/null # delete whole line with unsubstituted {{!variable}}
   sed -i -- -E -e 's/\{\{[^|]+\|//' -e 's/\}\}//' $file &> /dev/null # apply default values for unsubstituted variables
   sed -i -- 's/{{.*}}//g' $file &> /dev/null # delete unsubstituted variable {{variable}}
-
-  # remove temp file
-  rm "$file--"
 }
 
 # TODO: Sanitize strings before replace

@@ -1,5 +1,6 @@
 local theme = require('theme')
 local palette = theme.palette
+local separator = theme.separator
 
 require('vacuumline').setup({
   theme = {
@@ -17,5 +18,15 @@ require('vacuumline').setup({
     warning          = {foreground = palette.black, background = palette.bright_yellow},
     error            = {foreground = palette.black, background = palette.bright_red},
     scroll           = {foreground = palette.yellow}
+  },
+  separator = {
+    segment = {
+      left = separator.left,
+      right = separator.right
+    },
+    section = {
+      left = separator.left_section,
+      right = separator.right_section
+    }
   }
 })

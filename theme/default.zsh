@@ -6,7 +6,7 @@
 # tmux should only use colors 1-16.
 
 # vim/bat config
-SYNTAX_THEME_PLUG="'dylanaraps/wal.vim'"
+SYNTAX_THEME_PACKER=dylanaraps/wal.vim
 SYNTAX_THEME=wal
 
 # windows terminal

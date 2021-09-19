@@ -1,5 +1,7 @@
 local M = {}
 
+M.package = '{{syntax_theme_packer}}'
+
 M.palette = {
   background = '{{background}}',
   foreground = '{{foreground}}',
@@ -23,13 +25,10 @@ M.palette = {
 }
 
 M.separator = {
-  left = '{{left_separator}}',
-  left_section = '{{left_segment_separator}}',
-  right = '{{right_separator}}',
-  right_section = '{{right_segment_separator}}'
+  left = '{{left_segment_separator}}',
+  left_section = '{{left_separator}}',
+  right = '{{right_segment_separator}}',
+  right_section = '{{right_separator}}'
 }
 
--- 
--- 
---
 return M

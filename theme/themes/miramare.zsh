@@ -21,7 +21,7 @@ FOREGROUND=$WHITE
 ACCENT=$BRIGHT_GREEN
 
 WINTERM_THEME=system
-SYNTAX_THEME_PLUG="'franbach/miramare'"
+SYNTAX_THEME_PACKER=franbach/miramare
 SYNTAX_THEME=miramare
 TMUX_THEME='system-theme'
 

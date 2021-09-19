@@ -1,7 +1,7 @@
 # ONE-DARK
 
-SYNTAX_THEME_PLUG="'joshdick/onedark.vim'"
-SYNTAX_THEME=onedark
+SYNTAX_THEME_PACKER=Th3Whit3Wolf/one-nvim
+SYNTAX_THEME=one-nvim
 
 #chrome config
 CHROME_THEME=https://chrome.google.com/webstore/detail/one-dark/hpkjepofpoigjlihphohlecofocheiaf?hl=en

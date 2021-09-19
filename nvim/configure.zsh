@@ -13,12 +13,12 @@ pip3 install neovim pynvim ranger-fm
 if [[ ! -v BACKGROUND_TYPE ]]; then
   BACKGROUND_TYPE=dark
 fi
-themer_substitute syntax_theme_plug $SYNTAX_THEME_PLUG $NVIM_CONFIG_FILE
 themer_substitute syntax_theme $SYNTAX_THEME $NVIM_CONFIG_FILE
 themer_substitute background $BACKGROUND_TYPE $NVIM_CONFIG_FILE
 themer_cleanup $NVIM_CONFIG_FILE
 
 # Lua Palette Theming
+themer_substitute syntax_theme_packer $SYNTAX_THEME_PACKER $NVIM_LUA_THEME_FILE
 themer_substitute background $BACKGROUND $NVIM_LUA_THEME_FILE
 themer_substitute foreground $FOREGROUND $NVIM_LUA_THEME_FILE
 themer_substitute accent $ACCENT $NVIM_LUA_THEME_FILE

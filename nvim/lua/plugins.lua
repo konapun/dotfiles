@@ -1,7 +1,8 @@
--- Bootstrap packer
+local theme = require('./theme')
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
+-- Bootstrap packer
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -14,7 +15,9 @@ return require('packer').startup(function(use)
 
   -- themes
   use {'npxbr/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}            -- Lua port of the most famous vim colorscheme
-  -- use {{!syntax_theme_plug}}                                             -- Install script configured theme
+  if theme.package then
+    use {theme.package}                                                  -- Install script configured theme
+  end
 
   -- general
   use 'hrsh7th/nvim-compe'                                               -- Nvim code autocompletion (Lua)

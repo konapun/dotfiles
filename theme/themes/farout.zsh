@@ -1,7 +1,7 @@
 # FAROUT
 
 # vim/bat config
-SYNTAX_THEME_PLUG="'fcpg/vim-farout'"
+SYNTAX_THEME_PACKER=fcpg/vim-farout
 SYNTAX_THEME=farout
 WINTERM_THEME=system
 TMUX_THEME='system-theme'

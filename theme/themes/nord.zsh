@@ -1,7 +1,7 @@
 # NORD
 
 # vim/bat config
-SYNTAX_THEME_PLUG="'arcticicestudio/nord-vim'"
+SYNTAX_THEME_PACKER=shaunsingh/nord.nvim
 SYNTAX_THEME=nord
 WINTERM_THEME=nord
 
