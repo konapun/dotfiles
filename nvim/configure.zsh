@@ -38,10 +38,10 @@ themer_substitute bright_blue $BRIGHT_BLUE $NVIM_LUA_THEME_FILE
 themer_substitute bright_purple $BRIGHT_PURPLE $NVIM_LUA_THEME_FILE
 themer_substitute bright_cyan $BRIGHT_CYAN $NVIM_LUA_THEME_FILE
 themer_substitute bright_white $BRIGHT_WHITE $NVIM_LUA_THEME_FILE
-themer_substitute left_separator $LEFT_SEPARATOR $NVIM_LUA_THEME_FILE
-themer_substitute right_separator $RIGHT_SEPARATOR $NVIM_LUA_THEME_FILE
-themer_substitute left_segment_separator $LEFT_SEGMENT_START $NVIM_LUA_THEME_FILE
-themer_substitute right_segment_separator $RIGHT_SEGMENT_START $NVIM_LUA_THEME_FILE
+themer_substitute left_separator $LEFT_SEPARATOR $NVIM_LUA_THEME_FILE true
+themer_substitute right_separator $RIGHT_SEPARATOR $NVIM_LUA_THEME_FILE true
+themer_substitute left_segment_separator $LEFT_SEGMENT_START $NVIM_LUA_THEME_FILE true
+themer_substitute right_segment_separator $RIGHT_SEGMENT_START $NVIM_LUA_THEME_FILE true
 themer_cleanup $NVIM_LUA_THEME_FILE
 
 themer_substitute background $BACKGROUND $NVIM_THEME_FILE

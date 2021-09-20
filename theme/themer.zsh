@@ -10,6 +10,7 @@ function themer_substitute {
   local key=$1
   local value=$2
   local file=$3
+  local escape=$4
 
   # if value is empty, its value will be file's and file will be empty so shuffle things around...
   if [[ $file == '' ]]; then
@@ -23,6 +24,9 @@ function themer_substitute {
   if [[ ! -z $value ]]; then # don't do replacements with empty values or the variables won't be available for cleanup
     if [[ $value == $THEMER_EMPTY_STRING ]]; then # Since shell scripting sucks, if value is '' it'll still be considered null which will break intended functionality. As a lame workaround, use a special value to represent an intended empty string :(
       value=''
+    fi
+    if [[ $escape ]]; then
+      value=${value//\\/\\\\}
     fi
 
     sed -E -i -- "s&$pattern&$value&g" $file &> /dev/null
