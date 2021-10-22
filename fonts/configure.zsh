@@ -5,7 +5,7 @@ NERD_BASE=https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts
 # TODO: properly look up local font files
 
 # (name url format cask)
-FONT=("CaskaydiaCove Nerd Font Mono" "$NERD_BASE/CascadiaCode/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete%20Mono" "ttf" "font-caskaydia-cove-nerd-font")
+FONT=("CaskaydiaCove Nerd Font Mono" "$NERD_BASE/CascadiaCode/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete%20Mono" "ttf" "homebrew/cask-fonts/font-caskaydia-cove-nerd-font")
 FONT_SIZE=13
 
 function set_gnome_terminal {
