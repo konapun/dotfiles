@@ -3,7 +3,7 @@
 " general
 let mapleader=" "
 let maplocalleader="\\"
-nnoremap <silent> <C-n> :nohl<CR>
+nmap <silent> <Esc> :nohl<CR>
 map <C-c> <Esc>
 
 " split navigation
