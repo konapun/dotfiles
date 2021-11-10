@@ -119,8 +119,11 @@ return require('packer').startup(function(use)
   -- utilities
   use 'vhyrro/neorg'                                                     -- Org mode for Nvim (Lua)
   use 'stevearc/aerial.nvim'                                             -- Code navigation in outline window
-  use 'windwp/nvim-spectre'                                              -- Find and replace utility
   use 'tweekmonster/startuptime.vim'                                     -- Breakdown Vim's --startuptime output
+  use {'filipdutescu/renamer.nvim', branch = 'master', requires = {      -- VS Code-like renaming UI for Neovim (Lua)
+    {'nvim-lua/plenary.nvim'}
+  }}
+  -- use 'windwp/nvim-spectre'                                              -- Find and replace utility
 
   -- lisp/clojure
   -- use 'guns/vim-sexp'                                                    -- Precision editing for S-expressions

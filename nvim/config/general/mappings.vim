@@ -68,12 +68,17 @@ nnoremap <silent><leader>f :lua vim.lsp.buf.formatting()<CR>
 nnoremap <silent><localleader>u :UndotreeToggle<cr>
 
 " spectre
-noremap <silent><localleader>S :lua require('spectre').open()<CR>
-" search current word
-nnoremap <silent><localleader>sw viw:lua require('spectre').open_visual()<CR>
-vnoremap <silent><localleader>s :lua require('spectre').open_visual()<CR>
-" search in current file
-nnoremap <silent><localleader>sp viw:lua require('spectre').open_file_search()<cr>
+" noremap <silent><localleader>S :lua require('spectre').open()<CR>
+" " search current word
+" nnoremap <silent><localleader>sw viw:lua require('spectre').open_visual()<CR>
+" vnoremap <silent><localleader>s :lua require('spectre').open_visual()<CR>
+" " search in current file
+" nnoremap <silent><localleader>sp viw:lua require('spectre').open_file_search()<cr>
+
+" renamer
+inoremap <silent> <F2> <cmd>lua require('renamer').rename()<cr>
+nnoremap <silent> <leader>n <cmd>lua require('renamer').rename()<cr>
+vnoremap <silent> <leader>n <cmd>lua require('renamer').rename()<cr>
 
 " indent blankline
 nmap <silent><localleader>i :IndentBlanklineToggle<cr>
