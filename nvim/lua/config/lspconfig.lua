@@ -60,10 +60,10 @@ end
 
 local function setup_servers()
   -- Default setups from lsp-config
-  require('lspinstall').setup()
-  local servers = require('lspinstall').installed_servers()
+  local servers = require('nvim-lsp-installer').get_installed_servers()
   for _, server in pairs(servers) do
-    require('lspconfig')[server].setup{
+    local default_config = lspconfig[server.name]
+    default_config.setup{
       on_attach = on_attach
     }
   end
@@ -84,7 +84,7 @@ end
 setup_servers()
 
 -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-require('lspinstall').post_install_hook = function ()
+--[[ require('lspinstall').post_install_hook = function ()
   setup_servers() -- reload installed servers
   vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
-end
+end ]]
