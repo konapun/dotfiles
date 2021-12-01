@@ -64,6 +64,7 @@ return require('packer').startup(function(use)
   use 'justinmk/vim-sneak'                                               -- Jump to any location specified by two characters
   use 'tpope/vim-repeat'                                                 -- Enable repeating supported plugin maps
   use 'mattn/emmet-vim'                                                  -- HTML/CSS text expansion
+  use 'github/copilot.vim'                                               -- GitHub Copilot AI pair programming assistant
 
   -- buffer/window
   use 'beauwilliams/focus.nvim'                                          -- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim (Lua)
