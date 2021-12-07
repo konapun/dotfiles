@@ -133,4 +133,5 @@ return require('packer').startup(function(use)
 
   -- other languages
   use 'alunny/pegjs-vim'                                                 -- Syntax highlighting for PEG.js grammars
+  use 'hashivim/vim-terraform'                                           -- Syntax highlighting for terraform grammars
 end)
