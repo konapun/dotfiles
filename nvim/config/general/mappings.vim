@@ -34,8 +34,8 @@ nnoremap <silent> <leader>A :lua require('telescope.builtin').grep_string{}<CR>
 nmap <silent><leader>a :lua require('telescope.builtin').lsp_code_actions{}<CR>
 nmap <silent><leader>o :lua require('telescope.builtin').buffers{}<CR>
 nmap <silent><leader>m :lua require('telescope.builtin').marks{}<CR>
-nmap <silent><leader>d :lua require('telescope.builtin').lsp_document_diagnostics{}<CR>
-nmap <silent><leader>D :lua require('telescope.builtin').lsp_workspace_diagnostics{}<CR>
+nmap <silent><leader>d :lua require('telescope.builtin').diagnostics{bufnr=0}<CR>
+nmap <silent><leader>D :lua require('telescope.builtin').diagnostics{}<CR>
 nmap <silent><leader>t :lua require('telescope.builtin').current_buffer_tags{}<CR>
 nmap <silent><leader>T :lua require('telescope.builtin').tags{}<CR>
 nmap <silent><leader>" :lua require('telescope.builtin').registers{}<CR>
