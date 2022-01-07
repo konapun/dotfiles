@@ -8,10 +8,10 @@ require('bufferline').setup({
     custom_areas = {
       right = function()
         local result = {}
-        local error = vim.lsp.diagnostic.get_count(0, [[Error]])
-        local warning = vim.lsp.diagnostic.get_count(0, [[Warning]])
-        local info = vim.lsp.diagnostic.get_count(0, [[Information]])
-        local hint = vim.lsp.diagnostic.get_count(0, [[Hint]])
+        local error = vim.diagnostic.get(0, [[Error]])
+        local warning = vim.diagnostic.get(0, [[Warning]])
+        local info = vim.diagnostic.get(0, [[Information]])
+        local hint = vim.diagnostic.get(0, [[Hint]])
 
         if error ~= 0 then
           table.insert(result, {text = "   " .. error, guifg = palette.red})
