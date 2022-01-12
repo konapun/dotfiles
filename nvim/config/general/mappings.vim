@@ -70,6 +70,9 @@ nnoremap <silent><leader>f :lua vim.lsp.buf.formatting()<CR>
 " undotree
 nnoremap <silent><localleader>u :UndotreeToggle<cr>
 
+" symbols outline
+noremap <silent><localleader>s :SymbolsOutline<cr>
+
 " spectre
 " noremap <silent><localleader>S :lua require('spectre').open()<CR>
 " " search current word
