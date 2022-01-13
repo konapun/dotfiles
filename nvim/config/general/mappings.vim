@@ -56,7 +56,7 @@ nmap <silent><leader>gf :lua require('telescope.builtin').git_files{}<CR>
 nmap <silent>gr :lua require('telescope.builtin').lsp_references{}<CR>
 nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<CR>
 nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<CR>
-nmap <silent>gt :lua require('telescope.builtin').lsp_type_definitions{}<CR>
+nmap <silent>gD :lua require('telescope.builtin').lsp_type_definitions{}<CR>
 
 " gitsigns
 nmap <silent><leader>gw :lua require('gitsigns').blame_line(true)<CR>
