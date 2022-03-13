@@ -1,6 +1,8 @@
 export NVM_DIR="$HOME/.nvm"
 [ -s "${NVM_DIR}/nvm.sh" ] && . "${NVM_DIR}/nvm.sh" --no-use
 
+# nvm alias default 14
+
 autoload -U add-zsh-hook
 nvm_use_nvmrc() {
   if [ -f "./.nvmrc" ]; then
