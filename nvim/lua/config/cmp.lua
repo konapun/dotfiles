@@ -28,19 +28,10 @@ cmp.setup({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true
     }),
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      cmp.mapping.abort()
-      local copilot_keys = vim.fn['copilot#Accept']()
-      if copilot_keys ~= "" then
-        vim.api.nvim_feedkeys(copilot_keys, 'i', true)
-      else
-        fallback()
-      end
-    end)
-    --[[ ['<Tab>'] = cmp.mapping.confirm({
+    ['<Tab>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true
-    }), ]]
+    }),
   },
   formatting = {
     format = function(entry, vim_item)

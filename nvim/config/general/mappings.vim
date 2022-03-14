@@ -58,6 +58,9 @@ nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<CR>
 nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<CR>
 nmap <silent>gD :lua require('telescope.builtin').lsp_type_definitions{}<CR>
 
+" copilot
+imap <silent><script><expr> <C-\> copilot#Accept("\<CR>")
+
 " gitsigns
 nmap <silent><leader>gw :lua require('gitsigns').blame_line(true)<CR>
 
