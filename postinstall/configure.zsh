@@ -1,0 +1,1 @@
+source ./postinstall/nvm.zsh
