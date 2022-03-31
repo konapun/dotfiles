@@ -60,6 +60,34 @@ Alternatively, you can install the following targets separately by running `zsh 
   * `-c` Compile additional Cargo packages. This is off by default since this can take a considerable amount of time. By default, only cargo packages which are dependencies for other utilities are compiled.
   * `-u` Update installed packages
 
+### Examples
+```sh
+./install.zsh -t gruvbox # install everything using the gruvbox theme
+```
+
+```sh
+./install.zsh -t nord tmux zsh bat nvim highlight ranger kitty # install configurations for the selected packages using the nord theme
+```
+
+## Customizing
+Certain configurations are customizable (i.e. things you'd want to differ per-computer while keeping the bulk of your config the same).
+These configurations are stored in `/custom`. Scripts are provided to automate the process of using customizations:
+
+### Examples
+```sh
+./build.zsh -i # Run in interactive mode
+```
+
+### Variables
+Default variables are located at `/custom/default_vars.zsh`. **DO NOT OVERWRITE THESE:** instead, copy the file from `/custom/templates/vars.zsh` to the `/custom` directory.
+
+### Blocks
+Blocks are custom snippets which are appended to their respective configuration files (located in `/custom/templates`). To use these, copy a template file into the `/custom`
+directory and they will be loaded during install.
+
+### General Shell
+Create a file called  . **This will be loaded last to allow overriding other configurations.**
+
 ## Theming
 Theme support is provided via a simple `sed`-based template system. Any configuration file can specify a template variable by enclosing a key
 within double curly braces (e.g. `{{my_template_variable}}`). The theme script then replaces these variables with values from the loaded theme.
