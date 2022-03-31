@@ -1,0 +1,1 @@
+source ./postinstall/packages.zsh
