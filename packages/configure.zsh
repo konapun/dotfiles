@@ -1,3 +1,6 @@
+# versions
+source ./packages/versions.zsh
+
 # shared definitions
 source ./packages/definitions/nvm.zsh
 
@@ -49,3 +52,6 @@ fi
 
 # local definitions
 sudo cp ./packages/local/* /usr/local/bin
+
+# run postinstall steps
+source ./packages/postinstall/configure.zsh

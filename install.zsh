@@ -87,4 +87,3 @@ if [[ ${targets[(i)chrome]} -le ${#targets} ]]; then
   source ./chrome/configure.zsh
 fi
 
-source ./postinstall/configure.zsh
