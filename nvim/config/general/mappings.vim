@@ -58,6 +58,14 @@ nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<CR>
 nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<CR>
 nmap <silent>gD :lua require('telescope.builtin').lsp_type_definitions{}<CR>
 
+" neotest
+"   nearest test
+nmap <silent><leader>xt :lua require("neotest").run.run()<CR>
+"   current file
+nmap <silent><leader>xf :lua require("neotest").run.run(vim.fn.expand("%"))<CR>
+"   stop running
+nmap <silent><leader>xx :lua require("neotest").run.stop()<CR>
+
 " copilot
 imap <silent><script><expr> <C-\> copilot#Accept("\<CR>")
 
@@ -108,7 +116,7 @@ nmap <silent><localleader>a :AerialToggle!<cr>
 nmap [a :AerialPrevUp<cr>
 nmap ]a :AerialNextUp<cr>
 
-" Terminal
+" terminal
 nmap <silent><localleader>tt :term<cr>
 nmap <silent><localleader>ts :split \| :term<cr>
 nmap <silent><localleader>tv :vsplit \| :term<cr>
