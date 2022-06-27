@@ -10,8 +10,8 @@ require('./config/focus')
 require('./config/fterm')
 require('./config/gitsigns')
 require('./config/lspconfig')
+require('./config/neotest')
 require('./config/nvim-lsp-installer')
--- require('./config/lsp-kind')
 require('./config/lsp-signature')
 require('./config/neorg')
 require('./config/renamer')
@@ -22,6 +22,7 @@ require('./config/treesitter')
 require('./config/vacuumline')
 
 -- Future use
+-- require('./config/lsp-kind') -- currently broken
 -- require('./config/lightspeed')
 -- require('./config/spectre')
 -- require('./config/surround')

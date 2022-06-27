@@ -85,9 +85,15 @@ return require('packer').startup(function(use)
   use {'radenling/vim-dispatch-neovim',                                  -- Support for neovim's terminal emulator and job control to dispatch.vim
     requires = {'tpope/vim-dispatch'}
   }
-  use {'rcarriga/vim-ultest',                                            -- The ultimate testing plugin for Nvim (Lua)
-    requires = {'vim-test/vim-test'},
-    run = ":UpdateRemotePlugins"
+  use {"nvim-neotest/neotest",                                           -- An extensible framework for interacting with tests within NeoVim
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      -- supported languages
+      'nvim-neotest/neotest-go',
+      'haydenmeade/neotest-jest'
+    }
   }
 
   -- text objects
