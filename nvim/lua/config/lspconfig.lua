@@ -31,13 +31,14 @@ local function get_table_keys(tab)
 end
 
 -- Linting
-vim.lsp.handlers["textDocument/formatting"] = function(err, _, result, _, bufnr)
+vim.lsp.handlers["textDocument/formatting"] = function(err, result, ctx, config)
   if err ~= nil or result == nil then
     return
   end
+  bufnr = ctx.bufnr
   if not vim.api.nvim_buf_get_option(bufnr, "modified") then
     local view = vim.fn.winsaveview()
-    vim.lsp.util.apply_text_edits(result, bufnr)
+    vim.lsp.util.apply_text_edits(result, bufnr, "utf-16")
     vim.fn.winrestview(view)
     if bufnr == vim.api.nvim_get_current_buf() then
       vim.api.nvim_command("noautocmd :update")
