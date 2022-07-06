@@ -66,7 +66,7 @@ nmap <silent>gD :lua require('telescope.builtin').lsp_type_definitions{}<CR>
 imap <silent><script><expr> <C-\> copilot#Accept("\<CR>")
 
 " gitsigns
-nmap <silent><leader>gw :lua require('gitsigns').blame_line(true)<CR>
+nmap <silent><leader>gw :lua require('gitsigns').blame_line({full=true})<CR>
 
 " rnvimr
 nnoremap <silent><leader>r :RnvimrToggle<CR>
