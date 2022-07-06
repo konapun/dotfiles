@@ -29,6 +29,10 @@ nmap <leader>p  <Plug>ReplaceWithRegisterOperator
 nmap <leader>pp <Plug>ReplaceWithRegisterLine
 xmap <leader>p  <Plug>ReplaceWithRegisterVisual
 
+"lsp
+nmap <silent><leader>x :lua vim.diagnostic.open_float()<CR>
+nnoremap <silent><leader>f :lua vim.lsp.buf.formatting()<CR>
+
 " telescope
 nnoremap <silent><C-p> :lua require('telescope.builtin').find_files{}<CR>
 nmap <silent><leader><space> :lua require('telescope.builtin').live_grep{}<CR>
@@ -58,14 +62,6 @@ nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<CR>
 nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<CR>
 nmap <silent>gD :lua require('telescope.builtin').lsp_type_definitions{}<CR>
 
-" neotest
-"   nearest test
-nmap <silent><leader>xt :lua require("neotest").run.run()<CR>
-"   current file
-nmap <silent><leader>xf :lua require("neotest").run.run(vim.fn.expand("%"))<CR>
-"   stop running
-nmap <silent><leader>xx :lua require("neotest").run.stop()<CR>
-
 " copilot
 imap <silent><script><expr> <C-\> copilot#Accept("\<CR>")
 
@@ -75,9 +71,13 @@ nmap <silent><leader>gw :lua require('gitsigns').blame_line(true)<CR>
 " rnvimr
 nnoremap <silent><leader>r :RnvimrToggle<CR>
 
-" formatting
-nnoremap <silent><leader>f :lua vim.lsp.buf.formatting()<CR>
-
+" neotest
+"   nearest test
+nmap <silent><localleader>xt :lua require("neotest").run.run()<CR>
+"   current file
+nmap <silent><localleader>xf :lua require("neotest").run.run(vim.fn.expand("%"))<CR>
+"   stop running
+nmap <silent><localleader>xx :lua require("neotest").run.stop()<CR>
 " undotree
 nnoremap <silent><localleader>u :UndotreeToggle<cr>
 
