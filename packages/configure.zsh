@@ -29,7 +29,7 @@ fi
 
 # install from package sources
 npm install -g $NPM_PACKAGES
-pip3 install $PIP3_PACKAGES
+python3 -m pip install $PIP3_PACKAGES
 if command -v cargo &> /dev/null; then
   cargo install $CARGO_UTILITY_PACKAGES
   if [[ $COMPILE ]]; then
@@ -42,7 +42,7 @@ fi
 
 if [[ $UPDATE ]]; then
   npm update
-  pip3 install --upgrade $PIP3_PACKAGES
+  python3 -m pip install --upgrade $PIP3_PACKAGES
   cargo install --force $CARGO_DEPENDENCY_PACKAGES
   if [[ $COMPILE ]]; then
     cargo install --force $CARGO_UTILITY_PACKAGES

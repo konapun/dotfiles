@@ -7,7 +7,7 @@ cp -r ./nvim/efm-langserver ~/.config
 rm ~/.config/nvim/configure.zsh
 rm -rf ~/.config/nvim/efm-langserver
 
-pip3 install neovim pynvim ranger-fm
+python3 -m pip install neovim pynvim ranger-fm
 
 # Main Theming
 if [[ ! -v BACKGROUND_TYPE ]]; then
