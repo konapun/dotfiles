@@ -62,10 +62,10 @@ end
 local on_attach_illuminate = function(client)
   require('illuminate').on_attach(client)
 
-  vim.api.nvim_command [[augroup illuminate_augroup]]
-  vim.api.nvim_command [[autocmd!]]
-  vim.api.nvim_command [[autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline]]
-  vim.api.nvim_command [[augroup END]]
+  --vim.api.nvim_command [[augroup illuminate_augroup]]
+  --vim.api.nvim_command [[autocmd!]]
+  --vim.api.nvim_command [[autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline]]
+  --vim.api.nvim_command [[augroup END]]
 end
 
 local on_attach = function(client)
