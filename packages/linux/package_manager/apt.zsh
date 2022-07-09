@@ -2,8 +2,8 @@ GRAPHICAL_PACKAGE_MANAGER="sudo apt"
 PACKAGE_MANAGER="sudo apt"
 INSTALL_COMMAND="install"
 
-CORE_PACKAGES=(bat calcurse cargo clojure command-not-found docker docker-compose fortune-mod fzf gh golang gron guile highlight htop hub leiningen luarocks neofetch nodejs python3 python3-pip ripgrep thefuck tmux universal-ctags tree zsh) # stow navi ncmpcpp sxhkd
-GRAPHICAL_PACKAGES=(audacity blender gimp lmms milkytracker slack spotify-client steam)
+CORE_PACKAGES=(bat calcurse cargo clojure cmatrix command-not-found docker docker-compose fortune-mod fzf gh golang gron guile highlight htop hub leiningen luarocks neofetch nodejs python3 python3-pip ripgrep thefuck tmux universal-ctags tree zsh) # stow navi ncmpcpp sxhkd
+GRAPHICAL_PACKAGES=(audacity blender gimp lmms macopix milkytracker slack spotify-client steam vlc)
 
 # run migrations
 source ./packages/linux/package_manager/apt/migrations.zsh

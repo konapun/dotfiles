@@ -23,7 +23,7 @@ else
 fi
 
 eval "$PACKAGE_MANAGER $INSTALL_COMMAND $CORE_PACKAGES"
-if [[ $GRAPHICAL ]]; then
+if [[ $GRAPHICAL ]]; then # don't want to include these on tty-only systems
   eval $GRAPHICAL_PACKAGE_MANAGER $INSTALL_COMMAND $GRAPHICAL_PACKAGES
 fi
 
