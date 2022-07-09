@@ -120,7 +120,7 @@ return require('packer').startup(function(use)
   use 'wfxr/minimap.vim'                                                 -- Minimap
   use 'junegunn/goyo.vim'                                                -- Distraction-free writing in Vim
   use 'junegunn/limelight.vim'                                           -- Highlight current block
-  use 'yamatsum/nvim-cursorline'                                         -- Highlight matching words/lines under the cursor (Lua)
+  use 'RRethy/vim-illuminate'                                            -- Highlight matching words/lines under the cursor (Lua)
   use 'lukas-reineke/indent-blankline.nvim'                              -- Indent guides for Nvim (Lua)
   use 'yamatsum/nvim-nonicons'                                           -- Icon set using nonicons for Nvim plugins and settings (Lua)
 

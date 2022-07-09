@@ -55,8 +55,22 @@ local on_attach_efm = function(client)
   end
 end
 
-local on_attach = function(client)
+local on_attach_lsp_signature = function(client)
   require('lsp_signature').on_attach()
+end
+
+local on_attach_illuminate = function(client)
+  require('illuminate').on_attach(client)
+
+  vim.api.nvim_command [[augroup illuminate_augroup]]
+  vim.api.nvim_command [[autocmd!]]
+  vim.api.nvim_command [[autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline]]
+  vim.api.nvim_command [[augroup END]]
+end
+
+local on_attach = function(client)
+  on_attach_lsp_signature(client)
+  on_attach_illuminate(client)
 end
 
 local function setup_servers()
