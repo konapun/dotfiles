@@ -30,6 +30,8 @@ nmap <leader>pp <Plug>ReplaceWithRegisterLine
 xmap <leader>p  <Plug>ReplaceWithRegisterVisual
 
 "lsp
+nmap <silent>]x :lua vim.diagnostic.goto_next()<CR>
+nmap <silent>[x :lua vim.diagnostic.goto_prev()<CR>
 nmap <silent><leader>x :lua vim.diagnostic.open_float()<CR>
 nnoremap <silent><leader>f :lua vim.lsp.buf.formatting()<CR>
 
