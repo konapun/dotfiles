@@ -13,7 +13,7 @@ BPYTOP_THEME=monokai
 
 # tmux config
 TMUX_THEME='system-theme'
-TMUX_STATUS_BG=colour236
+TMUX_STATUS_BG=colour235
 TMUX_STATUS_RIGHT_FG=colour2
 
 # colors

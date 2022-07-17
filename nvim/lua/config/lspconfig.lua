@@ -1,30 +1,31 @@
 local linters = require('./config/efm/_linters')
 local lspconfig = require('lspconfig')
+local vim = vim
 
 local format_on_write = false
 local lint_settings = {
-  ["="] = {linters.misspell},
-  vim = {linters.vint},
-  lua = {linters.luafmt},
-  go = {linters.golint, linters.gofmt},
-  python = {linters.black, linters.isort, linters.flake8, linters.mypy},
-  typescript = {linters.prettier, linters.eslint},
-  javascript = {linters.prettier, linters.eslint},
-  typescriptreact = {linters.prettier, linters.eslint},
-  javascriptreact = {linters.prettier, linters.eslint},
-  yaml = {linters.prettier},
-  json = {linters.prettier},
-  html = {linters.prettier},
-  scss = {linters.prettier},
-  css = {linters.prettier},
-  markdown = {linters.prettier},
-  sh = {linters.shellcheck},
-  tf = {linters.terraform}
+  ["="] = { linters.misspell },
+  vim = { linters.vint },
+  lua = { linters.luafmt },
+  go = { linters.golint, linters.gofmt },
+  python = { linters.black, linters.isort, linters.flake8, linters.mypy },
+  typescript = { linters.prettier, linters.eslint },
+  javascript = { linters.prettier, linters.eslint },
+  typescriptreact = { linters.prettier, linters.eslint },
+  javascriptreact = { linters.prettier, linters.eslint },
+  yaml = { linters.prettier },
+  json = { linters.prettier },
+  html = { linters.prettier },
+  scss = { linters.prettier },
+  css = { linters.prettier },
+  markdown = { linters.prettier },
+  sh = { linters.shellcheck },
+  tf = { linters.terraform }
 }
 
 local function get_table_keys(tab)
   local keyset = {}
-  for k,v in pairs(tab) do
+  for k, v in pairs(tab) do
     keyset[#keyset + 1] = k
   end
   return keyset
@@ -62,10 +63,11 @@ end
 local on_attach_illuminate = function(client)
   require('illuminate').on_attach(client)
 
-  --vim.api.nvim_command [[augroup illuminate_augroup]]
-  --vim.api.nvim_command [[autocmd!]]
-  --vim.api.nvim_command [[autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline]]
-  --vim.api.nvim_command [[augroup END]]
+  -- FIXME: Configuring this here isn't working. Figure out why and remove the duplicate in autocommands.vim
+  -- vim.api.nvim_command [[augroup illuminate_augroup]]
+  -- vim.api.nvim_command [[autocmd!]]
+  -- vim.api.nvim_command [[autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline]]
+  -- vim.api.nvim_command [[augroup END]]
 end
 
 local on_attach = function(client)
@@ -78,7 +80,7 @@ local function setup_servers()
   local servers = require('nvim-lsp-installer').get_installed_servers()
   for _, server in pairs(servers) do
     local default_config = lspconfig[server.name]
-    default_config.setup{
+    default_config.setup {
       on_attach = on_attach
     }
   end
@@ -86,10 +88,10 @@ local function setup_servers()
   -- specific lsp configs
   lspconfig.efm.setup {
     on_attach = on_attach_efm,
-    init_options = {documentFormatting = true},
+    init_options = { documentFormatting = true },
     root_dir = vim.loop.cwd,
     settings = {
-      rootMarkers = {".git/"},
+      rootMarkers = { ".git/" },
       languages = lint_settings
     },
     filetypes = get_table_keys(lint_settings)

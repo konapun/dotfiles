@@ -4,7 +4,7 @@ local separator = theme.separator
 
 require('vacuumline').setup({
   theme = {
-    line             = {foreground = palette.green, background = palette.black},
+    line             = {foreground = palette.green, background = palette.background},
     segment_odd      = {foreground = palette.black, background = palette.purple},
     segment_even     = {foreground = palette.black, background = palette.green},
     mode_normal      = {foreground = palette.purple},
