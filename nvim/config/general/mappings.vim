@@ -33,6 +33,7 @@ xmap <leader>p  <Plug>ReplaceWithRegisterVisual
 nmap <silent>]x :lua vim.diagnostic.goto_next()<CR>
 nmap <silent>[x :lua vim.diagnostic.goto_prev()<CR>
 nmap <silent><leader>x :lua vim.diagnostic.open_float()<CR>
+nmap <silent><leader>h :lua vim.lsp.buf.hover()<CR>
 nnoremap <silent><leader>f :lua vim.lsp.buf.formatting()<CR>
 
 " telescope
