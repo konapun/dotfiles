@@ -3,16 +3,16 @@
 " general
 let mapleader=" "
 let maplocalleader="\\"
-nmap <silent> <Esc> :nohl<CR>
+nmap <silent> <Esc> :nohl<cr>
 map <C-c> <Esc>
 
 " split navigation
-nnoremap <C-w>n :enew<CR>
-nnoremap <C-w>N :vnew<CR>
-nnoremap <C-w>t :tabnew<CR>
-nnoremap <C-w>S :bo sp<CR>
-nnoremap <C-w>d :bd<CR>
-nnoremap <C-w>D :BD<CR>
+nnoremap <C-w>n :enew<cr>
+nnoremap <C-w>N :vnew<cr>
+nnoremap <C-w>t :tabnew<cr>
+nnoremap <C-w>S :bo sp<cr>
+nnoremap <C-w>d :bd<cr>
+nnoremap <C-w>D :BD<cr>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
@@ -21,8 +21,8 @@ set splitbelow
 set splitright
 
 " buffer navigation
-nnoremap gb :bn<CR>
-nnoremap gB :bp<CR>
+nnoremap gb :bn<cr>
+nnoremap gB :bp<cr>
 
 " replace-with-register
 nmap <leader>p  <Plug>ReplaceWithRegisterOperator
@@ -30,57 +30,57 @@ nmap <leader>pp <Plug>ReplaceWithRegisterLine
 xmap <leader>p  <Plug>ReplaceWithRegisterVisual
 
 "lsp
-nmap <silent>]x :lua vim.diagnostic.goto_next()<CR>
-nmap <silent>[x :lua vim.diagnostic.goto_prev()<CR>
-nmap <silent><leader>x :lua vim.diagnostic.open_float()<CR>
-nmap <silent><leader>h :lua vim.lsp.buf.hover()<CR>
-nnoremap <silent><leader>f :lua vim.lsp.buf.formatting()<CR>
+nmap <silent>]x :lua vim.diagnostic.goto_next()<cr>
+nmap <silent>[x :lua vim.diagnostic.goto_prev()<cr>
+nmap <silent><leader>x :lua vim.diagnostic.open_float()<cr>
+nmap <silent><leader>h :lua vim.lsp.buf.hover()<cr>
+nnoremap <silent><leader>f :lua vim.lsp.buf.formatting()<cr>
 
 " telescope
-nnoremap <silent><C-p> :lua require('telescope.builtin').find_files{}<CR>
-nmap <silent><leader><space> :lua require('telescope.builtin').live_grep{}<CR>
-nnoremap <silent> <leader>A :lua require('telescope.builtin').grep_string{}<CR>
-nmap <silent><leader>a :lua require('telescope.builtin').lsp_code_actions{}<CR>
-nmap <silent><leader>o :lua require('telescope.builtin').buffers{}<CR>
-nmap <silent><leader>m :lua require('telescope.builtin').marks{}<CR>
-nmap <silent><leader>d :lua require('telescope.builtin').diagnostics{bufnr=0}<CR>
-nmap <silent><leader>D :lua require('telescope.builtin').diagnostics{}<CR>
-nmap <silent><leader>t :lua require('telescope.builtin').current_buffer_tags{}<CR>
-nmap <silent><leader>T :lua require('telescope.builtin').tags{}<CR>
-nmap <silent><leader>" :lua require('telescope.builtin').registers{}<CR>
-nmap <silent><leader>/ :lua require('telescope.builtin').current_buffer_fuzzy_find{}<CR>
-nmap <silent><leader>q :lua require('telescope.builtin').quickfix{}<CR>
-nmap <silent><leader>s :lua require('telescope.builtin').lsp_document_symbols{}<CR>
-nmap <silent><leader>S :lua require('telescope.builtin').lsp_workspace_symbols{}<CR>
-nmap <silent><leader>? :Cheatsheet<CR>
-nmap <silent><leader>ik :lua require('telescope.builtin').keymaps{}<CR>
-nmap <silent><leader>is :lua require('telescope').extensions.ultisnips.ultisnips{}<CR>
-nmap <silent><leader>gc :lua require('telescope.builtin').git_bcommits{}<CR>
-nmap <silent><leader>gC :lua require('telescope.builtin').git_commits{}<CR>
-nmap <silent><leader>gb :lua require('telescope.builtin').git_branches{}<CR>
-nmap <silent><leader>gs :lua require('telescope.builtin').git_status{}<CR>
-nmap <silent><leader>gf :lua require('telescope.builtin').git_files{}<CR>
-nmap <silent>gr :lua require('telescope.builtin').lsp_references{}<CR>
-nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<CR>
-nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<CR>
-nmap <silent>gD :lua require('telescope.builtin').lsp_type_definitions{}<CR>
+nnoremap <silent><C-p> :lua require('telescope.builtin').find_files{}<cr>
+nmap <silent><leader><space> :lua require('telescope.builtin').live_grep{}<cr>
+nnoremap <silent> <leader>A :lua require('telescope.builtin').grep_string{}<cr>
+nmap <silent><leader>a :lua require('telescope.builtin').lsp_code_actions{}<cr>
+nmap <silent><leader>o :lua require('telescope.builtin').buffers{}<cr>
+nmap <silent><leader>m :lua require('telescope.builtin').marks{}<cr>
+nmap <silent><leader>d :lua require('telescope.builtin').diagnostics{bufnr=0}<cr>
+nmap <silent><leader>D :lua require('telescope.builtin').diagnostics{}<cr>
+nmap <silent><leader>t :lua require('telescope.builtin').current_buffer_tags{}<cr>
+nmap <silent><leader>T :lua require('telescope.builtin').tags{}<cr>
+nmap <silent><leader>" :lua require('telescope.builtin').registers{}<cr>
+nmap <silent><leader>/ :lua require('telescope.builtin').current_buffer_fuzzy_find{}<cr>
+nmap <silent><leader>q :lua require('telescope.builtin').quickfix{}<cr>
+nmap <silent><leader>s :lua require('telescope.builtin').lsp_document_symbols{}<cr>
+nmap <silent><leader>S :lua require('telescope.builtin').lsp_workspace_symbols{}<cr>
+nmap <silent><leader>? :Cheatsheet<cr>
+nmap <silent><leader>ik :lua require('telescope.builtin').keymaps{}<cr>
+nmap <silent><leader>is :lua require('telescope').extensions.ultisnips.ultisnips{}<cr>
+nmap <silent><leader>gc :lua require('telescope.builtin').git_bcommits{}<cr>
+nmap <silent><leader>gC :lua require('telescope.builtin').git_commits{}<cr>
+nmap <silent><leader>gb :lua require('telescope.builtin').git_branches{}<cr>
+nmap <silent><leader>gs :lua require('telescope.builtin').git_status{}<cr>
+nmap <silent><leader>gf :lua require('telescope.builtin').git_files{}<cr>
+nmap <silent>gr :lua require('telescope.builtin').lsp_references{}<cr>
+nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<cr>
+nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<cr>
+nmap <silent>gD :lua require('telescope.builtin').lsp_type_definitions{}<cr>
 
 " copilot
-imap <silent><script><expr> <C-\> copilot#Accept("\<CR>")
+imap <silent><script><expr> <C-\> copilot#Accept("\<cr>")
 
 " gitsigns
-nmap <silent><leader>gw :lua require('gitsigns').blame_line({full=true})<CR>
+nmap <silent><leader>gw :lua require('gitsigns').blame_line({full=true})<cr>
 
 " rnvimr
-nnoremap <silent><leader>r :RnvimrToggle<CR>
+nnoremap <silent><leader>r :RnvimrToggle<cr>
 
 " neotest
 "   nearest test
-nmap <silent><localleader>xt :lua require("neotest").run.run()<CR>
+nmap <silent><localleader>xt :lua require("neotest").run.run()<cr>
 "   current file
-nmap <silent><localleader>xf :lua require("neotest").run.run(vim.fn.expand("%"))<CR>
+nmap <silent><localleader>xf :lua require("neotest").run.run(vim.fn.expand("%"))<cr>
 "   stop running
-nmap <silent><localleader>xx :lua require("neotest").run.stop()<CR>
+nmap <silent><localleader>xx :lua require("neotest").run.stop()<cr>
 " undotree
 nnoremap <silent><localleader>u :UndotreeToggle<cr>
 
@@ -88,10 +88,10 @@ nnoremap <silent><localleader>u :UndotreeToggle<cr>
 noremap <silent><localleader>s :SymbolsOutline<cr>
 
 " spectre
-" noremap <silent><localleader>S :lua require('spectre').open()<CR>
+" noremap <silent><localleader>S :lua require('spectre').open()<cr>
 " " search current word
-" nnoremap <silent><localleader>sw viw:lua require('spectre').open_visual()<CR>
-" vnoremap <silent><localleader>s :lua require('spectre').open_visual()<CR>
+" nnoremap <silent><localleader>sw viw:lua require('spectre').open_visual()<cr>
+" vnoremap <silent><localleader>s :lua require('spectre').open_visual()<cr>
 " " search in current file
 " nnoremap <silent><localleader>sp viw:lua require('spectre').open_file_search()<cr>
 
@@ -104,10 +104,12 @@ vnoremap <silent> <leader>n <cmd>lua require('renamer').rename()<cr>
 nmap <silent><localleader>i :IndentBlanklineToggle<cr>
 
 " diffview
-nmap <silent><localleader>d :DiffviewOpen<CR>
+nmap <silent><localleader>d :DiffviewOpen<cr>
 nmap <localleader>D :DiffviewOpen
-nmap <silent><localleader>dx :DiffviewClose<CR>
+nmap <silent><localleader>dx :DiffviewClose<cr>
 
+" focus
+nmap <silent><loalleader>] :FocusToggle<cr>
 " goyo
 nmap <silent><localleader>z :Goyo<cr>
 
