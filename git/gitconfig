@@ -33,7 +33,8 @@
   acpf = !git ac && git pf
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   dmb = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
-  up = !git checkout master && git branch --set-upstream-to=upstream/master && git pull && git push origin master && git dmb
+  up = !git checkout $1 && git branch --set-upstream-to=upstream/$1 && git pull && git push origin $1 && git dmb
+  upm = !git checkout master && git branch --set-upstream-to=upstream/master && git pull && git push origin master && git dmb
   setup = "!f() { git remote add upstream $1 && git fetch --all && git up;}; f"
   rekt = reset --hard upstream/master
   ; git = hub
