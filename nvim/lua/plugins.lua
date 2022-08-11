@@ -115,6 +115,7 @@ return require('packer').startup(function(use)
     'kyazdani42/nvim-web-devicons', opt = true
   }}
   use 'akinsho/nvim-bufferline.lua'                                      -- A snazzy bufferline for Nvim (Lua)
+  use {'smiteshP/nvim-navic', requires = {'neovim/nvim-lspconfig'}}      -- Simple winbar/statusline plugin that shows your current code context (Lua)
   use 'sunjon/shade.nvim'                                                -- Dim inactive windows (Lua)
   use 'machakann/vim-highlightedyank'                                    -- Make the yanked region apparent
   use 'wfxr/minimap.vim'                                                 -- Minimap
