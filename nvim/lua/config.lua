@@ -1,5 +1,4 @@
 -- activate plugin configurations
-require('./config/aerial')
 require('./config/autopairs')
 require('./config/autotag')
 require('./config/bufferline')
