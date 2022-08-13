@@ -110,9 +110,9 @@ return require('packer').startup(function(use)
   -- TODO: https://github.com/TimUntersberger/neogit
 
   -- decoration/layout
-  use {'konapun/vacuumline.nvim', branch = 'next', requires = {          -- A configuration for galaxyline based on airline
-    'glepnir/galaxyline.nvim', branch = 'main',
-    'kyazdani42/nvim-web-devicons', opt = true
+  use {'feline-nvim/feline.nvim', requires = {                           -- A minimal, stylish and customizable statusline for Neovim (Lua)
+    'kyazdani42/nvim-web-devicons',
+    'lewis6991/gitsigns.nvim'
   }}
   use 'akinsho/nvim-bufferline.lua'                                      -- A snazzy bufferline for Nvim (Lua)
   use {'smiteshP/nvim-navic', requires = {'neovim/nvim-lspconfig'}}      -- Simple winbar/statusline plugin that shows your current code context (Lua)

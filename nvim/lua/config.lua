@@ -6,6 +6,7 @@ require('./config/bufferline')
 require('./config/colorizer')
 require('./config/cmp')
 require('./config/diffview')
+require('./config/feline')
 require('./config/focus')
 require('./config/fterm')
 require('./config/gitsigns')
@@ -20,7 +21,6 @@ require('./config/shade')
 require('./config/symbols-outline')
 require('./config/telescope')
 require('./config/treesitter')
-require('./config/vacuumline')
 
 -- Future use
 -- require('./config/lsp-kind') -- currently broken
