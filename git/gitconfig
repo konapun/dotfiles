@@ -8,6 +8,11 @@
   default = simple
 [pull]
   rebase = false
+[diff]
+  tool = nvim
+[merge]
+  conflilctstyle = diff3
+  tool = nvimdiff1
 [alias]
   ls = !git branch | fzf | xargs git checkout
   branch-name = !git branch --show-current
