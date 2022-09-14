@@ -1,1 +1,1 @@
-PIP3_PACKAGES=(bpytop colorpedia deemix gruvbox-factory mdv pynvim ranger-fm topydo)
+PIP3_PACKAGES=(bpytop colorpedia deemix gruvbox-factory mdv pynvim ranger-fm topydo) #demux
