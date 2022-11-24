@@ -82,9 +82,11 @@ local function setup_servers()
 
   for _, server in pairs(servers) do
     local default_config = lspconfig_servers[server.name]
-    default_config.setup {
-      on_attach = on_attach
-    }
+    if default_config ~= nil then
+      default_config.setup {
+        on_attach = on_attach
+      }
+    end
   end
 
   -- specific lsp configs

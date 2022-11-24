@@ -3,6 +3,7 @@ local palette = theme.palette
 local separator = theme.separator
 
 require('vacuumline').setup({
+  -- backend = require('vacuumline.backend.lualine'), -- enable once lualine support is merged
   theme = {
     line             = {foreground = palette.green, background = palette.background},
     segment_odd      = {foreground = palette.black, background = palette.purple},
