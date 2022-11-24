@@ -14,6 +14,7 @@ set inccommand=split                                                    " Enable
 set lazyredraw                                                          " Increase performance of screen drawing
 set nofoldenable                                                        " Disable folding by default
 set noshowmode                                                          " Remove extra status line
+set cmdheight=0                                                         " Hide the command line
 set nowrap                                                              " Don't wrap lines
 set mouse=a                                                             " Enable mouse in all modes
 set shortmess=tIF                                                       " Don't show the intro message when starting Vim
