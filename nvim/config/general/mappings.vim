@@ -34,7 +34,7 @@ nmap <silent>]x :lua vim.diagnostic.goto_next()<cr>
 nmap <silent>[x :lua vim.diagnostic.goto_prev()<cr>
 nmap <silent><leader>x :lua vim.diagnostic.open_float()<cr>
 nmap <silent><leader>h :lua vim.lsp.buf.hover()<cr>
-nnoremap <silent><leader>f :lua vim.lsp.buf.formatting()<cr>
+nnoremap <silent><leader>f :lua vim.lsp.buf.format{async=true}<cr>
 
 " telescope
 nnoremap <silent><C-p> :lua require('telescope.builtin').find_files{}<cr>
