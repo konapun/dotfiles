@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'                                            -- Quickstart configurations for the Nvim LSP client (Lua)
-  use 'williamboman/nvim-lsp-installer'                                  -- Companion plugin for nvim-lspconfig that allows you to seamlessly manage LSP servers locally (Lua)
+  use 'williamboman/mason.nvim'                                          -- Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters (Lua)
   use 'onsails/lspkind-nvim'                                             -- VSCode-like pictograms for Nvim lsp completion items (Lua)
   use 'simrat39/symbols-outline.nvim'                                    -- Tree like view for LSP symbols (Lua)
   use 'ray-x/lsp_signature.nvim'                                         -- Show function signature as you type

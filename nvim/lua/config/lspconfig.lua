@@ -77,9 +77,11 @@ end
 
 local function setup_servers()
   -- Default setups from lsp-config
-  local servers = require('nvim-lsp-installer').get_installed_servers()
+  local servers = require('mason-registry').get_installed_packages()
+  local lspconfig_servers = lspconfig.util.available_servers()
+
   for _, server in pairs(servers) do
-    local default_config = lspconfig[server.name]
+    local default_config = lspconfig_servers[server.name]
     default_config.setup {
       on_attach = on_attach
     }

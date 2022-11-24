@@ -1,0 +1,2 @@
+require('mason').setup()
+
