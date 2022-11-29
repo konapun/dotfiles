@@ -1,7 +1,8 @@
 # GRUVBOX
 
 # vim/bat config
-SYNTAX_THEME=gruvbox
+SYNTAX_THEME_PACKER=luisiacc/gruvbox-baby
+SYNTAX_THEME=gruvbox-baby
 AIRLINE_THEME=system
 WINTERM_THEME=gruvbox
 
