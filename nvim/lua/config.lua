@@ -12,15 +12,18 @@ require('./config/lspconfig')
 require('./config/neotest')
 require('./config/lsp-signature')
 require('./config/mason')
--- require('./config/neorg')
 require('./config/renamer')
 require('./config/symbols-outline')
 require('./config/telescope')
 require('./config/treesitter')
 require('./config/vacuumline')
 
+-- Plugins that should be loaded after others
+require('./config/tint')
+
 -- Future use
 -- require('./config/lsp-kind') -- currently broken
 -- require('./config/lightspeed')
 -- require('./config/spectre')
 -- require('./config/surround')
+-- require('./config/neorg')
