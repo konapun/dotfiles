@@ -14,7 +14,6 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' -- allow packer to manage itself
 
   -- themes
-  use {'npxbr/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}            -- Lua port of the most famous vim colorscheme
   if theme.package then
     use {theme.package}                                                  -- Install script configured theme
   end
