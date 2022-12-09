@@ -125,6 +125,7 @@ return require('packer').startup(function(use)
   use 'RRethy/vim-illuminate'                                            -- Highlight matching words/lines under the cursor (Lua)
   use 'lukas-reineke/indent-blankline.nvim'                              -- Indent guides for Nvim (Lua)
   use 'yamatsum/nvim-nonicons'                                           -- Icon set using nonicons for Nvim plugins and settings (Lua)
+  use 'p00f/nvim-ts-rainbow'                                             -- Rainbow parentheses for neovim using tree-sitter
 
   -- utilities
   use 'vhyrro/neorg'                                                     -- Org mode for Nvim (Lua)
@@ -135,9 +136,10 @@ return require('packer').startup(function(use)
   -- use 'windwp/nvim-spectre'                                              -- Find and replace utility
 
   -- lisp/clojure
-  -- use 'guns/vim-sexp'                                                    -- Precision editing for S-expressions
-  -- use 'tpope/vim-sexp-mappings-for-regular-people'                       -- Better sexp mappings
-  -- use 'Olical/conjure'                                                   -- Interactive evaluation for Neovim (Clojure, Fennel, Janet)
+  use 'guns/vim-sexp'                                                    -- Precision editing for S-expressions
+  use 'tpope/vim-sexp-mappings-for-regular-people'                       -- Better sexp mappings
+  use 'Olical/conjure'                                                   -- Interactive evaluation for Neovim (Clojure, Fennel, Janet)
+  -- use 'gpanders/nvim-parinfer'                                           -- parinfer for Neovim
   -- use 'clojure-vim/vim-jack-in'                                          -- cider-jack-in for vim
 
   -- other languages

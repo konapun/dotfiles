@@ -1,3 +1,5 @@
+local theme = require('../theme')
+
 require('nvim-treesitter.configs').setup {
   ensure_installed = { -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     'bash',
@@ -27,5 +29,10 @@ require('nvim-treesitter.configs').setup {
   },
   incremental_selection = {
     enable = true
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    -- colors = {}
   }
 }
