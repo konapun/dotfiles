@@ -3,6 +3,7 @@ require('nvim-treesitter.configs').setup {
     'bash',
     'clojure',
     'comment',
+    'commonlisp',
     'css',
     'dockerfile',
     'glimmer',
@@ -27,5 +28,10 @@ require('nvim-treesitter.configs').setup {
   },
   incremental_selection = {
     enable = true
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    -- colors = {}
   }
 }

@@ -1,3 +1,5 @@
-require('nvim-autopairs').setup()
+local autopairs = require('nvim-autopairs')
+autopairs.setup()
 
--- TODO: https://github.com/windwp/nvim-autopairs#treesitter
+autopairs.get_rule("'")[1].not_filetypes = { "clojure", "scheme", "lisp" }
+autopairs.get_rule("`")[1].not_filetypes = { "clojure", "scheme", "lisp" }

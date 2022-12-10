@@ -48,6 +48,7 @@ cmp.setup({
   },
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'conjure' },
     { name = 'nvim_lua' },
     { name = 'ultisnips' },
     { name = 'buffer' },
