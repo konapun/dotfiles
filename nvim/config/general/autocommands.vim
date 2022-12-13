@@ -13,3 +13,6 @@ augroup illuminate_augroup
   autocmd!
   autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline
 augroup END
+
+" Start a roswell server if one's not already running when a lisp file is opened
+" autocmd FileType lisp :Ros
