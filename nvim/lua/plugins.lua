@@ -41,6 +41,9 @@ return require('packer').startup(function(use)
     'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim'
   }}
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}         -- FZF sorter for telescope written in C
+  use {'nvim-telescope/telescope-smart-history.nvim', requires = {       -- A history implementation that memorizes prompt input for a specific context
+    'kkharji/sqlite.lua'
+  }}
   use {'fhill2/telescope-ultisnips.nvim'}                                -- Telescope integration for Ultisnips
   use {'sudormrfbin/cheatsheet.nvim'}                                    -- A cheatsheet plugin for neovim with bundled cheatsheets for the editor, multiple vim plugins, nerd-fonts, regex, etc. with a Telescope fuzzy finder interface
 

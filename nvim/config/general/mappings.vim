@@ -51,8 +51,11 @@ nmap <silent><leader>T :lua require('telescope.builtin').tags{}<cr>
 nmap <silent><leader>" :lua require('telescope.builtin').registers{}<cr>
 nmap <silent><leader>/ :lua require('telescope.builtin').current_buffer_fuzzy_find{}<cr>
 nmap <silent><leader>q :lua require('telescope.builtin').quickfix{}<cr>
+nmap <silent><leader>Q :lua require('telescope.builtin').quickfixhistory{}<cr>
+nmap <silent><leader>j :lua require('telescope.builtin').jumplist{}<cr>
 nmap <silent><leader>s :lua require('telescope.builtin').lsp_document_symbols{}<cr>
 nmap <silent><leader>S :lua require('telescope.builtin').lsp_workspace_symbols{}<cr>
+nmap <silent><leader>z :lua require('telescope.builtin').resume{}<cr>
 nmap <silent><leader>? :Cheatsheet<cr>
 nmap <silent><leader>ik :lua require('telescope.builtin').keymaps{}<cr>
 nmap <silent><leader>is :lua require('telescope').extensions.ultisnips.ultisnips{}<cr>
@@ -62,6 +65,7 @@ nmap <silent><leader>gb :lua require('telescope.builtin').git_branches{}<cr>
 nmap <silent><leader>gs :lua require('telescope.builtin').git_status{}<cr>
 nmap <silent><leader>gf :lua require('telescope.builtin').git_files{}<cr>
 nmap <silent>gr :lua require('telescope.builtin').lsp_references{}<cr>
+nmap <silent>gR :lua require('telescope.builtin').lsp_incoming_calls{}<cr>
 nmap <silent>gi :lua require('telescope.builtin').lsp_implementations{}<cr>
 nmap <silent>gd :lua require('telescope.builtin').lsp_definitions{}<cr>
 nmap <silent>gD :lua require('telescope.builtin').lsp_type_definitions{}<cr>

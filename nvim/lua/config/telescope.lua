@@ -17,6 +17,10 @@ telescope.setup({
       "--smart-case",
       "--hidden",
     },
+    history = {
+      path = "~/.cache/nvim/telescope_history",
+      limit = 100
+    },
     prompt_prefix = "     ",
     selection_caret = "  ",
     entry_prefix = "  ",
@@ -74,4 +78,4 @@ telescope.setup({
 
 telescope.load_extension('fzf')
 telescope.load_extension('ultisnips')
-
+telescope.load_extension('smart_history')
