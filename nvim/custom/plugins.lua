@@ -58,12 +58,32 @@ local plugins = {
 
 	{
 		"kylechui/nvim-surround",
-		opts = overrides.nvimsurround,
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
 	},
 
 	{
 		"zbirenbaum/copilot.lua",
-    opts = overrides.copilot,
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({
+				suggestion = {
+					enabled = true,
+					auto_trigger = true,
+					keymap = {
+						accept = "C-\\",
+						next = "C-]",
+						prev = "C-[",
+					},
+				},
+			})
+		end,
 	},
 }
 
