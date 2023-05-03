@@ -86,7 +86,6 @@ M.nvimtree = {
 	git = {
 		enable = true,
 	},
-
 	renderer = {
 		highlight_git = true,
 		icons = {
@@ -105,6 +104,17 @@ M.nvimsurround = {
 			-- Configuration here, or leave empty to use defaults
 		})
 	end,
+}
+
+M.copilot = {
+	cmd = "Copilot",
+	event = "InsertEnter",
+	config = function()
+		require("copilot").setup({})
+	end,
+	suggestion = {
+		auto_trigger = true,
+	},
 }
 
 return M

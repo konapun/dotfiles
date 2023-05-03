@@ -1,11 +1,13 @@
 NVIM_CONFIG_FILE=~/.config/nvim/init.vim
 NVIM_LUA_THEME_FILE=~/.config/nvim/lua/theme.lua
 NVIM_THEME_FILE=~/.config/nvim/colors/system.vim
+NVCHAD_ROOT=~/.config/nvim/lua
 
-cp -r ./nvim ~/.config
-cp -r ./nvim/efm-langserver ~/.config
-rm ~/.config/nvim/configure.zsh
-rm -rf ~/.config/nvim/efm-langserver
+cp -r ./nvim/custom $NVCHAD_ROOT
+# cp -r ./nvim ~/.config
+# cp -r ./nvim/efm-langserver ~/.config
+# rm ~/.config/nvim/configure.zsh
+# rm -rf ~/.config/nvim/efm-langserver
 
 python3 -m pip install neovim pynvim ranger-fm
 
