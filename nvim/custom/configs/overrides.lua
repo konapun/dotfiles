@@ -1,100 +1,110 @@
 local M = {}
 
 M.treesitter = {
-  ensure_installed = {
-    -- core
-    "vim",
-    "lua",
+	ensure_installed = {
+		-- core
+		"vim",
+		"lua",
 
-    -- sources
-    "c",
-    "go",
-    "python",
-    "racket",
-    "bash",
+		-- sources
+		"c",
+		"go",
+		"python",
+		"racket",
+		"bash",
 
-    -- web
-    "javascript",
-    "typescript",
-    "tsx",
-    "jsdoc",
-    "json",
-    "jsonc",
-    "graphql",
-    "html",
-    "css",
+		-- web
+		"javascript",
+		"typescript",
+		"tsx",
+		"jsdoc",
+		"json",
+		"jsonc",
+		"graphql",
+		"html",
+		"css",
 
-    -- markup
-    "markdown",
-    "markdown_inline",
-    "yaml",
-  },
-  indent = {
-    enable = true,
-    -- disable = {
-    --   "python"
-    -- },
-  },
-  highlight = {
-    enable = true
-  },
-  incremental_selection = {
-    enable = true
-  },
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-  }
+		-- markup
+		"markdown",
+		"markdown_inline",
+		"yaml",
+	},
+	indent = {
+		enable = true,
+		-- disable = {
+		--   "python"
+		-- },
+	},
+	highlight = {
+		enable = true,
+	},
+	incremental_selection = {
+		enable = true,
+	},
+	rainbow = {
+		enable = true,
+		extended_mode = true,
+	},
 }
 
 M.mason = {
-  ensure_installed = {
-    -- lua stuff
-    "lua-language-server",
-    "stylua",
+	ensure_installed = {
+		-- lua stuff
+		"lua-language-server",
+		"stylua",
 
-    -- web dev stuff
-    "css-lsp",
-    "html-lsp",
-    "typescript-language-server",
-    "deno",
-    "prettier",
-    "fixjson",
-    "xo",
+		-- web dev stuff
+		"css-lsp",
+		"html-lsp",
+		"typescript-language-server",
+		"deno",
+		"prettier",
+		"fixjson",
+		"xo",
 
-    -- c/cpp stuff
-    "clangd",
-    "clang-format",
+		-- c/cpp stuff
+		"clangd",
+		"clang-format",
 
-    -- go
-    "gopls",
-    "goimports",
-    "gomodifytags",
-    "go-debug-adapter",
-    "impl",
+		-- go
+		"gopls",
+		"goimports",
+		"gomodifytags",
+		"go-debug-adapter",
+		"impl",
 
-    -- python
-    "blue",
+		-- python
+		"blue",
 
-    -- shell
-    "beautysh",
-  },
+		-- shell
+		"beautysh",
+	},
 }
 
 -- git support in nvimtree
 M.nvimtree = {
-  git = {
-    enable = true,
-  },
+	git = {
+		enable = true,
+	},
 
-  renderer = {
-    highlight_git = true,
-    icons = {
-      show = {
-        git = true,
-      },
-    },
-  },
+	renderer = {
+		highlight_git = true,
+		icons = {
+			show = {
+				git = true,
+			},
+		},
+	},
+}
+
+M.nvimsurround = {
+	version = "*", -- Use for stability; omit to use `main` branch for the latest features
+	event = "VeryLazy",
+	config = function()
+		require("nvim-surround").setup({
+			-- Configuration here, or leave empty to use defaults
+		})
+	end,
 }
 
 return M

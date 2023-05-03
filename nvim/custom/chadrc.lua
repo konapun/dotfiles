@@ -5,11 +5,15 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "onedark",
+  theme = "gruvbox",
   theme_toggle = { "onedark", "one_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
+
+  statusline = {
+    separator_style = "block"
+  }
 }
 
 M.plugins = "custom.plugins"
