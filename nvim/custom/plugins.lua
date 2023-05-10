@@ -56,6 +56,17 @@ local plugins = {
 
 	-- Custom plugins
 
+  {
+    "ggandor/leap.nvim",
+    event = "BufEnter",
+    dependencies = {
+      "tpope/vim-repeat",
+    },
+    config = function()
+      require('leap').add_default_mappings()
+    end
+  },
+
 	{
 		"kylechui/nvim-surround",
 		version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -76,11 +87,6 @@ local plugins = {
 				suggestion = {
 					enabled = true,
 					auto_trigger = true,
-					keymap = {
-						accept = "C-\\",
-						next = "C-]",
-						prev = "C-[",
-					},
 				},
 			})
 		end,
