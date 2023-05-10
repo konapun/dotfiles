@@ -3,7 +3,7 @@ local M = {}
 
 M.general = {
   n = {
-    -- ["<Esc>"] = { ":cclose <CR>", "close quickfix panel" },
+    ["<Esc>"] = { ":cclose <CR>", "close quickfix panel", { noremap = true } },
     ["<leader>ww"] = { "<cmd> set wrap! <CR>", "toggle word wrapping" },
     ["<leader>nn"] = { "<cmd> set nu! <CR>", "toggle line number" },
     ["<leader>nt"] = { "<cmd> tabnew <CR>", "new tab" },
