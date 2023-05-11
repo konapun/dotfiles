@@ -8,5 +8,5 @@ python3 -m pip install neovim pynvim ranger-fm
 
 # Main Theming
 themer_substitute theme $SYNTAX_THEME $NVIM_BRIDGE
-themer_substitute separator_style $SEPARATOR[name]
-themer_cleanup $NVIM_CONFIG_FILE
+themer_substitute separator_style $SEPARATOR[name] $NVIM_BRIDGE
+themer_cleanup $NVIM_BRIDGE

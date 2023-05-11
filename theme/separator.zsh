@@ -63,11 +63,11 @@ SEPARATOR_ARROW[right_separator]=""
 
 declare -A SEPARATOR_BLOCK
 SEPARATOR_BLOCK[name]="block"
-SEPARATOR_BLOCK[left_start]=""
-SEPARATOR_BLOCK[left_end]=""
+SEPARATOR_BLOCK[left_start]=$THEMER_EMPTY_STRING
+SEPARATOR_BLOCK[left_end]=$THEMER_EMPTY_STRING
 SEPARATOR_BLOCK[left_separator]="\\uE621"
-SEPARATOR_BLOCK[right_start]=""
-SEPARATOR_BLOCK[right_end]=""
+SEPARATOR_BLOCK[right_start]=$THEMER_EMPTY_STRING
+SEPARATOR_BLOCK[right_end]=$THEMER_EMPTY_STRING
 SEPARATOR_BLOCK[right_separator]="\\uE621"
 
 declare -A SEPARATOR_SLANT
@@ -81,10 +81,10 @@ SEPARATOR_SLANT[right_separator]="\\uE0BB"
 
 declare -A SEPARATOR_ROUND
 SEPARATOR_ROUND[name]="round"
-SEPARATOR_ROUND[left_start]=""
-SEPARATOR_ROUND[left_end]=""
-SEPARATOR_ROUND[left_separator]=""
-SEPARATOR_ROUND[right_start]=""
-SEPARATOR_ROUND[right_end]=""
-SEPARATOR_ROUND[right_separator]=""
+SEPARATOR_ROUND[left_start]="\\uE0B4"
+SEPARATOR_ROUND[left_end]="\\uE0B4"
+SEPARATOR_ROUND[left_separator]="\\uE0B5"
+SEPARATOR_ROUND[right_start]="\\uE0B6"
+SEPARATOR_ROUND[right_end]="\\uE0B6"
+SEPARATOR_ROUND[right_separator]="\\uE0B7"
 

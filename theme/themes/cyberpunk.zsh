@@ -39,12 +39,8 @@ PROMPT_LEFT_START='' # the leftmost side
 PROMPT_LEFT_END='\\uE0C6' # the portion preceding user input
 PROMPT_RIGHT_START='\\uE0C7' # the portion proceding user input
 PROMPT_RIGHT_END='' # the rightmost side
-LEFT_SEGMENT_START='\\uE0C6' # '\\uE0B0'
-LEFT_SEGMENT_END='\\uE0C6'
-LEFT_SEPARATOR= # '\\uE0B1'
-RIGHT_SEGMENT_START='\\uE0C7' # '\\uE0B2'
-RIGHT_SEGMENT_END='\\uE0C7'
-RIGHT_SEPARATOR= # '\\uE0B3'
+typeset -A SEPARATOR
+set -A SEPARATOR ${(kv)SEPARATOR_ARROW}
 
 # tmux config
 TMUX_THEME='system-theme'

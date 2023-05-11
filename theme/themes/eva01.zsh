@@ -11,12 +11,8 @@ CHROME_THEME=https://www.themebeta.com/chrome/theme/1358797
 # segments
 PROMPT_LEFT_END='\\uE0B8' # 01
 PROMPT_RIGHT_START='\\uE0BA'
-LEFT_SEGMENT_START='\\uE0B8'
-LEFT_SEGMENT_END='\\uE0B8'
-LEFT_SEPARATOR='\\uE0B9' #
-RIGHT_SEGMENT_START='\\uE0BA' # '\\uE0B2'
-RIGHT_SEGMENT_END='\\uE0BA'
-RIGHT_SEPARATOR='\\uE0BB' #
+typeset -A SEPARATOR
+set -A SEPARATOR ${(kv)SEPARATOR_SLANT}
 
 # tmux config
 TMUX_THEME='system-theme'

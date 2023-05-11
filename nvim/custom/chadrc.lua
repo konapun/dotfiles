@@ -1,4 +1,4 @@
-local bridge = require("bridge").ui
+local bridge = require("custom.bridge").ui
 
 ---@type ChadrcConfig
 local M = {}
@@ -8,7 +8,7 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   theme = bridge.theme.current,
-  theme_toggle = { bridge.theme.dark, bridge.theme.light},
+  -- theme_toggle = { bridge.theme.dark, bridge.theme.light},
 
   hl_override = highlights.override,
   hl_add = highlights.add,
