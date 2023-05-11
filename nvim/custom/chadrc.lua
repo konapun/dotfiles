@@ -1,3 +1,5 @@
+local bridge = require("bridge").ui
+
 ---@type ChadrcConfig
 local M = {}
 
@@ -5,14 +7,14 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "gruvbox",
-  theme_toggle = { "onedark", "one_light" },
+  theme = bridge.theme.current,
+  theme_toggle = { bridge.theme.dark, bridge.theme.light},
 
   hl_override = highlights.override,
   hl_add = highlights.add,
 
   statusline = {
-    separator_style = "block"
+    separator_style = bridge.statusline.separator_style
   }
 }
 
