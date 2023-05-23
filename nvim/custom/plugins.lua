@@ -95,6 +95,22 @@ local plugins = {
       })
     end,
   },
+
+  {
+    "stevearc/overseer.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("overseer").setup()
+    end
+  },
+
+  {
+    "andythigpen/nvim-coverage",
+    event = "BufRead",
+    config = function()
+      require("coverage").setup()
+    end
+  },
 }
 
 return plugins
