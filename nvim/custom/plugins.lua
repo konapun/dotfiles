@@ -111,6 +111,14 @@ local plugins = {
       require("coverage").setup()
     end
   },
+
+  {
+    "chentoast/marks.nvim",
+    event = "BufRead",
+    config = function()
+      require("marks").setup()
+    end
+  },
 }
 
 return plugins
