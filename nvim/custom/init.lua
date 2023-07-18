@@ -6,4 +6,5 @@ autocmd("VimResized", {
   command = "tabdo wincmd =",
 })
 
-vim.wo.relativenumber = true
+vim.wo.relativenumber = true -- Relative line numbers
+vim.wo.list = true           -- Show whitespace
