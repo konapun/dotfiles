@@ -97,6 +97,11 @@ local plugins = {
   },
 
   {
+    "mfussenegger/nvim-dap",
+    event = "VeryLazy",
+  },
+
+  {
     "stevearc/overseer.nvim",
     event = "VeryLazy",
     config = function()

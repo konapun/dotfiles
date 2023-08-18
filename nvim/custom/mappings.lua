@@ -31,4 +31,28 @@ M.telescope = {
   },
 }
 
+M.debug = {
+  n = {
+    ["<leader>dc"] = { "<cmd> lua require('dap').continue()<CR>", "continue" },
+    ["<leader>ds"] = { "<cmd> lua require('dap').step_over()<CR>", "step over" },
+    ["<leader>di"] = { "<cmd> lua require('dap').step_into()<CR>", "step into" },
+    ["<leader>do"] = { "<cmd> lua require('dap').step_out()<CR>", "step out" },
+    ["<leader>db"] = { "<cmd> lua require('dap').toggle_breakpoint()<CR>", "toggle breakpoint" },
+    ["<leader>dB"] = { "<cmd> lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", "set breakpoint" },
+    ["<leader>dl"] = { "<cmd> lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", "log point" },
+    ["<leader>dr"] = { "<cmd> lua require('dap').repl.open()<CR>", "open repl" },
+    ["<leader>de"] = { "<cmd> lua require('dap').repl.run_last()<CR>", "run last" },
+    ["<leader>dd"] = { "<cmd> lua require('dap').disconnect()<CR>", "disconnect" },
+    ["<leader>dk"] = { "<cmd> lua require('dap').close()<CR>", "close" },
+    ["<leader>df"] = { function()
+      local widgets = require('dap.ui.widgets')
+      widgets.centered_float(widgets.frames)
+    end, "view frames" },
+    ["<leader>dy"] = { function()
+      local widgets = require('dap.ui.widgets')
+      widgets.centered_float(widgets.scopes)
+    end, "view scopes"}
+  }
+}
+
 return M
