@@ -3,6 +3,7 @@ local M = {}
 M.treesitter = {
 	ensure_installed = {
 		-- core
+    "comment",
 		"vim",
 		"lua",
 
