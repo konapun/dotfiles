@@ -21,6 +21,15 @@ M.copilot = {
 	},
 }
 
+M.minimap = {
+	n = {
+		["<leader>mo"] = { "<cmd> lua require('codewindow').open_minimap() <CR>", "open minimap" },
+		["<leader>mc"] = { "<cmd> lua require('codewindow').close_minimap() <CR>", "close minimap" },
+		["<leader>mf"] = { "<cmd> lua require('codewindow').toggle_focus() <CR>", "focus/unfocus minimap" },
+		["<leader>mm"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "toggle minimap" },
+	},
+}
+
 M.telescope = {
 	n = {
 		["<leader>fs"] = { "<cmd> Telescope lsp_document_symbols <CR>", "find symbols (document)" },

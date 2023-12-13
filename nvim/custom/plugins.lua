@@ -1,5 +1,5 @@
 local overrides = require("custom.configs.overrides")
-
+-------------------------------------------------------------------------------------------------------------------
 ---@type NvPluginSpec[]
 local plugins = {
 
@@ -130,6 +130,23 @@ local plugins = {
 		event = "BufRead",
 		config = function()
 			require("marks").setup()
+		end,
+	},
+
+	-- {
+	-- 	"wfxr/minimap.vim",
+	-- 	event = "VeryLazy",
+	-- },
+
+	{
+		"konapun/codewindow.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("codewindow").setup({
+				relative = "editor",
+				minimap_width = 10,
+				window_border = "solid",
+			})
 		end,
 	},
 }
