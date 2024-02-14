@@ -17,9 +17,7 @@ local sources = {
   formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
   formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
   formatting.fixjson,
-  code_actions.xo,
   diagnostics.jshint,
-  diagnostics.xo,
 
   -- Lua
   formatting.stylua,
@@ -38,6 +36,7 @@ local sources = {
 
   -- shell
   formatting.beautysh,
+  diagnostics.shellcheck,
 }
 
 null_ls.setup {

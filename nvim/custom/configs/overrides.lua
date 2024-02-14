@@ -61,7 +61,6 @@ M.mason = {
     "deno",
     "prettier",
     "fixjson",
-    "xo",
 
     -- c/cpp stuff
     "clangd",
@@ -80,6 +79,7 @@ M.mason = {
 
     -- shell
     "beautysh",
+    "shellcheck",
   },
 }
 
