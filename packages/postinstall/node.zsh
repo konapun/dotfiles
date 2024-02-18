@@ -1,7 +1,7 @@
 for node_version in $NODE_VERSIONS; do
-  nvm install $node_version
+  asdf install nodejs $node_version
 done
 
-nvm install $NODE_VERSION
-nvm alias default $NODE_VERSIONS[1]
-nvm use default
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install $NODE_VERSION
+asdf global nodejs $NODE_VERSION
