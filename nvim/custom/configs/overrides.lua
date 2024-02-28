@@ -1,9 +1,10 @@
-local lang = require("custom.configs.lang")
+local ts_provider = require("custom.configs.providers.treesitter")
+local mason_provider = require("custom.configs.providers.mason")
 
 local M = {}
 
 M.treesitter = {
-  ensure_installed = lang.languages,
+  ensure_installed = ts_provider.provide(),
   indent = {
     enable = true,
     -- disable = {
@@ -23,7 +24,7 @@ M.treesitter = {
 }
 
 M.mason = {
-  ensure_installed = lang.support,
+  ensure_installed = mason_provider.provide(),
 }
 
 -- git support in nvimtree

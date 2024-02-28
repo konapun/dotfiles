@@ -5,6 +5,14 @@ local plugins = {
 
   -- Override plugin definition options
 
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("plugins.configs.lspconfig")
+      require("custom.configs.lspconfig")
+    end, -- Override to setup mason-lspconfig
+  },
+
   -- utils
   "konapun/base46-rt",
 
