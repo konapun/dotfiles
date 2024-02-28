@@ -1,17 +1,15 @@
 local lspconfig = require("lspconfig")
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
+local lang = require("custom.configs.lang")
 
--- if you just want default config for the servers then put them in a table
--- TODO: automatically find these
-local servers = { "html", "cssls", "tsserver", "clangd", "gopls", "pyright" }
-
-for _, lsp in ipairs(servers) do
+-- set default config for all language servers
+for _, lsp in ipairs(lang.servers) do
   lspconfig[lsp].setup({
     on_attach = on_attach,
     capabilities = capabilities,
   })
 end
 
---
+-- any additional configuration for specific language servers
 -- lspconfig.pyright.setup { blabla}
