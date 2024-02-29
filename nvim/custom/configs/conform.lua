@@ -1,4 +1,4 @@
-local conform_provider = require("custom.configs.providers").conform
+local conform_provider = require("custom.configs.providers.conform")
 
 --type conform.options
 local options = {
