@@ -2,7 +2,7 @@
 source ./packages/versions.zsh
 
 # shared definitions
-source ./packages/definitions/nvm.zsh
+source ./packages/definitions/asdf.zsh
 
 # package sources
 source ./packages/npm.zsh

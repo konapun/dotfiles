@@ -10,7 +10,7 @@ themer_cleanup $tmux_config_file
 
 # Default values
 if [[ ! -v TMUX_STATUS_LEFT_SEGMENT ]]; then
-  TMUX_STATUS_LEFT_SEGMENT=$LEFT_SEGMENT_START
+  TMUX_STATUS_LEFT_SEGMENT=$SEPARATOR[left_start]
 fi
 if [[ ! -v TMUX_STATUS_INACTIVE_BG ]]; then
   TMUX_STATUS_INACTIVE_BG=$TMUX_STATUS_CURRENT_FG
@@ -47,10 +47,10 @@ themer_substitute status_inactive_fg $TMUX_STATUS_INACTIVE_FG $tmux_system_theme
 themer_substitute status_current_bg $TMUX_STATUS_CURRENT_BG $tmux_system_theme
 themer_substitute status_current_fg $TMUX_STATUS_CURRENT_FG $tmux_system_theme
 themer_substitute status_left_segment $TMUX_STATUS_LEFT_SEGMENT $tmux_system_theme
-themer_substitute left_segment_separator $LEFT_SEGMENT_START $tmux_system_theme
-themer_substitute right_segment_separator $RIGHT_SEGMENT_START $tmux_system_theme
-themer_substitute left_subsegment_separator $LEFT_SEPARATOR $tmux_system_theme
-themer_substitute right_subsegment_separator $RIGHT_SEPARATOR $tmux_system_theme
+themer_substitute left_segment_separator $SEPARATOR[left_start] $tmux_system_theme
+themer_substitute right_segment_separator $SEPARATOR[right_start] $tmux_system_theme
+themer_substitute left_subsegment_separator $SEPARATOR[left_separator] $tmux_system_theme
+themer_substitute right_subsegment_separator $SEPARATOR[right_separator] $tmux_system_theme
 themer_substitute left_last_segment_end_symbol $PROMPT_LEFT_END $tmux_system_theme
 themer_substitute right_first_segment_start_symbol $PROMPT_RIGHT_START $tmux_system_theme
 themer_substitute left_first_segment_start_symbol $PROMPT_LEFT_START $tmux_system_theme

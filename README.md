@@ -146,3 +146,9 @@ To use a theme, run the install script with the `-t` option followed by the them
 
 ### xp
 <img src="./_res/xp-theme.png" alt="xp">
+
+## TODO
+  * [X] Modify themes to use $SEPARATOR_ instead of setting their own separator/segment values
+  * [ ] Create configurable nvchad theme
+  * [ ] Update themes to use configurable nvchad theme
+  * [ ] Create reverse binding to theme terminal when nvchad theme changes
