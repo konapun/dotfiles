@@ -11,10 +11,7 @@ M.general = {
     ["<leader>s"] = { "<cmd> :SymbolsOutline <CR>", "toggle symbols outline" },
     ["<leader>fm"] = {
       function()
-        require("conform").format({
-          async = true,
-          lsp_fallback = true
-        })
+        require("conform").format({ async = true })
       end,
       "formatting",
     }
