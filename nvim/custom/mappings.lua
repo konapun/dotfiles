@@ -24,7 +24,17 @@ M.copilot = {
   },
   n = {
     ["<C-\\>"] = { "<cmd>Copilot panel open<CR>", "open panel" },
+    ["<leader>co"] = { "<cmd>CopilotChatToggle<CR>", "toggle chat" },
   },
+  v = {
+    ["<leader>cc"] = { "<cmd>CopilotChatToggle<CR>", "toggle chat" },
+    ["<leader>ce"] = { "<cmd>CopilotChatExplain<CR>", "explain" },
+    ["<leader>cr"] = { "<cmd>CopilotChatReview<CR>", "review" },
+    ["<leader>cx"] = { "<cmd>CopilotChatFix<CR>", "fix" },
+    ["<leader>co"] = { "<cmd>CopilotChatOptimize<CR>", "optimize" },
+    ["<leader>cd"] = { "<cmd>CopilotChatDocs<CR>", "generate docs" },
+    ["<leader>ct"] = { "<cmd>CopilotChatTests<CR>", "generate tests" },
+  }
 }
 
 M.minimap = {

@@ -2,9 +2,7 @@ local overrides = require("custom.configs.overrides")
 -------------------------------------------------------------------------------------------------------------------
 ---@type NvPluginSpec[]
 local plugins = {
-
-	-- Override plugin definition options
-
+	-- Custom plugins
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
@@ -14,7 +12,9 @@ local plugins = {
 	},
 
 	-- utils
-	"konapun/base46-rt",
+	{
+		"konapun/base46-rt",
+	},
 
 	-- plugins
 	{
@@ -29,6 +29,19 @@ local plugins = {
 	{
 		"williamboman/mason.nvim",
 		opts = overrides.mason,
+	},
+
+	{
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			{
+				"zbirenbaum/copilot-cmp",
+				config = function()
+					require("copilot_cmp").setup()
+				end,
+			},
+		},
+		ops = overrides.cmp,
 	},
 
 	{
@@ -96,6 +109,18 @@ local plugins = {
 	},
 
 	{
+		"CopilotC-Nvim/CopilotChat.nvim",
+		event = "InsertEnter",
+		dependencies = {
+			{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+		},
+		config = function()
+			require("CopilotChat").setup()
+		end,
+	},
+
+	{
 		"mfussenegger/nvim-dap",
 		event = "VeryLazy",
 	},
@@ -131,11 +156,6 @@ local plugins = {
 			require("marks").setup()
 		end,
 	},
-
-	-- {
-	-- 	"wfxr/minimap.vim",
-	-- 	event = "VeryLazy",
-	-- },
 
 	{
 		"konapun/codewindow.nvim",
