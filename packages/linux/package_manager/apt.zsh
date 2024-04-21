@@ -9,6 +9,7 @@ GRAPHICAL_PACKAGES=(audacity blender gimp lmms macopix milkytracker slack spotif
 source ./packages/linux/package_manager/apt/migrations.zsh
 
 # packages which aren't currently available in apt
+source ./packages/definitions/lazygit.zsh
 source ./packages/definitions/lsd.zsh
 source ./packages/definitions/oblique-fortunes.zsh
 source ./packages/definitions/neovim-0.5.zsh
