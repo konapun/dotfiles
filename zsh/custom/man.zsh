@@ -1,1 +1,0 @@
-export MANPAGER='nvim +Man!'
