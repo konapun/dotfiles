@@ -15,5 +15,5 @@ if command -v lazygit &> /dev/null; then
   if [ ! -f "$LAZYGIT_CONFIG_FILE" ]; then
     mkdir -p "$(dirname "$LAZYGIT_CONFIG_FILE")"
   fi
-  cp "$DOTFILES/lazygit/config.yml" "$LAZYGIT_CONFIG_FILE"
+  cp ./git/lazygit/config.yml "$LAZYGIT_CONFIG_FILE"
 fi

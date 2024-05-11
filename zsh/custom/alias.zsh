@@ -2,6 +2,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 alias vim=nvim
+alias lgit=lazygit
 
 command -v hub &> /dev/null && alias git=hub
 command -v gsed &> /dev/null && alias sed=gsed

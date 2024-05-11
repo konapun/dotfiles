@@ -153,8 +153,8 @@ keybinding:
     new: 'n'
     edit: 'e'
     openFile: 'o'
-    scrollUpMain: '<ctrl-p>' # main panel scroll up
-    scrollDownMain: '<ctrl-n>' # main panel scroll down
+    scrollUpMain: '<c-p>' # main panel scroll up
+    scrollDownMain: '<c-n>' # main panel scroll down
     scrollUpMain-alt1: 'K' # main panel scroll up
     scrollDownMain-alt1: 'J' # main panel scroll down
     scrollUpMain-alt2: '<c-u>' # main panel scroll up
