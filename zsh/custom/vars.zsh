@@ -7,7 +7,7 @@ export GOROOT=/usr/local/go
 export PATH=$GOROOT/bin:$PATH
 
 # LAZYGIT
-LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
+export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 
 # MAN
 export MANPAGER='nvim +Man!'
