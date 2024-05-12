@@ -17,7 +17,7 @@ M.general = {
 			end,
 			"formatting",
 		},
-		["<leader>z"] = { "<cmd> ZenMode <CR>", "zen mode" },
+		["<leader>z"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "zen mode" },
 	},
 }
 
