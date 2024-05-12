@@ -8,14 +8,16 @@ M.general = {
 		["<leader>nn"] = { "<cmd> set nu! <CR>", "toggle line number" },
 		["<leader>nt"] = { "<cmd> tabnew <CR>", "new tab" },
 		["<leader>nb"] = { "<cmd> enew <CR>", "new buffer" },
-		["<leader>s"] = { "<cmd> :SymbolsOutline <CR>", "toggle symbols outline" },
+		["<leader>]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "jump to next todo" },
+		["<leader>[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "jump to previous todo" },
+		["<leader>s"] = { "<cmd> SymbolsOutline <CR>", "toggle symbols outline" },
 		["<leader>fm"] = {
 			function()
 				require("conform").format({ async = true })
 			end,
 			"formatting",
 		},
-		["<leader>z"] = { "<cmd> lua require('zen-mode').toggle() <CR>", "zen mode" },
+		["<leader>z"] = { "<cmd> ZenMode <CR>", "zen mode" },
 	},
 }
 
@@ -55,6 +57,7 @@ M.telescope = {
 		["<leader>fD"] = { "<cmd> Telescope diagnostics <CR>", "find diagnostics (all)" },
 		["<leader>fj"] = { "<cmd> Telescope jumplist <CR>", "find jumplist" },
 		["<leader>fr"] = { "<cmd> Telescope resume <CR>", "find resume" },
+		["<leader>ft"] = { "<cmd> TodoTelescope <CR>", "find todos" },
 	},
 }
 

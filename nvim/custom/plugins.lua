@@ -201,7 +201,18 @@ local plugins = {
 	},
 
 	{
+		"folke/todo-comments.nvim",
+		event = "UIEnter",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {
+			-- use default settings
+		},
+	},
+
+	{
 		"folke/zen-mode.nvim",
+		event = "UIEnter",
+		dependencies = { "folke/twilight.nvim" },
 		opts = {
 			window = {
 				backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
