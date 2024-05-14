@@ -11,7 +11,7 @@ M.general = {
 		["<leader>]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "jump to next todo" },
 		["<leader>[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "jump to previous todo" },
 		["<leader>s"] = { "<cmd> SymbolsOutline <CR>", "toggle symbols outline" },
-		["<leader>fm"] = {
+		["<leader>."] = {
 			function()
 				require("conform").format({ async = true })
 			end,
@@ -58,6 +58,9 @@ M.telescope = {
 		["<leader>fj"] = { "<cmd> Telescope jumplist <CR>", "find jumplist" },
 		["<leader>fr"] = { "<cmd> Telescope resume <CR>", "find resume" },
 		["<leader>ft"] = { "<cmd> TodoTelescope <CR>", "find todos" },
+		["<leader>fm"] = { "<cmd> Telescope marks <CR>", "find marks" },
+		["<leader>fh"] = { "<cmd> Telescope search_history <CR>", "find through search history" },
+		["<leader>fq"] = { "<cmd> Telescope quickfix <CR>", "find items in the quickfix list" },
 	},
 }
 
