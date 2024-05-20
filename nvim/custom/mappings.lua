@@ -10,7 +10,7 @@ M.general = {
 		["<leader>nb"] = { "<cmd> enew <CR>", "new buffer" },
 		["<leader>]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "jump to next todo" },
 		["<leader>[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "jump to previous todo" },
-		["<leader>s"] = { "<cmd> SymbolsOutline <CR>", "toggle symbols outline" },
+		["<C-b>"] = { "<cmd> SymbolsOutline <CR>", "toggle symbols outline" },
 		["<leader>."] = {
 			function()
 				require("conform").format({ async = true })
@@ -42,10 +42,8 @@ M.copilot = {
 
 M.minimap = {
 	n = {
-		["<leader>mo"] = { "<cmd> lua require('codewindow').open_minimap() <CR>", "open minimap" },
-		["<leader>mc"] = { "<cmd> lua require('codewindow').close_minimap() <CR>", "close minimap" },
+		["<C-m>"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "toggle minimap" },
 		["<leader>mf"] = { "<cmd> lua require('codewindow').toggle_focus() <CR>", "focus/unfocus minimap" },
-		["<leader>mm"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "toggle minimap" },
 	},
 }
 
@@ -53,14 +51,20 @@ M.telescope = {
 	n = {
 		["<leader>fs"] = { "<cmd> Telescope lsp_document_symbols <CR>", "find symbols (document)" },
 		["<leader>fS"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "find symbols (workspace)" },
-		["<leader>fd"] = { "<cmd> Telescope diagnostics bufnr=0 <CR>", "find diagnostics (current buffer)" },
-		["<leader>fD"] = { "<cmd> Telescope diagnostics <CR>", "find diagnostics (all)" },
+		["<leader>fd"] = { "<cmd> Telescope lsp_definitions <CR>", "find definitions" },
+		["<leader>fD"] = { "<cmd> Telescope lsp_type_definitions <CR>", "find references" },
+		["<leader>fr"] = { "<cmd> Telescope lsp_references <CR>", "find references" },
+		["<leader>fi"] = { "<cmd> Telescope lsp_implementations <CR>", "find implementations" },
+		["<leader>fc"] = { "<cmd> Telescope lsp_incoming_calls <CR>", "find incoming calls" },
+		["<leader>fo"] = { "<cmd> Telescope lsp_outgoing_calls <CR>", "find outgoing calls" },
+		["<leader>fx"] = { "<cmd> Telescope diagnostics bufnr=0 <CR>", "find diagnostics (current buffer)" },
+		["<leader>fX"] = { "<cmd> Telescope diagnostics <CR>", "find diagnostics (all)" },
 		["<leader>fj"] = { "<cmd> Telescope jumplist <CR>", "find jumplist" },
-		["<leader>fr"] = { "<cmd> Telescope resume <CR>", "find resume" },
 		["<leader>ft"] = { "<cmd> TodoTelescope <CR>", "find todos" },
 		["<leader>fm"] = { "<cmd> Telescope marks <CR>", "find marks" },
 		["<leader>fh"] = { "<cmd> Telescope search_history <CR>", "find through search history" },
 		["<leader>fq"] = { "<cmd> Telescope quickfix <CR>", "find items in the quickfix list" },
+		["<leader>f."] = { "<cmd> Telescope resume <CR>", "find resume" },
 	},
 }
 
