@@ -10,7 +10,7 @@ M.general = {
 		["<leader>nb"] = { "<cmd> enew <CR>", "new buffer" },
 		["<leader>]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "jump to next todo" },
 		["<leader>[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "jump to previous todo" },
-		["<C-b>"] = { "<cmd> SymbolsOutline <CR>", "toggle symbols outline" },
+		["<C-s>"] = { "<cmd> SymbolsOutline <CR>", "toggle symbols outline" },
 		["<leader>."] = {
 			function()
 				require("conform").format({ async = true })
