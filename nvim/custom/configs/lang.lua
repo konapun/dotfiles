@@ -37,35 +37,32 @@ local config = {
 		formatters = { "clang-format" },
 	},
 	go = {
-		language_server = "gopls",
-		formatters = { "gofmt", "goimports" },
-		tools = { "gomodifytags", "go-debug-adapter", "impl" },
-		settings = {
-			gopls = {
-				["ui.inlayhint.hints"] = {
-					assignVariableTypes = true,
-					compositeLiteralFields = true,
-					compositeLiteralTypes = true,
-					constantValues = true,
-					functionTypeParameters = true,
-					parameterNames = true,
-					rangeVariableTypes = true,
-				},
-				semanticTokens = true,
-				hints = {
-					assignVariableTypes = true,
-					compositeLiteralFields = true,
-					compositeLiteralTypes = true,
-					constantValues = true,
-					functionTypeParameters = true,
-					parameterNames = true,
-					rangeVariableTypes = true,
+		language_server = {
+			name = "gopls",
+			settings = {
+				gopls = {
+					["ui.inlayhint.hints"] = {
+						assignVariableTypes = true,
+						compositeLiteralFields = true,
+						compositeLiteralTypes = true,
+						constantValues = true,
+						functionTypeParameters = true,
+						parameterNames = true,
+						rangeVariableTypes = true,
+					},
 				},
 			},
 		},
+		formatters = { "gofmt", "goimports" },
+		tools = { "gomodifytags", "go-debug-adapter", "impl" },
 		debug = {
-			dap = { -- TODO
-				provider = "dlv",
+			dap = {
+				adapter = {
+					-- TODO:
+				},
+				configuration = {
+					-- TODO:
+				},
 			},
 		},
 	},

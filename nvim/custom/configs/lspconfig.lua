@@ -6,12 +6,9 @@ local lspconfig_provider = require("custom.configs.providers.lspconfig")
 -- set default config for all language servers
 local servers = lspconfig_provider.provide()
 for server, settings in pairs(servers) do
-  lspconfig[server].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = settings,
-  })
+	lspconfig[server].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		settings = settings,
+	})
 end
-
--- any additional configuration for specific language servers
--- lspconfig.pyright.setup { blabla}
