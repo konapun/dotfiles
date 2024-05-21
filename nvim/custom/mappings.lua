@@ -4,8 +4,15 @@ local M = {}
 M.general = {
 	n = {
 		["<Esc>"] = { "<cmd> :noh <CR> :cclose <CR>", "Clear highlights and close quickfix panel" },
-		["<leader>ww"] = { "<cmd> set wrap! <CR>", "Toggle word wrapping" },
-		["<leader>nn"] = { "<cmd> set nu! <CR>", "Toggle line number" },
+		["<leader>tw"] = { "<cmd> set wrap! <CR>", "Toggle word wrapping" },
+		["<leader>tn"] = { "<cmd> set nu! <CR>", "Toggle line number" },
+    ["<leader>tr"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
+		["<leader>tc"] = { "<cmd> Coverage <CR>", "Toggle code coverage" },
+		["<leader>tz"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "Toggle zen mode" },
+		["<leader>tt"] = {
+			"<cmd> lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) <CR>",
+			"Toggle inlay hints",
+		},
 		["<leader>nt"] = { "<cmd> tabnew <CR>", "New tab" },
 		["<leader>nb"] = { "<cmd> enew <CR>", "New buffer" },
 		["<leader>]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "Jump to next todo" },
@@ -14,10 +21,8 @@ M.general = {
 			function()
 				require("conform").format({ async = true })
 			end,
-			"formatting",
+			"Apply formatting",
 		},
-		["<leader>a"] = { "<cmd> Coverage <CR>", "Toggle code coverage" },
-		["<leader>z"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "Zen mode" },
 	},
 }
 
