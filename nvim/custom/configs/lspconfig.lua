@@ -5,10 +5,11 @@ local lspconfig_provider = require("custom.configs.providers.lspconfig")
 
 -- set default config for all language servers
 local servers = lspconfig_provider.provide()
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup({
+for server, settings in pairs(servers) do
+  lspconfig[server].setup({
     on_attach = on_attach,
     capabilities = capabilities,
+    settings = settings,
   })
 end
 

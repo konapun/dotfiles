@@ -1,9 +1,8 @@
 local lang = require("custom.configs.lang")
 
--- return a list of language servers or the alias of the language server
+-- return a mapping of language servers or the alias of the language server to additional settings for the server, if any
 local function getLanguageServers(config)
-  local languageServers = {}
-  local seen = {} -- Table to track seen language servers
+  local languageServerMap = {}
 
   for _, v in pairs(config) do
     local serverName = ""
@@ -14,13 +13,12 @@ local function getLanguageServers(config)
     end
 
     -- Add to languageServers if not seen before
-    if serverName ~= "" and not seen[serverName] then
-      table.insert(languageServers, serverName)
-      seen[serverName] = true
+    if serverName ~= "" and not languageServerMap[serverName] then
+      languageServerMap[serverName] = v.language_server.settings or {}
     end
   end
 
-  return languageServers
+  return languageServerMap
 end
 return {
   provide = function()

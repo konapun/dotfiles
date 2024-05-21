@@ -10,13 +10,14 @@ M.general = {
 		["<leader>nb"] = { "<cmd> enew <CR>", "new buffer" },
 		["<leader>]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "jump to next todo" },
 		["<leader>[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "jump to previous todo" },
-		["<C-s>"] = { "<cmd> SymbolsOutline <CR>", "toggle symbols outline" },
+		["<leader>s"] = { "<cmd> SymbolsOutline <CR>", "toggle symbols outline" },
 		["<leader>."] = {
 			function()
 				require("conform").format({ async = true })
 			end,
 			"formatting",
 		},
+    ["<leader>a"] = { "<cmd> Coverage <CR>", "toggle code coverage" },
 		["<leader>z"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "zen mode" },
 	},
 }
@@ -42,7 +43,7 @@ M.copilot = {
 
 M.minimap = {
 	n = {
-		["<C-m>"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "toggle minimap" },
+		["<leader>mm"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "toggle minimap" },
 		["<leader>mf"] = { "<cmd> lua require('codewindow').toggle_focus() <CR>", "focus/unfocus minimap" },
 	},
 }
