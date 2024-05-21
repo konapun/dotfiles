@@ -21,12 +21,20 @@ M.general = {
 	},
 }
 
+M.overseer = {
+	n = {
+		["<leader>oo"] = { "<cmd> OverseerToggle <CR>", "toggle overseer" },
+		["<leader>or"] = { "<cmd> OverseerRun <CR>", "overseer run" },
+		["<leader>oi"] = { "<cmd> OverseerInfo <CR>", "overseer info" },
+	},
+}
+
 M.outline = {
 	n = {
-		["<leader>oo"] = { "<cmd> Outline! <CR>", "toggle symbols outline" },
-		["<leader>op"] = { "<cmd> Outline <CR>", "open symbols outline with focus" },
-		["<leader>of"] = { "<cmd> OutlineFocusOutline <CR>", "focus on outline" },
-		["<leader>oc"] = { "<cmd> OutlineFocusCode <CR>", "focus on code" },
+		["<leader>jj"] = { "<cmd> Outline! <CR>", "toggle symbols outline" },
+		["<leader>jk"] = { "<cmd> Outline <CR>", "open symbols outline with focus" },
+		["<leader>jf"] = { "<cmd> OutlineFocusOutline <CR>", "focus on outline" },
+		["<leader>jd"] = { "<cmd> OutlineFocusCode <CR>", "focus on code" },
 	},
 }
 
