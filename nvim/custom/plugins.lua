@@ -145,6 +145,7 @@ local plugins = {
 	},
 
 	{
+		-- TODO: lazy loading with commands
 		"stevearc/overseer.nvim",
 		event = "VeryLazy",
 		config = function()
@@ -161,10 +162,10 @@ local plugins = {
 	},
 
 	{
-		"simrat39/symbols-outline.nvim",
-		event = "VeryLazy",
+		"hedyhli/outline.nvim",
+		event = "BufRead",
 		config = function()
-			require("symbols-outline").setup()
+			require("outline").setup()
 		end,
 	},
 
@@ -196,6 +197,41 @@ local plugins = {
 			require("sunglasses").setup({
 				filter_type = "SHADE",
 				filter_percent = 0.60,
+				-- TODO: remove these once the Outline PR is merged
+				excluded_filetypes = {
+					"dashboard",
+					"Outline",
+					"lspsagafinder",
+					"packer",
+					"checkhealth",
+					"mason",
+					"NvimTree",
+					"neo-tree",
+					"plugin",
+					"lazy",
+					"TelescopePrompt",
+					"alpha",
+					"toggleterm",
+					"sagafinder",
+					"better_term",
+					"fugitiveblame",
+					"starter",
+					"NeogitPopup",
+					"NeogitStatus",
+					"DiffviewFiles",
+					"DiffviewFileHistory",
+					"DressingInput",
+					"spectre_panel",
+					"zsh",
+					"registers",
+					"startuptime",
+					"OverseerList",
+					"Navbuddy",
+					"noice",
+					"notify",
+					"saga_codeaction",
+					"sagarename",
+				},
 			})
 		end,
 	},

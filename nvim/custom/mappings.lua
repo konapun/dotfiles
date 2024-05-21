@@ -10,15 +10,23 @@ M.general = {
 		["<leader>nb"] = { "<cmd> enew <CR>", "new buffer" },
 		["<leader>]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "jump to next todo" },
 		["<leader>[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "jump to previous todo" },
-		["<leader>s"] = { "<cmd> SymbolsOutline <CR>", "toggle symbols outline" },
 		["<leader>."] = {
 			function()
 				require("conform").format({ async = true })
 			end,
 			"formatting",
 		},
-    ["<leader>a"] = { "<cmd> Coverage <CR>", "toggle code coverage" },
+		["<leader>a"] = { "<cmd> Coverage <CR>", "toggle code coverage" },
 		["<leader>z"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "zen mode" },
+	},
+}
+
+M.outline = {
+	n = {
+		["<leader>oo"] = { "<cmd> Outline! <CR>", "toggle symbols outline" },
+		["<leader>op"] = { "<cmd> Outline <CR>", "open symbols outline with focus" },
+		["<leader>of"] = { "<cmd> OutlineFocusOutline <CR>", "focus on outline" },
+		["<leader>oc"] = { "<cmd> OutlineFocusCode <CR>", "focus on code" },
 	},
 }
 
