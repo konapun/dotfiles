@@ -3,120 +3,120 @@ local M = {}
 
 M.general = {
 	n = {
-		["<Esc>"] = { "<cmd> :noh <CR> :cclose <CR>", "clear highlights and close quickfix panel" },
-		["<leader>ww"] = { "<cmd> set wrap! <CR>", "toggle word wrapping" },
-		["<leader>nn"] = { "<cmd> set nu! <CR>", "toggle line number" },
-		["<leader>nt"] = { "<cmd> tabnew <CR>", "new tab" },
-		["<leader>nb"] = { "<cmd> enew <CR>", "new buffer" },
-		["<leader>]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "jump to next todo" },
-		["<leader>[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "jump to previous todo" },
+		["<Esc>"] = { "<cmd> :noh <CR> :cclose <CR>", "Clear highlights and close quickfix panel" },
+		["<leader>ww"] = { "<cmd> set wrap! <CR>", "Toggle word wrapping" },
+		["<leader>nn"] = { "<cmd> set nu! <CR>", "Toggle line number" },
+		["<leader>nt"] = { "<cmd> tabnew <CR>", "New tab" },
+		["<leader>nb"] = { "<cmd> enew <CR>", "New buffer" },
+		["<leader>]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "Jump to next todo" },
+		["<leader>[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "Jump to previous todo" },
 		["<leader>."] = {
 			function()
 				require("conform").format({ async = true })
 			end,
 			"formatting",
 		},
-		["<leader>a"] = { "<cmd> Coverage <CR>", "toggle code coverage" },
-		["<leader>z"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "zen mode" },
+		["<leader>a"] = { "<cmd> Coverage <CR>", "Toggle code coverage" },
+		["<leader>z"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "Zen mode" },
 	},
 }
 
 M.overseer = {
 	n = {
-		["<leader>oo"] = { "<cmd> OverseerToggle <CR>", "toggle overseer" },
-		["<leader>or"] = { "<cmd> OverseerRun <CR>", "overseer run" },
-		["<leader>oi"] = { "<cmd> OverseerInfo <CR>", "overseer info" },
+		["<leader>oo"] = { "<cmd> OverseerToggle <CR>", "Toggle overseer" },
+		["<leader>or"] = { "<cmd> OverseerRun <CR>", "Overseer run" },
+		["<leader>oi"] = { "<cmd> OverseerInfo <CR>", "Overseer info" },
 	},
 }
 
 M.outline = {
 	n = {
-		["<leader>jj"] = { "<cmd> Outline! <CR>", "toggle symbols outline" },
-		["<leader>jk"] = { "<cmd> Outline <CR>", "open symbols outline with focus" },
-		["<leader>jf"] = { "<cmd> OutlineFocusOutline <CR>", "focus on outline" },
-		["<leader>jd"] = { "<cmd> OutlineFocusCode <CR>", "focus on code" },
+		["<leader>jj"] = { "<cmd> Outline! <CR>", "Toggle symbols outline" },
+		["<leader>jk"] = { "<cmd> Outline <CR>", "Open symbols outline with focus" },
+		["<leader>jf"] = { "<cmd> OutlineFocusOutline <CR>", "Focus on outline" },
+		["<leader>jd"] = { "<cmd> OutlineFocusCode <CR>", "Focus on code" },
 	},
 }
 
 M.copilot = {
 	i = {
-		["<C-\\>"] = { "<cmd> Copilot suggestion accept_line <CR>", "accept suggestion" },
+		["<C-\\>"] = { "<cmd> Copilot suggestion accept_line <CR>", "Accept suggestion" },
 	},
 	n = {
-		["<C-\\>"] = { "<cmd> Copilot panel open <CR>", "open panel" },
-		["<leader>co"] = { "<cmd> CopilotChatToggle <CR>", "toggle chat" },
+		["<leader>cc"] = { "<cmd> Copilot panel open <CR>", "Open panel" },
+		["<leader>co"] = { "<cmd> CopilotChatToggle <CR>", "Toggle chat" },
 	},
 	v = {
-		["<leader>cc"] = { "<cmd> CopilotChatToggle <CR>", "toggle chat" },
-		["<leader>ce"] = { "<cmd> CopilotChatExplain <CR>", "explain" },
-		["<leader>cr"] = { "<cmd> CopilotChatReview <CR>", "review" },
-		["<leader>cx"] = { "<cmd> CopilotChatFix <CR>", "fix" },
-		["<leader>co"] = { "<cmd> CopilotChatOptimize <CR>", "optimize" },
-		["<leader>cd"] = { "<cmd> CopilotChatDocs <CR>", "generate docs" },
-		["<leader>ct"] = { "<cmd> CopilotChatTests <CR>", "generate tests" },
+		["<leader>cc"] = { "<cmd> CopilotChatToggle <CR>", "Toggle chat" },
+		["<leader>ce"] = { "<cmd> CopilotChatExplain <CR>", "Explain" },
+		["<leader>cr"] = { "<cmd> CopilotChatReview <CR>", "Review" },
+		["<leader>cx"] = { "<cmd> CopilotChatFix <CR>", "Fix" },
+		["<leader>co"] = { "<cmd> CopilotChatOptimize <CR>", "Optimize" },
+		["<leader>cd"] = { "<cmd> CopilotChatDocs <CR>", "Generate docs" },
+		["<leader>ct"] = { "<cmd> CopilotChatTests <CR>", "Generate tests" },
 	},
 }
 
 M.minimap = {
 	n = {
-		["<leader>mm"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "toggle minimap" },
-		["<leader>mf"] = { "<cmd> lua require('codewindow').toggle_focus() <CR>", "focus/unfocus minimap" },
+		["<leader>mm"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "Toggle minimap" },
+		["<leader>mf"] = { "<cmd> lua require('codewindow').toggle_focus() <CR>", "Focus/unfocus minimap" },
 	},
 }
 
 M.telescope = {
 	n = {
-		["<leader>fs"] = { "<cmd> Telescope lsp_document_symbols <CR>", "find symbols (document)" },
-		["<leader>fS"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "find symbols (workspace)" },
-		["<leader>fd"] = { "<cmd> Telescope lsp_definitions <CR>", "find definitions" },
-		["<leader>fD"] = { "<cmd> Telescope lsp_type_definitions <CR>", "find references" },
-		["<leader>fr"] = { "<cmd> Telescope lsp_references <CR>", "find references" },
-		["<leader>fi"] = { "<cmd> Telescope lsp_implementations <CR>", "find implementations" },
-		["<leader>fc"] = { "<cmd> Telescope lsp_incoming_calls <CR>", "find incoming calls" },
-		["<leader>fo"] = { "<cmd> Telescope lsp_outgoing_calls <CR>", "find outgoing calls" },
-		["<leader>fx"] = { "<cmd> Telescope diagnostics bufnr=0 <CR>", "find diagnostics (current buffer)" },
-		["<leader>fX"] = { "<cmd> Telescope diagnostics <CR>", "find diagnostics (all)" },
-		["<leader>fj"] = { "<cmd> Telescope jumplist <CR>", "find jumplist" },
-		["<leader>ft"] = { "<cmd> TodoTelescope <CR>", "find todos" },
-		["<leader>fm"] = { "<cmd> Telescope marks <CR>", "find marks" },
-		["<leader>fh"] = { "<cmd> Telescope search_history <CR>", "find through search history" },
-		["<leader>fq"] = { "<cmd> Telescope quickfix <CR>", "find items in the quickfix list" },
-		["<leader>f."] = { "<cmd> Telescope resume <CR>", "find resume" },
+		["<leader>fs"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find symbols (document)" },
+		["<leader>fS"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "Find symbols (workspace)" },
+		["<leader>fd"] = { "<cmd> Telescope lsp_definitions <CR>", "Find definitions" },
+		["<leader>fD"] = { "<cmd> Telescope lsp_type_definitions <CR>", "Find references" },
+		["<leader>fr"] = { "<cmd> Telescope lsp_references <CR>", "Find references" },
+		["<leader>fi"] = { "<cmd> Telescope lsp_implementations <CR>", "Find implementations" },
+		["<leader>fc"] = { "<cmd> Telescope lsp_incoming_calls <CR>", "Find incoming calls" },
+		["<leader>fo"] = { "<cmd> Telescope lsp_outgoing_calls <CR>", "Find outgoing calls" },
+		["<leader>fx"] = { "<cmd> Telescope diagnostics bufnr=0 <CR>", "Find diagnostics (current buffer)" },
+		["<leader>fX"] = { "<cmd> Telescope diagnostics <CR>", "Find diagnostics (all)" },
+		["<leader>fj"] = { "<cmd> Telescope jumplist <CR>", "Find jumplist" },
+		["<leader>ft"] = { "<cmd> TodoTelescope <CR>", "Find todos" },
+		["<leader>fm"] = { "<cmd> Telescope marks <CR>", "Find marks" },
+		["<leader>fh"] = { "<cmd> Telescope search_history <CR>", "Find through search history" },
+		["<leader>fq"] = { "<cmd> Telescope quickfix <CR>", "Find items in the quickfix list" },
+		["<leader>f."] = { "<cmd> Telescope resume <CR>", "Find resume" },
 	},
 }
 
 M.debug = {
 	n = {
-		["<leader>dc"] = { "<cmd> lua require('dap').continue() <CR>", "continue" },
-		["<leader>ds"] = { "<cmd> lua require('dap').step_over() <CR>", "step over" },
-		["<leader>di"] = { "<cmd> lua require('dap').step_into() <CR>", "step into" },
-		["<leader>do"] = { "<cmd> lua require('dap').step_out() <CR>", "step out" },
-		["<leader>db"] = { "<cmd> lua require('dap').toggle_breakpoint() <CR>", "toggle breakpoint" },
+		["<leader>dc"] = { "<cmd> lua require('dap').continue() <CR>", "Continue" },
+		["<leader>ds"] = { "<cmd> lua require('dap').step_over() <CR>", "Step over" },
+		["<leader>di"] = { "<cmd> lua require('dap').step_into() <CR>", "Step into" },
+		["<leader>do"] = { "<cmd> lua require('dap').step_out() <CR>", "Step out" },
+		["<leader>db"] = { "<cmd> lua require('dap').toggle_breakpoint() <CR>", "Toggle breakpoint" },
 		["<leader>dB"] = {
 			"<cmd> lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: ')) <CR>",
-			"set breakpoint",
+			"Set breakpoint",
 		},
 		["<leader>dl"] = {
 			"<cmd> lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) <CR>",
-			"log point",
+			"Log point",
 		},
-		["<leader>dr"] = { "<cmd> lua require('dap').repl.open() <CR>", "open repl" },
-		["<leader>de"] = { "<cmd> lua require('dap').repl.run_last() <CR>", "run last" },
-		["<leader>dd"] = { "<cmd> lua require('dap').disconnect() <CR>", "disconnect" },
-		["<leader>dk"] = { "<cmd> lua require('dap').close() <CR>", "close" },
+		["<leader>dr"] = { "<cmd> lua require('dap').repl.open() <CR>", "Open repl" },
+		["<leader>de"] = { "<cmd> lua require('dap').repl.run_last() <CR>", "Run last" },
+		["<leader>dd"] = { "<cmd> lua require('dap').disconnect() <CR>", "Disconnect" },
+		["<leader>dk"] = { "<cmd> lua require('dap').close() <CR>", "Close" },
 		["<leader>df"] = {
 			function()
 				local widgets = require("dap.ui.widgets")
 				widgets.centered_float(widgets.frames)
 			end,
-			"view frames",
+			"View frames",
 		},
 		["<leader>dy"] = {
 			function()
 				local widgets = require("dap.ui.widgets")
 				widgets.centered_float(widgets.scopes)
 			end,
-			"view scopes",
+			"View scopes",
 		},
 	},
 }
