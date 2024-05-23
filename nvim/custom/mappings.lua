@@ -33,8 +33,8 @@ M.general = {
 		},
 		["]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "Jump to next todo" },
 		["[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "Jump to previous todo" },
-    ["]x"] = { "<cmd> lua vim.diagnostic.goto_next() <CR>", "Jump to next diagnostic" },
-    ["[x"] = { "<cmd> lua vim.diagnostic.goto_prev() <CR>", "Jump to previous diagnostic" },
+		["]x"] = { "<cmd> lua vim.diagnostic.goto_next() <CR>", "Jump to next diagnostic" },
+		["[x"] = { "<cmd> lua vim.diagnostic.goto_prev() <CR>", "Jump to previous diagnostic" },
 	},
 }
 
@@ -96,6 +96,7 @@ M.telescope = {
 		["<leader>fj"] = { "<cmd> Telescope jumplist <CR>", "Find jumplist" },
 		["<leader>ft"] = { "<cmd> TodoTelescope <CR>", "Find todos" },
 		["<leader>fm"] = { "<cmd> Telescope marks <CR>", "Find marks" },
+		["<leader>fy"] = { "<cmd> Telescope registers <CR>", "Find registers" },
 		["<leader>fh"] = { "<cmd> Telescope search_history <CR>", "Find through search history" },
 		["<leader>fq"] = { "<cmd> Telescope quickfix <CR>", "Find items in the quickfix list" },
 		["<leader>f."] = { "<cmd> Telescope resume <CR>", "Find resume" },
