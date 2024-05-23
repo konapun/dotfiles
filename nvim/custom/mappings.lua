@@ -1,6 +1,15 @@
 ---@type MappingsTable
 local M = {}
 
+--[[
+-- Mappings are mostly normalized in the following categories:
+-- 1. General mappings
+--    a. Toggle mappings (<leader> + t + key)
+--    b. Jump mappings ([|] + key)
+-- 2. Application mappings (<leader> + application_prefix + key)
+--    If there's a "main" action for an application, it's usually mapped to
+--    <leader> + application_prefix + application_prefix in order to speed up its activation
+--]]
 M.general = {
 	n = {
 		["<Esc>"] = { "<cmd> :noh <CR> :cclose <CR>", "Clear highlights and close quickfix panel" },
