@@ -16,14 +16,16 @@ M.general = {
 		["<leader>tT"] = { "<cmd> lua _G.toggle_modal_inlay_hints() <Cr>", "Toggle modal inlay hints" },
 		["<leader>nt"] = { "<cmd> tabnew <CR>", "New tab" },
 		["<leader>nb"] = { "<cmd> enew <CR>", "New buffer" },
-		["<leader>]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "Jump to next todo" },
-		["<leader>[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "Jump to previous todo" },
 		["<leader>."] = {
 			function()
 				require("conform").format({ async = true })
 			end,
 			"Apply formatting",
 		},
+		["]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "Jump to next todo" },
+		["[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "Jump to previous todo" },
+    ["]x"] = { "<cmd> lua vim.diagnostic.goto_next() <CR>", "Jump to next diagnostic" },
+    ["[x"] = { "<cmd> lua vim.diagnostic.goto_prev() <CR>", "Jump to previous diagnostic" },
 	},
 }
 
