@@ -61,3 +61,5 @@ fstash() {
     fi
   done
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

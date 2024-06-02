@@ -4,6 +4,8 @@ local tmux_system_theme=$HOME/.tmux/plugins/system-theme/tmux-system-theme.conf
 zsh ./tmux/install.zsh
 
 cp -r ./tmux/plugins/* $HOME/.tmux/plugins
+cp -r ./tmux/scripts $HOME/.tmux
+chmod +x $HOME/.tmux/scripts/*
 
 themer_substitute tmux_theme $TMUX_THEME $tmux_config_file
 themer_cleanup $tmux_config_file
