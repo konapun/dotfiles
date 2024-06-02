@@ -191,6 +191,17 @@ local plugins = {
 	},
 
 	{
+		"JellyApple102/flote.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("flote").setup({
+        window_border = "single",
+        window_style = ""
+      })
+		end,
+	},
+
+	{
 		"miversen33/sunglasses.nvim",
 		event = "UIEnter",
 		config = function()

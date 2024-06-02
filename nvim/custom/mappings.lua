@@ -25,6 +25,7 @@ M.general = {
 		["<leader>tT"] = { "<cmd> lua _G.toggle_modal_inlay_hints() <Cr>", "Toggle modal inlay hints" },
 		["<leader>nt"] = { "<cmd> tabnew <CR>", "New tab" },
 		["<leader>nb"] = { "<cmd> enew <CR>", "New buffer" },
+		["<leader>q"] = { "<cmd> Flote <CR>", "Open Flote notes" },
 		["<leader>."] = {
 			function()
 				require("conform").format({ async = true })
