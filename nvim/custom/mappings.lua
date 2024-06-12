@@ -1,3 +1,5 @@
+vim.g.maplocalleader = "\\"
+
 ---@type MappingsTable
 local M = {}
 
@@ -6,7 +8,8 @@ local M = {}
 -- 1. General mappings
 --    a. Toggle mappings (<leader> + t + key)
 --    b. Jump mappings ([|] + key)
--- 2. Application mappings (<leader> + application_prefix + key)
+-- 2 Panel mappings (<localleader> + key)
+-- 3. Application mappings (<leader> + application_prefix + key)
 --    If there's a "main" action for an application, it's usually mapped to
 --    <leader> + application_prefix + application_prefix in order to speed up its activation
 --]]
@@ -17,7 +20,6 @@ M.general = {
 		["<leader>tn"] = { "<cmd> set nu! <CR>", "Toggle line number" },
 		["<leader>tr"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
 		["<leader>tc"] = { "<cmd> Coverage <CR>", "Toggle code coverage" },
-		["<leader>tz"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "Toggle zen mode" },
 		["<leader>tt"] = {
 			"<cmd> lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) <CR>",
 			"Toggle inlay hints",
@@ -25,7 +27,6 @@ M.general = {
 		["<leader>tT"] = { "<cmd> lua _G.toggle_modal_inlay_hints() <Cr>", "Toggle modal inlay hints" },
 		["<leader>nt"] = { "<cmd> tabnew <CR>", "New tab" },
 		["<leader>nb"] = { "<cmd> enew <CR>", "New buffer" },
-		["<leader>q"] = { "<cmd> Flote <CR>", "Open Flote notes" },
 		["<leader>."] = {
 			function()
 				require("conform").format({ async = true })
@@ -36,6 +37,19 @@ M.general = {
 		["[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "Jump to previous todo" },
 		["]x"] = { "<cmd> lua vim.diagnostic.goto_next() <CR>", "Jump to next diagnostic" },
 		["[x"] = { "<cmd> lua vim.diagnostic.goto_prev() <CR>", "Jump to previous diagnostic" },
+	},
+}
+
+M.ui = {
+	n = {
+		["<localleader>a"] = { "<cmd> NvimTreeToggle <CR>", "Toggle file explorer" },
+		["<localleader>c"] = { "<cmd> CopilotChatToggle <CR>", "Toggle chat" },
+		["<localleader>d"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "Toggle minimap" },
+		["<localleader>f"] = { "<cmd> Flote <CR>", "Open Flote notes" },
+		["<localleader>r"] = { "<cmd> OverseerToggle <CR>", "Toggle overseer" },
+		["<localleader>s"] = { "<cmd> Outline! <CR>", "Toggle symbols outline" },
+		["<localleader>z"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "Toggle zen mode" },
+		["<localleader>x"] = { "<cmd> Copilot panel open <CR>", "Open panel" },
 	},
 }
 
