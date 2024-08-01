@@ -95,6 +95,25 @@ local plugins = {
 	},
 
 	{
+		"jinh0/eyeliner.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("eyeliner").setup({
+				-- show highlights only after keypress
+				highlight_on_key = true,
+
+				-- dim all other characters if set to true (recommended!)
+				dim = false,
+
+				-- set the maximum number of characters eyeliner.nvim will check from
+				-- your current cursor position; this is useful if you are dealing with
+				-- large files: see https://github.com/jinh0/eyeliner.nvim/issues/41
+				max_length = 9999,
+			})
+		end,
+	},
+
+	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
 		event = "InsertEnter",
@@ -195,9 +214,9 @@ local plugins = {
 		event = "VeryLazy",
 		config = function()
 			require("flote").setup({
-        window_border = "single",
-        window_style = ""
-      })
+				window_border = "single",
+				window_style = "",
+			})
 		end,
 	},
 
