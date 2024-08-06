@@ -96,14 +96,14 @@ local plugins = {
 
 	{
 		"jinh0/eyeliner.nvim",
-		event = "VeryLazy",
+		event = "InsertEnter",
 		config = function()
 			require("eyeliner").setup({
 				-- show highlights only after keypress
 				highlight_on_key = true,
 
 				-- dim all other characters if set to true (recommended!)
-				dim = false,
+				dim = true,
 
 				-- set the maximum number of characters eyeliner.nvim will check from
 				-- your current cursor position; this is useful if you are dealing with
