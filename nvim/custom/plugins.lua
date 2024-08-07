@@ -50,9 +50,27 @@ local plugins = {
 	},
 
 	{
+		"nvim-treesitter/nvim-treesitter-context",
+		event = "InsertEnter",
+	},
+
+	{
+		"utilyre/barbecue.nvim",
+		event = "BufRead",
+		dependencies = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons", -- optional dependency
+		},
+		opts = {
+			show_dirname = true,
+			show_basename = true,
+			show_modified = false,
+		},
+	},
+
+	{
 		"nvim-tree/nvim-tree.lua",
 		opts = overrides.nvimtree,
-		-- enabled = false,
 	},
 
 	-- Install a plugin

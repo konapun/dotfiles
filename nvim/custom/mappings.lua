@@ -22,6 +22,7 @@ M.general = {
 		["<leader>.n"] = { "<cmd> set nu! <CR>", "Toggle line number" },
 		["<leader>.r"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
 		["<leader>.c"] = { "<cmd> Coverage <CR>", "Toggle code coverage" },
+		["<leader>.b"] = { "<cmd> TSContextToggle <CR>", "Toggle treesitter context" },
 		["<leader>.t"] = {
 			"<cmd> lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) <CR>",
 			"Toggle inlay hints",
@@ -46,12 +47,14 @@ M.general = {
 		["[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "Jump to previous todo" },
 		["]x"] = { "<cmd> lua vim.diagnostic.goto_next() <CR>", "Jump to next diagnostic" },
 		["[x"] = { "<cmd> lua vim.diagnostic.goto_prev() <CR>", "Jump to previous diagnostic" },
+		["[a"] = { "<cmd> lua require('barbecue.ui').navigate(-1) <CR>", "Jump to last context" },
 	},
 }
 
 M.ui = {
 	n = {
 		["<localleader>a"] = { "<cmd> NvimTreeToggle <CR>", "Toggle file explorer" },
+		["<localleader>b"] = { "<cmd> Barbecue toggle<CR>", "Toggle barbecue context bar" },
 		["<localleader>c"] = { "<cmd> CopilotChatToggle <CR>", "Toggle copilot chat" },
 		["<localleader>d"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "Toggle minimap" },
 		["<localleader>f"] = { "<cmd> Flote <CR>", "Open Flote notes" },
