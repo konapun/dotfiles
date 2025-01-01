@@ -182,6 +182,18 @@ local plugins = {
 	},
 
 	{
+		"pwntester/octo.nvim",
+		event = "VeryLazy",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+		config = function()
+			require("octo").setup()
+		end,
+	},
+
+	{
 		-- TODO: lazy loading with commands
 		"stevearc/overseer.nvim",
 		event = "VeryLazy",
