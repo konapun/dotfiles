@@ -219,6 +219,32 @@ local plugins = {
 	},
 
 	{
+		"ldelossa/litee.nvim",
+		event = "VeryLazy",
+		opts = {
+			notify = { enabled = false },
+			panel = {
+				orientation = "right",
+			},
+		},
+		config = function(_, opts)
+			require("litee.lib").setup(opts)
+		end,
+	},
+	{
+		"ldelossa/litee-calltree.nvim",
+		dependencies = "ldelossa/litee.nvim",
+		event = "VeryLazy",
+		opts = {
+			on_open = "panel",
+			map_resize_keys = false,
+		},
+		config = function(_, opts)
+			require("litee.calltree").setup(opts)
+		end,
+	},
+
+	{
 		"chentoast/marks.nvim",
 		event = "BufRead",
 		config = function()

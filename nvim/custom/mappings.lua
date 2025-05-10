@@ -15,7 +15,7 @@ local M = {}
 --]]
 M.general = {
 	n = {
-		["<Esc>"] = { "<cmd> :noh <CR> :cclose <CR>", "Clear highlights and close quickfix panel" },
+		["<Esc>"] = { "<cmd> :noh <CR> :cclose <CR> LTCloseCalltree <CR>", "Clear highlights and close quickfix panel" },
 
 		-- Toggle mappings
 		["<leader>.w"] = { "<cmd> set wrap! <CR>", "Toggle word wrapping" },
@@ -35,6 +35,14 @@ M.general = {
 		-- buffer mappings
 		["<leader>bn"] = { "<cmd> enew <CR>", "New buffer" },
 
+		-- jump mappings
+		["]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "Jump to next todo" },
+		["[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "Jump to previous todo" },
+		["]x"] = { "<cmd> lua vim.diagnostic.goto_next() <CR>", "Jump to next diagnostic" },
+		["[x"] = { "<cmd> lua vim.diagnostic.goto_prev() <CR>", "Jump to previous diagnostic" },
+		["[a"] = { "<cmd> lua require('barbecue.ui').navigate(-1) <CR>", "Jump to last context" },
+
+    -- formatting
 		["<leader>,"] = {
 			function()
 				require("conform").format({ async = true })
@@ -42,12 +50,9 @@ M.general = {
 			"Apply formatting",
 		},
 
-		-- jump mappings
-		["]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "Jump to next todo" },
-		["[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "Jump to previous todo" },
-		["]x"] = { "<cmd> lua vim.diagnostic.goto_next() <CR>", "Jump to next diagnostic" },
-		["[x"] = { "<cmd> lua vim.diagnostic.goto_prev() <CR>", "Jump to previous diagnostic" },
-		["[a"] = { "<cmd> lua require('barbecue.ui').navigate(-1) <CR>", "Jump to last context" },
+    -- call map
+    ["<leader>gi"] = { "<cmd> lua vim.lsp.buf.incoming_calls() <CR>", "Incoming calls" },
+    ["<leader>go"] = { "<cmd> lua vim.lsp.buf.outgoing_calls() <CR>", "Outgoing calls" },
 	},
 }
 
