@@ -15,7 +15,7 @@ local M = {}
 --]]
 M.general = {
 	n = {
-		["<Esc>"] = { "<cmd> :noh <CR> :cclose <CR> :LTCloseCalltree <CR>", "Clear highlights and close quickfix panel" },
+		["<Esc>"] = { "<cmd> :noh <CR> :cclose <CR>", "Clear highlights and close quickfix panel" },
 
 		-- Toggle mappings
 		["<leader>.w"] = { "<cmd> set wrap! <CR>", "Toggle word wrapping" },
