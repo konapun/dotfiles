@@ -7,7 +7,7 @@ autocmd("VimResized", {
 })
 
 -- Auto show inlay hints
-vim.g.modal_inlay_hints = true
+vim.g.modal_inlay_hints = false -- off by default
 autocmd({ "LspAttach", "InsertEnter", "InsertLeave" }, {
 	callback = function(args)
 		if vim.g.modal_inlay_hints then

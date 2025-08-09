@@ -18,6 +18,7 @@ In particular, this provides installation and configuration for:
   * neovim
   * tmux
   * ranger
+  * mcphub
   * slack (suggested sidebar theme)
   * zsh (and sets up replacements for cat and ls)
   * fonts
@@ -53,12 +54,17 @@ Alternatively, you can install the following targets separately by running `zsh 
   * **gnome-terminal** install configuration for gnome terminal (where available)
   * **slack** generate sidebar theme for slack
   * **chrome** link to suggested chrome theme in web store
+  * **mcphub** install configuration for mcphub
 
 ### Options
   * `-t <theme_name>` Specify theme to use (see themes below)
   * `-w <windows username>` If on windows, the username which corresponds to the home folder which will be used as an install path for windows-specific settings
   * `-c` Compile additional Cargo packages. This is off by default since this can take a considerable amount of time. By default, only cargo packages which are dependencies for other utilities are compiled.
   * `-u` Update installed packages
+
+## Environment Variables
+For obvious reasons, tokens aren't checked into this repo. You can either include them in a gitignored file called `zsh/custom/creds.zsh` or put them anywhere else. For full functionality, the following env vars should be defined:
+  * `GITHUB_PERSONAL_ACCESS_TOKEN`: used by mcphub for the github MCP
 
 ## Theming
 Theme support is provided via a simple `sed`-based template system. Any configuration file can specify a template variable by enclosing a key

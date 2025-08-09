@@ -50,9 +50,27 @@ local plugins = {
 	},
 
 	{
+		"nvim-treesitter/nvim-treesitter-context",
+		event = "InsertEnter",
+	},
+
+	{
+		"utilyre/barbecue.nvim",
+		event = "BufRead",
+		dependencies = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons", -- optional dependency
+		},
+		opts = {
+			show_dirname = true,
+			show_basename = true,
+			show_modified = false,
+		},
+	},
+
+	{
 		"nvim-tree/nvim-tree.lua",
 		opts = overrides.nvimtree,
-		-- enabled = false,
 	},
 
 	-- Install a plugin
@@ -95,6 +113,133 @@ local plugins = {
 	},
 
 	{
+		"jinh0/eyeliner.nvim",
+		event = "InsertEnter",
+		config = function()
+			require("eyeliner").setup({
+				-- show highlights only after keypress
+				highlight_on_key = true,
+
+				-- dim all other characters if set to true (recommended!)
+				dim = true,
+
+				-- set the maximum number of characters eyeliner.nvim will check from
+				-- your current cursor position; this is useful if you are dealing with
+				-- large files: see https://github.com/jinh0/eyeliner.nvim/issues/41
+				max_length = 9999,
+			})
+		end,
+	},
+
+	-- AI tools
+	{
+		"ravitemer/mcphub.nvim",
+		event = "VeryLazy",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		build = "npm install -g mcp-hub@latest", -- Installs `mcp-hub` node binary globally
+		config = function()
+			require("mcphub").setup()
+		end,
+	},
+
+	{
+		"yetone/avante.nvim",
+		-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
+		-- ⚠️ must add this setting! ! !
+		build = vim.fn.has("win32") ~= 0
+				and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+			or "make BUILD_FROM_SOURCE=true",
+		event = "VeryLazy",
+		version = false, -- Never set this value to "*"! Never!
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+			--- The below dependencies are optional,
+			"nvim-telescope/telescope.nvim",
+			"hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
+			"folke/snacks.nvim", -- for input provider snacks
+			"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+			"zbirenbaum/copilot.lua", -- for providers='copilot'
+			{
+				-- support for image pasting
+				"HakonHarnes/img-clip.nvim",
+				event = "VeryLazy",
+				opts = {
+					-- recommended settings
+					default = {
+						embed_image_as_base64 = false,
+						prompt_for_file_name = false,
+						drag_and_drop = {
+							insert_mode = true,
+						},
+						-- required for Windows users
+						use_absolute_path = true,
+					},
+				},
+			},
+			{
+				-- Make sure to set this up properly if you have lazy=true
+				"MeanderingProgrammer/render-markdown.nvim",
+				opts = {
+					file_types = { "markdown", "Avante" },
+				},
+				ft = { "markdown", "Avante" },
+			},
+		},
+		config = function()
+			require("avante").setup({
+				-- Agent configuration
+				mode = "agentic",
+				auto_suggestions_provider = nil,
+				provider = "copilot",
+				providers = {
+					copilot = {
+						endpoint = "https://api.githubcopilot.com",
+						model = "gpt-4o-2024-11-20",
+						proxy = nil, -- [protocol://]host[:port] Use this proxy
+						allow_insecure = false, -- Allow insecure server connections
+						timeout = 30000, -- Timeout in milliseconds
+						context_window = 64000, -- Number of tokens to send to the model for context
+						extra_request_body = {
+							temperature = 0.75,
+							max_tokens = 20480,
+						},
+					},
+				},
+				-- Use snacks.nvim as input provider
+				input = {
+					provider = "snacks", -- "native" | "dressing" | "snacks"
+					provider_opts = {
+						title = "Avante Input",
+						icon = " ",
+						placeholder = "Enter your API key...",
+					},
+				},
+				file_selector = {
+					provider = "telescope",
+				},
+				selector = {
+					provider = "telescope",
+				},
+				-- system_prompt as function ensures LLM always has latest MCP server state
+				-- This is evaluated for every message, even in existing chats
+				system_prompt = function()
+					local hub = require("mcphub").get_hub_instance()
+					return hub and hub:get_active_servers_prompt() or ""
+				end,
+				-- Using function prevents requiring mcphub before it's loaded
+				custom_tools = function()
+					return {
+						require("mcphub.extensions.avante").mcp_tool(),
+					}
+				end,
+			})
+		end,
+	},
+
+	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
 		event = "InsertEnter",
@@ -105,18 +250,6 @@ local plugins = {
 					auto_trigger = true,
 				},
 			})
-		end,
-	},
-
-	{
-		"CopilotC-Nvim/CopilotChat.nvim",
-		event = "InsertEnter",
-		dependencies = {
-			{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-		},
-		config = function()
-			require("CopilotChat").setup()
 		end,
 	},
 
@@ -145,6 +278,18 @@ local plugins = {
 	},
 
 	{
+		"pwntester/octo.nvim",
+		event = "VeryLazy",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+		config = function()
+			require("octo").setup()
+		end,
+	},
+
+	{
 		-- TODO: lazy loading with commands
 		"stevearc/overseer.nvim",
 		event = "VeryLazy",
@@ -166,6 +311,32 @@ local plugins = {
 		event = "BufRead",
 		config = function()
 			require("outline").setup()
+		end,
+	},
+
+	{
+		"ldelossa/litee.nvim",
+		event = "VeryLazy",
+		opts = {
+			notify = { enabled = false },
+			panel = {
+				orientation = "right",
+			},
+		},
+		config = function(_, opts)
+			require("litee.lib").setup(opts)
+		end,
+	},
+	{
+		"ldelossa/litee-calltree.nvim",
+		dependencies = "ldelossa/litee.nvim",
+		event = "VeryLazy",
+		opts = {
+			on_open = "panel",
+			map_resize_keys = false,
+		},
+		config = function(_, opts)
+			require("litee.calltree").setup(opts)
 		end,
 	},
 
@@ -195,9 +366,9 @@ local plugins = {
 		event = "VeryLazy",
 		config = function()
 			require("flote").setup({
-        window_border = "single",
-        window_style = ""
-      })
+				window_border = "single",
+				window_style = "",
+			})
 		end,
 	},
 

@@ -1,41 +1,72 @@
+vim.g.maplocalleader = "\\"
+
 ---@type MappingsTable
 local M = {}
 
 --[[
 -- Mappings are mostly normalized in the following categories:
 -- 1. General mappings
---    a. Toggle mappings (<leader> + t + key)
+--    a. Toggle mappings (<leader> + . + key)
 --    b. Jump mappings ([|] + key)
--- 2. Application mappings (<leader> + application_prefix + key)
+-- 2 Panel mappings (<localleader> + key)
+-- 3. Application mappings (<leader> + application_prefix + key)
 --    If there's a "main" action for an application, it's usually mapped to
 --    <leader> + application_prefix + application_prefix in order to speed up its activation
 --]]
 M.general = {
 	n = {
 		["<Esc>"] = { "<cmd> :noh <CR> :cclose <CR>", "Clear highlights and close quickfix panel" },
-		["<leader>tw"] = { "<cmd> set wrap! <CR>", "Toggle word wrapping" },
-		["<leader>tn"] = { "<cmd> set nu! <CR>", "Toggle line number" },
-		["<leader>tr"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
-		["<leader>tc"] = { "<cmd> Coverage <CR>", "Toggle code coverage" },
-		["<leader>tz"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "Toggle zen mode" },
-		["<leader>tt"] = {
+
+		-- Toggle mappings
+		["<leader>.w"] = { "<cmd> set wrap! <CR>", "Toggle word wrapping" },
+		["<leader>.n"] = { "<cmd> set nu! <CR>", "Toggle line number" },
+		["<leader>.r"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
+		["<leader>.c"] = { "<cmd> Coverage <CR>", "Toggle code coverage" },
+		["<leader>.b"] = { "<cmd> TSContextToggle <CR>", "Toggle treesitter context" },
+		["<leader>.t"] = {
 			"<cmd> lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) <CR>",
 			"Toggle inlay hints",
 		},
-		["<leader>tT"] = { "<cmd> lua _G.toggle_modal_inlay_hints() <Cr>", "Toggle modal inlay hints" },
-		["<leader>nt"] = { "<cmd> tabnew <CR>", "New tab" },
-		["<leader>nb"] = { "<cmd> enew <CR>", "New buffer" },
-		["<leader>q"] = { "<cmd> Flote <CR>", "Open Flote notes" },
-		["<leader>."] = {
+		["<leader>.T"] = { "<cmd> lua _G.toggle_modal_inlay_hints() <Cr>", "Toggle modal inlay hints" },
+
+		-- tab mappings
+		["<leader>tn"] = { "<cmd> tabnew <CR>", "New tab" },
+
+		-- buffer mappings
+		["<leader>bn"] = { "<cmd> enew <CR>", "New buffer" },
+
+		-- jump mappings
+		["]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "Jump to next todo" },
+		["[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "Jump to previous todo" },
+		["]x"] = { "<cmd> lua vim.diagnostic.goto_next() <CR>", "Jump to next diagnostic" },
+		["[x"] = { "<cmd> lua vim.diagnostic.goto_prev() <CR>", "Jump to previous diagnostic" },
+		["[a"] = { "<cmd> lua require('barbecue.ui').navigate(-1) <CR>", "Jump to last context" },
+
+		-- formatting
+		["<leader>,"] = {
 			function()
 				require("conform").format({ async = true })
 			end,
 			"Apply formatting",
 		},
-		["]t"] = { "<cmd> lua require('todo-comments').jump_next() <CR>", "Jump to next todo" },
-		["[t"] = { "<cmd> lua require('todo-comments').jump_prev() <CR>", "Jump to previous todo" },
-		["]x"] = { "<cmd> lua vim.diagnostic.goto_next() <CR>", "Jump to next diagnostic" },
-		["[x"] = { "<cmd> lua vim.diagnostic.goto_prev() <CR>", "Jump to previous diagnostic" },
+
+		-- call map
+		["<leader>gi"] = { "<cmd> lua vim.lsp.buf.incoming_calls() <CR>", "Incoming calls" },
+		["<leader>go"] = { "<cmd> lua vim.lsp.buf.outgoing_calls() <CR>", "Outgoing calls" },
+	},
+}
+
+M.ui = {
+	n = {
+		["<localleader>a"] = { "<cmd> NvimTreeToggle <CR>", "Toggle file explorer" },
+		["<localleader>b"] = { "<cmd> Barbecue toggle<CR>", "Toggle barbecue context bar" },
+		["<localleader>c"] = { "<cmd> AvanteToggle <CR>", "Toggle Avante chat" },
+		["<localleader>d"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "Toggle minimap" },
+		["<localleader>f"] = { "<cmd> Flote <CR>", "Open Flote notes" },
+		["<localleader>r"] = { "<cmd> OverseerToggle <CR>", "Toggle overseer" },
+		["<localleader>s"] = { "<cmd> Outline! <CR>", "Toggle symbols outline" },
+		["<localleader>z"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "Toggle zen mode" },
+		["<localleader>x"] = { "<cmd> Copilot panel open <CR>", "Open copilot panel" },
 	},
 }
 
@@ -61,17 +92,15 @@ M.copilot = {
 		["<C-\\>"] = { "<cmd> Copilot suggestion accept_line <CR>", "Accept suggestion" },
 	},
 	n = {
-		["<leader>cc"] = { "<cmd> Copilot panel open <CR>", "Open panel" },
-		["<leader>co"] = { "<cmd> CopilotChatToggle <CR>", "Toggle chat" },
+		["<leader>cc"] = { "<cmd> Copilot panel open <CR>", "Open copilot panel" },
+		["<leader>co"] = { "<cmd> AvanteChat <CR>", "Open Avante chat" },
+		["<leader>ce"] = { "<cmd> AvanteEdit <CR>", "Edit the selected code blocks in Avante" },
+		["<leader>ch"] = { "<cmd> AvanteHistory <CR>", "Show Avante chat history" },
+		["<leader>cm"] = { "<cmd> AvanteModels <CR>", "Show available models for Avante" },
+		["<leader>c."] = { "<cmd> AvanteFocus <CR>", "Focus on Avante window" },
 	},
 	v = {
-		["<leader>cc"] = { "<cmd> CopilotChatToggle <CR>", "Toggle chat" },
-		["<leader>ce"] = { "<cmd> CopilotChatExplain <CR>", "Explain" },
-		["<leader>cr"] = { "<cmd> CopilotChatReview <CR>", "Review" },
-		["<leader>cx"] = { "<cmd> CopilotChatFix <CR>", "Fix" },
-		["<leader>co"] = { "<cmd> CopilotChatOptimize <CR>", "Optimize" },
-		["<leader>cd"] = { "<cmd> CopilotChatDocs <CR>", "Generate docs" },
-		["<leader>ct"] = { "<cmd> CopilotChatTests <CR>", "Generate tests" },
+		["<leader>cc"] = { "<cmd> AvanteAsk <CR>", "Ask Avante about your code" },
 	},
 }
 
