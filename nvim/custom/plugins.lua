@@ -134,7 +134,7 @@ local plugins = {
 	-- AI tools
 	{
 		"ravitemer/mcphub.nvim",
-    event = "VeryLazy",
+		event = "VeryLazy",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
@@ -146,46 +146,19 @@ local plugins = {
 
 	{
 		"yetone/avante.nvim",
-		build = function()
-			-- conditionally use the correct build system for the current OS
-			if vim.fn.has("win32") == 1 then
-				return "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-			else
-				return "make"
-			end
-		end,
+		-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
+		-- ⚠️ must add this setting! ! !
+		build = vim.fn.has("win32") ~= 0
+				and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+			or "make BUILD_FROM_SOURCE=true",
 		event = "VeryLazy",
 		version = false, -- Never set this value to "*"! Never!
-		---@module 'avante'
-		---@type avante.Config
-		opts = {
-			-- add any opts here
-			-- for example
-			provider = "claude",
-			-- provider = 'openai',
-			providers = {
-				claude = {
-					-- openai = {
-					endpoint = "<https://api.anthropic.com>",
-					model = "claude-sonnet-4-20250514",
-					api_key_name = "CLAUDE_API_KEY",
-					-- model = 'o3-mini',
-					-- api_key_name = 'OPENAI_API_KEY',
-					timeout = 30000, -- Timeout in milliseconds
-					extra_request_body = {
-						temperature = 0.75,
-						max_tokens = 20480,
-					},
-				},
-			},
-		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
 			--- The below dependencies are optional,
 			"nvim-telescope/telescope.nvim",
 			"hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
-			"stevearc/dressing.nvim", -- for input provider dressing
 			"folke/snacks.nvim", -- for input provider snacks
 			"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
 			"zbirenbaum/copilot.lua", -- for providers='copilot'
@@ -217,6 +190,39 @@ local plugins = {
 		},
 		config = function()
 			require("avante").setup({
+				-- Agent configuration
+				mode = "agentic",
+				auto_suggestions_provider = nil,
+				provider = "copilot",
+				providers = {
+					copilot = {
+						endpoint = "https://api.githubcopilot.com",
+						model = "gpt-4o-2024-11-20",
+						proxy = nil, -- [protocol://]host[:port] Use this proxy
+						allow_insecure = false, -- Allow insecure server connections
+						timeout = 30000, -- Timeout in milliseconds
+						context_window = 64000, -- Number of tokens to send to the model for context
+						extra_request_body = {
+							temperature = 0.75,
+							max_tokens = 20480,
+						},
+					},
+				},
+				-- Use snacks.nvim as input provider
+				input = {
+					provider = "snacks", -- "native" | "dressing" | "snacks"
+					provider_opts = {
+						title = "Avante Input",
+						icon = " ",
+						placeholder = "Enter your API key...",
+					},
+				},
+				file_selector = {
+					provider = "telescope",
+				},
+				selector = {
+					provider = "telescope",
+				},
 				-- system_prompt as function ensures LLM always has latest MCP server state
 				-- This is evaluated for every message, even in existing chats
 				system_prompt = function()
@@ -247,7 +253,7 @@ local plugins = {
 		end,
 	},
 
-  -- TODO: remove this in favor of avante
+	-- TODO: remove this in favor of avante
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		event = "InsertEnter",
