@@ -42,7 +42,7 @@ M.general = {
 		["[x"] = { "<cmd> lua vim.diagnostic.goto_prev() <CR>", "Jump to previous diagnostic" },
 		["[a"] = { "<cmd> lua require('barbecue.ui').navigate(-1) <CR>", "Jump to last context" },
 
-    -- formatting
+		-- formatting
 		["<leader>,"] = {
 			function()
 				require("conform").format({ async = true })
@@ -50,9 +50,9 @@ M.general = {
 			"Apply formatting",
 		},
 
-    -- call map
-    ["<leader>gi"] = { "<cmd> lua vim.lsp.buf.incoming_calls() <CR>", "Incoming calls" },
-    ["<leader>go"] = { "<cmd> lua vim.lsp.buf.outgoing_calls() <CR>", "Outgoing calls" },
+		-- call map
+		["<leader>gi"] = { "<cmd> lua vim.lsp.buf.incoming_calls() <CR>", "Incoming calls" },
+		["<leader>go"] = { "<cmd> lua vim.lsp.buf.outgoing_calls() <CR>", "Outgoing calls" },
 	},
 }
 
@@ -60,7 +60,7 @@ M.ui = {
 	n = {
 		["<localleader>a"] = { "<cmd> NvimTreeToggle <CR>", "Toggle file explorer" },
 		["<localleader>b"] = { "<cmd> Barbecue toggle<CR>", "Toggle barbecue context bar" },
-		["<localleader>c"] = { "<cmd> CopilotChatToggle <CR>", "Toggle copilot chat" },
+		["<localleader>c"] = { "<cmd> AvanteToggle <CR>", "Toggle Avante chat" },
 		["<localleader>d"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "Toggle minimap" },
 		["<localleader>f"] = { "<cmd> Flote <CR>", "Open Flote notes" },
 		["<localleader>r"] = { "<cmd> OverseerToggle <CR>", "Toggle overseer" },
@@ -93,16 +93,14 @@ M.copilot = {
 	},
 	n = {
 		["<leader>cc"] = { "<cmd> Copilot panel open <CR>", "Open copilot panel" },
-		["<leader>co"] = { "<cmd> CopilotChatToggle <CR>", "Toggle copilot chat" },
+		["<leader>co"] = { "<cmd> AvanteChat <CR>", "Open Avante chat" },
+		["<leader>ce"] = { "<cmd> AvanteEdit <CR>", "Edit the selected code blocks in Avante" },
+		["<leader>ch"] = { "<cmd> AvanteHistory <CR>", "Show Avante chat history" },
+		["<leader>cm"] = { "<cmd> AvanteModels <CR>", "Show available models for Avante" },
+		["<leader>c."] = { "<cmd> AvanteFocus <CR>", "Focus on Avante window" },
 	},
 	v = {
-		["<leader>cc"] = { "<cmd> CopilotChatToggle <CR>", "Toggle copilot chat" },
-		["<leader>ce"] = { "<cmd> CopilotChatExplain <CR>", "Explain" },
-		["<leader>cr"] = { "<cmd> CopilotChatReview <CR>", "Review" },
-		["<leader>cx"] = { "<cmd> CopilotChatFix <CR>", "Fix" },
-		["<leader>co"] = { "<cmd> CopilotChatOptimize <CR>", "Optimize" },
-		["<leader>cd"] = { "<cmd> CopilotChatDocs <CR>", "Generate docs" },
-		["<leader>ct"] = { "<cmd> CopilotChatTests <CR>", "Generate tests" },
+		["<leader>cc"] = { "<cmd> AvanteAsk <CR>", "Ask Avante about your code" },
 	},
 }
 
