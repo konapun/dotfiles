@@ -253,19 +253,6 @@ local plugins = {
 		end,
 	},
 
-	-- TODO: remove this in favor of avante
-	{
-		"CopilotC-Nvim/CopilotChat.nvim",
-		event = "InsertEnter",
-		dependencies = {
-			{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-		},
-		config = function()
-			require("CopilotChat").setup()
-		end,
-	},
-
 	{
 		"mfussenegger/nvim-dap",
 		event = "VeryLazy",
