@@ -29,6 +29,13 @@ M.general = {
 		},
 		["<leader>.T"] = { "<cmd> lua _G.toggle_modal_inlay_hints() <Cr>", "Toggle modal inlay hints" },
 
+		-- window mappings
+		["+"] = { "5<C-w>+", "Increase window height" },
+		["="] = { "5<C-w>-", "Decrease window height" },
+		["_"] = { "5<C-w>>", "Increase window width" },
+		["-"] = { "5<C-w><", "Decrease window width" },
+		["<C-=>"] = { "<C-w>=", "Equalize window sizes" },
+
 		-- tab mappings
 		["<leader>tn"] = { "<cmd> tabnew <CR>", "New tab" },
 
