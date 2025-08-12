@@ -70,6 +70,7 @@ M.ui = {
 		["<localleader>c"] = { "<cmd> AvanteToggle <CR>", "Toggle Avante chat" },
 		["<localleader>d"] = { "<cmd> lua require('codewindow').toggle_minimap() <CR>", "Toggle minimap" },
 		["<localleader>f"] = { "<cmd> Flote <CR>", "Open Flote notes" },
+    ["<localleader>h"] = { "<cmd> MCPHub <CR>", "Open MCPHub" },
 		["<localleader>r"] = { "<cmd> OverseerToggle <CR>", "Toggle overseer" },
 		["<localleader>s"] = { "<cmd> Outline! <CR>", "Toggle symbols outline" },
 		["<localleader>z"] = { "<cmd> ZenMode <bar> SunglassesToggle <CR>", "Toggle zen mode" },

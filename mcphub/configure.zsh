@@ -1,1 +1,1 @@
-cp ./mcphub/servers.json ~/.config/mcphub
+cp --parents ./mcphub/servers.json ~/.config/mcphub
