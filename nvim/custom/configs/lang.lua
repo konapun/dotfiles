@@ -83,7 +83,7 @@ local config = {
 	javascript = {
 		language_server = {
 			name = "typescript-language-server",
-			alias = "tsserver",
+			alias = "ts_ls",
 			settings = {
 				init_options = {
 					preferences = {
@@ -97,7 +97,7 @@ local config = {
 	typescript = {
 		language_server = {
 			name = "typescript-language-server",
-			alias = "tsserver",
+			alias = "ts_ls",
 		},
 		formatters = { "prettier" },
 	},
