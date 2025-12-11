@@ -12,3 +12,14 @@ for server, settings in pairs(servers) do
 		settings = settings,
 	})
 end
+
+-- FIXME
+-- local servers = lspconfig_provider.provide()
+-- for server, settings in pairs(servers) do
+--   vim.lsp.config(server, {
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+--     settings = settings,
+--   })
+-- end
+-- vim.lsp.enable(servers)
