@@ -13,7 +13,7 @@ SYNTAX_THEME=wal
 WINTERM_THEME=system
 
 # tmux config
-TMUX_THEME="'konapun/tmux-terminal-theme'"
+TMUX_THEME='system-theme'
 
 # system theme defaults
 TMUX_STATUS_BG=colour0
