@@ -4,9 +4,9 @@ local bridge = require("custom.bridge").ui
 local M = {}
 
 -- Path to overriding theme and highlights files
-local highlights = require("custom.highlights")
+local highlights = require("highlights")
 
-M.ui = {
+M.base64 = {
 	theme = bridge.theme.current,
 	-- theme_toggle = { bridge.theme.dark, bridge.theme.light},
 
@@ -16,19 +16,21 @@ M.ui = {
 	statusline = {
 		separator_style = bridge.statusline.separator_style,
 	},
-
-  cmp = {
-    style = "atom_colored"
-  },
-
-	nvdash = {
-		load_on_startup = true,
-	},
 }
 
-M.plugins = "custom.plugins"
+M.cmp = {
+	style = "atom_colored"
+},
 
--- check core.mappings for table structure
-M.mappings = require("custom.mappings")
+
+M.nvdash = {
+	load_on_startup = true
+}
+
+M.ui = {
+	tabufline = {
+		lazy load = false
+	}
+}
 
 return M

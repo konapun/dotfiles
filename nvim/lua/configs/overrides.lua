@@ -1,5 +1,5 @@
-local ts_provider = require("custom.configs.providers.treesitter")
-local mason_provider = require("custom.configs.providers.mason")
+local ts_provider = require("configs.providers.treesitter")
+local mason_provider = require("configs.providers.mason")
 
 local M = {}
 

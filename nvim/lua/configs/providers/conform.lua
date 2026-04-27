@@ -1,4 +1,4 @@
-local lang = require("custom.configs.lang")
+local lang = require("configs.lang")
 
 -- return a list of language servers or the alias of the language server
 local function getFormattersByLanguage(config)

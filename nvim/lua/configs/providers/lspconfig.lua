@@ -1,4 +1,4 @@
-local lang = require("custom.configs.lang")
+local lang = require("configs.lang")
 
 -- return a mapping of language servers or the alias of the language server to additional settings for the server, if any
 local function getLanguageServers(config)

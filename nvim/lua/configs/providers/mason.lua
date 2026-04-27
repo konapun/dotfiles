@@ -1,4 +1,4 @@
-local lang = require("custom.configs.lang")
+local lang = require("configs.lang")
 
 local function getKeys(tbl)
   local keys = {}
