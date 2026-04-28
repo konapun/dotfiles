@@ -395,18 +395,17 @@ local plugins = {
 		end,
 	},
 
-	-- {
-	-- 	"konapun/codewindow.nvim",
-	-- 	event = "VeryLazy",
-	-- 	branch = "fix-editor-height",
-	-- 	config = function()
-	-- 		require("codewindow").setup({
-	-- 			relative = "editor",
-	-- 			minimap_width = 10,
-	-- 			window_border = "solid",
-	-- 		})
-	-- 	end,
-	-- },
+	{
+		"konapun/codewindow.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("codewindow").setup({
+				relative = "editor",
+				minimap_width = 10,
+				window_border = "solid",
+			})
+		end,
+	},
 
 	{
 		"JellyApple102/flote.nvim",

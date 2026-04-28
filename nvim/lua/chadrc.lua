@@ -9,14 +9,10 @@ local highlights = require("highlights")
 M.base46 = {
 	theme = bridge.theme.current,
   transparency = true,
-	-- theme_toggle = { bridge.theme.dark, bridge.theme.light},
+	theme_toggle = { bridge.theme.dark, bridge.theme.light},
 
 	hl_override = highlights.override,
 	hl_add = highlights.add,
-
-	statusline = {
-		separator_style = bridge.statusline.separator_style,
-	},
 }
 
 M.nvdash = {
@@ -24,9 +20,19 @@ M.nvdash = {
 }
 
 M.ui = {
-	tabufline = {
-		lazy_load = false
-	}
+  cmp = {
+    lspkind_text = true,
+    style = bridge.theme.current,
+    format_colors = {
+      lsp = true,
+    },
+  },
+
+	statusline = {
+		separator_style = bridge.statusline.separator_style,
+	},
+
+  telescope = { style = "borderless" },
 }
 
 return M
