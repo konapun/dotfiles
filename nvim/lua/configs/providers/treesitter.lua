@@ -1,4 +1,4 @@
-local lang = require("custom.configs.lang")
+local lang = require("configs.lang")
 
 -- return the keys of the config table as treesitter values
 local function getLanguages(config)

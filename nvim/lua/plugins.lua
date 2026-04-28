@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require("configs.overrides")
 -------------------------------------------------------------------------------------------------------------------
 ---@type NvPluginSpec[]
 local plugins = {
@@ -6,8 +6,8 @@ local plugins = {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			require("plugins.configs.lspconfig")
-			require("custom.configs.lspconfig")
+			require("nvchad.configs.lspconfig")
+			require("configs.lspconfig")
 		end, -- Override to setup mason-lspconfig
 	},
 
@@ -22,7 +22,7 @@ local plugins = {
 		--  for users those who want auto-save conform + lazyloading!
 		-- event = "BufWritePre"
 		config = function()
-			require("custom.configs.conform")
+			require("configs.conform")
 		end,
 	},
 	-- override plugin configs
@@ -216,7 +216,7 @@ local plugins = {
 				-- Agent configuration
 				mode = "agentic",
 				auto_suggestions_provider = nil,
-				provider = "copilot",
+				provider = os.getenv("LLM_PROVIDER"),
 				providers = {
 					copilot = {
 						endpoint = "https://api.githubcopilot.com",
@@ -228,6 +228,30 @@ local plugins = {
 						extra_request_body = {
 							temperature = 0.75,
 							max_tokens = 20480,
+						},
+					},
+					lmstudio = {
+						__inherited_from = "openai",
+						api_key_name = "",
+						endpoint = os.getenv("LLM_LOCAL_BASE_URL"),
+						model = os.getenv("LLM_LOCAL_MODEL"),
+					},
+				},
+				acp_providers = {
+					["gemini-cli"] = {
+						command = "gemini",
+						args = { "--experimental-acp" },
+						env = {
+							NODE_NO_WARNINGS = "1",
+							GEMINI_API_KEY = os.getenv("GOOGLE_API_KEY"),
+						},
+					},
+					["claude-code"] = {
+						command = "npx",
+						args = { "@zed-industries/claude-code-acp" },
+						env = {
+							NODE_NO_WARNINGS = "1",
+							ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY"),
 						},
 					},
 				},
@@ -261,7 +285,7 @@ local plugins = {
 			})
 		end,
 	},
-
+	-- TODO: Remove this once avante suggestions are ready
 	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
@@ -374,7 +398,6 @@ local plugins = {
 	{
 		"konapun/codewindow.nvim",
 		event = "VeryLazy",
-		branch = "fix-editor-height",
 		config = function()
 			require("codewindow").setup({
 				relative = "editor",

@@ -9,6 +9,11 @@ export GOPATH=$HOME/go
 # LAZYGIT
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 
+# LLM
+export LLM_PROVIDER="lmstudio"
+export LLM_LOCAL_BASE_URL="http://192.168.86.250:1234/v1"
+export LLM_LOCAL_MODEL="tvall43/Qwen3.5-14B-A3B-Claude-4.6-Opus-Reasoning-Distilled-reap-gguf/Qwen3.5-14B-A3B-Claude-Opus-Reasoning-Distilled-4.6-MXFP4_MOE.gguf"
+
 # MAN
 export MANPAGER='nvim +Man!'
 
