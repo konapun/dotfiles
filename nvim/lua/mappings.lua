@@ -40,11 +40,20 @@ map("n", "[t", "<cmd> lua require('todo-comments').jump_prev() <CR>", { desc = "
 map("n", "]x", "<cmd> lua vim.diagnostic.goto_next() <CR>", { desc = "Jump Next diagnostic" })
 map("n", "[x", "<cmd> lua vim.diagnostic.goto_prev() <CR>", { desc = "Jump Previous diagnostic" })
 map("n", "[a", "<cmd> lua require('barbecue.ui').navigate(-1) <CR>", { desc = "Jump Last context" })
+map("n", "]c", "<cmd> Gitsigns next_hunk <CR>", { desc = "Jump Next git hunk" })
+map("n", "[c", "<cmd> Gitsigns prev_hunk <CR>", { desc = "Jump Previous git hunk" })
+
 -- formatting
-map("n", "<leader>,", function() equire("conform").format({ async = true }) end, { desc = "Formatting Apply" })
+map("n", "<leader>,", "<cmd> lua require('conform').format({ async = true }) <CR>", { desc = "Formatting Apply" })
 -- call map
 map("n", "<leader>gi", "<cmd> lua vim.lsp.buf.incoming_calls() <CR>", { desc = "Calls Incoming" })
 map("n", "<leader>go", "<cmd> lua vim.lsp.buf.outgoing_calls() <CR>", { desc = "Calls Outgoing" })
+
+---------
+-- Git --
+---------
+map("n", "<leader>gb", "<cmd> Gitsigns blame_line <CR>", { desc = "Git Blame line" })
+map("n", "<leader>gB", "<cmd> Gitsigns blame <CR>", { desc = "Git Blame whole file" })
 
 --------
 -- UI --

@@ -1,4 +1,4 @@
-local bridge = require("custom.bridge").ui
+local bridge = require("bridge").ui
 
 ---@type ChadrcConfig
 local M = {}
@@ -6,8 +6,9 @@ local M = {}
 -- Path to overriding theme and highlights files
 local highlights = require("highlights")
 
-M.base64 = {
+M.base46 = {
 	theme = bridge.theme.current,
+  transparency = true,
 	-- theme_toggle = { bridge.theme.dark, bridge.theme.light},
 
 	hl_override = highlights.override,
@@ -18,18 +19,13 @@ M.base64 = {
 	},
 }
 
-M.cmp = {
-	style = "atom_colored"
-},
-
-
 M.nvdash = {
 	load_on_startup = true
 }
 
 M.ui = {
 	tabufline = {
-		lazy load = false
+		lazy_load = false
 	}
 }
 

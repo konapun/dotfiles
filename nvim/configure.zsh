@@ -1,7 +1,7 @@
 NVIM_ROOT=~/.config/nvim
 NVIM_BRIDGE=$NVIM_ROOT/lua/bridge.lua
 
-cp -r ./nvim $NVIM_ROOT
+cp -r ./nvim/* $NVIM_ROOT
 rm $NVIM_ROOT/configure.zsh
 
 python3 -m pip install neovim pynvim ranger-fm
