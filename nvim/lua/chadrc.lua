@@ -8,31 +8,31 @@ local highlights = require("highlights")
 
 M.base46 = {
 	theme = bridge.theme.current,
-  transparency = true,
-	theme_toggle = { bridge.theme.dark, bridge.theme.light},
+	transparency = false,
+	theme_toggle = { bridge.theme.dark, bridge.theme.light },
 
 	hl_override = highlights.override,
 	hl_add = highlights.add,
 }
 
 M.nvdash = {
-	load_on_startup = true
+	load_on_startup = true,
 }
 
 M.ui = {
-  cmp = {
-    lspkind_text = true,
-    style = bridge.theme.current,
-    format_colors = {
-      lsp = true,
-    },
-  },
+	cmp = {
+		lspkind_text = true,
+		style = bridge.theme.current,
+		format_colors = {
+			lsp = true,
+		},
+	},
 
 	statusline = {
 		separator_style = bridge.statusline.separator_style,
 	},
 
-  telescope = { style = "borderless" },
+	telescope = { style = "borderless" },
 }
 
 return M
